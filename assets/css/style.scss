@@ -1,0 +1,39 @@
+body {
+    scroll-behavior: smooth;
+}
+
+#wrapper {
+    margin-bottom: 50px;
+
+    .profile {
+        background: red;
+        color: #fff;
+
+        .image {
+            height: 30px;
+            width: 30px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    .card {
+        .card-body {}
+    }
+}
+
+.footer {
+    background-color: red;
+
+    a {
+        color: red;
+
+        &:hover {
+            color: blue;
+        }
+    }
+
+}
