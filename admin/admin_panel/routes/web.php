@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\user_authentication;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[user_authentication::class , 'getLogin'])->name('login');
+Route::post('/login',[user_authentication::class , 'login']);
+Route::get('/register',[user_authentication::class , 'getRegister']);
+Route::post('/register',[user_authentication::class , 'register']);
+Route::view('/adminpanel','adminpages/adminpanel')->middleware('auth');
+
