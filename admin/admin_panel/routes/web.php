@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\user_authentication;
+use App\Http\Controllers\User_authentication;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +15,9 @@ use App\Http\Controllers\user_authentication;
 |
 */
 
-Route::get('/',[user_authentication::class , 'getLogin'])->name('login');
-Route::post('/login',[user_authentication::class , 'login']);
-Route::get('/register',[user_authentication::class , 'getRegister']);
-Route::post('/register',[user_authentication::class , 'register']);
+Route::get('/',[User_authentication::class , 'getLogin'])->name('login');
+Route::post('/login',[User_authentication::class , 'login']);
+Route::get('/register',[User_authentication::class , 'getRegister']);
+Route::post('/register',[User_authentication::class , 'register']);
 Route::view('/adminpanel','adminpages/adminpanel')->middleware('auth');
 

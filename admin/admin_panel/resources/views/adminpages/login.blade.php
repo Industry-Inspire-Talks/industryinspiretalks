@@ -41,7 +41,8 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" action="/login" method="POST">
+                                        @csrf
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail" aria-describedby="emailHelp" name="Email"
@@ -58,9 +59,8 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="/adminpanel" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
+                                        <input type = "submit" value="Login" class="btn btn-primary btn-user btn-block">
+                                        
                                         <hr>
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google
