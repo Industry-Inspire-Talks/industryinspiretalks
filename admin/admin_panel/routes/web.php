@@ -17,6 +17,7 @@ use App\Http\Controllers\User_authentication;
 
 Route::get('/',[User_authentication::class , 'getLogin'])->name('login');
 Route::post('/login',[User_authentication::class , 'login']);
+Route::get('/logout', [User_authentication::class,'logout']);
 Route::get('/register',[User_authentication::class , 'getRegister']);
 Route::post('/register',[User_authentication::class , 'register']);
 Route::view('/adminpanel','adminpages/adminpanel')->middleware('auth');

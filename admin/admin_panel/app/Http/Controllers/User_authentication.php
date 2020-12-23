@@ -60,6 +60,11 @@ class User_authentication extends Controller
             return redirect()->back()->with('alert','Login Details Not Found. Please Signup First');
         }
     }
+
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/');
+    }
 }
 
 
