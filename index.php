@@ -53,7 +53,7 @@
             </nav>
         </section>
         <!-- BANNER SECTION -->
-        <section id="banner">
+        <section id="banner" class="d-flex align-items-center" style="height:60vh">
             <div class="container py-1">
                 <div class="row">
                     <div class="col-md-6 text-center justify-content-center mt-5">
