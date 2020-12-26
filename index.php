@@ -32,7 +32,7 @@
                     <a class="nav-link" href="#explore">Explore</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#design-by">Our Community</a>
+                    <a class="nav-link" href="#community">Our Community</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -92,6 +92,113 @@
     </section>
     <!-- About Section End -->
 
+    <section class="container team">
+        <p class="title text-center">Meet Our Team</p>
+
+        <div id="team" class="swiper-container">
+            <div class="swiper-wrapper">
+                <?php for ($i = 0; $i < 8; $i++) { ?>
+                    <div class="swiper-slide">
+                        <div class="member">
+                            <div class="image">
+                                <img src="" alt="">
+                            </div>
+                            <p class="name">Lorem Ipsum</p>
+                            <p class="position">Lorem Ipsum</p>
+                        </div>
+                    </div>
+                <?php } ?>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </section>
+
+    <section class="container board">
+        <p class="title text-center">Meet Our Board of Directors</p>
+        <div class="row">
+            <div class="mb-3 col-lg-3 col-sm-6">
+                <div class="director">
+                    <div class="">
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="name">Omkar Shinde</p>
+                        <p class="position">Founder & CEO</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/omkar-shinde-310aa5193/"><i class="fab fa-linkedin"></i></a>
+                        <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>
+                        <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>
+                        <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>
+                        <a href="javascript:0" disabled><i class="fab fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 col-lg-3 col-sm-6">
+                <div class="director">
+                    <div class="">
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="name">Satya Prakash Mohapatra</p>
+                        <p class="position">Chief Marketing Officer</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/satya-prakash-mohapatra-153926129/"><i class="fab fa-linkedin"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-facebook"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-twitter"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-instagram"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-google-plus"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 col-lg-3 col-sm-6">
+                <div class="director">
+                    <div class="">
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="name">Vishal Nair</p>
+                        <p class="position">Chief People Officer</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/vishalnairm/"><i class="fab fa-linkedin"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-facebook"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-twitter"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-instagram"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-google-plus"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 col-lg-3 col-sm-6">
+                <div class="director">
+                    <div class="">
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="name">Danish Shaikh</p>
+                        <p class="position">Chief Technology Officer</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/shaikhdanish04/"> <i class="fab fa-linkedin"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-facebook"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-twitter"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-instagram"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-google-plus"></i> </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </section>
+
     <!-- Our Events -->
     <section class="explore container ">
         <div class="direct" id="explore" style="top:-150px"></div>
@@ -108,7 +215,8 @@
                     <?php for ($i = 0; $i < 8; $i++) { ?>
                         <div class="swiper-slide">
                             <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="https://via.placeholder.com/150x100/292a2d/c1c1c1/?text=thumbnail" alt="Card image cap">
+                            <div class="card-img-top">
+                            </div>    
                                 <div class="card-body">
                                     <p class="card-title m-0">Path to Product Management</p>
                                     <p class="small">Industry Expo 2020</p>
@@ -132,7 +240,8 @@
                     <?php for ($i = 0; $i < 8; $i++) { ?>
                         <div class="swiper-slide">
                             <div class="card" style="width: 18rem;">
-                                <img class="card-img-top" src="https://via.placeholder.com/150x100/292a2d/c1c1c1/?text=thumbnail" alt="Card image cap">
+                            <div class="card-img-top">
+                            </div>    
                                 <div class="card-body">
                                     <p class="card-title m-0">Path towards Student Entrepreneurship</p>
                                     <p class="small">Industry Connect</p>
@@ -164,9 +273,7 @@
                 <?php for ($i = 0; $i < 6; $i++) { ?>
                     <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="member d-flex card flex-row">
-                            <div class="image mr-3">
-                                <img src="https://via.placeholder.com/150x180/f1f1f1/c1c1c1/?text=thumbnail" alt="">
-                            </div>
+                            <div class="image mr-3"></div>
                             <div class="d-flex justify-content-between flex-column">
                                 <div>
                                     <p class="name">Ritwik Deshpande</p>
@@ -317,6 +424,29 @@
                 },
                 996: {
                     slidesPerView: 3,
+                }
+            },
+        });
+
+        var swiper = new Swiper('#team.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 2,
+            loop: true,
+            breakpoints: {
+                // 386: {
+                //     slidesPerView: 1,
+                // },
+                552: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                996: {
+                    slidesPerView: 5,
                 }
             },
         });

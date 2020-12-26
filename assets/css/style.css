@@ -111,7 +111,6 @@ body {
 
 .about .content {
   padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .about .doodle {
@@ -164,6 +163,140 @@ body {
   background: #0296c0;
 }
 
+.team .member {
+  text-align: center;
+  margin: 5px;
+  margin: auto;
+  margin-bottom: 1rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 1rem;
+  width: 150px;
+  height: 100%;
+}
+
+.team .member:hover {
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #0296c0;
+}
+
+.team .member:hover .image {
+  height: 130px;
+  width: 130px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.team .member:hover .name,
+.team .member:hover .position {
+  color: #fff;
+}
+
+.team .member .image {
+  -webkit-transition: .5s;
+  transition: .5s;
+  height: 150px;
+  width: 150px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  margin-bottom: 10px;
+}
+
+.team .member .name {
+  margin: 0;
+  font-style: 12px;
+  font-weight: 600;
+}
+
+.team .member .position {
+  margin: 0;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.board .director {
+  background-color: #f2f2f2;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  height: 100%;
+  width: 230px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.board .director:hover {
+  background-color: #0296c0;
+  cursor: pointer;
+}
+
+.board .director:hover .name,
+.board .director:hover .position {
+  color: #fff;
+}
+
+.board .director:hover .social {
+  background-color: #fff;
+}
+
+.board .director:hover .social a {
+  color: #000;
+}
+
+.board .director:hover .social a:hover:not([disabled]) {
+  color: #0296c0;
+  text-decoration: none;
+}
+
+.board .director .image {
+  border-radius: 1rem;
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+
+.board .director .name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.board .director .position {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.board .director .social {
+  background-color: #0296c0;
+  border-radius: 5rem;
+  padding: .5rem;
+}
+
+.board .director .social a {
+  margin: 5px;
+  color: #fff;
+}
+
+.board .director .social a[disabled] {
+  color: rgba(0, 0, 0, 0.28);
+}
+
 section {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -207,6 +340,7 @@ section .section-header {
 }
 
 .community .member .image {
+  background-color: #f2f2f2;
   border-radius: 1rem;
   overflow: hidden;
   height: 180px;
@@ -266,6 +400,13 @@ section .section-header {
 #connect .card .card-title {
   font-size: 14px;
   font-weight: 600;
+}
+
+#expo .card .card-img-top,
+#connect .card .card-img-top {
+  height: 170px;
+  width: 100%;
+  background-color: #1e1e1e;
 }
 
 #expo .card .card-text,
