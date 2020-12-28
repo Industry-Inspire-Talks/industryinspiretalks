@@ -11,6 +11,7 @@
 
       <!-- Page Sections -->
 
+      <section style="min-height:80vh"></section>
 
 
       <!-- Page Sections End -->

@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#about_us">About Us</a>
+                <a class="nav-link" href="about.php">About Us</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#explore">Explore</a>
