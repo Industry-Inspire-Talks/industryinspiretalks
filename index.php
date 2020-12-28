@@ -2,56 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="assets/img/init_logo.jpg" type="image/x-icon">
+    <?php require_once('components/head.php') ?>
 
-    <meta name="Description" content="Industry Inspire Talks" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css?0800H">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-    <title>Industry Inspire Talks</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">
-            <img src="assets/img/init_logo.jpg" alt="" class="logo">
-            Industry Inspire Talks
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#about_us">About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#explore">Explore</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#community">Our Community</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        More
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">Careers</a>
-                        <a class="dropdown-item" href="#">Events</a>
-                        <a class="dropdown-item" href="#">Our Blogs</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <?php require_once('components/navbar.php') ?>
+
     <!-- BANNER SECTION -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container py-1">
@@ -217,8 +174,8 @@
                     <?php for ($i = 0; $i < 8; $i++) { ?>
                         <div class="swiper-slide">
                             <div class="card" style="width: 18rem;">
-                            <div class="card-img-top">
-                            </div>    
+                                <div class="card-img-top">
+                                </div>
                                 <div class="card-body">
                                     <p class="card-title m-0">Path to Product Management</p>
                                     <p class="small">Industry Expo 2020</p>
@@ -242,8 +199,8 @@
                     <?php for ($i = 0; $i < 8; $i++) { ?>
                         <div class="swiper-slide">
                             <div class="card" style="width: 18rem;">
-                            <div class="card-img-top">
-                            </div>    
+                                <div class="card-img-top">
+                                </div>
                                 <div class="card-body">
                                     <p class="card-title m-0">Path towards Student Entrepreneurship</p>
                                     <p class="small">Industry Connect</p>
@@ -343,123 +300,11 @@
     </section>
 
     <!-- Footer Section  -->
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="row">
-                <div class="col-10 col-sm-10 col-lg-3 col-md-6">
-                    <div class="footer-info">
-                        <h3>Industry Inspire Talks</h3>
-                        <p>
-                            9/2 Dhanashri CHS,
-                            Nanda Patkar Road,
-                            Vile Parle(E),
-                            Mumbai 400057, India<br><br>
-                            <strong>Phone:</strong> <br /> +91 8850810515<br>
-                            <strong>Email:</strong> industryinspiretalks2020@gamil.com<br>
-                        </p>
-                    </div>
-                </div>
+    <?php require_once('components/footer.php') ?>
 
-                <div class="col-10 col-sm-10 col-lg-2 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li> <a href="#">Home</a></li>
-                        <li> <a href="#">About us</a></li>
-                        <li> <a href="#">Our Team</a></li>
-                        <li> <a href="#">Our Episodes</a></li>
-                        <li> <a href="#">Our Community</a></li>
-                        <li> <a href="#">Connect US</a></li>
-                    </ul>
-                </div>
 
-                <div class="col-10 col-sm-10 col-lg-3 col-md-6 footer-links">
-                    <!-- <h4>Our Services</h4> -->
-                    <ul class="mt-5">
-                        <li><a href="#">Carrer </a></li>
-                        <li><a href="#">Our Channel</a></li>
-
-                </div>
-
-                <div class="col-12 col-sm-12 col-lg-4 col-md-6 footer-newsletter">
-                    <h4>Our Newsletter</h4>
-                    <p>Feel free to drop your email here So you will be updated with US</p>
-                    <form action="" method="post">
-                        <form class="form-inline">
-                            <div class="d-flex">
-                                <input type="email" name="" id="" class="form-control mr-2" placeholder="" aria-describedby="helpId">
-                                <button class="btn btn-dark" style="background:#1bb1dc">Subscribe</button>
-                            </div>
-                        </form>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright">
-            &copy; Copyright <strong><span>Industry Inspire Talks</span></strong>. All Rights Reserved
-        </div>
-
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    <?php require_once('components/foot.php') ?>
 </body>
 
-<script>
-    $(document).ready(function() {
-        if (scrollY > 0) {
-            $('.navbar').addClass('top');
-        } else {
-            $('.navbar').removeClass('top');
-        }
-        var swiper = new Swiper('#expo.swiper-container,#connect.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            slidesPerView: 1,
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                },
-                996: {
-                    slidesPerView: 3,
-                }
-            },
-        });
-
-        var swiper = new Swiper('#team.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            slidesPerView: 2,
-            loop: true,
-            breakpoints: {
-                // 386: {
-                //     slidesPerView: 1,
-                // },
-                552: {
-                    slidesPerView: 3,
-                },
-                768: {
-                    slidesPerView: 4,
-                },
-                996: {
-                    slidesPerView: 5,
-                }
-            },
-        });
-    })
-    $(document).scroll(function() {
-        if (scrollY > 0) {
-            $('.navbar').addClass('top');
-        } else {
-            $('.navbar').removeClass('top');
-        }
-    })
-</script>
 
 </html>
