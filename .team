@@ -2,4 +2,17 @@ Ganesh - index.php,
         /assets/style.scss
 
 
-Tanmay - /admin/
+Tanmay- /                                /views/template
+        /login                           /views/login
+
+        /                                /views/pages/dashboard
+        
+        /staff                           /views/pages/staff/list
+        /staff/add                       /views/pages/staff/add
+        /staff/edit/{id}                 /views/pages/staff/edit (with get paramter id)
+        
+        /community                       /views/pages/community/list
+        /community/add                   /views/pages/community/add
+        /community/edit/{id}             /views/pages/community/edit (with get paramter id)
+
+        /notfound                        /views/pages/404
