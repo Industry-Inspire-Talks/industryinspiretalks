@@ -128,11 +128,18 @@
                     <span>Charts</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - Community -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="/admindashboard/community">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span>Community</span></a>
+            </li>
+
+            <!-- Nav Item - Staff -->
+            <li class="nav-item">
+                <a class="nav-link" href="/admindashboard/staff">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Staff</span></a>
             </li>
 
             <!-- Divider -->
@@ -375,6 +382,10 @@
                     @yield('utilities_borders')
                     @yield('utilities_animations')
                     @yield('utilities_others')
+
+
+                    @yield('community_details')
+                    @yield('staff_details')
 
                     
 

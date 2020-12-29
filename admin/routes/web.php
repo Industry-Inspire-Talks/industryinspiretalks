@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\User_authentication;
+use App\Http\Controllers\DatabaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,9 @@ Route::middleware(['auth'])->group( function()
     Route::view('/admindashboard/utilities/borders','adminpages/borders');
     Route::view('/admindashboard/utilities/animations','adminpages/animations');
     Route::view('/admindashboard/utilities/others','adminpages/others');
+
+    Route::get('/admindashboard/community',[DatabaseController::class , 'community_details']);
+    Route::get('/admindashboard/staff',[DatabaseController::class , 'staff_details']);
 
 
   

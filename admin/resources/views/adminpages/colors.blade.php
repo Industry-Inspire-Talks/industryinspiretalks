@@ -1,4 +1,4 @@
-@extends('adminpages/adminpanel');
+@extends('adminpages/adminpanel')
 
 @section('utilities_colors')
 

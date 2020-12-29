@@ -1,6 +1,6 @@
 
 
-@extends('adminpages/adminpanel');
+@extends('adminpages/adminpanel')
 
 @section('components_cards')
 <!-- Page Heading -->
