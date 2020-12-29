@@ -106,14 +106,14 @@
 
             <!-- Nav Item - Community -->
             <li class="nav-item">
-                <a class="nav-link" href="/admindashboard/community">
+                <a class="nav-link" href="/community">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Community</span></a>
             </li>
 
             <!-- Nav Item - Staff -->
             <li class="nav-item">
-                <a class="nav-link" href="/admindashboard/staff">
+                <a class="nav-link" href="/staff">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Staff</span></a>
             </li>

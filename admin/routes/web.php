@@ -16,7 +16,7 @@ use App\Http\Controllers\DatabaseController;
 |
 */
 
-Route::get('/',[User_authentication::class , 'getLogin'])->name('login');
+Route::get('/login',[User_authentication::class , 'getLogin'])->name('login');
 Route::post('/login',[User_authentication::class , 'login']);
 Route::get('/logout', [User_authentication::class,'logout']);
 Route::get('/register',[User_authentication::class , 'getRegister']);
@@ -26,16 +26,10 @@ Route::post('/register',[User_authentication::class , 'register']);
 Route::middleware(['auth'])->group( function()  
 {  
   
-    Route::view('/admindashboard','adminpages/admindashboard');
-    Route::view('/admindashboard/components/buttons','adminpages/buttons');
-    Route::view('/admindashboard/components/cards','adminpages/cards');
-    Route::view('/admindashboard/utilities/colors','adminpages/colors');
-    Route::view('/admindashboard/utilities/borders','adminpages/borders');
-    Route::view('/admindashboard/utilities/animations','adminpages/animations');
-    Route::view('/admindashboard/utilities/others','adminpages/others');
+    Route::view('/','adminpages/admindashboard');
 
-    Route::get('/admindashboard/community',[DatabaseController::class , 'community_details']);
-    Route::get('/admindashboard/staff',[DatabaseController::class , 'staff_details']);
+    Route::get('/community',[DatabaseController::class , 'community_details']);
+    Route::get('/staff',[DatabaseController::class , 'staff_details']);
 
 
   

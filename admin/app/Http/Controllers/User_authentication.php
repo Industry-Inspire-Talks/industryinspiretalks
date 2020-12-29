@@ -47,7 +47,7 @@ class User_authentication extends Controller
     {
         if (auth()->check())
         {
-            return redirect('/admindashboard');
+            return redirect('/');
         }
         else
         {
@@ -86,7 +86,7 @@ class User_authentication extends Controller
 
             if(Auth::attempt(['email'=>$email,'password'=>$password],$remember_token))
             {
-                return redirect('/admindashboard');
+                return redirect('/');
             }
             else
             {
