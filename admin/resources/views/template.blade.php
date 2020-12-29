@@ -106,14 +106,14 @@
 
             <!-- Nav Item - Community -->
             <li class="nav-item">
-                <a class="nav-link" href="/community">
+                <a class="nav-link" href="/community/list">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Community</span></a>
             </li>
 
             <!-- Nav Item - Staff -->
             <li class="nav-item">
-                <a class="nav-link" href="/staff">
+                <a class="nav-link" href="/staff/list">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Staff</span></a>
             </li>
@@ -342,19 +342,12 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-
-                    @yield('components_buttons')
-                    @yield('components_cards')
                     @yield('admin_dashboard')
-
-                    @yield('utilities_colors')
-                    @yield('utilities_borders')
-                    @yield('utilities_animations')
-                    @yield('utilities_others')
-
 
                     @yield('community_details')
                     @yield('staff_details')
+
+                    @yield('404')   
 
                     
 

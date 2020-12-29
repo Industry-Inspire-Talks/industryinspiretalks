@@ -10,9 +10,7 @@ use Auth;
 class User_authentication extends Controller
 {
 
-    public function getRegister(){
-        return view('adminpages.register');
-    }
+    
 
     public function register(Request $request)
     {
@@ -51,7 +49,7 @@ class User_authentication extends Controller
         }
         else
         {
-            return view('adminpages.login');
+            return view('login');
         }
         
     }

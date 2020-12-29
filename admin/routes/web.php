@@ -19,17 +19,17 @@ use App\Http\Controllers\DatabaseController;
 Route::get('/login',[User_authentication::class , 'getLogin'])->name('login');
 Route::post('/login',[User_authentication::class , 'login']);
 Route::get('/logout', [User_authentication::class,'logout']);
-Route::get('/register',[User_authentication::class , 'getRegister']);
-Route::post('/register',[User_authentication::class , 'register']);
+
 
 
 Route::middleware(['auth'])->group( function()  
 {  
   
-    Route::view('/','adminpages/admindashboard');
+    Route::view('/','admindashboard');
+   
 
-    Route::get('/community',[DatabaseController::class , 'community_details']);
-    Route::get('/staff',[DatabaseController::class , 'staff_details']);
+    Route::get('/community/list',[DatabaseController::class , 'community_details']);
+    Route::get('/staff/list',[DatabaseController::class , 'staff_details']);
 
 
   

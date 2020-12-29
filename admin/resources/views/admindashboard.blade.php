@@ -1,4 +1,4 @@
-@extends('adminpages/adminpanel')
+@extends('template')
 
 @section('admin_dashboard')
 

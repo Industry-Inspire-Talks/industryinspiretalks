@@ -1,4 +1,4 @@
-@extends('adminpages/adminpanel')
+@extends('template')
 
 @section('staff_details')
 
@@ -42,9 +42,5 @@
         </div>
     </div>
 </div>
-
-
-
-
 
 @stop
