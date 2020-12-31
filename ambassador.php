@@ -12,6 +12,8 @@
 
     <section class="container dummy">
         <div class="title">Campus Ambassador Program</div>
+        <hr class="mb-4">
+
     </section>
     <!-- Footer Section  -->
     <?php require_once('components/footer.php') ?>

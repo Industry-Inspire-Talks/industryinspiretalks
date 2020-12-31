@@ -20,7 +20,7 @@
 		<p class="text-justify">This is what we do here, we inspire people to achieve greater heights in their career by helping them connect with successful people from the industry! Your career is our priority!Our mission is to empower every person on this planet to achieve more in their future careers. Our vision is to inspire people with their stories of hustle & dedication towards their dreams and make an impact in their lives! We are here to connect you with leaders of the industry so you can transform yourself into a leader. Come let's do something for the community. </p>
 		<p> If you are a community person too, this is the place where you truly belong! Join the #Inspire Community!</p>
 	</section>
-	<section class="container">
+	<section class="container board">
 		<h1 class="title text-center">Our Board Directories</h1>
 		<div class="row">
 			<div class="mb-3 col-lg-3 col-sm-6">
