@@ -27,6 +27,17 @@ body.nav-nofixed {
   padding: 2rem 1rem;
 }
 
+.navbar.shown .navbar-collapse {
+  background-color: #fff;
+  margin: .5rem 0rem;
+  padding: .5rem 1rem;
+  border-radius: 10px;
+}
+
+.navbar.shown .nav-link {
+  color: #1e1e1e;
+}
+
 .navbar.top,
 .nav-nofixed .navbar {
   top: 0;
@@ -50,7 +61,16 @@ body.nav-nofixed {
 .navbar.top .logo,
 .nav-nofixed .navbar .logo {
   height: 50px;
-  margin-right: 0rem;
+  margin-right: 1rem;
+}
+
+.navbar.top .navbar-toggler,
+.nav-nofixed .navbar .navbar-toggler {
+  color: #1e1e1e;
+}
+
+.navbar .navbar-toggler {
+  color: #fff;
 }
 
 .navbar .logo {
@@ -67,6 +87,12 @@ body.nav-nofixed {
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar .nav-link {

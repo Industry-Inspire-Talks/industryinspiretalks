@@ -1,7 +1,10 @@
 <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="./index.php">
         <img src="assets/img/init_logo.jpg" alt="" class="logo">
-        Industry Inspire Talks
+        <div>
+            <p class="mb-2">Industry Inspire</p>
+            <p class="m-0">Talks</p>
+        </div>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <i class="fa fa-bars"></i>

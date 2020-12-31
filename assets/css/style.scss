@@ -38,6 +38,20 @@ body {
     box-shadow: 0 0 0;
     padding: 2rem 1rem;
 
+    &.shown {
+        .navbar-collapse {
+
+            background-color: #fff;
+            margin: .5rem 0rem;
+            padding: .5rem 1rem;
+            border-radius: 10px;
+        }
+
+        .nav-link {
+            color: #1e1e1e;
+        }
+    }
+
 
     &.top,
     .nav-nofixed & {
@@ -57,8 +71,17 @@ body {
 
         .logo {
             height: 50px;
-            margin-right: 0rem;
+            margin-right: 1rem;
         }
+
+        .navbar-toggler {
+            color: #1e1e1e
+        }
+
+    }
+
+    .navbar-toggler {
+        color: #fff
     }
 
     .logo {
@@ -74,6 +97,9 @@ body {
         font-weight: 400;
         letter-spacing: 3px;
         text-transform: uppercase;
+
+        display: flex;
+        align-items: center;
     }
 
     .nav-link {

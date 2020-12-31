@@ -237,7 +237,7 @@
             <div class="row">
                 <?php
                 // $idArray = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22);
-                $idArray = array(1,2,3,4,5,6);
+                $idArray = array(1, 2, 3, 4, 5, 6);
 
                 foreach ($idArray as $id) {
                     $result = $conn->query("SELECT * FROM community WHERE id='$id'")->fetch_assoc();
@@ -319,6 +319,17 @@
 
     <?php require_once('components/foot.php') ?>
 </body>
+
+<script>
+    $('.navbar-collapse').on('show.bs.collapse', function() {
+        console.log('up');
+        $('.navbar').addClass('shown')
+    })
+    $('.navbar-collapse').on('hide.bs.collapse', function() {
+        $('.navbar').removeClass('shown')
+        console.log('down');
+    })
+</script>
 
 
 </html>
