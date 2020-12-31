@@ -1,3 +1,5 @@
+<?php include('connect.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,30 +52,6 @@
         </div>
     </section>
     <!-- About Section End -->
-
-    <section class="container team">
-        <p class="title text-center">Meet Our Team</p>
-
-        <div id="team" class="swiper-container">
-            <div class="swiper-wrapper">
-                <?php for ($i = 0; $i < 8; $i++) { ?>
-                    <div class="swiper-slide">
-                        <div class="member">
-                            <div class="image">
-                                <img src="" alt="">
-                            </div>
-                            <p class="name">Lorem Ipsum</p>
-                            <p class="position">Lorem Ipsum</p>
-                        </div>
-                    </div>
-                <?php } ?>
-
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-
-    </section>
 
     <section class="container board">
         <p class="title text-center">Meet Our Board of Directors</p>
@@ -158,6 +136,34 @@
 
     </section>
 
+    <section class="container team">
+        <p class="title text-center">Meet Our Team</p>
+
+        <div id="team" class="swiper-container">
+            <div class="swiper-wrapper">
+                <?php
+                $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+
+                foreach ($idArray as $id) {
+                    $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
+                    echo '<div class="swiper-slide">' .
+                        '    <div class="member">' .
+                        '        <div class="image">' .
+                        '            <img src="" alt="">' .
+                        '        </div>' .
+                        '        <p class="name">' . $result['name'] . '</p>' .
+                        '        <p class="position">' . $result['designation'] . '</p>' .
+                        '    </div>' .
+                        '</div>';
+                }
+                ?>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </section>
     <!-- Our Events -->
     <section class="explore container ">
         <div class="direct" id="explore" style="top:-150px"></div>
@@ -229,23 +235,31 @@
         </div>
         <div class="container">
             <div class="row">
-                <?php for ($i = 0; $i < 6; $i++) { ?>
-                    <div class="col-md-6 col-lg-6 col-xl-4">
-                        <div class="member d-flex card flex-row">
-                            <div class="image mr-3"></div>
-                            <div class="d-flex justify-content-between flex-column">
-                                <div>
-                                    <p class="name">Ritwik Deshpande</p>
-                                    <p class="company mb-2">JP Morgan</p>
-                                    <p class="position">Software Development Engineer</p>
-                                </div>
-                                <div class="social">
-                                    <a href="https://www.linkedin.com/in/ritwik-deshpande-ba4b51170/"><i class="fab fa-linkedin"></i> LinkedIn </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
+                <?php
+                // $idArray = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22);
+                $idArray = array(1, 2, 3, 4, 5, 6);
+
+                foreach ($idArray as $id) {
+                    $result = $conn->query("SELECT * FROM community WHERE id='$id'")->fetch_assoc();
+
+                    echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
+                        '    <div class="member d-flex card flex-row">' .
+                        '        <div class="image mr-3"></div>' .
+                        '        <div class="d-flex justify-content-between flex-column">' .
+                        '            <div>' .
+                        '                <p class="name">' . $result['name'] . '</p>' .
+                        '                <p class="company mb-2">' . $result['company'] . '</p>' .
+                        '                <p class="position">' . $result['role'] . '</p>' .
+                        '            </div>' .
+                        '            <div class="social">' .
+                        '                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
+                        '            </div>' .
+                        '        </div>' .
+                        '    </div>' .
+                        '</div>';
+                }
+                ?>
+
 
             </div>
             <p class="text-center">
@@ -305,6 +319,77 @@
 
     <?php require_once('components/foot.php') ?>
 </body>
+
+<style>
+    .swiper-container-multirow-column>.swiper-wrapper {
+        flex-direction: row;
+    }
+</style>
+
+
+<script>
+    $(document).ready(function() {
+        if (scrollY > 0) {
+            $('.navbar').addClass('top');
+        } else {
+            $('.navbar').removeClass('top');
+        }
+        var swiper = new Swiper('#expo.swiper-container,#connect.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 1,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                996: {
+                    slidesPerView: 3,
+                }
+            },
+        });
+
+        var swiper = new Swiper('#team.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 2,
+            slidesPerColumn: 2,
+            // loop: true,
+            breakpoints: {
+                // 386: {
+                //     slidesPerView: 1,
+                // },
+                552: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                996: {
+                    slidesPerView: 5,
+                }
+            },
+        });
+    })
+    $(document).scroll(function() {
+        if (scrollY > 0) {
+            $('.navbar').addClass('top');
+        } else {
+            $('.navbar').removeClass('top');
+        }
+    })
+    $('.navbar-collapse').on('show.bs.collapse', function() {
+        console.log('up');
+        $('.navbar').addClass('shown')
+    })
+    $('.navbar-collapse').on('hide.bs.collapse', function() {
+        $('.navbar').removeClass('shown')
+        console.log('down');
+    })
+</script>
 
 
 </html>

@@ -19,6 +19,14 @@ body {
         "Segoe UI Symbol",
         "Noto Color Emoji";
     font-size: 1rem;
+
+    &.nav-nofixed {
+        padding-top: 70px;
+    }
+}
+
+.dummy {
+    min-height: 60vh;
 }
 
 .navbar {
@@ -30,8 +38,24 @@ body {
     box-shadow: 0 0 0;
     padding: 2rem 1rem;
 
+    &.shown {
+        .navbar-collapse {
 
-    &.top {
+            background-color: #fff;
+            margin: .5rem 0rem;
+            padding: .5rem 1rem;
+            border-radius: 10px;
+        }
+
+        .nav-link {
+            color: #1e1e1e;
+        }
+    }
+
+
+    &.top,
+    .nav-nofixed & {
+        top: 0;
         background-color: #fff;
         padding: .5rem 1rem;
         box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
@@ -47,8 +71,17 @@ body {
 
         .logo {
             height: 50px;
-            margin-right: 0rem;
+            margin-right: 1rem;
         }
+
+        .navbar-toggler {
+            color: #1e1e1e
+        }
+
+    }
+
+    .navbar-toggler {
+        color: #fff
     }
 
     .logo {
@@ -64,6 +97,9 @@ body {
         font-weight: 400;
         letter-spacing: 3px;
         text-transform: uppercase;
+
+        display: flex;
+        align-items: center;
     }
 
     .nav-link {
@@ -356,7 +392,7 @@ section {
         border-bottom: 5px solid #1bb1dc;
 
         .image {
-background-color: #f2f2f2;
+            background-color: #f2f2f2;
 
             border-radius: 1rem;
             overflow: hidden;

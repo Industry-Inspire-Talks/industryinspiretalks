@@ -39,14 +39,14 @@ CREATE TABLE `staff` (
   `address` text NOT NULL,
   `profile_image_ext` varchar(5) NOT NULL,
   `date_of_joining` varchar(20) NOT NULL,
-  `date_of_living` varchar(20) NOT NULL
+  `date_of_leaving` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `staff`
 --
 
-INSERT INTO `staff` (`id`, `name`, `designation`, `contact`, `email`, `dob`, `social_links`, `nationality`, `address`, `profile_image_ext`, `date_of_joining`, `date_of_living`) VALUES
+INSERT INTO `staff` (`id`, `name`, `designation`, `contact`, `email`, `dob`, `social_links`, `nationality`, `address`, `profile_image_ext`, `date_of_joining`, `date_of_leaving`) VALUES
 (1, 'Omkar Shinde', 'Founder & CEO', '', '', '', '', '', '', '', '', ''),
 (2, 'Satya Prakash Mohapatra', 'Chief Marketing Officer', '', '', '', '', '', '', '', '', ''),
 (3, 'Vishal Nair', 'Chief People Officer', '', '', '', '', '', '', '', '', ''),
