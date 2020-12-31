@@ -104,15 +104,18 @@
 
 		<div class="d-flex flex-wrap justify-content-center align-items-center text-center">
 			<?php
-			$conn->query("");
-			for ($i = 0; $i < 20; $i++) { ?>
-				<div class="card m-2" style="width:200px">
-					<div class="card-body mb-3">
-						<h5 class="card-title">Member Name</h5>
-						<p class="card-text">designation</p>
-					</div>
-				</div>
-			<?php } ?>
+			$idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+
+			foreach ($idArray as $id) {
+				$result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
+				echo '<div class="card m-2" style="width:200px">' .
+					'	<div class="card-body mb-3">' .
+					'		<h5 class="card-title">' . $result['name'] . '</h5>' .
+					'		<p class="card-text">' . $result['designation'] . '</p>' .
+					'	</div>' .
+					'</div>';
+			}
+			?>
 		</div>
 	</section>
 

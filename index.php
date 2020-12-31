@@ -1,3 +1,5 @@
+<?php include('connect.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,30 +52,6 @@
         </div>
     </section>
     <!-- About Section End -->
-
-    <section class="container team">
-        <p class="title text-center">Meet Our Team</p>
-
-        <div id="team" class="swiper-container">
-            <div class="swiper-wrapper">
-                <?php for ($i = 0; $i < 8; $i++) { ?>
-                    <div class="swiper-slide">
-                        <div class="member">
-                            <div class="image">
-                                <img src="" alt="">
-                            </div>
-                            <p class="name">Lorem Ipsum</p>
-                            <p class="position">Lorem Ipsum</p>
-                        </div>
-                    </div>
-                <?php } ?>
-
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div>
-
-    </section>
 
     <section class="container board">
         <p class="title text-center">Meet Our Board of Directors</p>
@@ -158,6 +136,34 @@
 
     </section>
 
+    <section class="container team">
+        <p class="title text-center">Meet Our Team</p>
+
+        <div id="team" class="swiper-container">
+            <div class="swiper-wrapper">
+                <?php
+                $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+
+                foreach ($idArray as $id) {
+                    $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
+                    echo '<div class="swiper-slide">' .
+                        '    <div class="member">' .
+                        '        <div class="image">' .
+                        '            <img src="" alt="">' .
+                        '        </div>' .
+                        '        <p class="name">' . $result['name'] . '</p>' .
+                        '        <p class="position">' . $result['designation'] . '</p>' .
+                        '    </div>' .
+                        '</div>';
+                }
+                ?>
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+    </section>
     <!-- Our Events -->
     <section class="explore container ">
         <div class="direct" id="explore" style="top:-150px"></div>
@@ -229,23 +235,31 @@
         </div>
         <div class="container">
             <div class="row">
-                <?php for ($i = 0; $i < 6; $i++) { ?>
-                    <div class="col-md-6 col-lg-6 col-xl-4">
-                        <div class="member d-flex card flex-row">
-                            <div class="image mr-3"></div>
-                            <div class="d-flex justify-content-between flex-column">
-                                <div>
-                                    <p class="name">Ritwik Deshpande</p>
-                                    <p class="company mb-2">JP Morgan</p>
-                                    <p class="position">Software Development Engineer</p>
-                                </div>
-                                <div class="social">
-                                    <a href="https://www.linkedin.com/in/ritwik-deshpande-ba4b51170/"><i class="fab fa-linkedin"></i> LinkedIn </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
+                <?php
+                // $idArray = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22);
+                $idArray = array(1,2,3,4,5,6);
+
+                foreach ($idArray as $id) {
+                    $result = $conn->query("SELECT * FROM community WHERE id='$id'")->fetch_assoc();
+
+                    echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
+                        '    <div class="member d-flex card flex-row">' .
+                        '        <div class="image mr-3"></div>' .
+                        '        <div class="d-flex justify-content-between flex-column">' .
+                        '            <div>' .
+                        '                <p class="name">' . $result['name'] . '</p>' .
+                        '                <p class="company mb-2">' . $result['company'] . '</p>' .
+                        '                <p class="position">' . $result['role'] . '</p>' .
+                        '            </div>' .
+                        '            <div class="social">' .
+                        '                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
+                        '            </div>' .
+                        '        </div>' .
+                        '    </div>' .
+                        '</div>';
+                }
+                ?>
+
 
             </div>
             <p class="text-center">
