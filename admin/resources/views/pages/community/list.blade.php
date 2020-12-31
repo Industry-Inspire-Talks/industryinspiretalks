@@ -9,7 +9,7 @@
     <div class="card-body">
 
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="table table-bordered datatable">
                 <thead class="thead">
                     <tr>
                         <th scope="col">Id</th>
