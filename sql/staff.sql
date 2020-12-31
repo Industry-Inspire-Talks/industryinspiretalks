@@ -39,7 +39,7 @@ CREATE TABLE `staff` (
   `address` text NOT NULL,
   `profile_image_ext` varchar(5) NOT NULL,
   `date_of_joining` varchar(20) NOT NULL,
-  `date_of_living` varchar(20) NOT NULL
+  `date_of_leaving` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
