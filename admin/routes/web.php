@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 use App\Http\Controllers\User_authentication;
 use App\Http\Controllers\DatabaseController;
-use App\Http\Controllers\PageControl;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/community/list', [DatabaseController::class, 'community_details']);
     Route::get('/staff/list', [DatabaseController::class, 'staff_details']);
 
-    Route::get('/staff/add', [PageControl::class, 'add_staff']);
+    Route::get('/staff/add', function () {
+        return view('pages.staff.add');
+    });
+
+    Route::get('/staff/edit/{id}', function ($id) {
+        // $staff = DB::table('staff')->where('id', $id)->distinct()->get();
+        $staff = DB::table('staff')->where('id', $id)->distinct()->first();
+
+        return view('pages.staff.edit', compact('staff'));
+    });
 });

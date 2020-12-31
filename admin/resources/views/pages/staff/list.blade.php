@@ -32,7 +32,7 @@
                         <td>{{$staff->nationality}}</td>
 
                         <td class="text-nowrap">
-                            <a class="btn btn-sm btn-warning " href="#"><i class="fa fa-edit"></i> Edit</a>
+                            <a class="btn btn-sm btn-warning " href="/staff/edit/{{$staff->id}}"><i class="fa fa-edit"></i> Edit</a>
                             <a class="btn btn-sm btn-primary" href="#"><i class="fa fa-eye"></i> View</a>
                         </td>
                     </tr>

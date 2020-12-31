@@ -9,25 +9,18 @@ use Illuminate\Support\Facades\DB;
 
 class DatabaseController extends Controller
 {
-    public function community_details(){
+    public function community_details()
+    {
         $community = DB::table('community')->distinct()->get();
 
-        return view('pages.community.list',compact('community'));
-        
+        return view('pages.community.list', compact('community'));
     }
 
 
-    public function staff_details(){
+    public function staff_details()
+    {
         $staff = DB::table('staff')->distinct()->get();
 
-        return view('pages.staff.list',compact('staff'));
-        
-    }
-
-    public function add_staff(){
-        // $staff = DB::table('staff')->distinct()->get();
-
-        return view('pages.staff.add');
-        
+        return view('pages.staff.list', compact('staff'));
     }
 }
