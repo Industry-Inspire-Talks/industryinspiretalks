@@ -19,23 +19,28 @@ body {
   padding: 2rem 1rem;
 }
 
-.navbar.top {
+.navbar.top,
+.nav-nofixed .navbar {
+  top: 0;
   background-color: #fff;
   padding: .5rem 1rem;
   -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
           box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
 }
 
-.navbar.top .nav-link {
+.navbar.top .nav-link,
+.nav-nofixed .navbar .nav-link {
   color: #000;
 }
 
-.navbar.top .navbar-brand {
+.navbar.top .navbar-brand,
+.nav-nofixed .navbar .navbar-brand {
   font-weight: 600;
   color: #1bb1dc;
 }
 
-.navbar.top .logo {
+.navbar.top .logo,
+.nav-nofixed .navbar .logo {
   height: 50px;
   margin-right: 0rem;
 }

@@ -31,7 +31,9 @@ body {
     padding: 2rem 1rem;
 
 
-    &.top {
+    &.top,
+    .nav-nofixed & {
+        top: 0;
         background-color: #fff;
         padding: .5rem 1rem;
         box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
@@ -356,7 +358,7 @@ section {
         border-bottom: 5px solid #1bb1dc;
 
         .image {
-background-color: #f2f2f2;
+            background-color: #f2f2f2;
 
             border-radius: 1rem;
             overflow: hidden;
