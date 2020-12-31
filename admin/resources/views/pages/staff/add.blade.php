@@ -1,32 +1,52 @@
+@extends('template')
+
+@section('staff_details')
+
 <form action="" method="post">
     <div class="card">
         <div class="card-header">
-            <p class="h3">Add New Member</p>
+            <p class="h5 m-0"><a href="/staff/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Staff</p>
         </div>
         <div class="card-body">
-            <div class="form-group">
-                <label for="">Name</label>
-                <input type="text" name="name" class="form-control" required>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" name="name" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Designation</label>
+                        <input type="text" name="designation" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Contact</label>
+                        <input type="text" name="contact" class="form-control">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="">Designation</label>
-                <input type="text" name="designation" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="">Contact</label>
-                <input type="text" name="contact" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Email</label>
-                <input type="text" name="email" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Date of Birth</label>
-                <input type="text" name="dob" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Nationality</label>
-                <input type="text" name="nationality" class="form-control">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Date of Birth</label>
+                        <input type="date" name="dob" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Nationality</label>
+                        <input type="text" name="nationality" class="form-control">
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="">Address</label>
@@ -46,3 +66,6 @@
         </div>
     </div>
 </form>
+
+
+@stop

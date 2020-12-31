@@ -8,29 +8,45 @@
                 <label for="">Id</label>
                 <input type="text" name="id" class="form-control" readonly>
             </div>
-            <div class="form-group">
-                <label for="">Name</label>
-                <input type="text" name="name" class="form-control" required>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" name="name" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Designation</label>
+                        <input type="text" name="designation" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Contact</label>
+                        <input type="text" name="contact" class="form-control">
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="">Designation</label>
-                <input type="text" name="designation" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="">Contact</label>
-                <input type="text" name="contact" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Email</label>
-                <input type="text" name="email" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Date of Birth</label>
-                <input type="text" name="dob" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Nationality</label>
-                <input type="text" name="nationality" class="form-control">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Date of Birth</label>
+                        <input type="date" name="dob" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Nationality</label>
+                        <input type="text" name="nationality" class="form-control">
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="">Address</label>

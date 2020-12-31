@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\User_authentication;
 use App\Http\Controllers\DatabaseController;
+use App\Http\Controllers\PageControl;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,21 +17,19 @@ use App\Http\Controllers\DatabaseController;
 |
 */
 
-Route::get('/login',[User_authentication::class , 'getLogin'])->name('login');
-Route::post('/login',[User_authentication::class , 'login']);
-Route::get('/logout', [User_authentication::class,'logout']);
+Route::get('/login', [User_authentication::class, 'getLogin'])->name('login');
+Route::post('/login', [User_authentication::class, 'login']);
+Route::get('/logout', [User_authentication::class, 'logout']);
 
 
 
-Route::middleware(['auth'])->group( function()  
-{  
-  
-    Route::view('/','admindashboard');
-   
+Route::middleware(['auth'])->group(function () {
 
-    Route::get('/community/list',[DatabaseController::class , 'community_details']);
-    Route::get('/staff/list',[DatabaseController::class , 'staff_details']);
+    Route::view('/', 'admindashboard');
 
 
-  
-});  
+    Route::get('/community/list', [DatabaseController::class, 'community_details']);
+    Route::get('/staff/list', [DatabaseController::class, 'staff_details']);
+
+    Route::get('/staff/add', [PageControl::class, 'add_staff']);
+});

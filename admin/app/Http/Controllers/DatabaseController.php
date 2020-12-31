@@ -23,4 +23,11 @@ class DatabaseController extends Controller
         return view('pages.staff.list',compact('staff'));
         
     }
+
+    public function add_staff(){
+        // $staff = DB::table('staff')->distinct()->get();
+
+        return view('pages.staff.add');
+        
+    }
 }
