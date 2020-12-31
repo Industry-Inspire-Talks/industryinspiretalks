@@ -19,6 +19,14 @@ body {
         "Segoe UI Symbol",
         "Noto Color Emoji";
     font-size: 1rem;
+
+    &.nav-nofixed {
+        padding-top: 70px;
+    }
+}
+
+.dummy {
+    min-height: 60vh;
 }
 
 .navbar {

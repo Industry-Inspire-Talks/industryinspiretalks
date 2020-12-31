@@ -11,7 +11,7 @@
 	<?php require_once('components/navbar.php') ?>
 
 
-	<section class="container mt-5 pt-5">
+	<section class="container pt-5">
 		<p class="section-header">About Us</p>
 		<p class="font-weight-bold text-center">Industry Inspire Talks is a non-profit community started by Omkar Shinde in August 2020.</p>
 		<p class="text-justify">We believe in educating the Students/Working Professionals/Entrepreneurs by providing them guidance from the Industry Experts & helping them to make an impact in their lives by transforming themselves into an Industry-Leader.</p>

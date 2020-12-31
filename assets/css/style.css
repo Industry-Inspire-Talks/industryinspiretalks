@@ -7,6 +7,14 @@ body {
   font-size: 1rem;
 }
 
+body.nav-nofixed {
+  padding-top: 70px;
+}
+
+.dummy {
+  min-height: 60vh;
+}
+
 .navbar {
   position: fixed;
   z-index: 9999;
