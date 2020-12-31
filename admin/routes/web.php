@@ -32,14 +32,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/community/list', [DatabaseController::class, 'community_details']);
     Route::get('/staff/list', [DatabaseController::class, 'staff_details']);
 
-    Route::get('/staff/add', function () {
-        return view('pages.staff.add');
-    });
+    Route::get('/staff/add', [DatabaseController::class, 'staff_add_page']);
+    Route::post('/staff/add', [DatabaseController::class, 'add_staff']);
+    
 
-    Route::get('/staff/edit/{id}', function ($id) {
-        // $staff = DB::table('staff')->where('id', $id)->distinct()->get();
-        $staff = DB::table('staff')->where('id', $id)->distinct()->first();
-
-        return view('pages.staff.edit', compact('staff'));
-    });
+    Route::get('/staff/edit/{id}',[DatabaseController::class, 'staff_edit_page']);
+    Route::post('/staff/edit/{id}',[DatabaseController::class, 'edit_staff']);
+    
+    
 });
