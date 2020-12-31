@@ -320,7 +320,67 @@
     <?php require_once('components/foot.php') ?>
 </body>
 
+<style>
+    .swiper-container-multirow-column>.swiper-wrapper {
+        flex-direction: row;
+    }
+</style>
+
+
 <script>
+    $(document).ready(function() {
+        if (scrollY > 0) {
+            $('.navbar').addClass('top');
+        } else {
+            $('.navbar').removeClass('top');
+        }
+        var swiper = new Swiper('#expo.swiper-container,#connect.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 1,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                996: {
+                    slidesPerView: 3,
+                }
+            },
+        });
+
+        var swiper = new Swiper('#team.swiper-container', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            slidesPerView: 2,
+            slidesPerColumn: 2,
+            // loop: true,
+            breakpoints: {
+                // 386: {
+                //     slidesPerView: 1,
+                // },
+                552: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 4,
+                },
+                996: {
+                    slidesPerView: 5,
+                }
+            },
+        });
+    })
+    $(document).scroll(function() {
+        if (scrollY > 0) {
+            $('.navbar').addClass('top');
+        } else {
+            $('.navbar').removeClass('top');
+        }
+    })
     $('.navbar-collapse').on('show.bs.collapse', function() {
         console.log('up');
         $('.navbar').addClass('shown')
