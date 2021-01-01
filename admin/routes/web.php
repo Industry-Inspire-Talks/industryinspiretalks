@@ -34,10 +34,13 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/staff/add', [DatabaseController::class, 'staff_add_page']);
     Route::post('/staff/add', [DatabaseController::class, 'add_staff']);
-    
-
     Route::get('/staff/edit/{id}',[DatabaseController::class, 'staff_edit_page']);
     Route::post('/staff/edit/{id}',[DatabaseController::class, 'edit_staff']);
+
+    Route::get('/community/add', [DatabaseController::class, 'community_add_page']);
+    Route::post('/community/add', [DatabaseController::class, 'add_community']);
+    Route::get('/community/edit/{id}',[DatabaseController::class, 'community_edit_page']);
+    Route::post('/community/edit/{id}',[DatabaseController::class, 'edit_community']);
     
     
 });

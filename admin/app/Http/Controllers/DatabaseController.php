@@ -19,6 +19,61 @@ class DatabaseController extends Controller
         return view('pages.community.list', compact('community'));
     }
 
+
+    // Get Add New Community Page 
+    public function community_add_page()
+    {
+        return view('pages.community.add');
+    }  
+
+     // Add New Community
+
+     public function add_community(Request $request)
+     {   
+     
+ 
+         if(DB::table('community')->insert($request->only(['name', 'company', 'role', 'industry'])))
+         
+         {
+             return redirect()->back()->with('alert','Sucessfully Registered');
+         }
+         
+         else
+         {
+             return redirect()->back()->with('alert','Error !!! Try Again Later');
+         }    
+         
+         
+     }
+
+
+         // Get Community Edit Page
+
+    public function community_edit_page($id)
+    {
+        $community = DB::table('community')->where('id', $id)->distinct()->first();
+
+        return view('pages.community.edit', compact('community'));
+    } 
+
+
+     // Edit community details
+
+     public function edit_community(Request $request,$id)
+     {
+          DB::table('community')
+         ->where('id', $id)
+         ->update($request->only(['name', 'company', 'role', 'industry']));
+ 
+         $community = DB::table('community')->where('id', $id)->distinct()->first();
+ 
+         return view('pages.community.edit', compact('community'));
+     }
+     
+
+
+
+
     // Get staff details list
 
     public function staff_details()
@@ -42,12 +97,8 @@ class DatabaseController extends Controller
     public function add_staff(Request $request)
     {   
     
-        $values = array('name'=> $request->input('name'), 'designation'=>$request->input('designation'), 'contact'=>$request->input('contact'),
-                        'email'=>$request->input('email'), 'dob'=>$request->input('dob'), 'social_links'=>'', 'nationality'=>$request->input('nationality'), 'address'=>$request->input('address'),
-                        'profile_image_ext'=>'','date_of_joining'=>$request->input('date_of_joining') , 'date_of_leaving'=>$request->input('date_of_leaving')
-        );
 
-        if(DB::table('staff')->insert($values))
+        if(DB::table('staff')->insert($request->only(['name', 'designation', 'contact', 'email','dob','social_links','nationality','address','profile_image_ext','date_of_joining','date_of_leaving'])))
         
         {
             return redirect()->back()->with('alert','Sucessfully Registered');

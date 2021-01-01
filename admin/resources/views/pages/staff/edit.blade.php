@@ -55,11 +55,11 @@
             </div>
             <div class="form-group">
                 <label for="">Date of Joining</label>
-                <input type="text" value="{{$staff->date_of_joining}}" name="date_of_joining" class="form-control">
+                <input type="date" value="{{$staff->date_of_joining}}" name="date_of_joining" class="form-control">
             </div>
             <div class="form-group">
                 <label for="">Date of Leaving</label>
-                <input type="text" value="{{$staff->date_of_leaving}}" name="date_of_leaving" class="form-control">
+                <input type="date" value="{{$staff->date_of_leaving}}" name="date_of_leaving" class="form-control">
             </div>
         </div>
         <div class="card-footer">

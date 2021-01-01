@@ -4,7 +4,7 @@
 <div class="card">
     <div class="card-header d-flex align-item-center justify-content-between">
         <p class="h3 m-0">Community Member</p>
-        <button class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Member</button>
+        <a href="/community/add" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Community Member</a>
     </div>
     <div class="card-body">
 
@@ -29,7 +29,7 @@
                         <td>{{$community->role}}</td>
                         <td>{{$community->industry}}</td>
                         <td class="text-nowrap">
-                            <a class="btn btn-warning btn-sm" href="#" role="button">Edit</a>
+                            <a class="btn btn-warning btn-sm" href="/community/edit/{{$community->id}}" role="button">Edit</a>
                             <a class="btn btn-primary btn-sm" href="#" role="button">View</a>
                         </td>
                     </tr>
