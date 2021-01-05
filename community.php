@@ -13,6 +13,35 @@
     <section class="container dummy community">
         <div class="title">Meet our Inspire Community members</div>
         <hr class="mb-4">
+        <div class="row">
+            <?php
+            $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9);
+            
+
+            foreach ($idArray as $id) {
+                $result = $conn->query("SELECT * FROM community WHERE id='$id'")->fetch_assoc();
+
+                echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
+                    '    <div class="member card">' .
+                    '        <div class="image mr-3"></div>' .
+                    '        <div class=" justify-content-between flex-column">' .
+                    '            <div>' .
+                    '                <p class="name">Name</p>' .
+                    '                <p class="company mb-2">Design</p>' .
+                    '                <p class="position">Company</p>' .
+                    '            </div>' .
+                    '            <div class="social">' .
+                    '                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
+                    '            </div>' .
+                    '        </div>' .
+                    '    </div>' .
+                    '</div>';
+            }
+            ?>
+
+
+        </div>
+        <hr class="mb-4">
        
         <div class="row">
             <?php
