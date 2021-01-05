@@ -11,10 +11,9 @@
     <?php require_once('components/navbar.php') ?>
 
     <section class="container dummy community">
-        <div class="title">Community</div>
+        <div class="title">Meet our Inspire Community members</div>
         <hr class="mb-4">
-
-
+       
         <div class="row">
             <?php
             $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22);
