@@ -10,10 +10,13 @@
 <body class="nav-nofixed">
     <?php require_once('components/navbar.php') ?>
 
-    <section class="container dummy">
-        <div class="title">Inspire Stories</div>
-        <hr class="mb-4">
-
+    <section class="stories">
+       <div class="container text-center">
+       	<div class="row">
+       		<div class="col-md-8"></div>
+       		<div class="col-md-8"></div>
+       	</div>
+       </div>
     </section>
     <!-- Footer Section  -->
     <?php require_once('components/footer.php') ?>
