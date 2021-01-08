@@ -10,7 +10,6 @@
 <body class="nav-nofixed">
     <?php require_once('components/navbar.php') ?>
 
-
     <section class="container dummy">
         <div class="title">Inspire Stories</div>
         <hr class="mb-4">
@@ -115,7 +114,6 @@ body {
 </div>
 
 </body>
-
 
 
     </section>
