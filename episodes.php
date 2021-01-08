@@ -31,88 +31,35 @@
 			</div>
 		</div>
 	</section>
-	<section class="container pt-5">
-		<div class="row">
-			<div class="col-md-4 col-lg-3">
-				<!-- Nav pills -->
-				<ul class="nav nav-pills flex-column">
-					<li class="nav-item">
-						<a class="nav-link active" data-toggle="pill" href="#interview_series">Interview Series</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="pill" href="#podcast_series">Podcast Series</a>
-					</li>
-				</ul>
-			</div>
-			<div class="col-md-8 col-lg-9">
-				<!-- Tab panes -->
-				<div class="tab-content">
-					<div class="tab-pane  active" id="interview_series">
-						<!-- interview series -->
-						<p class="h1 text-center font-weight-normal mb-5">Interview Series</p>
-						<div class="row">
-							<?php for ($i = 0; $i < 8; $i++) { ?>
-								<div class="col-md-6 col-lg-4  mb-3">
-									<div class="card">
-										<img class="card-img-top" src="..." alt="Card image cap">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Click</a>
-										</div>
-									</div>
-								</div>
-							<?php } ?>
+
+	<section class="container pt-5 my-5">
+		<div class="row align-items-center justify-content-center">
+			<div class="col-md-4">
+				<a class="btn w-100" href="series.php">
+					<div class="card text-center">
+					<div class="card-img-top" style="height:240px;background:#f1f1f1">
+					</div>
+						<div class="card-body">
+							<p class=" h1 font-weight-normal">Interview</p>
+							<p class="m-0 h2 font-weight-light">Series</p>
 						</div>
-						<!-- interview series End -->
 					</div>
-					<div class="tab-pane fade" id="podcast_series">
-						<!-- Podcast Series -->
-						<section class="podcast-series ">
-							<h3 class="text-center font-weight-bold mb-5">Podcast Series</h3>
-							<div class="row">
-								<div class="col-md-4">
-									<div class="card">
-										<img class="card-img-top" src="..." alt="Card image cap">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Click</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="card">
-										<img class="card-img-top" src="..." alt="Card image cap">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Click</a>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="card">
-										<img class="card-img-top" src="..." alt="Card image cap">
-										<div class="card-body">
-											<h5 class="card-title">Card title</h5>
-											<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											<a href="#" class="btn btn-primary">Click</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</section>
-						<!-- Podcast Series End -->
+				</a>
+			</div>
+			<div class="col-md-4">
+				<a class="btn w-100" href="series.php">
+					<div class="card text-center">
+					<div class="card-img-top" style="height:240px;background:#f1f1f1">
 					</div>
-				</div>
+						<div class="card-body">
+							<p class=" h1 font-weight-normal">Podcast Series</p>
+							<p class="m-0 h2 font-weight-light">Series</p>
+						</div>
+					</div>
+				</a>
 			</div>
 		</div>
-
-
-
 	</section>
-
 
 	<!-- Footer Section  -->
 	<?php require_once('components/footer.php') ?>
