@@ -53,7 +53,7 @@
 						<div class="card-img-top" style="height:240px;background:#f1f1f1">
 						</div>
 						<div class="card-body">
-							<p class=" h1 font-weight-normal">Podcast Series</p>
+							<p class=" h1 font-weight-normal">Podcast</p>
 							<p class="m-0 h2 font-weight-light">Series</p>
 						</div>
 					</div>
