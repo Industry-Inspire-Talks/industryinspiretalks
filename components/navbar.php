@@ -15,13 +15,13 @@
                 <a class="nav-link" href="./about.php">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./community.php">Community</a>
+                <a class="nav-link" href="./community.php">Our Community</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="./events.php">Events</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./episodes.php">Episodes</a>
+                <a class="nav-link" href="./series.php">Series</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
