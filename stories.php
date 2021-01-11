@@ -11,9 +11,7 @@
     <?php require_once('components/navbar.php') ?>
 
     <section class="container dummy">
-        <div class="title">Inspire Stories</div>
-        <hr class="mb-4">
-
+        
         <div class="title">Get inspired by reading our inspire stories</div>
         <hr class="mb-4">
 
@@ -62,7 +60,7 @@
                     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                     padding: 16px;
                     text-align: center;
-                    background-color: #f1f1f1;
+                    background-color: #f1f1f1;margin-bottom:30px;
                 }
             </style>
         </head>
@@ -73,7 +71,7 @@
 
 
             <div class="row">
-                <div class="column">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
                     <div class="card">
                         <h3>Card 1</h3>
                         <p>Some text</p>
@@ -81,7 +79,7 @@
                     </div>
                 </div>
 
-                <div class="column">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
                     <div class="card">
                         <h3>Card 2</h3>
                         <p>Some text</p>
@@ -89,7 +87,7 @@
                     </div>
                 </div>
 
-                <div class="column">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
                     <div class="card">
                         <h3>Card 3</h3>
                         <p>Some text</p>
@@ -97,13 +95,55 @@
                     </div>
                 </div>
 
-                <div class="column">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
                     <div class="card">
                         <h3>Card 4</h3>
                         <p>Some text</p>
                         <p>Some text</p>
                     </div>
                 </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
+                    <div class="card">
+                        <h3>Card 4</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
+                    <div class="card">
+                        <h3>Card 4</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
+                    <div class="card">
+                        <h3>Card 4</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
+                    <div class="card">
+                        <h3>Card 4</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
+                    <div class="card">
+                        <h3>Card 4</h3>
+                        <p>Some text</p>
+                        <p>Some text</p>
+                    </div>
+                </div>
+
+                
             </div>
 
             <div class="container">
