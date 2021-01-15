@@ -4,6 +4,8 @@
 
 <head>
     <?php require_once('components/head.php') ?>
+    <link rel="stylesheet" href="assets/css/stories.css?1530H">
+
 
 </head>
 
@@ -11,150 +13,54 @@
     <?php require_once('components/navbar.php') ?>
 
     <section class="container dummy">
-        
+
         <div class="title">Get inspired by reading our inspire stories</div>
         <hr class="mb-4">
 
-
-        <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <style>
-                * {
-                    box-sizing: border-box;
-                }
-
-                body {
-                    font-family: Arial, Helvetica, sans-serif;
-                }
-
-                /* Float four columns side by side */
-                .column {
-                    float: left;
-                    width: 25%;
-                    padding: 0 10px;
-                }
-
-                /* Remove extra left and right margins, due to padding */
-                .row {
-                    margin: 0 -5px;
-                }
-
-                /* Clear floats after the columns */
-                .row:after {
-                    content: "";
-                    display: table;
-                    clear: both;
-                }
-
-                /* Responsive columns */
-                @media screen and (max-width: 600px) {
-                    .column {
-                        width: 100%;
-                        display: block;
-                        margin-bottom: 20px;
-                    }
-                }
-
-                /* Style the counter cards */
-                .card {
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                    padding: 16px;
-                    text-align: center;
-                    background-color: #f1f1f1;margin-bottom:30px;
-                }
-            </style>
-        </head>
-
         <body>
+            <div class="row mb-3">
+                <?php for ($i = 0; $i < 9; $i++) { ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card mb-3 story-card">
+                            <div class="py-2 px-3 d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="rounded-circle mr-2" style="width:50px;height: 50px;background: #f1f1f1;"></div>
+                                    <div>
+                                        <p class="name">FirstName MiddleName LastName</p>
+                                        <p class="position"><i class="text-muted">Current Position</i> at <i class="text-muted">Company Name</i></p>
+                                        <p class="post-date">8 days Ago</p>
+                                    </div>
+                                </div>
+                            </div>
 
-
-
-
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
-                    <div class="card">
-                        <h3>Card 1</h3>
-                        <p>Some text</p>
-                        <p>Some text</p>
+                            <div class="img-square" style="background-image : url('uploads/inspire_stories/1.jpg')" style="background: #f1f1f1;"></div>
+                            <div class="py-2 px-3 border-bottom">
+                                <p class="link">
+                                    <a class="" href="#" target="_blank" rel="noopener noreferrer">Few Lines of the story to proceed forward to the linkedin </a>
+                                </p>
+                            </div>
+                            <div class="py-2 px-3 d-flex align-items-center justify-content-between">
+                                <p class="m-0"><i class="far fa-thumbs-up "></i></p>
+                                <p class="m-0"><i class="far fa-comment "></i></p>
+                                <p class="m-0"><i class="fa fa-share-alt"></i></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                <?php } ?>
 
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
-                    <div class="card">
-                        <h3>Card 2</h3>
-                        <p>Some text</p>
-                        <p>Some text</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
-                    <div class="card">
-                        <h3>Card 3</h3>
-                        <p>Some text</p>
-                        <p>Some text</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
-                    <div class="card">
-                        <h3>Card 4</h3>
-                        <p>Some text</p>
-                        <p>Some text</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
-                    <div class="card">
-                        <h3>Card 4</h3>
-                        <p>Some text</p>
-                        <p>Some text</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
-                    <div class="card">
-                        <h3>Card 4</h3>
-                        <p>Some text</p>
-                        <p>Some text</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
-                    <div class="card">
-                        <h3>Card 4</h3>
-                        <p>Some text</p>
-                        <p>Some text</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
-                    <div class="card">
-                        <h3>Card 4</h3>
-                        <p>Some text</p>
-                        <p>Some text</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xl-4">
-                    <div class="card">
-                        <h3>Card 4</h3>
-                        <p>Some text</p>
-                        <p>Some text</p>
-                    </div>
-                </div>
-
-                
             </div>
 
             <div class="container">
 
-            <ul class="pagination">
-                 
-                 <li class="page-item"><a class="page-link" href="#">1</a></li>
-                 <li class="page-item"><a class="page-link" href="#">2</a></li>
-                 <li class="page-item"><a class="page-link" href="#">3</a></li>
-                 <li class="page-item"><a class="page-link" href="#">4</a></li>
-            </ul>
+                <ul class="pagination justify-content-center">
+
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link " href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
             </div>
 
         </body>
