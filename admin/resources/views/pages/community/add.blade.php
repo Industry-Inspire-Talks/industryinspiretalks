@@ -3,7 +3,7 @@
 @section('community_details')
 
 
-<form method="POST" action="/community/add">
+<form method="POST" action="/community/add" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
@@ -36,7 +36,13 @@
                         <label for="">Industry</label>
                         <input type="text" name="industry" class="form-control">
                     </div>
+
+                    <div>
+                        <label for="formFile" class="form-label">Upload Image</label>
+                        <input class="form-control form-control mb-4" name="image" id="formFile" type="file">
+                    </div>
                 </div>
+
             </div>
             
         <div class="card-footer">
