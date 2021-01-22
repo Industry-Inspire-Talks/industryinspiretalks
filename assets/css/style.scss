@@ -35,6 +35,66 @@ body {
         background-size: contain;
         background-repeat: no-repeat;
     }
+
+    &.loading {
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+
+    z-index: 999999;
+
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+        font-size: 15px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .loader {
+        margin: auto;
+        border: 4px solid #f3f3f3;
+        /* Light grey */
+        border-top: 4px solid #242424;
+        /* Blue */
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .shape {
+        background-color: #e8e8e8;
+        height: 150px;
+        width: 120%;
+        position: absolute;
+        bottom: -80px;
+        border-radius: 50%;
+    }
 }
 
 .dummy {
