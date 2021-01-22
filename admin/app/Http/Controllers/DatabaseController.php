@@ -96,9 +96,33 @@ class DatabaseController extends Controller
 
     public function add_staff(Request $request)
     {   
-    
+        
+        $name = $request->input('name');
+        $designation = $request->input('designation');
+        $contact = $request->input('contact');
+        $email = $request->input('email');
+        $dob = $request->input('dob');
+        $social_links = $request->input('social_links');
+        $nationality = $request->input('nationality');
+        $address = $request->input('address');
+        // $image = $request->profile_image_ext;
+        $date_of_joining = $request->input('date_of_joining');
+        $date_of_leaving = $request->input('date_of_leaving');
 
-        if(DB::table('staff')->insert($request->only(['name', 'designation', 'contact', 'email','dob','social_links','nationality','address','profile_image_ext','date_of_joining','date_of_leaving'])))
+
+        $request->validate([
+            'profile_image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        $imageExtension = '.'.$request->profile_image_ext->extension(); 
+        $imageName = $name;
+        $request->profile_image_ext->move(public_path('staff'), $imageName.$imageExtension);
+
+        // DB::table('staff')->insert($request->only(['name', 'designation', 'contact', 'email','dob','social_links','nationality','address','date_of_joining','date_of_leaving']),$request->input('profile_image_ext'))
+
+        // DB::insert('insert into staff(name,designation,contact,email,dob,social_links,nationality,address,profile_image_ext,date_of_joining,date_of_leaving) values(?,?,?,?,?,?,?,?,?,?,?)' , [$name,$designation,$contact,$email,$dob,$social_links,$nationality,$address,$image,$date_of_joining,$date_of_leaving]);
+
+        if(DB::insert('insert into staff(name,designation,contact,email,dob,social_links,nationality,address,profile_image_ext,date_of_joining,date_of_leaving) values(?,?,?,?,?,?,?,?,?,?,?)' , [$name,$designation,$contact,$email,$dob,$social_links,$nationality,$address,$image,$date_of_joining,$date_of_leaving]))
         
         {
             return redirect()->back()->with('alert','Sucessfully Registered');
