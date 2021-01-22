@@ -9,17 +9,20 @@
 
 <body class="nav-nofixed">
     <?php require_once('components/preloader.php') ?>
-    <?php require_once('components/navbar.php') ?>
+    <main>
 
-    <section class="container dummy">
-        <div class="title">Campus Ambassador Program</div>
-        <hr class="mb-4">
+        <?php require_once('components/navbar.php') ?>
 
-    </section>
-    <!-- Footer Section  -->
-    <?php require_once('components/footer.php') ?>
+        <section class="container dummy">
+            <div class="title">Campus Ambassador Program</div>
+            <hr class="mb-4">
 
-    <?php require_once('components/foot.php') ?>
+        </section>
+        <!-- Footer Section  -->
+        <?php require_once('components/footer.php') ?>
+
+        <?php require_once('components/foot.php') ?>
+    </main>
 </body>
 
 

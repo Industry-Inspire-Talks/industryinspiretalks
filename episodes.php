@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-	<?php require_once('components/preloader.php') ?>
 	<?php require_once('components/head.php') ?>
 	<style>
 		.banner {
@@ -17,55 +16,60 @@
 </head>
 
 <body class="nav-nofixed">
-	<?php require_once('components/navbar.php') ?>
-	<div class="banner">
-		<div class="container">
-			<div class="row d-flex align-items-center py-4">
+	<?php require_once('components/preloader.php') ?>
+	<main>
 
-				<div class="col-md-8 text-center py-4">
-					<p class="display-4">Our Episodes</p>
-					<p>Watch our episodes with people from the industry & gain valuable knowledge from their industry experiences covering various industry-oriented topics! Start binge watching now!</p>
-				</div>
-				<div class="col-md-4">
-					<img class="img-fluid" src="assets/img/events.png" alt="">
-				</div>
-			</div>
-		</div>
-		<img src="assets/img/wave.png" width="100%" height="50px">
-	</div>
+		<?php require_once('components/navbar.php') ?>
+		<div class="banner">
+			<div class="container">
+				<div class="row d-flex align-items-center py-4">
 
-	<section class="container pt-5 my-5">
-		<div class="row align-items-center justify-content-center">
-			<div class="col-md-6 col-lg-4">
-				<a class="btn w-100" href="series.php">
-					<div class="card text-center">
-						<div class="card-img-top" style="height:240px;background:#f1f1f1">
-						</div>
-						<div class="card-body">
-							<p class=" h1 font-weight-normal">Interview</p>
-							<p class="m-0 h2 font-weight-light">Series</p>
-						</div>
+					<div class="col-md-8 text-center py-4">
+						<p class="display-4">Our Episodes</p>
+						<p>Watch our episodes with people from the industry & gain valuable knowledge from their industry experiences covering various industry-oriented topics! Start binge watching now!</p>
 					</div>
-				</a>
-			</div>
-			<div class="col-md-6 col-lg-4">
-				<a class="btn w-100" href="series.php">
-					<div class="card text-center">
-						<div class="card-img-top" style="height:240px;background:#f1f1f1">
-						</div>
-						<div class="card-body">
-							<p class=" h1 font-weight-normal">Podcast</p>
-							<p class="m-0 h2 font-weight-light">Series</p>
-						</div>
+					<div class="col-md-4">
+						<img class="img-fluid" src="assets/img/events.png" alt="">
 					</div>
-				</a>
+				</div>
 			</div>
+			<img src="assets/img/wave.png" width="100%" height="50px">
 		</div>
-	</section>
 
-	<!-- Footer Section  -->
-	<?php require_once('components/footer.php') ?>
-	<?php require_once('components/foot.php') ?>
+		<section class="container pt-5 my-5">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<a class="btn w-100" href="series.php">
+						<div class="card text-center">
+							<div class="card-img-top" style="height:240px;background:#f1f1f1">
+							</div>
+							<div class="card-body">
+								<p class=" h1 font-weight-normal">Interview</p>
+								<p class="m-0 h2 font-weight-light">Series</p>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<a class="btn w-100" href="series.php">
+						<div class="card text-center">
+							<div class="card-img-top" style="height:240px;background:#f1f1f1">
+							</div>
+							<div class="card-body">
+								<p class=" h1 font-weight-normal">Podcast</p>
+								<p class="m-0 h2 font-weight-light">Series</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer Section  -->
+		<?php require_once('components/footer.php') ?>
+		<?php require_once('components/foot.php') ?>
+	</main>
+
 </body>
 
 </html>

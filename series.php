@@ -3,7 +3,6 @@
 <html lang="en">
 
 <head>
-    <?php require_once('components/preloader.php') ?>
     <?php require_once('components/head.php') ?>
     <style>
         .banner {
@@ -17,35 +16,40 @@
 </head>
 
 <body class="nav-nofixed" data-spy="scroll" data-target=".scroll-spy" data-offset="90">
-    <?php require_once('components/navbar.php') ?>
-    <div class="jumbotron banner">
-        <div class="container">
-            <p class="display-4"><a class="text-light font-weight-light" href="episodes.php"><i class="fa fa-arrow-left small"></i></a> Interview Series</p>
-            <p class="lead m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus blanditiis fugit nisi necessitatibus accusamus voluptate, perferendis harum magni aperiam facilis aut dolor perspiciatis, fuga praesentium dolorem omnis eius tenetur quisquam!</p>
-        </div>
-    </div>
+    <?php require_once('components/preloader.php') ?>
+    <main>
 
-    <section class="container">
-        <div class="form-group">
-            <input type="search" class="form-control" placeholder="Search for episodes">
-        </div>
-
-        <?php for ($i = 1; $i < 3; $i++) { ?>
-
-            <div id="episode<?php echo $i ?>">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <p class="h6 m-0 text-left">EP #<?php echo $i ?> - Interview Series with Ritwik</p>
-                    </div>
-                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/FkvVTTgj2y4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+        <?php require_once('components/navbar.php') ?>
+        <div class="jumbotron banner">
+            <div class="container">
+                <p class="display-4"><a class="text-light font-weight-light" href="episodes.php"><i class="fa fa-arrow-left small"></i></a> Interview Series</p>
+                <p class="lead m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus blanditiis fugit nisi necessitatibus accusamus voluptate, perferendis harum magni aperiam facilis aut dolor perspiciatis, fuga praesentium dolorem omnis eius tenetur quisquam!</p>
             </div>
-        <?php } ?>
-    </section>
+        </div>
 
-    <!-- Footer Section  -->
-    <?php require_once('components/footer.php') ?>
-    <?php require_once('components/foot.php') ?>
+        <section class="container">
+            <div class="form-group">
+                <input type="search" class="form-control" placeholder="Search for episodes">
+            </div>
+
+            <?php for ($i = 1; $i < 3; $i++) { ?>
+
+                <div id="episode<?php echo $i ?>">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <p class="h6 m-0 text-left">EP #<?php echo $i ?> - Interview Series with Ritwik</p>
+                        </div>
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/FkvVTTgj2y4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            <?php } ?>
+        </section>
+
+        <!-- Footer Section  -->
+        <?php require_once('components/footer.php') ?>
+        <?php require_once('components/foot.php') ?>
+    </main>
+
 </body>
 
 </html>
