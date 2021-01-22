@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+	<?php require_once('components/preloader.php') ?>
 	<?php require_once('components/head.php') ?>
 	<style>
 		.banner {
