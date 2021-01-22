@@ -1,0 +1,41 @@
+.story-card {
+  max-width: 350px;
+  margin: auto;
+}
+
+.story-card .name {
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.story-card .position {
+  font-size: .75rem;
+  margin-bottom: .2rem;
+}
+
+.story-card .post-date {
+  font-size: .6rem;
+}
+
+.story-card .link {
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.story-card .link a {
+  color: #1e1e1e;
+}
+
+.story-card p {
+  margin-bottom: 0;
+}
+
+.img-square {
+  padding-top: 100%;
+  background-position: center;
+  background-size: cover;
+}
+/*# sourceMappingURL=stories.css.map */

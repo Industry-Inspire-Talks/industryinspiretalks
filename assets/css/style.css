@@ -11,6 +11,18 @@ body.nav-nofixed {
   padding-top: 70px;
 }
 
+body .image-center-cover {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body .image-center-contain {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .dummy {
   min-height: 60vh;
 }

@@ -23,79 +23,33 @@
 	<section class="container board">
 		<h1 class="title text-center">Our Board Directories</h1>
 		<div class="row">
-			<div class="mb-3 col-lg-3 col-sm-6">
-				<div class="director">
-					<div class="">
-						<div class="image">
-							<img src="" alt="">
-						</div>
-						<p class="name">Omkar Shinde</p>
-						<p class="position">Founder &amp; CEO</p>
-					</div>
-					<div class="social">
-						<a href="https://www.linkedin.com/in/omkar-shinde-310aa5193/"><i class="fab fa-linkedin"></i></a>
-						<a href="javascript:0" disabled=""><i class="fab fa-facebook"></i></a>
-						<a href="javascript:0" disabled=""><i class="fab fa-twitter"></i></a>
-						<a href="javascript:0" disabled=""><i class="fab fa-instagram"></i></a>
-						<a href="javascript:0" disabled=""><i class="fab fa-google-plus"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="mb-3 col-lg-3 col-sm-6">
-				<div class="director">
-					<div class="">
-						<div class="image">
-							<img src="" alt="">
-						</div>
-						<p class="name">Satya Prakash Mohapatra</p>
-						<p class="position">Chief Marketing Officer</p>
-					</div>
-					<div class="social">
-						<a href="https://www.linkedin.com/in/satya-prakash-mohapatra-153926129/"><i class="fab fa-linkedin"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-facebook"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-twitter"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-instagram"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-google-plus"></i> </a>
-					</div>
-				</div>
-			</div>
-			<div class="mb-3 col-lg-3 col-sm-6">
-				<div class="director">
-					<div class="">
-						<div class="image">
-							<img src="" alt="">
-						</div>
-						<p class="name">Vishal Nair</p>
-						<p class="position">Chief People Officer</p>
-					</div>
-					<div class="social">
-						<a href="https://www.linkedin.com/in/vishalnairm/"><i class="fab fa-linkedin"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-facebook"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-twitter"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-instagram"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-google-plus"></i> </a>
-					</div>
-				</div>
-			</div>
-			<div class="mb-3 col-lg-3 col-sm-6">
-				<div class="director">
-					<div class="">
-						<div class="image">
-							<img src="" alt="">
-						</div>
-						<p class="name">Danish Shaikh</p>
-						<p class="position">Chief Technology Officer</p>
-					</div>
-					<div class="social">
-						<a href="https://www.linkedin.com/in/shaikhdanish04/"> <i class="fab fa-linkedin"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-facebook"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-twitter"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-instagram"></i> </a>
-						<a href="javascript:0" disabled=""><i class="fab fa-google-plus"></i> </a>
+			<?php
+			$idArray = array(1, 2, 3, 4);
 
-					</div>
-				</div>
-			</div>
+			foreach ($idArray as $id) {
+				$result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
+
+				echo '' .
+					'<div class="mb-3 col-lg-3 col-sm-6">' .
+					'    <div class="director">' .
+					'        <div class="">' .
+					'            <div class="image image-center-cover" style="background-image: url(\'./uploads/board/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
+					'            </div>' .
+					'            <p class="name">' . $result['name'] . '</p>' .
+					'            <p class="position">' . $result['designation'] . '</p>' .
+					'        </div>' .
+					'        <div class="social">' .
+					'            <a href="#"><i class="fab fa-linkedin"></i></a>' .
+					'            <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>' .
+					'            <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>' .
+					'            <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>' .
+					'            <a href="javascript:0" disabled><i class="fab fa-google-plus"></i></a>' .
+					'        </div>' .
+					'    </div>' .
+					'</div>';
+			}
+			?>
+
 		</div>
 	</section>
 

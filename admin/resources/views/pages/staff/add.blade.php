@@ -2,7 +2,9 @@
 
 @section('staff_details')
 
-<form action="" method="post">
+
+<form method="POST" action="/staff/add" enctype='multipart/form-data'>
+    @csrf
     <div class="card">
         <div class="card-header">
             <p class="h5 m-0"><a href="/staff/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Staff</p>
@@ -10,7 +12,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="form-group">
+                    <div class="form-group" >
                         <label for="">Name</label>
                         <input type="text" name="name" class="form-control" required>
                     </div>
@@ -54,15 +56,20 @@
             </div>
             <div class="form-group">
                 <label for="">Date of Joining</label>
-                <input type="text" name="date_of_joining" class="form-control">
+                <input type="date" name="date_of_joining" class="form-control">
             </div>
             <div class="form-group">
                 <label for="">Date of Leaving</label>
-                <input type="text" name="date_of_leaving" class="form-control">
+                <input type="date" name="date_of_leaving" class="form-control">
+            </div>
+
+            <div>
+                <label for="formFile" class="form-label">Upload Image</label>
+                <input class="form-control form-control mb-4" name="profile_image_ext" type="file">
             </div>
         </div>
         <div class="card-footer">
-            <button class="btn btn-success" type="submit"><i class="fa fa-plus"></i> Add</button>
+            <button class="btn btn-success" type="submit" name = "add" ><i class="fa fa-plus"></i> Add</button>
         </div>
     </div>
 </form>
