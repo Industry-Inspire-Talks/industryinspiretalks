@@ -43,6 +43,7 @@ body main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 #preloader .title {
@@ -93,8 +94,16 @@ body main {
   height: 150px;
   width: 120%;
   position: absolute;
-  bottom: -80px;
+  bottom: 0;
   border-radius: 50%;
+}
+
+#preloader .shape .rect {
+  background-color: #e8e8e8;
+  height: 150px;
+  width: 100%;
+  position: relative;
+  top: 75px;
 }
 
 .dummy {

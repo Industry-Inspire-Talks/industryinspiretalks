@@ -55,6 +55,8 @@ body {
     align-items: center;
     justify-content: center;
 
+    overflow: hidden;
+
     .title {
         font-size: 15px;
     }
@@ -90,8 +92,16 @@ body {
         height: 150px;
         width: 120%;
         position: absolute;
-        bottom: -80px;
+        bottom: 0;
         border-radius: 50%;
+
+        .rect {
+            background-color: #e8e8e8;
+            height: 150px;
+            width: 100%;
+            position: relative;
+            top: 75px;
+        }
     }
 }
 

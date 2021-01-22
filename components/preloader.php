@@ -10,7 +10,9 @@
         <div class="loader"></div>
 
     </div>
-    <div class="shape"></div>
+    <div class="shape">
+        <div class="rect"></div>
+    </div>
 </section>
 
 <script>
