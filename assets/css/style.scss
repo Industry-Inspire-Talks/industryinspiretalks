@@ -118,6 +118,11 @@ body {
     box-shadow: 0 0 0;
     padding: 2rem 1rem;
 
+
+    .holder {
+        font-size: 12px;
+    }
+
     &.shown {
         .navbar-collapse {
 
@@ -149,10 +154,10 @@ body {
             color: $primary;
         }
 
-        .logo {
-            height: 50px;
-            margin-right: 1rem;
-        }
+        // .logo {
+            // height: 50px;
+            // margin-right: 1rem;
+        // }
 
         .navbar-toggler {
             color: #1e1e1e
@@ -165,10 +170,10 @@ body {
     }
 
     .logo {
-        transition: .3s;
-        height: 60px;
+    //     transition: .3s;
+    //     height: 60px;
         border-radius: 10px;
-        margin-right: 1rem;
+        margin-right: .5rem;
     }
 
     .navbar-brand {
@@ -197,7 +202,7 @@ body {
 #hero {
     width: 100%;
     height: 100vh;
-    position: relative;
+    // position: relative;
     /* background: #f5f8fd url(img/public-speaking-3926344_1920.jpg) center top no-repeat; */
     /* background: #747a76 url(img/public-speaking-3926344_1920.jpg) center top no-repeat; */
     background: linear-gradient(#00000080, #00000080),
@@ -207,7 +212,7 @@ body {
     .info h2 {
         color: #fff;
         margin-bottom: 40px;
-        font-size: 48px;
+        // font-size: 48px;
         font-weight: 700;
 
         span {
