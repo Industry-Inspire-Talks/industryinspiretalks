@@ -1,6 +1,9 @@
 $primary : #1bb1dc;
 $primary-hover : #0296c0;
 
+// $primary : #3886d4;
+// $primary-hover : #044b95;
+
 html {
     scroll-behavior: smooth;
 }
@@ -123,10 +126,18 @@ body {
         font-size: 12px;
     }
 
+    @media (max-width:340px) {
+
+        .holder {
+            font-size: 10px;
+        }
+    }
+
     &.shown {
         .navbar-collapse {
 
-            background-color: #fff;
+            // background-color: #fff;
+            background: linear-gradient(45deg, #fff, #ebebeb);
             margin: .5rem 0rem;
             padding: .5rem 1rem;
             border-radius: 10px;
@@ -141,7 +152,8 @@ body {
     &.top,
     .nav-nofixed & {
         top: 0;
-        background-color: #fff;
+        // background-color: #fff;
+        background: linear-gradient(45deg, #fff, #ebebeb);
         padding: .5rem 1rem;
         box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
 
@@ -155,8 +167,8 @@ body {
         }
 
         // .logo {
-            // height: 50px;
-            // margin-right: 1rem;
+        // height: 50px;
+        // margin-right: 1rem;
         // }
 
         .navbar-toggler {
@@ -170,8 +182,8 @@ body {
     }
 
     .logo {
-    //     transition: .3s;
-    //     height: 60px;
+        //     transition: .3s;
+        //     height: 60px;
         border-radius: 10px;
         margin-right: .5rem;
     }
@@ -284,18 +296,6 @@ body {
             transition: .5s;
         }
     }
-
-    .btn-primary {
-        padding: .5rem 1.5rem;
-        border-radius: 5rem;
-        background: $primary;
-        border: 0;
-
-        &:hover {
-            border: 0;
-            background: $primary-hover;
-        }
-    }
 }
 
 .team {
@@ -337,6 +337,7 @@ body {
             border-radius: 10px;
             background-color: #f1f1f1;
             margin-bottom: 10px;
+
         }
 
         .name {
@@ -358,6 +359,7 @@ body {
 
     .director {
         background-color: #f2f2f2;
+        background: linear-gradient(45deg, #f2f2f2, #d9d9d9);
         padding: 1rem;
         border-radius: 1rem;
         text-align: center;
@@ -372,16 +374,23 @@ body {
         transition: .5s;
 
         &:hover {
-            background-color: $primary-hover;
             cursor: pointer;
+            background: linear-gradient(45deg, $primary-hover, $primary);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
 
             .name,
             .position {
                 color: #fff;
             }
 
+            .image {
+                box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+            }
+
             .social {
                 background-color: #fff;
+                background: #fff;
+                box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25) inset;
 
                 a {
                     color: #000;
@@ -401,6 +410,7 @@ body {
             width: 200px;
             background-color: #fff;
             margin-bottom: 1rem;
+
         }
 
         .name {
@@ -416,6 +426,8 @@ body {
 
         .social {
             background-color: $primary-hover;
+            background: linear-gradient(45deg, $primary, $primary-hover);
+
             border-radius: 5rem;
             padding: .5rem;
 
@@ -475,6 +487,7 @@ section {
         border-radius: 1rem;
         border-top: 5px solid #575578;
         border-bottom: 5px solid #1bb1dc;
+        background: linear-gradient(45deg, #fff, #f3f3f3);
 
         .image {
             background-color: #f2f2f2;
@@ -508,19 +521,11 @@ section {
         }
     }
 
-    .btn {
-        background: $primary;
-        border: 0;
-        padding: 10px 35px;
-        color: #fff;
-        transition: 0.4s;
-        border-radius: 50px;
-    }
-
 }
 
 .explore {
     background-color: #f5f8fd;
+    background: linear-gradient(45deg, #ebf3ff, #e3edff);
     border-radius: 1rem;
 
     .swiper-slide {
@@ -558,13 +563,16 @@ section {
 
 .contact-form {
     background-color: #ebebeb;
+    background: linear-gradient(47deg, #e1e1e1, #f1f1f1);
     padding: 1.5rem;
     border-radius: 1rem;
     color: #fff;
 }
 
 #footer {
-    background-color: #343a40;
+    // background-color: #343a40;
+    background: linear-gradient(45deg, #3886d4, #002449);
+    background: linear-gradient(45deg, $primary, $primary-hover);
     color: #fff;
 
     .footer-top {
@@ -572,7 +580,7 @@ section {
     }
 
     .copyright {
-        background-color: #1e1e1e;
+        background-color: rgba(0, 0, 0, .5);
         padding: 1rem;
         text-align: center;
     }
@@ -580,4 +588,31 @@ section {
     a {
         color: #fff;
     }
+}
+
+.btn-dark {
+    background: linear-gradient(45deg, #000, #090909);
+    border: 0;
+
+    &:hover {
+        text-shadow: 0px 0px 2px;
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, $primary, $primary-hover);
+    border: 0;
+
+    &:hover {
+        text-shadow: 0px 0px 2px;
+    }
+}
+
+.btn-pill {
+    border: 0;
+    padding: 10px 35px;
+    color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 50px;
 }

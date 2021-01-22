@@ -92,8 +92,13 @@ body main {
 .navbar .holder {
   font-size: 12px;
 }
+@media (max-width: 340px) {
+  .navbar .holder {
+    font-size: 10px;
+  }
+}
 .navbar.shown .navbar-collapse {
-  background-color: #fff;
+  background: linear-gradient(45deg, #fff, #ebebeb);
   margin: 0.5rem 0rem;
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -103,7 +108,7 @@ body main {
 }
 .navbar.top, .nav-nofixed .navbar {
   top: 0;
-  background-color: #fff;
+  background: linear-gradient(45deg, #fff, #ebebeb);
   padding: 0.5rem 1rem;
   box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
 }
@@ -212,16 +217,6 @@ body main {
   border: 8px solid #fff;
   transition: 0.5s;
 }
-.about .btn-primary {
-  padding: 0.5rem 1.5rem;
-  border-radius: 5rem;
-  background: #1bb1dc;
-  border: 0;
-}
-.about .btn-primary:hover {
-  border: 0;
-  background: #0296c0;
-}
 
 .team .member {
   text-align: center;
@@ -270,6 +265,7 @@ body main {
 
 .board .director {
   background-color: #f2f2f2;
+  background: linear-gradient(45deg, #f2f2f2, #d9d9d9);
   padding: 1rem;
   border-radius: 1rem;
   text-align: center;
@@ -282,15 +278,21 @@ body main {
   transition: 0.5s;
 }
 .board .director:hover {
-  background-color: #0296c0;
   cursor: pointer;
+  background: linear-gradient(45deg, #0296c0, #1bb1dc);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
 }
 .board .director:hover .name,
 .board .director:hover .position {
   color: #fff;
 }
+.board .director:hover .image {
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+}
 .board .director:hover .social {
   background-color: #fff;
+  background: #fff;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25) inset;
 }
 .board .director:hover .social a {
   color: #000;
@@ -317,6 +319,7 @@ body main {
 }
 .board .director .social {
   background-color: #0296c0;
+  background: linear-gradient(45deg, #1bb1dc, #0296c0);
   border-radius: 5rem;
   padding: 0.5rem;
 }
@@ -364,6 +367,7 @@ section .section-header {
   border-radius: 1rem;
   border-top: 5px solid #575578;
   border-bottom: 5px solid #1bb1dc;
+  background: linear-gradient(45deg, #fff, #f3f3f3);
 }
 .community .member .image {
   background-color: #f2f2f2;
@@ -387,17 +391,10 @@ section .section-header {
 .community .member .social i {
   color: #1bb1dc;
 }
-.community .btn {
-  background: #1bb1dc;
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
 
 .explore {
   background-color: #f5f8fd;
+  background: linear-gradient(45deg, #ebf3ff, #e3edff);
   border-radius: 1rem;
 }
 .explore .swiper-slide {
@@ -431,23 +428,50 @@ section .section-header {
 
 .contact-form {
   background-color: #ebebeb;
+  background: linear-gradient(47deg, #e1e1e1, #f1f1f1);
   padding: 1.5rem;
   border-radius: 1rem;
   color: #fff;
 }
 
 #footer {
-  background-color: #343a40;
+  background: linear-gradient(45deg, #3886d4, #002449);
+  background: linear-gradient(45deg, #1bb1dc, #0296c0);
   color: #fff;
 }
 #footer .footer-top {
   padding: 2rem;
 }
 #footer .copyright {
-  background-color: #1e1e1e;
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem;
   text-align: center;
 }
 #footer a {
   color: #fff;
+}
+
+.btn-dark {
+  background: linear-gradient(45deg, #000, #090909);
+  border: 0;
+}
+.btn-dark:hover {
+  text-shadow: 0px 0px 2px;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #1bb1dc, #0296c0);
+  border: 0;
+}
+.btn-primary:hover {
+  text-shadow: 0px 0px 2px;
+}
+
+.btn-pill {
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
 }

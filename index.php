@@ -50,7 +50,7 @@
                     <p class="h6">Industry Inspire Talks is a non-profit community founded by Omkar Shinde in August 2020.</p>
                     <p class="text-justify mt-3">We believe in educating the Students / Working Professionals / Entrepreneurs by providing them guidance from the Industry Experts & helping them to make an impact in their lives by transforming themselves into an Industry-Leader.</p>
                     <!-- <p> It is a platform where we invite successful people from the industry to share their career journeys. We inspire people in three ways. We have three categories i.e.. Interview Series, Podcasts Series, Career Stories. 'Interview series' involves people who interned at companies & converted that internship opportunity into a full-time offer. 'Podcasts Series' involves people with 5-10 years of Industry Experience who hold big positions at companies like Founder, MD, CEO, Managers, etc. sharing their industry experiences in our series. 'Career Stories' is where we invite people who achieved immeasurable success in their careers with 10+ years of industry experience in a specific industry/company. -->
-                    <a href="#" class="btn btn-primary mt-4"> More About Us</a>
+                    <a href="#" class="btn btn-primary mt-4 btn-pill"> More About Us</a>
                 </div>
             </div>
         </section>
@@ -172,7 +172,7 @@
                     <div class="swiper-button-prev"></div>
                 </div>
                 <p class="text-center">
-                    <button class="btn">Events <i class="fa fa-arrow-right"></i></button>
+                    <button class="btn btn-primary btn-pill">Events <i class="fa fa-arrow-right"></i></button>
                 </p>
 
             </div>
@@ -215,7 +215,7 @@
 
                 </div>
                 <p class="text-center">
-                    <button class="btn">Community <i class="fa fa-arrow-right"></i></button>
+                    <button class="btn btn-primary">Community <i class="fa fa-arrow-right"></i></button>
                 </p>
             </div>
         </section>

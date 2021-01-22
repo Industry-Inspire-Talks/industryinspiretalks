@@ -44,7 +44,7 @@
                     <form class="form-inline">
                         <div class="d-flex">
                             <input type="email" name="" id="" class="form-control mr-2" placeholder="" aria-describedby="helpId">
-                            <button class="btn btn-dark" style="background:#1bb1dc">Subscribe</button>
+                            <button class="btn btn-dark">Subscribe</button>
                         </div>
                     </form>
                 </form>
