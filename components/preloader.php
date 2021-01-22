@@ -16,5 +16,6 @@
 <script>
     $(document).ready(function() {
         $('#preloader').slideUp();
+        $('main').fadeIn();
     })
 </script>
