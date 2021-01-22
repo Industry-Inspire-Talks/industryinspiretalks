@@ -10,7 +10,7 @@
                         Vile Parle(E),
                         Mumbai 400057, India<br><br>
                         <strong>Phone:</strong> <br /> +91 8850810515<br>
-                        <strong>Email:</strong> industryinspiretalks2020@gamil.com<br>
+                        <strong>Email:</strong> industryinspiretalks2020@gmail.com<br>
                     </p>
                 </div>
             </div>
@@ -20,9 +20,9 @@
                 <ul>
                     <li> <a href="#">Home</a></li>
                     <li> <a href="#">About us</a></li>
-                    <li> <a href="#">Our Team</a></li>
-                    <li> <a href="#">Our Episodes</a></li>
-                    <li> <a href="#">Our Community</a></li>
+                    <li> <a href="#">Community</a></li>
+                    <li> <a href="#">Episodes</a></li>
+                    <li> <a href="#">Events</a></li>
                     <li> <a href="#">Connect US</a></li>
                 </ul>
             </div>
@@ -30,6 +30,8 @@
             <div class="col-10 col-sm-10 col-lg-3 col-md-6 footer-links">
                 <!-- <h4>Our Services</h4> -->
                 <ul class="mt-5">
+                    <li><a href="#">Inspire Stories </a></li>
+                    <li><a href="#">Campus Ambassador Program</a></li>
                     <li><a href="#">Carrer </a></li>
                     <li><a href="#">Our Channel</a></li>
 
