@@ -10,6 +10,7 @@
 </head>
 
 <body class="nav-nofixed">
+    <?php require_once('components/preloader.php') ?>
     <?php require_once('components/navbar.php') ?>
 
     <section class="container dummy">

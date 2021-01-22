@@ -8,6 +8,7 @@
 </head>
 
 <body class="nav-nofixed" style="background:#f1f1f1">
+    <?php require_once('components/preloader.php') ?>
     <?php require_once('components/navbar.php') ?>
 
     <section class="container dummy">

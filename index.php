@@ -8,7 +8,8 @@
 
 </head>
 
-<body>
+<body class="loading">
+    <?php require_once('components/preloader.php') ?>
     <?php require_once('components/navbar.php') ?>
 
     <!-- BANNER SECTION -->
@@ -56,33 +57,79 @@
     <section class="container board">
         <p class="title text-center">Meet Our Board of Directors</p>
         <div class="row">
-            <?php
-            $idArray = array(1, 2, 3, 4);
+            <div class="mb-3 col-lg-3 col-sm-6">
+                <div class="director">
+                    <div class="">
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="name">Omkar Shinde</p>
+                        <p class="position">Founder & CEO</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/omkar-shinde-310aa5193/"><i class="fab fa-linkedin"></i></a>
+                        <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>
+                        <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>
+                        <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>
+                        <a href="javascript:0" disabled><i class="fab fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 col-lg-3 col-sm-6">
+                <div class="director">
+                    <div class="">
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="name">Satya Prakash Mohapatra</p>
+                        <p class="position">Chief Marketing Officer</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/satya-prakash-mohapatra-153926129/"><i class="fab fa-linkedin"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-facebook"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-twitter"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-instagram"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-google-plus"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 col-lg-3 col-sm-6">
+                <div class="director">
+                    <div class="">
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="name">Vishal Nair</p>
+                        <p class="position">Chief People Officer</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/vishalnairm/"><i class="fab fa-linkedin"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-facebook"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-twitter"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-instagram"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-google-plus"></i> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 col-lg-3 col-sm-6">
+                <div class="director">
+                    <div class="">
+                        <div class="image">
+                            <img src="" alt="">
+                        </div>
+                        <p class="name">Danish Shaikh</p>
+                        <p class="position">Chief Technology Officer</p>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.linkedin.com/in/shaikhdanish04/"> <i class="fab fa-linkedin"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-facebook"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-twitter"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-instagram"></i> </a>
+                        <a href="javascript:0" disabled><i class="fab fa-google-plus"></i> </a>
 
-            foreach ($idArray as $id) {
-                $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
-
-                echo '' .
-                    '<div class="mb-3 col-lg-3 col-sm-6">' .
-                    '    <div class="director">' .
-                    '        <div class="">' .
-                    '            <div class="image image-center-cover" style="background-image: url(\'./uploads/board/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
-                    '            </div>' .
-                    '            <p class="name">' . $result['name'] . '</p>' .
-                    '            <p class="position">' . $result['designation'] . '</p>' .
-                    '        </div>' .
-                    '        <div class="social">' .
-                    '            <a href="#"><i class="fab fa-linkedin"></i></a>' .
-                    '            <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>' .
-                    '            <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>' .
-                    '            <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>' .
-                    '            <a href="javascript:0" disabled><i class="fab fa-google-plus"></i></a>' .
-                    '        </div>' .
-                    '    </div>' .
-                    '</div>';
-            }
-            ?>
-
+                    </div>
+                </div>
+            </div>
         </div>
 
 
@@ -127,51 +174,56 @@
             <p>Get access to all our industry oriented events delivered by industry experts who are there to guide you,educate you and inspire you! Do attend our events & network with industry leaders for future career opportunities!</p>
             <hr>
 
-            <style>
-                .des {
-                    display: -webkit-box;
-                    max-width: 200px;
-                    -webkit-line-clamp: 4;
-                    -webkit-box-orient: vertical;
-                    overflow: hidden;
-                    margin: auto;
-                }
-            </style>
-            <!-- <h4 class="text-center mt-5 mb-4 text-capitalize">Industry Expo 2020</h4> -->
+            <h4 class="text-center mt-5 mb-4 text-capitalize">Industry Expo 2020</h4>
 
             <div id="expo" class="swiper-container">
                 <div class="swiper-wrapper">
-                    <?php
-                    $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
-                    foreach ($idArray as $id) {
-                        $result = $conn->query("SELECT * FROM events WHERE id='$id'")->fetch_assoc();
-
-                        echo '' .
-                            '<div class="swiper-slide">' .
-                            '    <div class="card" style="width: 18rem;">' .
-                            '        <div class="card-body pb-0">' .
-                            '            <p class="card-title m-0">' . $result['title'] . '</p>' .
-                            '            <p class="small">' . $result['category'] . '</p>' .
-                            '        </div>' .
-                            '        <div class=" image-center-cover" style="height:160px;background-image: url(\'./uploads/events/' . $result['id'] . '.' . $result['thumbnail_image_ext'] . '\')"></div>' .
-                            '        <div class="card-body">' .
-                            // '            <hr>' .
-                            '            <p class="card-text des mb-3">' . $result['description'] . '</p>' .
-                            '            <a href="javascript:0" class="btn btn-primary btn-sm">Watch Now</a>' .
-                            '        </div>' .
-                            '    </div>' .
-                            '</div>';
-                    }
-                    ?>
+                    <?php for ($i = 0; $i < 8; $i++) { ?>
+                        <div class="swiper-slide">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-img-top">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-title m-0">Path to Product Management</p>
+                                    <p class="small">Industry Expo 2020</p>
+                                    <hr>
+                                    <p class="card-text">Welcome to Day 1 of Industry Expo 2k20</p>
+                                    <a href="javascript:0" class="btn btn-primary btn-sm">Watch Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
-            <p class="text-center">
-                <button class="btn">Events <i class="fa fa-arrow-right"></i></button>
-            </p>
 
+            <hr>
+            <h4 class="text-center mt-5 mb-5 text-capitalize">Industry Connect</h4>
+
+            <div id="connect" class="swiper-container">
+                <div class="swiper-wrapper">
+                    <?php for ($i = 0; $i < 8; $i++) { ?>
+                        <div class="swiper-slide">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-img-top">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-title m-0">Path towards Student Entrepreneurship</p>
+                                    <p class="small">Industry Connect</p>
+                                    <hr>
+                                    <p class="card-text">Welcome to Day 1 of Industry Connect</p>
+                                    <a href="javascript:0" class="btn btn-primary btn-sm">Watch Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } ?>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+            </div>
         </div>
     </section>
     <!-- Our Events End -->
@@ -193,7 +245,7 @@
 
                     echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
                         '    <div class="member d-flex card flex-row">' .
-                        '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'./uploads/community/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')"></div>' .
+                        '        <div class="image mr-3"></div>' .
                         '        <div class="d-flex justify-content-between flex-column">' .
                         '            <div>' .
                         '                <p class="name">' . $result['name'] . '</p>' .
@@ -219,33 +271,6 @@
     <!-- view more community -->
 
     <!-- End of view more community -->
-
-    <section class="companies mb-5" style="background:#ebebeb">
-        <div class="container">
-            <div id="companies" class="swiper-container">
-                <div class="swiper-wrapper">
-                    <?php
-                    $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
-
-                    foreach ($idArray as $id) {
-                        $result = $conn->query("SELECT * FROM companies WHERE id='$id'")->fetch_assoc();
-
-                        echo '' .
-                            '<div class="swiper-slide">' .
-                            '   <div class="p-4 mx-3" style="overflow:hidden;border-radius:1rem;background:#fff">' .
-                            '       <div class=" image image-center-contain" style="height:70px;background-image: url(\'./uploads/companies/' . $result['id'] . '.' . $result['logo_image_ext'] . '\')"></div>' .
-                            '   </div>' .
-                            '</div>';
-                    }
-                    ?>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-        </div>
-
-
-    </section>
 
     <!-- Our Community End -->
 
@@ -310,7 +335,7 @@
         } else {
             $('.navbar').removeClass('top');
         }
-        var swiper = new Swiper('#expo.swiper-container', {
+        var swiper = new Swiper('#expo.swiper-container,#connect.swiper-container', {
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
@@ -322,26 +347,6 @@
                 },
                 996: {
                     slidesPerView: 3,
-                }
-            },
-        });
-
-        var swiper = new Swiper('#companies.swiper-container', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            slidesPerView: 1,
-            loop: true,
-            breakpoints: {
-                552: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                996: {
-                    slidesPerView: 5,
                 }
             },
         });
