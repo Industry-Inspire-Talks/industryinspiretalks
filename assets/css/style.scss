@@ -23,6 +23,18 @@ body {
     &.nav-nofixed {
         padding-top: 70px;
     }
+
+    .image-center-cover {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .image-center-contain {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
 
 .dummy {

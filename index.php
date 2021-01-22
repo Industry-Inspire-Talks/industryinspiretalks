@@ -52,19 +52,6 @@
         </div>
     </section>
     <!-- About Section End -->
-    <style>
-        .image-center-cover {
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        .image-center-contain {
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-    </style>
 
     <section class="container board">
         <p class="title text-center">Meet Our Board of Directors</p>
@@ -80,7 +67,6 @@
                     '    <div class="director">' .
                     '        <div class="">' .
                     '            <div class="image image-center-cover" style="background-image: url(\'./uploads/board/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
-                    // '                <img src="./uploads/board/' . $result['id'] . '.jpeg" alt="">' .
                     '            </div>' .
                     '            <p class="name">' . $result['name'] . '</p>' .
                     '            <p class="position">' . $result['designation'] . '</p>' .
