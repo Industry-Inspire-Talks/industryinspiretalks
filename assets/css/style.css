@@ -236,8 +236,8 @@ body .jumbotron {
   height: 100vh;
   /* background: #f5f8fd url(img/public-speaking-3926344_1920.jpg) center top no-repeat; */
   /* background: #747a76 url(img/public-speaking-3926344_1920.jpg) center top no-repeat; */
-  background: -webkit-gradient(linear, left top, left bottom, from(#00000080), to(#00000080)), url("../img/public-speaking-3926344_1920.jpg") center top no-repeat;
-  background: linear-gradient(#00000080, #00000080), url("../img/public-speaking-3926344_1920.jpg") center top no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#00000080)), url("../img/public-speaking-3926344_1920.jpg") center top no-repeat;
+  background: linear-gradient(#000000, #00000080), url("../img/public-speaking-3926344_1920.jpg") center top no-repeat;
   background-size: cover;
 }
 
@@ -277,7 +277,7 @@ body .jumbotron {
   #hero .info h2 {
     text-align: center;
     font-size: 32px;
-    line-height: 38px;
+    line-height: 50px;
     margin-top: 2rem;
   }
   #hero .image {
