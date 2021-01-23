@@ -17,7 +17,7 @@
 
 <script>
     $(document).ready(function() {
-        // $('#preloader').delay('1000').slideUp();
-        // $('main').fadeIn();
+        $('#preloader').delay('1000').slideUp();
+        $('main').fadeIn();
     })
 </script>
