@@ -598,6 +598,22 @@ section .section-header {
   color: #fff;
 }
 
+#footer .footer-newsletter {
+  background: #00000080;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .btn-dark {
   background: linear-gradient(45deg, #000, #090909);
   border: 0;

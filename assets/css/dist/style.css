@@ -474,6 +474,14 @@ section .section-header {
 #footer a {
   color: #fff;
 }
+#footer .footer-newsletter {
+  background: #00000080;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
 
 .btn-dark {
   background: linear-gradient(45deg, #000, #090909);

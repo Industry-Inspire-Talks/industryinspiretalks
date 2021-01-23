@@ -38,13 +38,15 @@
             </div>
 
             <div class="col-12 col-sm-12 col-lg-4 col-md-6 footer-newsletter">
-                <h4>Our Newsletter</h4>
-                <p>Feel free to drop your email here So you will be updated with US</p>
+                <div>
+                    <h4>Our Newsletter</h4>
+                    <p class="small">Feel free to drop your email here So you will be updated with US</p>
+                </div>
                 <form action="" method="post">
                     <form class="form-inline">
                         <div class="d-flex">
                             <input type="email" name="" id="" class="form-control mr-2" placeholder="" aria-describedby="helpId">
-                            <button class="btn btn-dark">Subscribe</button>
+                            <button class="btn btn-dark"> Subscribe</button>
                         </div>
                     </form>
                 </form>

@@ -619,6 +619,16 @@ section {
     a {
         color: #fff;
     }
+
+    .footer-newsletter {
+        background: #00000080;
+        padding: 1rem;
+        border-radius: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 }
 
 .btn-dark {
