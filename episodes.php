@@ -19,7 +19,7 @@
 		</div>
 
 
-		<section class="container pt-5 my-5">
+		<section class="container pt-5 my-5 series">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-md-6 col-lg-4">
 					<div class="card mx-auto mb-3 shadow border-0" style="max-width: 290px;border-radius:1rem;overflow:hidden">
@@ -41,6 +41,45 @@
 						</a>
 					</div>
 				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="card mx-auto mb-3 shadow border-0" style="max-width: 290px;border-radius:1rem;overflow:hidden">
+						<a class="" href="series.php">
+							<div class="image-center-cover" style="padding-top:100%;background-image:url('./assets/img/career.jpeg')"></div>
+							<div class="card-body text-center">
+								<p class="h5 font-weight-normal">Career Stories</p>
+							</div>
+						</a>
+						<div class="coming-soon">
+							Coming Soon
+						</div>
+					</div>
+				</div>
+
+				<style>
+					.series .coming-soon {
+						position: absolute;
+						height: 100%;
+						width: 100%;
+						background-color: rgba(255, 255, 255, 0.75);
+
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						color: #000;
+						font-weight: 600;
+						font-size: 24px;
+						transition: .5s;
+
+						/* text-shadow: 0px 0px 5px; */
+					}
+
+					.series .card:hover .coming-soon {
+						transition: .5s;
+						height: 0%;
+						overflow: hidden;
+					}
+				</style>
 			</div>
 		</section>
 

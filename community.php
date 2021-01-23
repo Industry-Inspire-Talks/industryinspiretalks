@@ -15,7 +15,7 @@
 
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <p class="h1 font-weight-light text-center">Meet our <b>Inspire Community</b> Members</p>
+                <p class="h1 font-weight-light text-center">Meet our <b>#Inspire Community</b> Members</p>
             </div>
         </div>
         <section class="container community">
