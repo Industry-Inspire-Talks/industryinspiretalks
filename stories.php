@@ -22,33 +22,44 @@
         <section class="container">
             <div class="row mb-3">
                 <?php for ($i = 0; $i < 9; $i++) { ?>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card mb-3 story-card">
-                            <div class="py-2 px-3 d-flex align-items-center justify-content-between">
-                                <div class="d-flex align-items-center justify-content-between">
-                                    <div class="rounded-circle mr-2" style="width:50px;height: 50px;background: #f1f1f1;"></div>
-                                    <div>
-                                        <p class="name">FirstName MiddleName LastName</p>
-                                        <p class="position"><i class="text-muted">Current Position</i> at <i class="text-muted">Company Name</i></p>
-                                        <p class="post-date">8 days Ago</p>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="img-square" style="background-image : url('uploads/inspire_stories/1.jpg')" style="background: #f1f1f1;"></div>
-                            <!-- <div class="py-2 px-3 border-bottom">
-                                <p class="link">
-                                    <a class="" href="#" target="_blank" rel="noopener noreferrer">Few Lines of the story to proceed forward to the linkedin </a>
-                                </p>
-                            </div> -->
-                            <div class="py-2 px-3 d-flex align-items-center justify-content-between">
-                                <p class="m-0"><i class="far fa-thumbs-up "></i></p>
-                                <p class="m-0"><i class="far fa-comment "></i></p>
-                                <p class="m-0"><i class="fa fa-share-alt"></i></p>
-                            </div>
-                        </div>
-                    </div>
                 <?php } ?>
+                <?php
+                $result = $conn->query("SELECT * FROM inspire_stories ORDER BY id DESC");
+
+                while ($row = $result->fetch_assoc()) {
+
+
+                    $id = $row['leader_id'];
+                    $ext = $row['post_image_ext'];
+
+                    $leader = $conn->query("SELECT * FROM industry_leaders WHERE id='$id'")->fetch_assoc();
+
+                    echo '<div class="col-lg-4 col-md-6 mb-3 ">' .
+                        '    <div class="card story-card d-flex justify-content-between" style="height:100%">' .
+                        '        <div class="py-2 px-3 d-flex align-items-center justify-content-between">' .
+                        '            <div class="d-flex align-items-center justify-content-between">' .
+                        '                <div class="rounded-circle mr-2 flex-shrink-0" style="width:50px;height: 50px;background: #f1f1f1;"></div>' .
+                        '                <div>' .
+                        '                    <p class="name">' . $leader['name'] . '</p>' .
+                        '                    <p class="position"><i class="text-muted">' . $leader['position'] . '</i> ' . (($leader['company']) ? 'at <i class="text-muted">' . $leader['company'] . '</i>' : '') . '</p>' .
+                        '                    <p class="post-date">8 days Ago</p>' .
+                        '                </div>' .
+                        '            </div>' .
+                        '        </div>' .
+                        '        <div>' .
+                        '        <div class="img-square" style="background-image : url(\'uploads/inspire_stories/' . $row['id'] . '.' . $ext . '\')" style="background: #f1f1f1;"></div>' .
+                        '           <div class="py-2 px-3 d-flex align-items-center justify-content-between">' .
+                        '               <p class="m-0"><i class="far fa-thumbs-up "></i></p>' .
+                        '               <p class="m-0"><i class="far fa-comment "></i></p>' .
+                        '               <p class="m-0"><i class="fa fa-share-alt"></i></p>' .
+                        '            </div>' .
+                        '        </div>' .
+                        '    </div>' .
+                        '</div>';
+                }
+                ?>
+
 
             </div>
 

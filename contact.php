@@ -27,8 +27,8 @@
                 <div class="col-md-8 py-3 contact-details aos-init aos-animate" data-aos="fade-down-left">
                     <p class="text-justify"><i class="fa fa-location-arrow"></i> <b>Address :</b> 9/2 Dhanashri CHS, Nanda Patkar Road, Vile Parle(E), Mumbai 400057, India</p>
                     <p><i class="fa fa-phone"></i> <b>Phone :</b>+91 885 081 0515</p>
-                    <p><i class="fa fa-envelope"></i> <b>Email :</b> support@industryinspiretalk.com</p>
-                    <p><i class="fa fa-linkedin"></i> <b>LinkedIn :</b> <a href="#" target="blank">IndustryInspireTalks</a></p>
+                    <p><i class="fa fa-envelope"></i> <b>Email :</b> industryinspiretalks2020@gmail.com</p>
+                    <p><i class="fa fa-linkedIn"></i> <b>LinkedIn :</b> <a href="#" target="blank">IndustryInspireTalks</a></p>
                 </div>
 
                 <style>

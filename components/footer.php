@@ -31,8 +31,8 @@
                 <!-- <h4>Our Services</h4> -->
                 <ul class="mt-5">
                     <li><a href="./stories.php">Inspire Stories </a></li>
-                    <li><a href="./ambassador.php">Campus Ambassador Program</a></li>
-                    <li><a href="./careers.php">Carrer </a></li>
+                    <li><a href="#">Campus Ambassador Program</a></li>
+                    <li><a href="./careers.php">Careers </a></li>
                     <li><a href="#">Our Channel</a></li>
 
             </div>
