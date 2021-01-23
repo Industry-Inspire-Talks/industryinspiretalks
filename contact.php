@@ -25,10 +25,10 @@
 
                 </div>
                 <div class="col-md-8 py-3 contact-details aos-init aos-animate" data-aos="fade-down-left">
-                    <p class="text-justify"><i class="fa fa-location-arrow"></i> <b>Address :</b> 9/2 Dhanashri CHS, Nanda Patkar Road, Vile Parle(E), Mumbai 400057, India</p>
-                    <p><i class="fa fa-phone"></i> <b>Phone :</b>+91 885 081 0515</p>
-                    <p><i class="fa fa-envelope"></i> <b>Email :</b> industryinspiretalks2020@gmail.com</p>
-                    <p><i class="fa fa-linkedIn"></i> <b>LinkedIn :</b> <a href="#" target="blank">IndustryInspireTalks</a></p>
+                    <p class="h6 font-weight-light mb-3 text-justify"><i class="fa fa-location-arrow"></i> <b class="font-weight-bold">Address :</b> 9/2 Dhanashri CHS, Nanda Patkar Road, Vile Parle(E), Mumbai 400057, India</p>
+                    <p class="h6 font-weight-light mb-3 "><i class="fa fa-phone"></i> <b class="font-weight-bold">Phone :</b>+91 885 081 0515</p>
+                    <p class="h6 font-weight-light mb-3 "><i class="fa fa-envelope"></i> <b class="font-weight-bold">Email :</b> industryinspiretalks2020@gmail.com</p>
+                    <p class="h6 font-weight-light mb-3 "><i class="fab fa-linkedin"></i> <b class="font-weight-bold">LinkedIn :</b> <a href="https://www.linkedin.com/company/industry-inspire-talks/" target="blank">IndustryInspireTalks</a></p>
                 </div>
 
                 <style>
@@ -45,7 +45,8 @@
                         font-size: 14px;
                     }
 
-                    .contact-details i.fa {
+                    .contact-details i.fa,
+                    .contact-details i.fab {
                         color: #1bb1dc;
 
                     }
