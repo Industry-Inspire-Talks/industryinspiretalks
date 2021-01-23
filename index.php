@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="info">
-                            <h2>Welcome to <br>Industry <span>Inspire</span> Talks Community</h2>
+                            <h2>Welcome to <br>Industry <span>Inspire</span> Talks Organization</h2>
                         </div>
 
                         <div>
