@@ -245,10 +245,44 @@ body .jumbotron {
   color: #fff;
   margin-bottom: 40px;
   font-weight: 700;
+  line-height: 50px;
 }
 
 #hero .info h2 span {
   color: #1bb1dc;
+}
+
+#hero .image {
+  height: 200px;
+}
+
+@media (max-width: 768px) {
+  #hero .container {
+    text-align: center;
+  }
+  #hero .info h2 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  #hero .image {
+    height: 200px;
+  }
+  #hero .btn-primary {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  #hero .info h2 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 2rem;
+  }
+  #hero .image {
+    height: 150px;
+  }
 }
 
 #hero .btn-primary {

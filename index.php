@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 text-center">
-                        <img src="assets/img/undraw_experts3_3njd.svg" alt="" class="img-fluid">
+                        <img src="assets/img/undraw_experts3_3njd.svg" alt="" class="img-fluid image">
                     </div>
                 </div>
             </div>

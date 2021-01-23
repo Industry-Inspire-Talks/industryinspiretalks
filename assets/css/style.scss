@@ -257,10 +257,51 @@ body {
         margin-bottom: 40px;
         // font-size: 48px;
         font-weight: 700;
+        line-height: 50px;
 
         span {
             color: $primary
         }
+    }
+
+    .image {
+        height: 200px;
+    }
+
+    @media (max-width:768px) {
+        .container {
+            text-align: center;
+
+        }
+
+        .info h2 {
+            text-align: center;
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        .image {
+            height: 200px;
+        }
+
+        .btn-primary {
+            margin-bottom: 1rem;
+        }
+    }
+
+    @media (max-width:520px) {
+
+        .info h2 {
+            text-align: center;
+            font-size: 24px;
+            line-height: 30px;
+            margin-top: 2rem;
+        }
+
+        .image {
+            height: 150px;
+        }
+
     }
 
     .btn-primary {
