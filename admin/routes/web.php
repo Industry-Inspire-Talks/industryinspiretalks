@@ -41,6 +41,9 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/community/add', [DatabaseController::class, 'add_community']);
     Route::get('/community/edit/{id}',[DatabaseController::class, 'community_edit_page']);
     Route::post('/community/edit/{id}',[DatabaseController::class, 'edit_community']);
+
     
+    // Route::post('/imageupload/{id}',[DatabaseController::class, 'imageupload']);
+
     
 });

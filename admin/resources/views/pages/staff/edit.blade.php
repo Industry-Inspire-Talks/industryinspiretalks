@@ -2,7 +2,7 @@
 
 @section('staff_details')
 
-<form method="POST" action="/staff/edit/{{$staff->id}}"> <!--action="/staff/edit/{{$staff->id}}"-->
+<form method="POST" action="/staff/edit/{{$staff->id}}" enctype='multipart/form-data'> <!--action="/staff/edit/{{$staff->id}}"-->
 @csrf
     <div class="card">
         <div class="card-header">
@@ -61,10 +61,16 @@
                 <label for="">Date of Leaving</label>
                 <input type="date" value="{{$staff->date_of_leaving}}" name="date_of_leaving" class="form-control">
             </div>
+            <div >
+                <label for="formFile" class="form-label">Upload Image</label>
+                <input class="form-control form-control mb-4" name="profile_image_ext" type="file">
+            </div>
+            <button class="btn btn-warning" type="submit" name="action" value="image_upload" ><i class="fa fa-plus"></i> Upload Image</button >
+
         </div>
         <div class="card-footer">
             <!-- <a class="btn btn-primary" href="/staff/edit/{{$staff->id}}"  ><i class="fa fa-plus"></i> Update</a> -->
-            <button class="btn btn-primary" type="submit"  ><i class="fa fa-plus"></i> Update</button>
+            <button class="btn btn-primary" type="submit" name="action" value="update"  ><i class="fa fa-plus"></i> Update</button>
         </div>
     </div>
 </form>
