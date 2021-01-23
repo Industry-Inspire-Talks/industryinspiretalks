@@ -42,8 +42,8 @@
                     $result = $conn->query("SELECT * FROM events WHERE id='$id'")->fetch_assoc();
 
                     echo '' .
-                        '<div class="col-md-4 mb-3">' .
-                        '    <div class="card" style="width: 18rem;height:100%">' .
+                        '<div class="col-md-6 col-lg-4 mb-3">' .
+                        '    <div class="card mx-auto" style="width: 18rem;height:100%">' .
                         '        <div class="card-body pb-0">' .
                         '            <p class="card-title m-0">' . $result['title'] . '</p>' .
                         '            <p class="small">' . $result['category'] . '</p>' .
