@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-10 col-sm-10 col-lg-3 col-md-6">
                 <div class="footer-info">
-                    <h3>Industry Inspire Talks</h3>
+                    <h5>Industry Inspire Talks</h5>
                     <p>
                         9/2 Dhanashri CHS,
                         Nanda Patkar Road,
