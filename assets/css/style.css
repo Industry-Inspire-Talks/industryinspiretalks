@@ -8,7 +8,7 @@ body {
 }
 
 body.nav-nofixed {
-  padding-top: 70px;
+  padding-top: 65px;
 }
 
 body .image-center-cover {
@@ -25,6 +25,11 @@ body .image-center-contain {
 
 body main {
   display: none;
+}
+
+body .jumbotron {
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25) inset;
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25) inset;
 }
 
 #preloader {
@@ -47,7 +52,7 @@ body main {
 }
 
 #preloader .title {
-  font-size: 15px;
+  font-size: 18px;
 }
 
 #preloader .logo {
@@ -91,6 +96,8 @@ body main {
 
 #preloader .shape {
   background-color: #e8e8e8;
+  background: -webkit-gradient(linear, left top, right top, from(#e8e8e8), to(#d2d2d2));
+  background: linear-gradient(90deg, #e8e8e8, #d2d2d2);
   height: 150px;
   width: 120%;
   position: absolute;
@@ -100,6 +107,8 @@ body main {
 
 #preloader .shape .rect {
   background-color: #e8e8e8;
+  background: -webkit-gradient(linear, left top, right top, from(#e8e8e8), to(#d2d2d2));
+  background: linear-gradient(90deg, #e8e8e8, #d2d2d2);
   height: 150px;
   width: 100%;
   position: relative;
@@ -200,6 +209,10 @@ body main {
   font-weight: 600;
 }
 
+.navbar .nav-link:hover {
+  color: #1bb1dc;
+}
+
 #hero {
   width: 100%;
   height: 100vh;
@@ -239,7 +252,7 @@ body main {
 
 #hero .btn-primary:hover {
   border: 0;
-  background: #0296c0;
+  background: #006d8c;
 }
 
 .about .content {
@@ -301,7 +314,7 @@ body main {
   cursor: pointer;
   -webkit-transition: .5s;
   transition: .5s;
-  background-color: #0296c0;
+  background-color: #006d8c;
 }
 
 .team .member:hover .image {
@@ -364,7 +377,7 @@ body main {
 
 .board .director:hover {
   cursor: pointer;
-  background: linear-gradient(45deg, #0296c0, #1bb1dc);
+  background: linear-gradient(45deg, #006d8c, #1bb1dc);
   -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
 }
@@ -391,7 +404,7 @@ body main {
 }
 
 .board .director:hover .social a:hover:not([disabled]) {
-  color: #0296c0;
+  color: #006d8c;
   text-decoration: none;
 }
 
@@ -415,8 +428,8 @@ body main {
 }
 
 .board .director .social {
-  background-color: #0296c0;
-  background: linear-gradient(45deg, #1bb1dc, #0296c0);
+  background-color: #006d8c;
+  background: linear-gradient(45deg, #1bb1dc, #006d8c);
   border-radius: 5rem;
   padding: .5rem;
 }
@@ -549,7 +562,7 @@ section .section-header {
 
 #footer {
   background: linear-gradient(45deg, #3886d4, #002449);
-  background: linear-gradient(45deg, #1bb1dc, #0296c0);
+  background: linear-gradient(45deg, #1bb1dc, #006d8c);
   color: #fff;
 }
 
@@ -577,7 +590,7 @@ section .section-header {
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, #1bb1dc, #0296c0);
+  background: linear-gradient(45deg, #1bb1dc, #006d8c);
   border: 0;
 }
 

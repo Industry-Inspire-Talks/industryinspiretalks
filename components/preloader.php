@@ -2,12 +2,12 @@
 
     <div class="initials">
         <div class="logo my-2">
-            <img src="./assets/img/init_logo.jpg" alt="">
+            <img src="./assets/img/init_logo.jpg" height="100px" alt="">
         </div>
-        <div class="title mb-5">
+        <div class="title mb-4">
             Industry Inspire Talks
         </div>
-        <div class="loader"></div>
+        <div class="loader mb-5"></div>
 
     </div>
     <div class="shape">
@@ -17,7 +17,7 @@
 
 <script>
     $(document).ready(function() {
-        $('#preloader').delay('1000').slideUp();
-        $('main').fadeIn();
+        // $('#preloader').delay('1000').slideUp();
+        // $('main').fadeIn();
     })
 </script>

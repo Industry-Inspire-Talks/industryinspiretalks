@@ -13,9 +13,12 @@
 
         <?php require_once('components/navbar.php') ?>
 
-        <section class="container dummy community">
-            <div class="title">Meet our Inspire Community members</div>
-            <hr class="mb-4">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <p class="h1 font-weight-light text-center">Meet our <b>Inspire Community</b> Members</p>
+            </div>
+        </div>
+        <section class="container community">
 
             <div class="row">
                 <?php

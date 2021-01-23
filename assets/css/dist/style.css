@@ -7,7 +7,7 @@ body {
   font-size: 1rem;
 }
 body.nav-nofixed {
-  padding-top: 70px;
+  padding-top: 65px;
 }
 body .image-center-cover {
   background-position: center;
@@ -21,6 +21,9 @@ body .image-center-contain {
 }
 body main {
   display: none;
+}
+body .jumbotron {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25) inset;
 }
 
 #preloader {
@@ -36,7 +39,7 @@ body main {
   overflow: hidden;
 }
 #preloader .title {
-  font-size: 15px;
+  font-size: 18px;
 }
 #preloader .logo {
   text-align: center;
@@ -62,6 +65,7 @@ body main {
 }
 #preloader .shape {
   background-color: #e8e8e8;
+  background: linear-gradient(90deg, #e8e8e8, #d2d2d2);
   height: 150px;
   width: 120%;
   position: absolute;
@@ -70,6 +74,7 @@ body main {
 }
 #preloader .shape .rect {
   background-color: #e8e8e8;
+  background: linear-gradient(90deg, #e8e8e8, #d2d2d2);
   height: 150px;
   width: 100%;
   position: relative;
@@ -146,6 +151,9 @@ body main {
   text-transform: uppercase;
   font-weight: 600;
 }
+.navbar .nav-link:hover {
+  color: #1bb1dc;
+}
 
 #hero {
   width: 100%;
@@ -180,7 +188,7 @@ body main {
 }
 #hero .btn-primary:hover {
   border: 0;
-  background: #0296c0;
+  background: #006d8c;
 }
 
 .about .content {
@@ -232,7 +240,7 @@ body main {
   padding: 10px;
   cursor: pointer;
   transition: 0.5s;
-  background-color: #0296c0;
+  background-color: #006d8c;
 }
 .team .member:hover .image {
   height: 130px;
@@ -279,7 +287,7 @@ body main {
 }
 .board .director:hover {
   cursor: pointer;
-  background: linear-gradient(45deg, #0296c0, #1bb1dc);
+  background: linear-gradient(45deg, #006d8c, #1bb1dc);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
 }
 .board .director:hover .name,
@@ -298,7 +306,7 @@ body main {
   color: #000;
 }
 .board .director:hover .social a:hover:not([disabled]) {
-  color: #0296c0;
+  color: #006d8c;
   text-decoration: none;
 }
 .board .director .image {
@@ -318,8 +326,8 @@ body main {
   font-style: italic;
 }
 .board .director .social {
-  background-color: #0296c0;
-  background: linear-gradient(45deg, #1bb1dc, #0296c0);
+  background-color: #006d8c;
+  background: linear-gradient(45deg, #1bb1dc, #006d8c);
   border-radius: 5rem;
   padding: 0.5rem;
 }
@@ -436,7 +444,7 @@ section .section-header {
 
 #footer {
   background: linear-gradient(45deg, #3886d4, #002449);
-  background: linear-gradient(45deg, #1bb1dc, #0296c0);
+  background: linear-gradient(45deg, #1bb1dc, #006d8c);
   color: #fff;
 }
 #footer .footer-top {
@@ -460,7 +468,7 @@ section .section-header {
 }
 
 .btn-primary {
-  background: linear-gradient(45deg, #1bb1dc, #0296c0);
+  background: linear-gradient(45deg, #1bb1dc, #006d8c);
   border: 0;
 }
 .btn-primary:hover {

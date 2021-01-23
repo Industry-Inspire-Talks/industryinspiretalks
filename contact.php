@@ -12,10 +12,12 @@
     <main>
 
         <?php require_once('components/navbar.php') ?>
-
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <p class="h1 font-weight-light text-center"><b>Contact Us</b></p>
+            </div>
+        </div>
         <section class="container dummy">
-            <div class="title">Contact Us</div>
-            <hr class="mb-4">
 
             <div class="row">
                 <div class="col-md-4 aos-init aos-animate" data-aos="fade-down-right">

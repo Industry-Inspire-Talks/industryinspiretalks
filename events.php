@@ -13,9 +13,12 @@
 
         <?php require_once('components/navbar.php') ?>
 
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <p class="h1 font-weight-light text-center"><b>Our Events</b></p>
+            </div>
+        </div>
         <section class="container dummy">
-            <div class="title">Our Events</div>
-            <hr class="mb-4">
 
         </section>
         <!-- Footer Section  -->

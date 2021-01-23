@@ -25,13 +25,13 @@
                 <a class="nav-link" href="./episodes.php">Episodes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./episodes.php">Stories</a>
+                <a class="nav-link" href="./stories.php">Stories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./episodes.php">Careers</a>
+                <a class="nav-link" href="./careers.php">Careers</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./episodes.php">Contacts Us</a>
+                <a class="nav-link" href="./contact.php">Contacts Us</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle no-arrow " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
