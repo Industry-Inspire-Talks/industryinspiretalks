@@ -22,28 +22,24 @@
 		<section class="container pt-5 my-5">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-md-6 col-lg-4">
-					<a class="btn w-100" href="series.php">
-						<div class="card text-center" style="width: 290px;">
-							<div class="image-center-cover" style="height:290px;background-image:url('./assets/img/interview.jpeg')">
+					<div class="card mx-auto mb-3 shadow border-0" style="max-width: 290px;border-radius:1rem;overflow:hidden">
+						<a class="" href="series.php">
+							<div class="image-center-cover" style="padding-top:100%;background-image:url('./assets/img/interview.jpeg')"></div>
+							<div class="card-body text-center">
+								<p class="h5 font-weight-normal">Interview Series</p>
 							</div>
-							<!-- <div class="card-body">
-								<p class=" h1 font-weight-normal">Interview</p>
-								<p class="m-0 h2 font-weight-light">Series</p>
-							</div> -->
-						</div>
-					</a>
+						</a>
+					</div>
 				</div>
 				<div class="col-md-6 col-lg-4">
-					<a class="btn w-100" href="series.php">
-						<div class="card text-center" style="width: 290px;">
-							<div class="image-center-cover" style="height:290px;background-image:url('./assets/img/podcast.jpeg')">
+					<div class="card mx-auto mb-3 shadow border-0" style="max-width: 290px;border-radius:1rem;overflow:hidden">
+						<a class="" href="series.php">
+							<div class="image-center-cover" style="padding-top:100%;background-image:url('./assets/img/podcast.jpeg')"></div>
+							<div class="card-body text-center">
+								<p class="h5 font-weight-normal">Podcast Series</p>
 							</div>
-							<!-- <div class="card-body">
-								<p class=" h1 font-weight-normal">Podcast</p>
-								<p class="m-0 h2 font-weight-light">Series</p>
-							</div> -->
-						</div>
-					</a>
+						</a>
+					</div>
 				</div>
 			</div>
 		</section>

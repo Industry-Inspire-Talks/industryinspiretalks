@@ -23,8 +23,25 @@ body {
         "Noto Color Emoji";
     font-size: 1rem;
 
+    .des {
+        display: -webkit-box;
+        max-width: 200px;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin: auto;
+    }
+
     &.nav-nofixed {
         padding-top: 65px;
+    }
+
+    @media (max-width:340px) {
+
+        &.nav-nofixed {
+            padding-top: 55px;
+        }
+
     }
 
     .image-center-cover {
@@ -136,6 +153,10 @@ body {
 
         .holder {
             font-size: 10px;
+        }
+
+        .logo {
+            height: 30px;
         }
     }
 

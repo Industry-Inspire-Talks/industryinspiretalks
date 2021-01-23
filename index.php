@@ -130,16 +130,6 @@
                 <p>Get access to all our industry oriented events delivered by industry experts who are there to guide you,educate you and inspire you! Do attend our events & network with industry leaders for future career opportunities!</p>
                 <hr>
 
-                <style>
-                    .des {
-                        display: -webkit-box;
-                        max-width: 200px;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        margin: auto;
-                    }
-                </style>
                 <!-- <h4 class="text-center mt-5 mb-4 text-capitalize">Industry Expo 2020</h4> -->
 
                 <div id="expo" class="swiper-container">
@@ -161,7 +151,7 @@
                                 '        <div class="card-body">' .
                                 // '            <hr>' .
                                 '            <p class="card-text des mb-3">' . $result['description'] . '</p>' .
-                                '            <a href="javascript:0" class="btn btn-primary btn-sm">Watch Now</a>' .
+                                '            <a href="' . $result['link'] . '" target="blank" class="btn btn-primary btn-sm">Watch Now</a>' .
                                 '        </div>' .
                                 '    </div>' .
                                 '</div>';

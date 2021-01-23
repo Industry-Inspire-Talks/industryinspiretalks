@@ -6,8 +6,21 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
 }
+body .des {
+  display: -webkit-box;
+  max-width: 200px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: auto;
+}
 body.nav-nofixed {
   padding-top: 65px;
+}
+@media (max-width: 340px) {
+  body.nav-nofixed {
+    padding-top: 55px;
+  }
 }
 body .image-center-cover {
   background-position: center;
@@ -100,6 +113,9 @@ body .jumbotron {
 @media (max-width: 340px) {
   .navbar .holder {
     font-size: 10px;
+  }
+  .navbar .logo {
+    height: 30px;
   }
 }
 .navbar.shown .navbar-collapse {
