@@ -94,9 +94,13 @@
         </section>
 
         <section class="container team">
-            <p class="title text-center">Meet Our Team</p>
-
             <div id="team" class="swiper-container">
+                <div class="d-flex align-items-center justify-content-between">
+                    <button class="swiper-prev btn btn-link mx-3"><i class="fa fa-chevron-left"></i></button>
+                    <p class="title text-center">Meet Our Team</p>
+                    <button class="swiper-next btn btn-link mx-3"><i class="fa fa-chevron-right"></i></button>
+                </div>
+
                 <div class="swiper-wrapper">
                     <?php
                     $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
@@ -116,8 +120,6 @@
                     ?>
 
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
 
         </section>
@@ -343,8 +345,8 @@
 
         var swiper = new Swiper('#team.swiper-container', {
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-next',
+                prevEl: '.swiper-prev',
             },
             slidesPerView: 2,
             slidesPerColumn: 2,
