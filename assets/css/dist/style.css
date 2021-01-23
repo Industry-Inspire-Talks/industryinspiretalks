@@ -259,8 +259,8 @@ body .jumbotron {
   background-color: #006d8c;
 }
 .team .member:hover .image {
-  height: 130px;
   width: 130px;
+  height: 180px;
   transition: 0.3s;
 }
 .team .member:hover .name,
@@ -269,8 +269,8 @@ body .jumbotron {
 }
 .team .member .image {
   transition: 0.5s;
-  height: 150px;
   width: 150px;
+  height: 180px;
   margin: auto;
   border-radius: 10px;
   background-color: #f1f1f1;

@@ -69,7 +69,7 @@
                         '<div class="mb-3 col-lg-3 col-sm-6">' .
                         '    <div class="director">' .
                         '        <div class="">' .
-                        '            <div class="image image-center-cover" style="background-image: url(\'./uploads/board/' . $result['id'] . '.' . $result['profile_image_ext'] . '\'?2339)">' .
+                        '            <div class="image image-center-cover" style="background-image: url(\'./uploads/team/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
                         '            </div>' .
                         '            <p class="name">' . $result['name'] . '</p>' .
                         '            <p class="position">' . $result['designation'] . '</p>' .
@@ -103,13 +103,20 @@
 
                 <div class="swiper-wrapper">
                     <?php
-                    $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+                    $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 18, 19, 20, 21);
+
+                    shuffle($idArray);
+
 
                     foreach ($idArray as $id) {
                         $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
+
+                        $background = ($result['profile_image_ext']) ? './uploads/team/' . $result['id'] . '.' . $result['profile_image_ext'] : './assets/img/dummy-avatar.png';
+
+
                         echo '<div class="swiper-slide">' .
                             '    <div class="member">' .
-                            '        <div class="image">' .
+                            '            <div class="image image-center-cover" style="background-image: url(' . $background . ')">' .
                             '            <img src="" alt="">' .
                             '        </div>' .
                             '        <p class="name">' . $result['name'] . '</p>' .

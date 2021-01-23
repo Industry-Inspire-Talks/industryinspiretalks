@@ -347,8 +347,8 @@ body {
             background-color: $primary-hover;
 
             .image {
-                height: 130px;
                 width: 130px;
+                height: 180px;
                 transition: .3s;
             }
 
@@ -358,12 +358,10 @@ body {
             }
         }
 
-        .swiper-slide {}
-
         .image {
             transition: .5s;
-            height: 150px;
             width: 150px;
+            height: 180px;
             margin: auto;
             border-radius: 10px;
             background-color: #f1f1f1;
