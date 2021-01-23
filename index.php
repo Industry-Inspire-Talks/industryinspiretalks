@@ -224,25 +224,31 @@
 
         <section class="companies mb-5" style="background:#ebebeb">
             <div class="container">
-                <div id="companies" class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <?php
-                        $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
+                <p class="title h6 text-center text-uppercase">Companies</p>
+                <p class="h5 text-center mb-4 font-weight-light">Our Community Members associated with</p>
 
-                        foreach ($idArray as $id) {
-                            $result = $conn->query("SELECT * FROM companies WHERE id='$id'")->fetch_assoc();
+                <div class="d-flex align-items-center ">
 
-                            echo '' .
-                                '<div class="swiper-slide">' .
-                                '   <div class="p-4 mx-3" style="overflow:hidden;border-radius:1rem;background:#fff">' .
-                                '       <div class=" image image-center-contain" style="height:70px;background-image: url(\'./uploads/companies/' . $result['id'] . '.' . $result['logo_image_ext'] . '\')"></div>' .
-                                '   </div>' .
-                                '</div>';
-                        }
-                        ?>
+                    <div class="swiper-prev"><i class="fa fa-chevron-left"></i></div>
+                    <div id="companies" class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <?php
+                            $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
+
+                            foreach ($idArray as $id) {
+                                $result = $conn->query("SELECT * FROM companies WHERE id='$id'")->fetch_assoc();
+
+                                echo '' .
+                                    '<div class="swiper-slide">' .
+                                    '   <div class="p-4 mx-3" style="overflow:hidden;border-radius:1rem;background:#fff">' .
+                                    '       <div class=" image image-center-contain" style="height:70px;background-image: url(\'./uploads/companies/' . $result['id'] . '.' . $result['logo_image_ext'] . '\')"></div>' .
+                                    '   </div>' .
+                                    '</div>';
+                            }
+                            ?>
+                        </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-next"><i class="fa fa-chevron-right"></i></div>
                 </div>
             </div>
 
@@ -332,8 +338,8 @@
 
         var swiper = new Swiper('#companies.swiper-container', {
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.swiper-next',
+                prevEl: '.swiper-prev',
             },
             slidesPerView: 1,
             loop: true,
