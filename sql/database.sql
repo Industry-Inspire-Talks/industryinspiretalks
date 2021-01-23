@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2021 at 08:49 PM
+-- Generation Time: Jan 23, 2021 at 10:21 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -43,7 +43,7 @@ CREATE TABLE `community` (
 INSERT INTO `community` (`id`, `name`, `company`, `role`, `industry`, `profile_image_ext`) VALUES
 (1, 'Ritwik Deshpande', 'JP Morgan Chase & Co', 'Software Development Engineer', 'Financial Services', 'jpg'),
 (2, 'Irin Banerjee', 'D.E Shaw & Co', 'Software Development Engineer', 'Financial Services', 'jpg'),
-(3, 'Krishan Kumar', 'Flipkart', 'Software Development Engineer', 'Internet', 'jpg'),
+(3, 'Krishan Kumar', 'Dell', 'Ex-Software Development Engineer', 'Information Technology & Services', 'jpg'),
 (4, 'Prakhar Chaturvedi', 'Sprinklr', 'Software Development Engineer', 'Information Technology & Services', 'jpg'),
 (5, 'Rohan Thakur', 'Informatica', 'Associate Software Engineer', 'Computer Software', 'jpg'),
 (6, 'Kritika Rupauliha', 'Microsoft', 'Software Engineer', 'Computer Software', 'jpg'),
@@ -52,17 +52,17 @@ INSERT INTO `community` (`id`, `name`, `company`, `role`, `industry`, `profile_i
 (9, 'Akshay Anand', 'redBus', 'Software Engineer', 'Internet', 'png'),
 (10, 'Arpan Bhowmik', 'Samsung R&D', 'Senior Engineer', 'Consumer Electronics', 'jpg'),
 (11, 'Raja Rahul', 'IBM', 'Software Development Engineer', 'Information Technology & Services', 'jpeg'),
-(12, 'Yusuf Hassan', 'OneDIrect', 'Product Manager', 'Information Technology & Services', ''),
-(13, 'Shashank Mishra', 'Amazon', 'Data Engineer', 'Internet', ''),
-(14, 'Pooja Sund', 'Microsoft', 'Director of Technology & Analytics', 'Computer Software', ''),
-(15, 'Varun Sud', 'CompTiA', 'Head of Academic Alliances', 'Information Technology & Services', ''),
-(16, 'Souhardya De', 'Rupa Publications', 'Indian Author', 'Publishing', ''),
+(12, 'Yusuf Hassan', 'OneDirect', 'Product Manager', 'Information Technology & Services', 'jpeg'),
+(13, 'Shashank Mishra', 'Amazon', 'Data Engineer', 'Internet', 'jpeg'),
+(14, 'Pooja Sund', 'Microsoft', 'Director of Technology & Analytics', 'Computer Software', 'jpeg'),
+(15, 'Varun Sud', 'CompTIA', 'Head of Academic Alliances', 'Information Technology & Services', 'jpeg'),
+(16, 'Souhardya De', 'Rupa Publications', 'Indian Author', 'Publishing', 'jpeg'),
 (17, 'Yudi J', 'EXL Healthcare', 'Software Team Manager', 'Healthcare Services', 'jpg'),
-(18, 'Meraj Faheem', 'The Hacking School', 'Founder', 'E-Learning', ''),
-(19, 'Srikumar Nair', 'Microsoft', 'Principal Group Program Manager', 'Computer Software', ''),
-(20, 'Mrinal Jain', 'Wittyfeed', 'Front-End Engineer', 'Online Media', ''),
-(21, 'Suman Debnath', 'Amazon Web Services', 'Principal Developer Advocate', 'Information Technology & Services', ''),
-(22, 'Vandana Mohture', 'MindArt', 'Founder', 'Professional Training & Coaching', '');
+(18, 'Meraj Faheem', 'The Hacking School', 'Founder', 'E-Learning', 'jpeg'),
+(19, 'Srikumar Nair', 'Microsoft', 'Principal Group Program Manager', 'Computer Software', 'jpeg'),
+(20, 'Mrinal Jain', 'Wittyfeed', 'Front-End Engineer', 'Online Media', 'jpeg'),
+(21, 'Suman Debnath', 'Amazon Web Services', 'Principal Developer Advocate', 'Information Technology & Services', 'jpeg'),
+(22, 'Vandana Mohture', 'MindArt', 'Founder', 'Professional Training & Coaching', 'jpeg');
 
 -- --------------------------------------------------------
 
@@ -101,6 +101,37 @@ INSERT INTO `companies` (`id`, `title`, `logo_image_ext`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `episodes`
+--
+
+CREATE TABLE `episodes` (
+  `id` int(11) NOT NULL,
+  `series_id` int(11) NOT NULL,
+  `title` varchar(60) NOT NULL,
+  `link` varchar(60) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `episodes`
+--
+
+INSERT INTO `episodes` (`id`, `series_id`, `title`, `link`) VALUES
+(1, 2, 'Podcast Series with Yudi J - EP #1', 'https://www.youtube.com/embed/JBmUScGyOEg'),
+(2, 1, 'Interview Series with Rahul - EP #11', 'https://www.youtube.com/embed/rHq1eU14wCs'),
+(3, 1, 'Interview Series with Arpan - EP #10', 'https://www.youtube.com/embed/y5nfPq-rxfw'),
+(4, 1, 'Interview Series with Akshay - EP #9', 'https://www.youtube.com/embed/4z7qbq4yAc8'),
+(5, 1, 'Interview Series with Shivam - EP #8', 'https://www.youtube.com/embed/lUE84M_Dq78'),
+(6, 1, 'Interview Series with Harshit - EP #7', 'https://www.youtube.com/embed/JAAwLHLUmu0'),
+(7, 1, 'Interview Series with Kritika - EP #6', 'https://www.youtube.com/embed/jiQeFPvU_bI'),
+(8, 1, 'Interview Series with Rohan - EP #5', 'https://www.youtube.com/embed/xLCOF7aCJ1U'),
+(9, 1, 'Interview Series with Prakhar - EP #4', 'https://www.youtube.com/embed/vPXOKfKLlY'),
+(10, 1, 'Interview Series with Krishan - EP #3', 'https://www.youtube.com/embed/XAf83l1wfFk'),
+(11, 1, 'Interview Series with Irin - EP #2', 'https://www.youtube.com/embed/VhD_-5BVcxM'),
+(12, 1, 'Interview Series with Ritwik - EP #1', 'https://www.youtube.com/embed/FkvVTTgj2y4');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `events`
 --
 
@@ -118,7 +149,7 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `category`, `title`, `description`, `link`, `thumbnail_image_ext`) VALUES
-(1, 'Industry Expo 2020', 'Path to Product Management', 'Welcome to Day 1 of Industry Expo 2k20, A 5-Day virtual event hosted with experts from the industry. Hope you have an amazing learning experience with us. Industry Inspire Talks are back again to equip you with the right dose of industry knowledge and scale-up your industry skills by making you industry-ready!  Yusuf Hassan is a Product Manager with a demonstrated ability to manage the entire product lifecycle - from ideation to deployment and post-deployment enhancements in an agile environment.Introduced QR codes on websites for a seamless payment experience. My area of expertise is to build and enhance products and features for higher customer retention, higher success rates, reduced frauds, and overall engaging experience for the consumer.', '', 'png'),
+(1, 'Industry Expo 2020', 'Path to Product Management', 'Welcome to Day 1 of Industry Expo 2k20, A 5-Day virtual event hosted with experts from the industry. Hope you have an amazing learning experience with us. Industry Inspire Talks are back again to equip you with the right dose of industry knowledge and scale-up your industry skills by making you industry-ready!  Yusuf Hassan is a Product Manager with a demonstrated ability to manage the entire product lifecycle - from ideation to deployment and post-deployment enhancements in an agile environment.Introduced QR codes on websites for a seamless payment experience. My area of expertise is to build and enhance products and features for higher customer retention, higher success rates, reduced frauds, and overall engaging experience for the consumer.', 'https://youtu.be/Zt8BhRS2vf0', 'png'),
 (2, 'Industry Expo 2020', 'Career opportunities in Big Data', 'Welcome to Day 2 of Industry Expo 2k20, A 5-Day virtual event hosted with experts from the industry. Hope you have an amazing learning experience with us. Industry Inspire Talks are back again to equip you with the right dose of industry knowledge and scale-up your industry skills by making you industry-ready! Shashank Mishra is a Data Engineer for Amazon, Ex - McKinsey & Company, Ex - Paytm, Founder @ E-Learning Bridge. He is an experienced Data Engineer with a demonstrated history of working in the information technology and services industry. Skilled in BigData technologies and Data Visualization ( Hadoop, Spark, SparkStreaming, HBase, Hive, Sqoop, Kafka, Datastax Cassandra, Datastax Studio, ElasticSearch, Grafana, Kibana) with a good grasp of Java, Python, C++, Core Data Structures & Algorithms, Django, REST API, and Databases. Strong engineering professional with a Master of Computer Applications (M.C.A.) focused in Computer Science and Engineering from Motilal Nehru National Institute Of Technology, Allahabad (NIT Allahabad)  ', 'https://youtu.be/5C5cJSduemw', 'png'),
 (3, 'Industry Expo 2020', 'Build your brand', 'Welcome to Day 3 of Industry Expo 2k20, A 5-Day virtual event hosted with experts from the industry. Hope you have an amazing learning experience with us. Industry Inspire Talks are back again to equip you with the right dose of industry knowledge and scale-up your industry skills by making you industry-ready! Pooja Sund is the Director-Technology & Analytics for Microsoft, Redmond, the USA with 14yrs+ of experience. She is an achievement-oriented finance and technology leader with solid credentials (Gold medalist and 2 times CFO Award winner). 15+ years of global experience in setting the vision, and the ability to execute on that vision by leading teams. An enthusiastic leader with deep technical and financial experience & proven ability to lead high-performing teams, build strong relationships, foster efficiency, and create an impact. I am the recipient of Highest Award for Leadership 2018, Dale Carnegie’s “Advanced Leadership Program”. She loves to make an impact by utilizing my brand of 3P: Passion for Technology, Data Analytics, Leadership and Business intelligence; Power to believe in myself and others, the power to keep ideating, fix things, create clarity, generate positive energy in teams; and lead people and teams to be successful.', 'https://youtu.be/04FokgmRk5o', 'png'),
 (4, 'Industry Expo 2020', 'Your next move: Learn a new skill', 'Welcome to Day 4 of Industry Expo 2k20, A 5-Day virtual event hosted with experts from the industry. Hope you have an amazing learning experience with us. Industry Inspire Talks are back again to equip you with the right dose of industry knowledge and scale-up your industry skills by making you industry-ready! Varun is currently heading the Academic alliances for CompTIA in India, Srilanka, and Bangladesh. My role in CompTIA is to work with Academic institutions build a workforce capable of exploiting technical innovation, protect valuable information, and at the same time help address the scarcity of talent.', 'https://youtu.be/cGnlBjDBzuo', 'png'),
@@ -265,6 +296,29 @@ CREATE TABLE `password_resets` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `series`
+--
+
+CREATE TABLE `series` (
+  `id` int(11) NOT NULL,
+  `name` varchar(40) NOT NULL,
+  `description` text NOT NULL,
+  `image_ext` varchar(6) NOT NULL,
+  `coming_soon` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `series`
+--
+
+INSERT INTO `series` (`id`, `name`, `description`, `image_ext`, `coming_soon`) VALUES
+(1, 'Interview Series', 'Interview series involves people who interned at companies & converted that internship opportunity into a full-time offer.', 'jpeg', 0),
+(2, 'Podcast Series', 'Podcasts Series involves people with 5-10 years of Industry Experience who hold big positions at companies like Founder, MD, CEO, Managers, etc sharing their industry experiences in our series.', 'jpeg', 0),
+(3, 'Careers', '', 'jpeg', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `staff`
 --
 
@@ -354,6 +408,12 @@ ALTER TABLE `companies`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `episodes`
+--
+ALTER TABLE `episodes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `events`
 --
 ALTER TABLE `events`
@@ -391,6 +451,12 @@ ALTER TABLE `password_resets`
   ADD KEY `password_resets_email_index` (`email`);
 
 --
+-- Indexes for table `series`
+--
+ALTER TABLE `series`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `staff`
 --
 ALTER TABLE `staff`
@@ -418,6 +484,12 @@ ALTER TABLE `community`
 --
 ALTER TABLE `companies`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `episodes`
+--
+ALTER TABLE `episodes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -448,6 +520,12 @@ ALTER TABLE `inspire_stories`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `series`
+--
+ALTER TABLE `series`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `staff`

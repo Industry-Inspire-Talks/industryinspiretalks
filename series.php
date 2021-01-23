@@ -39,17 +39,25 @@
                 <input type="search" class="form-control" placeholder="Search for episodes">
             </div>
 
-            <?php for ($i = 1; $i < 3; $i++) { ?>
+            <?php
+            $result = $conn->query("SELECT * FROM episodes WHERE series_id='$id'");
 
-                <div id="episode<?php echo $i ?>">
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <p class="h6 m-0 text-left">EP #<?php echo $i ?> - Interview Series with Ritwik</p>
-                        </div>
-                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/FkvVTTgj2y4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            <?php } ?>
+            while ($row = $result->fetch_assoc()) {
+
+                echo '' .
+                    '<div id="">' .
+                    '    <div class="card mb-3">' .
+                    '        <div class="card-body">' .
+                    '            <p class="h6 m-0 text-left">' . $row['title'] . '</p>' .
+                    '        </div>' .
+                    '        <iframe width="100%" height="500" src="' . $row['link'] . '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' .
+                    '    </div>' .
+                    '</div>';
+            }
+
+            ?>
+
+
         </section>
 
         <!-- Footer Section  -->
