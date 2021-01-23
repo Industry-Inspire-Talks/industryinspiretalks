@@ -18,21 +18,21 @@
             <div class="col-10 col-sm-10 col-lg-2 col-md-6 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
-                    <li> <a href="#">Home</a></li>
-                    <li> <a href="#">About us</a></li>
-                    <li> <a href="#">Community</a></li>
-                    <li> <a href="#">Episodes</a></li>
-                    <li> <a href="#">Events</a></li>
-                    <li> <a href="#">Connect US</a></li>
+                    <li> <a href="./index.php">Home</a></li>
+                    <li> <a href="./about.php">About us</a></li>
+                    <li> <a href="./community.php">Community</a></li>
+                    <li> <a href="./episodes.php">Episodes</a></li>
+                    <li> <a href="./events.php">Events</a></li>
+                    <li> <a href="./contact.php">Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="col-10 col-sm-10 col-lg-3 col-md-6 footer-links">
                 <!-- <h4>Our Services</h4> -->
                 <ul class="mt-5">
-                    <li><a href="#">Inspire Stories </a></li>
-                    <li><a href="#">Campus Ambassador Program</a></li>
-                    <li><a href="#">Carrer </a></li>
+                    <li><a href="./stories.php">Inspire Stories </a></li>
+                    <li><a href="./ambassador.php">Campus Ambassador Program</a></li>
+                    <li><a href="./careers.php">Carrer </a></li>
                     <li><a href="#">Our Channel</a></li>
 
             </div>
