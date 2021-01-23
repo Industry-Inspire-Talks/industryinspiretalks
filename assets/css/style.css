@@ -276,12 +276,23 @@ body .jumbotron {
 @media (max-width: 520px) {
   #hero .info h2 {
     text-align: center;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 32px;
+    line-height: 38px;
     margin-top: 2rem;
   }
   #hero .image {
-    height: 150px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 360px) {
+  #hero .info h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 2rem;
+  }
+  #hero .image {
+    height: 120px;
   }
 }
 
