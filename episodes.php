@@ -21,40 +21,23 @@
 
 		<section class="container pt-5 my-5 series">
 			<div class="row align-items-center justify-content-center">
-				<div class="col-md-6 col-lg-4">
-					<div class="card mx-auto mb-3 shadow border-0" style="max-width: 290px;border-radius:1rem;overflow:hidden">
-						<a class="" href="series.php">
-							<div class="image-center-cover" style="padding-top:100%;background-image:url('./assets/img/interview.jpeg')"></div>
-							<div class="card-body text-center">
-								<p class="h5 font-weight-normal">Interview Series</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<div class="card mx-auto mb-3 shadow border-0" style="max-width: 290px;border-radius:1rem;overflow:hidden">
-						<a class="" href="series.php">
-							<div class="image-center-cover" style="padding-top:100%;background-image:url('./assets/img/podcast.jpeg')"></div>
-							<div class="card-body text-center">
-								<p class="h5 font-weight-normal">Podcast Series</p>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-4">
-					<div class="card mx-auto mb-3 shadow border-0" style="max-width: 290px;border-radius:1rem;overflow:hidden">
-						<a class="" href="series.php">
-							<div class="image-center-cover" style="padding-top:100%;background-image:url('./assets/img/career.jpeg')"></div>
-							<div class="card-body text-center">
-								<p class="h5 font-weight-normal">Career Stories</p>
-							</div>
-						</a>
-						<div class="coming-soon">
-							Coming Soon
-						</div>
-					</div>
-				</div>
+				<?php
+				$result = $conn->query("SELECT * FROM series");
 
+				while ($row = $result->fetch_assoc()) {
+					echo '<div class="col-md-6 col-lg-4">' .
+						'	<div class="card mx-auto mb-3 shadow border-0" style="max-width: 290px;border-radius:1rem;overflow:hidden">' .
+						'		<a class="" href="' . ((!$row['coming_soon']) ? 'series.php?id=' . $row['id'] . '' : '#') . '">' .
+						'			<div class="image-center-cover" style="padding-top:100%;background-image:url(\'./uploads/series/' . $row['id'] . '.' . $row['image_ext'] . '\')"></div>' .
+						'			<div class="card-body text-center">' .
+						'				<p class="h5 font-weight-normal">' . $row['name'] . '</p>' .
+						'			</div>' .
+						'		</a>' .
+						(($row['coming_soon']) ? '<div class="coming-soon">Coming Soon</div>' : '') .
+						'	</div>' .
+						'</div>';
+				}
+				?>
 				<style>
 					.series .coming-soon {
 						position: absolute;
