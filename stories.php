@@ -36,11 +36,11 @@
                             </div>
 
                             <div class="img-square" style="background-image : url('uploads/inspire_stories/1.jpg')" style="background: #f1f1f1;"></div>
-                            <div class="py-2 px-3 border-bottom">
+                            <!-- <div class="py-2 px-3 border-bottom">
                                 <p class="link">
                                     <a class="" href="#" target="_blank" rel="noopener noreferrer">Few Lines of the story to proceed forward to the linkedin </a>
                                 </p>
-                            </div>
+                            </div> -->
                             <div class="py-2 px-3 d-flex align-items-center justify-content-between">
                                 <p class="m-0"><i class="far fa-thumbs-up "></i></p>
                                 <p class="m-0"><i class="far fa-comment "></i></p>

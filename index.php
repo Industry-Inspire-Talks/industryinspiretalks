@@ -69,7 +69,7 @@
                         '<div class="mb-3 col-lg-3 col-sm-6">' .
                         '    <div class="director">' .
                         '        <div class="">' .
-                        '            <div class="image image-center-cover" style="background-image: url(\'./uploads/board/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
+                        '            <div class="image image-center-cover" style="background-image: url(\'./uploads/board/' . $result['id'] . '.' . $result['profile_image_ext'] . '\'?2339)">' .
                         '            </div>' .
                         '            <p class="name">' . $result['name'] . '</p>' .
                         '            <p class="position">' . $result['designation'] . '</p>' .
