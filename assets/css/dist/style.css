@@ -216,6 +216,7 @@ body .jumbotron {
   }
   #hero .image {
     height: 180px;
+    margin-top: 1.5rem;
   }
 }
 @media (max-width: 360px) {
@@ -225,6 +226,7 @@ body .jumbotron {
     margin-top: 2rem;
   }
   #hero .image {
+    margin-top: 1rem;
     height: 120px;
   }
 }

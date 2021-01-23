@@ -300,8 +300,10 @@ body {
 
         .image {
             height: 180px;
+            margin-top: 1.5rem;
         }
     }
+
     @media (max-width:360px) {
 
         .info h2 {
@@ -311,6 +313,7 @@ body {
         }
 
         .image {
+            margin-top: 1rem;
             height: 120px;
         }
     }
