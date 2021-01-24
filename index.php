@@ -198,7 +198,7 @@
 
                         echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
                             '    <div class="member d-flex card flex-row">' .
-                            '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'./uploads/community/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')"></div>' .
+                            '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'./uploads/community/' . $result['id'] . '.' . $result['profile_image_ext'] . '?new\')"></div>' .
                             '        <div class="d-flex justify-content-between flex-column">' .
                             '            <div>' .
                             '                <p class="name">' . $result['name'] . '</p>' .
