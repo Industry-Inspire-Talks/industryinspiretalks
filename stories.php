@@ -48,15 +48,15 @@
                         '            </div>' .
                         '        </div>' .
                         '        <div>' .
-                        '      <a href="' . $row['link'] . '" target="blank">' .
                         '           <div class="img-square" style="background-image : url(\'uploads/inspire_stories/' . $row['id'] . '.' . $ext . '\')" style="background: #f1f1f1;"></div>' .
+                        '      <a href="' . $row['link'] . '" target="blank">' .
                         '              <div class="py-2 px-3 d-flex align-items-center justify-content-between">' .
                         '                  <p class="m-0"><i class="far fa-thumbs-up "></i></p>' .
                         '                  <p class="m-0"><i class="far fa-comment "></i></p>' .
                         '                  <p class="m-0"><i class="fa fa-share-alt"></i></p>' .
                         '               </div>' .
-                        '           </div>' .
                         '       </a>' .
+                        '           </div>' .
                         '    </div>' .
                         '</div>';
                 }
