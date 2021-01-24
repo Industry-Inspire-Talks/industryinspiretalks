@@ -248,9 +248,10 @@
 
                                 echo '' .
                                     '<div class="swiper-slide">' .
-                                    '   <div class="p-4 mx-3" style="overflow:hidden;border-radius:1rem;background:#fff">' .
+                                    '   <div class="p-4 mx-3 mb-2" style="overflow:hidden;border-radius:1rem;background:#fff">' .
                                     '       <div class=" image image-center-contain" style="height:70px;background-image: url(\'./uploads/companies/' . $result['id'] . '.' . $result['logo_image_ext'] . '\')"></div>' .
                                     '   </div>' .
+                                    '   <p class="text-center small font-weight-bold">' . $result['title'] . '</p>' .
                                     '</div>';
                             }
                             ?>
