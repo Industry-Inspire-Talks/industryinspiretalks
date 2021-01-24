@@ -62,12 +62,13 @@
 
 			<div class="d-flex flex-wrap justify-content-center align-items-center text-center">
 				<?php
-				$idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+				$idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13,  18, 19, 20, 21, 22);
 
 				foreach ($idArray as $id) {
 					$result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
-					echo '<div class="card m-2" style="width:200px">' .
+					echo '<div class="card m-2 border-0" style="width:200px">' .
 						'	<div class="card-body mb-3">' .
+						'       <div class="image-center-cover mb-3" style="border-radius:1rem;overflow:hidden;height:200px;background-image: url(\'./uploads/team/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')"></div>' .
 						'		<h5 class="card-title">' . $result['name'] . '</h5>' .
 						'		<p class="card-text">' . $result['designation'] . '</p>' .
 						'	</div>' .
