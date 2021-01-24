@@ -25,7 +25,7 @@
 			<p> If you are a community person too, this is the place where you truly belong! Join the #Inspire Community!</p>
 		</section>
 		<section class="container board">
-			<h1 class="title text-center mb-5">Our Board Directors</h1>
+			<h1 class="title text-center mb-5">Our Board of Directors</h1>
 			<div class="row">
 				<?php
 				$idArray = array(1, 2, 3, 4);
