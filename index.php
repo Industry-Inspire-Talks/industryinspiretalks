@@ -103,7 +103,7 @@
 
                 <div class="swiper-wrapper">
                     <?php
-                    $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 18, 19, 20, 21);
+                    $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 18, 19, 20, 21, 22);
 
                     shuffle($idArray);
 
@@ -187,9 +187,12 @@
             <div class="container">
                 <div class="row">
                     <?php
-                    // $idArray = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22);
-                    $idArray = array(1, 2, 3, 4, 5, 6);
 
+                    $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28);
+
+                    shuffle($idArray);
+
+                    $i = 0;
                     foreach ($idArray as $id) {
                         $result = $conn->query("SELECT * FROM community WHERE id='$id'")->fetch_assoc();
 
@@ -203,11 +206,14 @@
                             '                <p class="position">' . $result['role'] . '</p>' .
                             '            </div>' .
                             '            <div class="social">' .
-                            '                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
+                            '                <a  href="' . $result['link'] . '" target="blank"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
                             '            </div>' .
                             '        </div>' .
                             '    </div>' .
                             '</div>';
+
+                        $i++;
+                        if ($i > 5) break;
                     }
                     ?>
 
@@ -233,7 +239,9 @@
                     <div id="companies" class="swiper-container">
                         <div class="swiper-wrapper">
                             <?php
-                            $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
+                            $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17);
+
+                            shuffle($idArray);
 
                             foreach ($idArray as $id) {
                                 $result = $conn->query("SELECT * FROM companies WHERE id='$id'")->fetch_assoc();
@@ -325,6 +333,11 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             slidesPerView: 1,
             breakpoints: {
                 768: {
@@ -343,6 +356,10 @@
             },
             slidesPerView: 1,
             loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             breakpoints: {
                 552: {
                     slidesPerView: 2,
@@ -361,6 +378,11 @@
                 nextEl: '.swiper-next',
                 prevEl: '.swiper-prev',
             },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+
             slidesPerView: 2,
             slidesPerColumn: 2,
             // loop: true,
