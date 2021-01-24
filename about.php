@@ -64,6 +64,8 @@
 				<?php
 				$idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13,  18, 19, 20, 21, 22);
 
+				shuffle($idArray);
+
 				foreach ($idArray as $id) {
 					$result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
 					echo '<div class="card m-2 border-0" style="width:200px">' .

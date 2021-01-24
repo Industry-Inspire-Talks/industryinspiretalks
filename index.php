@@ -171,7 +171,7 @@
                     <div class="swiper-button-prev"></div>
                 </div>
                 <p class="text-center">
-                    <a href="./events.php" class="btn btn-primary btn-pill">Events <i class="fa fa-arrow-right"></i></a>
+                    <a href="./events.php" class="btn btn-primary btn-pill mt-3">Events <i class="fa fa-arrow-right"></i></a>
                 </p>
 
             </div>
@@ -235,11 +235,11 @@
 
                 <div class="d-flex align-items-center ">
 
-                    <div class="swiper-prev"><i class="fa fa-chevron-left"></i></div>
+                    <div class="swiper-prev btn"><i class="fa fa-chevron-left"></i></div>
                     <div id="companies" class="swiper-container">
                         <div class="swiper-wrapper">
                             <?php
-                            $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17);
+                            $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24);
 
                             shuffle($idArray);
 
@@ -256,7 +256,7 @@
                             ?>
                         </div>
                     </div>
-                    <div class="swiper-next"><i class="fa fa-chevron-right"></i></div>
+                    <div class="swiper-next btn"><i class="fa fa-chevron-right"></i></div>
                 </div>
             </div>
 
