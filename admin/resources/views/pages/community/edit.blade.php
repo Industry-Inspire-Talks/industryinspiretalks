@@ -3,7 +3,7 @@
 @section('community_details')
 
 
-<form method="POST" action="/community/edit/{{$community->id}}">
+<form method="POST" action="/community/edit/{{$community->id}}" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
@@ -31,16 +31,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="form-group">
                         <label for="">Industry</label>
                         <input type="text" name="industry" value="{{$community->industry}}" class="form-control">
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="formFile" class="form-label">Upload Image</label>
+                        <input class="form-control form-control mb-4" name="profile_image_ext" type="file">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <button class="btn btn-warning mt-4" type="submit" name="action" value="image_upload" ><i class="fa fa-plus"></i> Upload Image</button >
+                    </div>
+                </div>
+                
             </div>
             
         <div class="card-footer">
-            <button class="btn btn-success" type="submit"  ><i class="fa fa-plus"></i> Update</button>
+        <button class="btn btn-primary" type="submit" name="action" value="update"  ><i class="fa fa-plus"></i> Update</button>
         </div>
     </div>
 </form>

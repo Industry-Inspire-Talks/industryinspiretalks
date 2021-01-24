@@ -62,9 +62,31 @@ class DatabaseController extends Controller
      public function edit_community(Request $request,$id)
      {
 
-          DB::table('community')
-         ->where('id', $id)
-         ->update($request->only(['name', 'company', 'role', 'industry']));
+        switch ($request->input('action')) {
+            case 'image_upload':
+                $request->validate([
+                    'profile_image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                ]); 
+        
+                $imageExtension = $request->profile_image_ext->extension(); 
+                $request->profile_image_ext->move(public_path('uploads/community'), $id.$imageExtension);
+        
+                DB::table('community')
+                ->where('id', $id)
+                ->update(['profile_image_ext'=>$imageExtension]);
+        
+                break;
+    
+            case 'update':
+                DB::table('community')
+                ->where('id', $id)
+                ->update($request->only(['name', 'company', 'role', 'industry']));
+
+                break;
+    
+           
+        }
+
  
          $community = DB::table('community')->where('id', $id)->distinct()->first();
  
@@ -134,8 +156,8 @@ class DatabaseController extends Controller
                     'profile_image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                 ]); 
         
-                $imageExtension = '.'.$request->profile_image_ext->extension(); 
-                $request->profile_image_ext->move(public_path('staff_images'), $id.$imageExtension);
+                $imageExtension = $request->profile_image_ext->extension(); 
+                $request->profile_image_ext->move(public_path('uploads/staff'), $id.$imageExtension);
         
                 DB::table('staff')
                 ->where('id', $id)
