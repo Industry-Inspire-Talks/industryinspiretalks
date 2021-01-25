@@ -32,6 +32,7 @@
 
 				foreach ($idArray as $id) {
 					$result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
+					$social = json_decode($result['social_links'], true);
 
 					echo '' .
 						'<div class="mb-3 col-lg-3 col-sm-6">' .
@@ -43,7 +44,7 @@
 						'            <p class="position">' . $result['designation'] . '</p>' .
 						'        </div>' .
 						'        <div class="social">' .
-						'            <a href="#"><i class="fab fa-linkedin"></i></a>' .
+						'            <a href="' . $social['linkedin'] . '" target="blank"><i class="fab fa-linkedin"></i></a>' .
 						'            <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>' .
 						'            <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>' .
 						'            <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>' .
