@@ -28,7 +28,7 @@
 			<h1 class="title text-center mb-5">Our Board of Directors</h1>
 			<div class="row">
 				<?php
-				$idArray = array(1, 2, 3, 4);
+				$idArray = array(1, 3, 4);
 
 				foreach ($idArray as $id) {
 					$result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();

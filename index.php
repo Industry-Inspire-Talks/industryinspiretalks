@@ -60,7 +60,7 @@
             <p class="title text-center">Meet Our Board of Directors</p>
             <div class="row">
                 <?php
-                $idArray = array(1, 2, 3, 4);
+                $idArray = array(1, 3, 4);
 
                 foreach ($idArray as $id) {
                     $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
