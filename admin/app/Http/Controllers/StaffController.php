@@ -88,9 +88,9 @@ class StaffController extends Controller
         }
 
             
-        $staff = DB::table('staff')->where('id', $id)->distinct()->first();
+        $tablerow = DB::table('staff')->where('id', $id)->distinct()->first();
 
-        return view('pages.staff.edit', compact('staff'));
+        return view('pages.staff.edit', compact('tablerow'));
     }
     
     

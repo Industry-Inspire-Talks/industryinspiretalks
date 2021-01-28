@@ -3,7 +3,7 @@
 @section('community_details')
 
 
-<form method="POST" action="/community/edit/{{$community->id}}" enctype='multipart/form-data'>
+<form method="POST" action="/community/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
@@ -14,19 +14,19 @@
                 <div class="col-md-4">
                     <div class="form-group" >
                         <label for="">Name</label>
-                        <input type="text" name="name" value="{{$community->name}}" class="form-control" required>
+                        <input type="text" name="name" value="{{$tablerow->name}}" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Company</label>
-                        <input type="text" name="company" value="{{$community->company}}" class="form-control" required>
+                        <input type="text" name="company" value="{{$tablerow->company}}" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Role</label>
-                        <input type="text" name="role" value="{{$community->role}}" class="form-control">
+                        <input type="text" name="role" value="{{$tablerow->role}}" class="form-control">
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="">Industry</label>
-                        <input type="text" name="industry" value="{{$community->industry}}" class="form-control">
+                        <input type="text" name="industry" value="{{$tablerow->industry}}" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-3">

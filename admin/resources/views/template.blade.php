@@ -125,7 +125,7 @@
 
             <!-- Nav Item - Inspire Stories -->
             <li class="nav-item">
-                <a class="nav-link" href="/inspirestories/list">
+                <a class="nav-link" href="/inspire_stories/list">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Inspire Stories</span></a>
             </li>
