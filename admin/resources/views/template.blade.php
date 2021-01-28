@@ -116,6 +116,27 @@
                     <span>Staff</span></a>
             </li>
 
+            <!-- Nav Item - Episodes -->
+            <li class="nav-item">
+                <a class="nav-link" href="/episodes/list">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Episodes</a>
+            </li>
+
+            <!-- Nav Item - Inspire Stories -->
+            <li class="nav-item">
+                <a class="nav-link" href="/inspirestories/list">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Inspire Stories</span></a>
+            </li>
+
+            <!-- Nav Item - Series -->
+            <li class="nav-item">
+                <a class="nav-link" href="/series/list">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Series</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -327,6 +348,8 @@
 
                     @yield('community_details')
                     @yield('staff_details')
+                    @yield('episode_details')
+                    @yield('inspire_stories')
 
                     @yield('404')
 

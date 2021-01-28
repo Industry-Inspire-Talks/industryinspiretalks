@@ -22,7 +22,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($staff as $staff)
+                    @foreach ($tablerow as $staff)
                     <tr>
                         <th scope="row">{{$staff->id}}</th>
                         <td>{{$staff->name}}</td>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Input;
+
 
 
 class StaffController extends Controller
@@ -34,7 +34,7 @@ class StaffController extends Controller
 
         // DB::insert('insert into staff(name,designation,contact,email,dob,social_links,nationality,address,profile_image_ext,date_of_joining,date_of_leaving) values(?,?,?,?,?,?,?,?,?,?,?)' , [$name,$designation,$contact,$email,$dob,$social_links,$nationality,$address,$image,$date_of_joining,$date_of_leaving]);
 
-        if(DB::table('staff')->insert($request->only(['name', 'designation', 'contact', 'email','dob','social_links','nationality','address','date_of_joining','date_of_leaving']),$request->input('profile_image_ext')))
+        if(DB::table('staff')->insert($request->only(['name', 'designation', 'contact', 'email','dob','social_links','nationality','address','date_of_joining','date_of_leaving'])))
         
         {
             return redirect()->back()->with('alert','Sucessfully Registered');

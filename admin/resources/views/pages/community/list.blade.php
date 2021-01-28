@@ -21,7 +21,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($community as $community)
+                    @foreach ($tablerow as $community)
                     <tr>
                         <th scope="row">{{$community->id}}</th>
                         <td>{{$community->name}}</td>
