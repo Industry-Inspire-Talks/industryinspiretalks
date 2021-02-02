@@ -137,6 +137,13 @@
                     <span>Series</span></a>
             </li>
 
+             <!-- Nav Item - Events -->
+             <li class="nav-item">
+                <a class="nav-link" href="/events/list">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Events</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -350,7 +357,9 @@
                     @yield('staff_details')
                     @yield('episode_details')
                     @yield('inspire_stories')
-
+                    @yield('events')
+                    @yield('series')
+                
                     @yield('404')
 
 
