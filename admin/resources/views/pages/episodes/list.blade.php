@@ -5,7 +5,7 @@
 <div class="card">
     <div class="card-header d-flex align-items-center justify-content-between">
         <p class="h3 m-0">Episodes</p>
-        <a href="/staff/add" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Episode</a>
+        <a href="/episodes/add" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Episode</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -24,9 +24,9 @@
                         <th scope="row">{{$episode->series_id}}</th>
                         <td>{{$episode->title}}</td>
                         <td>{{$episode->link}}</td>
-                        
+
                         <td class="text-nowrap">
-                            <a class="btn btn-sm btn-warning " href="/episode/edit/{{$episode->id}}"><i class="fa fa-edit"></i> Edit</a>
+                            <a class="btn btn-sm btn-warning " href="/episodes/edit/{{$episode->id}}"><i class="fa fa-edit"></i> Edit</a>
                             <a class="btn btn-sm btn-primary" href="#"><i class="fa fa-eye"></i> View</a>
                         </td>
                     </tr>
