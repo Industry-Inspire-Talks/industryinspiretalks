@@ -1,11 +1,11 @@
 @extends('template')
 
-@section('series')
+@section('main')
 
 <div class="card">
     <div class="card-header d-flex align-items-center justify-content-between">
         <p class="h3 m-0">Inspire Series List</p>
-        <a href="/staff/add" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Series</a>
+        <a href="/series/add" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Series</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">

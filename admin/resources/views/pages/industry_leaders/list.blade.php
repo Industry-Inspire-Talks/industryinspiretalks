@@ -1,10 +1,10 @@
 @extends('template')
 
-@section('community_details')
+@section('main')
 <div class="card">
     <div class="card-header d-flex align-item-center justify-content-between">
-        <p class="h3 m-0">Community Member</p>
-        <a href="/community/add" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Community Member</a>
+        <p class="h3 m-0">Indsutry Leaders </p>
+        <a href="/industry_leaders/add" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Industry Leaders</a>
     </div>
     <div class="card-body">
 
@@ -14,22 +14,20 @@
                     <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Position</th>
                         <th scope="col">Company</th>
-                        <th scope="col">Role</th>
-                        <th scope="col">Industry</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($tablerow as $community)
+                    @foreach ($tablerow as $industry_leaders)
                     <tr>
-                        <th scope="row">{{$community->id}}</th>
-                        <td>{{$community->name}}</td>
-                        <td>{{$community->company}}</td>
-                        <td>{{$community->role}}</td>
-                        <td>{{$community->industry}}</td>
+                        <th scope="row">{{$industry_leaders->id}}</th>
+                        <td>{{$industry_leaders->name}}</td>
+                        <td>{{$industry_leaders->position}}</td>
+                        <td>{{$industry_leaders->company}}</td>
                         <td class="text-nowrap">
-                            <a class="btn btn-warning btn-sm" href="/community/edit/{{$community->id}}" role="button">Edit</a>
+                            <a class="btn btn-warning btn-sm" href="/industry_leaders/edit/{{$industry_leaders->id}}" role="button">Edit</a>
                             <a class="btn btn-primary btn-sm" href="#" role="button">View</a>
                         </td>
                     </tr>

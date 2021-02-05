@@ -137,11 +137,30 @@
                     <span>Series</span></a>
             </li>
 
-             <!-- Nav Item - Events -->
-             <li class="nav-item">
+            <!-- Nav Item - Events -->
+            <li class="nav-item">
                 <a class="nav-link" href="/events/list">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Events</span></a>
+            </li>
+
+            <!-- Nav Item - Careers -->
+            <li class="nav-item">
+                <a class="nav-link" href="/careers/list">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Careers</span></a>
+            </li>
+            <!-- Nav Item - Leaders -->
+            <li class="nav-item">
+                <a class="nav-link" href="/industry_leaders/list">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Industry Leaders</span></a>
+            </li>
+            <!-- Nav Item - Leaders -->
+            <li class="nav-item">
+                <a class="nav-link" href="/companies/list">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Companies</span></a>
             </li>
 
             <!-- Divider -->
@@ -353,13 +372,8 @@
 
                     @yield('admin_dashboard')
 
-                    @yield('community_details')
-                    @yield('staff_details')
-                    @yield('episode_details')
-                    @yield('inspire_stories')
-                    @yield('events')
-                    @yield('series')
-                
+                    @yield('main')
+
                     @yield('404')
 
 

@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('staff_details')
+@section('main')
 
 <div class="card">
     <div class="card-header d-flex align-items-center justify-content-between">

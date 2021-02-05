@@ -1,11 +1,11 @@
 @extends('template')
 
-@section('inspire_stories')
+@section('main')
 
 <div class="card">
     <div class="card-header d-flex align-items-center justify-content-between">
         <p class="h3 m-0">Inspire Stories List</p>
-        <a href="/staff/add" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Story</a>
+        <a href="/inspire_stories/add" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New Story</a>
     </div>
     <div class="card-body">
         <div class="table-responsive">
@@ -13,26 +13,20 @@
                 <thead class="thead">
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Designation</th>
-                        <th scope="col">Contact</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Nationality</th>
-                        <th scope="col">Actions</th>
+                        <th scope="col">Leader</th>
+                        <th scope="col">Link</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($staff as $staff)
+                    @foreach ($tablerow as $story)
                     <tr>
-                        <th scope="row">{{$staff->id}}</th>
-                        <td>{{$staff->name}}</td>
-                        <td>{{$staff->designation}}</td>
-                        <td>{{$staff->contact}}</td>
-                        <td>{{$staff->email}}</td>
-                        <td>{{$staff->nationality}}</td>
+                        <th scope="row">{{$story->id}}</th>
+                        <td>{{$story->leader_id}}</td>
+                        <td>{{$story->link}}</td>
 
                         <td class="text-nowrap">
-                            <a class="btn btn-sm btn-warning " href="/staff/edit/{{$staff->id}}"><i class="fa fa-edit"></i> Edit</a>
+                            <a class="btn btn-sm btn-warning " href="/inspire_stories/edit/{{$story->id}}"><i class="fa fa-edit"></i> Edit</a>
                             <a class="btn btn-sm btn-primary" href="#"><i class="fa fa-eye"></i> View</a>
                         </td>
                     </tr>
