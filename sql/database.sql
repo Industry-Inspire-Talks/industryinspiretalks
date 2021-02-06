@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 23, 2021 at 10:21 PM
+-- Generation Time: Feb 06, 2021 at 11:00 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -24,6 +24,32 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `careers`
+--
+
+CREATE TABLE `careers` (
+  `id` int(11) NOT NULL,
+  `title` varchar(60) NOT NULL,
+  `description` text NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `skills` text NOT NULL,
+  `perks` text NOT NULL,
+  `tenure` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `careers`
+--
+
+INSERT INTO `careers` (`id`, `title`, `description`, `type`, `skills`, `perks`, `tenure`) VALUES
+(1, 'Program Manager ', '<b>As a Program Manager you’ll be responsible for:</b>  <br>\r\n<br>\r\n• Creating a community about our organisation in your region. <br>\r\n• Appointing a Community Manager <br>\r\n• Instructing the Community Manager to appoint brand advocates in colleges in your region <br>\r\n• Work with the brand advocates to help spread the word about our organisation. <br>\r\n• Responsible for facilitating marketing activities in colleges about our organisation <br>\r\n• Handling the entire region operations & providing our industry oriented content to the selected colleges <br>', 'Full Time', 'Leadership, Communication Skills, Marketing, Public-Speaking, Program/Project Management, Team Management', 'Internship Letter, LOR, Access to our events', '3 months | 6 months | Project Based'),
+(2, 'Community Manager', '• Working under the Program Manager, helping him with all the activities. <br>\r\n• Responsible for appointing Campus Ambassadors from college in their region <br>\r\n• Collaborating with other communities <br>\r\n• Working with the Program Manager to improve our organisation engagement in your region. <br>\r\n• Reaching out to potential industry leaders & spreading our initiative with them, telling them about Inspire Stories, Our Events <br>\r\n• Facilitate the audience for the online meetups, webinars conducted by Campus Ambassador or Industry Leaders<br>', 'Full Time', 'Leadership, Communication Skills, Marketing, Public-Speaking, Community Management, Interview Skills', 'Internship Letter, LOR, Access to our events', '3 months | 6 months | Project Based'),
+(3, 'Marketing Interns', '• Collecting quantitative & qualitative data from marketing campaigns.  <br>\r\n• Performing market analysis and research on competition  <br>\r\n• Working alongside the CMO & Marketing Manager to prepare strategies to boost our content  <br>\r\n• Reaching out to 50 people per day & telling them about our organisation (Promotion Message will be provided) <br>', 'Internship', 'Leadership, Communication Skills, Marketing, Public-Speaking', 'Internship Letter, LOR, Access to our events', '3 months | 6 months | Project Based'),
+(4, 'Strategic Partnership Manager', '• Liase with partners to solve issues, communicate needs & create synergy  <br>\r\n• Analyze and report on partner initiatives, forecast for strategic & report on key metrics. <br>\r\n• Build the organisation network by through targeted outreach and strong project planning. <br>\r\n• Manage relationships with stakeholders to build the brand & the business <br>\r\n• Champion & Manage new projects to create stronger partnerships <br>\r\n• Looking for sponsors for our events  <br>\r\n• Connecting the Program Managers with the desired stakeholders for meaningful collaborations<br>', 'Internship', 'Leadership, Communication Skills, Convincing Skill, Marketing, Management Skills', 'Internship Letter, LOR, Access to our events', '3 months | 6 months | Project Based');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `community`
 --
 
@@ -33,36 +59,43 @@ CREATE TABLE `community` (
   `company` varchar(80) NOT NULL,
   `role` varchar(80) NOT NULL,
   `industry` varchar(80) NOT NULL,
-  `profile_image_ext` varchar(6) NOT NULL
+  `profile_image_ext` varchar(6) NOT NULL,
+  `link` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `community`
 --
 
-INSERT INTO `community` (`id`, `name`, `company`, `role`, `industry`, `profile_image_ext`) VALUES
-(1, 'Ritwik Deshpande', 'JP Morgan Chase & Co', 'Software Development Engineer', 'Financial Services', 'jpg'),
-(2, 'Irin Banerjee', 'D.E Shaw & Co', 'Software Development Engineer', 'Financial Services', 'jpg'),
-(3, 'Krishan Kumar', 'Dell', 'Ex-Software Development Engineer', 'Information Technology & Services', 'jpg'),
-(4, 'Prakhar Chaturvedi', 'Sprinklr', 'Software Development Engineer', 'Information Technology & Services', 'jpg'),
-(5, 'Rohan Thakur', 'Informatica', 'Associate Software Engineer', 'Computer Software', 'jpg'),
-(6, 'Kritika Rupauliha', 'Microsoft', 'Software Engineer', 'Computer Software', 'jpg'),
-(7, 'Harshit Singh', 'Amazon', 'Software Development Engineer', 'Internet', 'jpg'),
-(8, 'Shivam Kataria', 'BNY Mellon', 'Software Developer', 'Financial Services', 'jpg'),
-(9, 'Akshay Anand', 'redBus', 'Software Engineer', 'Internet', 'png'),
-(10, 'Arpan Bhowmik', 'Samsung R&D', 'Senior Engineer', 'Consumer Electronics', 'jpg'),
-(11, 'Raja Rahul', 'IBM', 'Software Development Engineer', 'Information Technology & Services', 'jpeg'),
-(12, 'Yusuf Hassan', 'OneDirect', 'Product Manager', 'Information Technology & Services', 'jpeg'),
-(13, 'Shashank Mishra', 'Amazon', 'Data Engineer', 'Internet', 'jpeg'),
-(14, 'Pooja Sund', 'Microsoft', 'Director of Technology & Analytics', 'Computer Software', 'jpeg'),
-(15, 'Varun Sud', 'CompTIA', 'Head of Academic Alliances', 'Information Technology & Services', 'jpeg'),
-(16, 'Souhardya De', 'Rupa Publications', 'Indian Author', 'Publishing', 'jpeg'),
-(17, 'Yudi J', 'EXL Healthcare', 'Software Team Manager', 'Healthcare Services', 'jpg'),
-(18, 'Meraj Faheem', 'The Hacking School', 'Founder', 'E-Learning', 'jpeg'),
-(19, 'Srikumar Nair', 'Microsoft', 'Principal Group Program Manager', 'Computer Software', 'jpeg'),
-(20, 'Mrinal Jain', 'Wittyfeed', 'Front-End Engineer', 'Online Media', 'jpeg'),
-(21, 'Suman Debnath', 'Amazon Web Services', 'Principal Developer Advocate', 'Information Technology & Services', 'jpeg'),
-(22, 'Vandana Mohture', 'MindArt', 'Founder', 'Professional Training & Coaching', 'jpeg');
+INSERT INTO `community` (`id`, `name`, `company`, `role`, `industry`, `profile_image_ext`, `link`) VALUES
+(1, 'Ritwik Deshpande', 'JP Morgan Chase & Co', 'Software Development Engineer', 'Financial Services', 'jpg', 'https://www.linkedin.com/in/ritwik-deshpande-ba4b51170/'),
+(2, 'Irin Banerjee', 'D.E Shaw & Co', 'Software Development Engineer', 'Financial Services', 'jpg', 'https://www.linkedin.com/in/irin-banerjee-a8a4261b2/'),
+(3, 'Krishan Kumar', 'Dell', 'Ex-Software Development Engineer', 'Information Technology & Services', 'jpg', 'https://www.linkedin.com/in/krishan-kumar-4ab217166/'),
+(4, 'Prakhar Chaturvedi', 'Sprinklr', 'Software Development Engineer', 'Information Technology & Services', 'jpg', 'https://www.linkedin.com/in/prakhar9453/'),
+(5, 'Rohan Thakur', 'Informatica', 'Associate Software Engineer', 'Computer Software', 'jpg', 'https://www.linkedin.com/in/rohan-thakur-624106168/'),
+(6, 'Kritika Rupauliha', 'Microsoft', 'Software Engineer', 'Computer Software', 'jpg', 'https://www.linkedin.com/in/kritika-rupauliha/'),
+(7, 'Harshit Singh', 'Amazon', 'Software Development Engineer', 'Internet', 'jpg', 'https://www.linkedin.com/in/helios1101/'),
+(8, 'Shivam Kataria', 'BNY Mellon', 'Software Developer', 'Financial Services', 'jpg', 'https://www.linkedin.com/in/shivkat/'),
+(9, 'Akshay Anand', 'redBus', 'Software Engineer', 'Internet', 'png', 'https://www.linkedin.com/in/akshayanand28/'),
+(10, 'Arpan Bhowmik', 'Samsung R&D', 'Senior Engineer', 'Consumer Electronics', 'jpg', 'https://www.linkedin.com/in/arpan9/'),
+(11, 'Raja Rahul', 'IBM', 'Software Development Engineer', 'Information Technology & Services', 'jpeg', 'https://www.linkedin.com/in/raja-rahul/'),
+(12, 'Yusuf Hassan', 'OneDirect', 'Product Manager', 'Information Technology & Services', 'jpeg', 'https://www.linkedin.com/in/syedyhassan/'),
+(13, 'Shashank Mishra', 'Amazon', 'Data Engineer', 'Internet', 'jpeg', 'https://www.linkedin.com/in/shashank219/'),
+(14, 'Pooja Sund', 'Microsoft', 'Director of Technology & Analytics', 'Computer Software', 'jpeg', 'https://www.linkedin.com/in/pooja3p/'),
+(15, 'Varun Sud', 'CompTIA', 'Head of Academic Alliances', 'Information Technology & Services', 'jpeg', 'https://www.linkedin.com/in/varun-sud-31abb18b/'),
+(16, 'Souhardya De', 'Rupa Publications', 'Indian Author', 'Publishing', 'jpeg', 'https://www.linkedin.com/in/souhardya-de-f-r-a-s-4475a4185/'),
+(17, 'Yudi J', 'EXL Healthcare', 'Software Team Manager', 'Healthcare Services', 'jpg', 'https://www.linkedin.com/in/priteshjagani/'),
+(18, 'Meraj Faheem', 'The Hacking School', 'Founder', 'E-Learning', 'jpeg', 'https://www.linkedin.com/in/merajf/'),
+(19, 'Srikumar Nair', 'Microsoft', 'Principal Group Program Manager', 'Computer Software', 'jpeg', 'https://www.linkedin.com/in/srikumarknair/'),
+(20, 'Mrinal Jain', 'Wittyfeed', 'Front-End Engineer', 'Online Media', 'jpeg', 'https://www.linkedin.com/in/mrinaljain/'),
+(21, 'Suman Debnath', 'Amazon Web Services', 'Principal Developer Advocate', 'Information Technology & Services', 'jpeg', 'https://www.linkedin.com/in/suman-d/'),
+(22, 'Vandana Mohture', 'MindArt', 'Founder', 'Professional Training & Coaching', 'jpeg', 'https://www.linkedin.com/in/vandanamohture/'),
+(23, 'Pablo Veramendi', 'Microsoft', 'Director - Audience Evangelism', 'Computer Software', 'jpeg', 'https://www.linkedin.com/in/pveramendi/'),
+(24, 'Prajwal Singh', 'Gojek Tech', 'Product Engineer', 'Internet', 'jpeg', 'https://www.linkedin.com/in/prajwal714/'),
+(25, 'Aswin Nagarajan', 'PayPal', 'Software Engineer', 'Internet', 'jpeg', 'https://www.linkedin.com/in/aswin-nagarajan-a957b8149/'),
+(26, 'Divyansh Srivastava', 'NCR Corporation', 'Software Engineer', 'IT Services', 'jpeg', 'https://www.linkedin.com/in/divyansh-srivastava-a2b87a176/'),
+(27, 'Shwetabh Dixit', 'VISA', 'Software Engineer', 'IT Services', 'jpeg', 'https://www.linkedin.com/in/shwetabh-dixit-4b2aa9149/'),
+(28, 'Aman Sadique', 'Deloitte', 'Analyst', 'Management Consulting', 'jpeg', 'https://www.linkedin.com/in/aman-sadique/');
 
 -- --------------------------------------------------------
 
@@ -96,7 +129,15 @@ INSERT INTO `companies` (`id`, `title`, `logo_image_ext`) VALUES
 (13, 'PayPal', 'png'),
 (14, 'NCR Corporation', 'png'),
 (15, 'VISA', 'png'),
-(16, 'EXL Healthcare', 'jpg');
+(16, 'EXL Healthcare', 'jpg'),
+(17, 'Deloitte', 'jpeg'),
+(18, 'Rupa Publications', 'png'),
+(19, 'CompTIA', 'png'),
+(20, 'The Hacking School', 'png'),
+(21, 'Amazon Web Services', 'png'),
+(22, 'MindArt', 'jpeg'),
+(23, 'OneDirect', 'jpg'),
+(24, 'WittyFeed', 'png');
 
 -- --------------------------------------------------------
 
@@ -117,17 +158,22 @@ CREATE TABLE `episodes` (
 
 INSERT INTO `episodes` (`id`, `series_id`, `title`, `link`) VALUES
 (1, 2, 'Podcast Series with Yudi J - EP #1', 'https://www.youtube.com/embed/JBmUScGyOEg'),
-(2, 1, 'Interview Series with Rahul - EP #11', 'https://www.youtube.com/embed/rHq1eU14wCs'),
-(3, 1, 'Interview Series with Arpan - EP #10', 'https://www.youtube.com/embed/y5nfPq-rxfw'),
-(4, 1, 'Interview Series with Akshay - EP #9', 'https://www.youtube.com/embed/4z7qbq4yAc8'),
-(5, 1, 'Interview Series with Shivam - EP #8', 'https://www.youtube.com/embed/lUE84M_Dq78'),
-(6, 1, 'Interview Series with Harshit - EP #7', 'https://www.youtube.com/embed/JAAwLHLUmu0'),
+(2, 1, 'Interview Series with Ritwik - EP #1', 'https://www.youtube.com/embed/FkvVTTgj2y4'),
+(3, 1, 'Interview Series with Irin - EP #2', 'https://www.youtube.com/embed/VhD_-5BVcxM'),
+(4, 1, 'Interview Series with Krishan - EP #3', 'https://www.youtube.com/embed/XAf83l1wfFk'),
+(5, 1, 'Interview Series with Prakhar - EP #4', 'https://www.youtube.com/embed/vPXOKfKLlY'),
+(6, 1, 'Interview Series with Rohan - EP #5', 'https://www.youtube.com/embed/xLCOF7aCJ1U'),
 (7, 1, 'Interview Series with Kritika - EP #6', 'https://www.youtube.com/embed/jiQeFPvU_bI'),
-(8, 1, 'Interview Series with Rohan - EP #5', 'https://www.youtube.com/embed/xLCOF7aCJ1U'),
-(9, 1, 'Interview Series with Prakhar - EP #4', 'https://www.youtube.com/embed/vPXOKfKLlY'),
-(10, 1, 'Interview Series with Krishan - EP #3', 'https://www.youtube.com/embed/XAf83l1wfFk'),
-(11, 1, 'Interview Series with Irin - EP #2', 'https://www.youtube.com/embed/VhD_-5BVcxM'),
-(12, 1, 'Interview Series with Ritwik - EP #1', 'https://www.youtube.com/embed/FkvVTTgj2y4');
+(8, 1, 'Interview Series with Harshit - EP #7', 'https://www.youtube.com/embed/JAAwLHLUmu0'),
+(9, 1, 'Interview Series with Shivam - EP #8', 'https://www.youtube.com/embed/lUE84M_Dq78'),
+(10, 1, 'Interview Series with Akshay - EP #9', 'https://www.youtube.com/embed/4z7qbq4yAc8'),
+(11, 1, 'Interview Series with Arpan - EP #10', 'https://www.youtube.com/embed/y5nfPq-rxfw'),
+(12, 1, 'Interview Series with Rahul - EP #11', 'https://www.youtube.com/embed/rHq1eU14wCs'),
+(13, 1, 'Interview Series with Prajwal - EP #12', 'https://www.youtube.com/embed/7fPSiJRzojc'),
+(14, 1, 'Interview Series with Aswin - EP #13', 'https://www.youtube.com/embed/KXc5lU1cYgM'),
+(15, 1, 'Interview Series with Divyansh - EP #14 (Part 1)', 'https://www.youtube.com/embed/SLenw3oIL0U'),
+(16, 1, 'Interview Series with Divyansh - EP #14 (Part 2)', 'https://www.youtube.com/embed/sTE6HBTnrsI'),
+(17, 1, 'Interview Series with Shwetabh - EP #15 (Part 1)', 'https://www.youtube.com/embed/z_V6MAsU43A');
 
 -- --------------------------------------------------------
 
@@ -228,37 +274,38 @@ INSERT INTO `industry_leaders` (`id`, `name`, `position`, `company`, `profile_im
 CREATE TABLE `inspire_stories` (
   `id` int(11) NOT NULL,
   `leader_id` int(11) NOT NULL,
-  `post_image_ext` varchar(6) NOT NULL
+  `post_image_ext` varchar(6) NOT NULL,
+  `link` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `inspire_stories`
 --
 
-INSERT INTO `inspire_stories` (`id`, `leader_id`, `post_image_ext`) VALUES
-(1, 1, 'jpeg'),
-(2, 2, 'jpeg'),
-(3, 3, 'jpeg'),
-(4, 4, 'jpeg'),
-(5, 5, 'jpeg'),
-(6, 6, 'jpeg'),
-(7, 7, 'jpeg'),
-(8, 8, 'jpeg'),
-(9, 9, 'jpeg'),
-(10, 10, 'jpeg'),
-(11, 11, 'jpeg'),
-(12, 12, 'jpeg'),
-(13, 13, 'jpeg'),
-(14, 14, 'jpeg'),
-(15, 15, 'jpeg'),
-(16, 16, 'jpeg'),
-(17, 17, 'jpeg'),
-(18, 18, 'jpeg'),
-(19, 19, 'jpeg'),
-(20, 20, 'jpeg'),
-(21, 21, 'jpeg'),
-(22, 22, 'jpeg'),
-(23, 23, 'jpeg');
+INSERT INTO `inspire_stories` (`id`, `leader_id`, `post_image_ext`, `link`) VALUES
+(1, 1, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_career-achievements-technology-activity-6732266136710209536-SS8N'),
+(2, 2, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_paraspundir-communityguy-microsoft-activity-6739047122873806848-jw4o'),
+(3, 3, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_srikumarnair-industryleader-microsoft-activity-6739793834185773056-RCDB'),
+(4, 4, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_satyaprakashmohapatra-industryleader-hrmanager-activity-6740603622310191104-bGmI'),
+(5, 5, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_vandanamohture-womenleaders-womenfounders-activity-6741697307500261376-Mh5t'),
+(6, 6, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_rabiahbhatia-industryleader-womenleaders-activity-6742085860054974465-P4A0'),
+(7, 7, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_jiteshkhanna-publicfigure-industryleader-activity-6742750669129834496-snFZ'),
+(8, 8, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_maheshwagh-ekeeda-elearningplatform-activity-6744486554347163648-7QJg'),
+(9, 9, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_bhavanabp-letmelisten-solopreneur-activity-6744918216155496448-gBKW'),
+(10, 10, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_shashankmishra-engineer-youtuber-activity-6746382765962485760-RAHQ'),
+(11, 11, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_devanbhalla-industryleaders-marketer-activity-6747834965448364032-w_pJ'),
+(12, 12, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_vishalnair-industryleaders-digitalstrategist-activity-6748213700735438848-v4cz'),
+(13, 13, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_samparksachdeva-industryleaders-salescoach-activity-6748932254027919360-zLUy'),
+(14, 14, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_sayeebhuvaneswari-merakiconsulting-entrepreneur-activity-6749653842905972736-xdZA'),
+(15, 15, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_kirupakars-industryleaders-salesleader-activity-6750748774538338304-ZzTx'),
+(16, 16, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_lokheshsatya-industryinsights-cofounder-activity-6751456472561004544-iAgL'),
+(17, 17, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_jyothinoronha-womenleaders-industryinsights-activity-6751829687305146369-wmpb'),
+(18, 18, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_nikitagupta-womenleaders-industryinsights-activity-6752189043888521216-6dy3'),
+(19, 19, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_vikasdua-industryleaders-hrexpert-activity-6752899627743371264-w3li'),
+(20, 20, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_logeshvelusamy-industryleaders-crmsolutions-activity-6753673286162505728-Gk_i'),
+(21, 21, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_shalakaverma-womenleaders-industryinsights-activity-6754389659104747520-rt88'),
+(22, 22, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_lindathackeray-womenleaders-industryinsights-activity-6754738906312376320-1aB2'),
+(23, 23, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_vanisengupta-womenleaders-industryinsights-activity-6757262687211794432-_9L3');
 
 -- --------------------------------------------------------
 
@@ -313,8 +360,8 @@ CREATE TABLE `series` (
 
 INSERT INTO `series` (`id`, `name`, `description`, `image_ext`, `coming_soon`) VALUES
 (1, 'Interview Series', 'Interview series involves people who interned at companies & converted that internship opportunity into a full-time offer.', 'jpeg', 0),
-(2, 'Podcast Series', 'Podcasts Series involves people with 5-10 years of Industry Experience who hold big positions at companies like Founder, MD, CEO, Managers, etc sharing their industry experiences in our series.', 'jpeg', 0),
-(3, 'Careers', '', 'jpeg', 1);
+(2, 'Podcast Series', 'Podcasts Series involves professionals and  entrepreneurs with 5+ years of Industry experience  holding positions of Founder, MD, CEO, Managers  sharing their inspiring  industry experiences in our series.', 'jpeg', 0),
+(3, 'Career Stories', '', 'jpeg', 1);
 
 -- --------------------------------------------------------
 
@@ -331,10 +378,10 @@ CREATE TABLE `staff` (
   `dob` varchar(20) NOT NULL,
   `social_links` text NOT NULL,
   `nationality` varchar(50) NOT NULL,
-  `address` text NOT NULL,
+  `address` text DEFAULT NULL,
   `profile_image_ext` varchar(5) NOT NULL,
-  `date_of_joining` varchar(20) NOT NULL,
-  `date_of_leaving` varchar(20) NOT NULL
+  `date_of_joining` varchar(20) DEFAULT NULL,
+  `date_of_leaving` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -342,19 +389,19 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`id`, `name`, `designation`, `contact`, `email`, `dob`, `social_links`, `nationality`, `address`, `profile_image_ext`, `date_of_joining`, `date_of_leaving`) VALUES
-(1, 'Omkar Shinde', 'Founder & CEO', '', '', '', '', '', '', 'png', '', ''),
-(2, 'Satya Prakash Mohapatra', 'Chief Marketing Officer', '', '', '', '', '', '', 'jpeg', '', ''),
-(3, 'Vishal Nair', 'Chief People Officer', '', '', '', '', '', '', 'png', '', ''),
-(4, 'Danish Shaikh', 'Chief Technology Officer', '', '', '', '', '', '', 'png', '', ''),
+(1, 'Omkar Shinde', 'Founder & CEO', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/omkar-shinde-310aa5193/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'png', '', ''),
+(2, 'Satya Prakash Mohapatra', 'Chief Marketing Officer', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/satya-prakash-mohapatra-153926129/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'jpeg', '', ''),
+(3, 'Vishal Nair', 'Chief People Officer', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/vishalnairm/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'png', '', ''),
+(4, 'Danish Shaikh', 'Chief Technology Officer', '8655332519', 'shaikh.danish4444@gmail.com', '1999-01-04', '{     \"linkedin\" : \"https://www.linkedin.com/in/shaikhdanish04/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', 'Indian', NULL, 'png', NULL, NULL),
 (5, 'Amrita Bhattacharjee', 'Program Manager', '', '', '', '', '', '', 'jpg', '', ''),
 (6, 'Joseph Nssien', 'Program Manager', '', '', '', '', '', '', 'jpg', '', ''),
-(7, 'Muneeb Ahmed', 'Community Manager', '', '', '', '', '', '', '', '', ''),
+(7, 'Muneeb Ahmed', 'Community Manager', '', '', '', '', '', '', 'jpeg', '', ''),
 (8, 'Ganesh Dubey', 'Front-End Developer', '', '', '', '', '', '', 'jpg', '', ''),
 (9, 'Tanmay Jadhav', 'Backend Developer', '', '', '', '', '', '', 'jpg', '', ''),
-(10, 'Omkar Desai', 'Front-End Developer', '', '', '', '', '', '', '', '', ''),
-(11, 'Himanshi Lodha', 'Program Manager', '', '', '', '', '', '', '', '', ''),
+(10, 'Omkar Desai', 'Front-End Developer', '', '', '', '', '', '', 'jpg', '', ''),
+(11, 'Himanshi Lodha', 'Program Manager', '', '', '', '', '', '', 'jpeg', '', ''),
 (12, 'Eshaan Chauhan', 'Marketing Manager', '', '', '', '', '', '', 'jpg', '', ''),
-(13, 'Ajinkya Sonawale', 'Backend Developer', '', '', '', '', '', '', '', '', ''),
+(13, 'Ajinkya Sonawale', 'Backend Developer', '', '', '', '', '', '', 'jpg', '', ''),
 (14, 'Aayush Vishnoi', 'Front-End Developer', '', '', '', '', '', '', '', '', ''),
 (15, 'Rihen Vora', 'Backend Developer', '', '', '', '', '', '', '', '', ''),
 (16, 'Karan Sawant', 'Backend Developer', '', '', '', '', '', '', '', '', ''),
@@ -362,7 +409,8 @@ INSERT INTO `staff` (`id`, `name`, `designation`, `contact`, `email`, `dob`, `so
 (18, 'Varad Gaidhani', 'Community Manager', '', '', '', '', '', '', 'jpg', '', ''),
 (19, 'Ali Asgar Tinwala', 'Graphic Design Head', '', '', '', '', '', '', 'jpg', '', ''),
 (20, 'Shashwat Mulgund', 'Graphic Designer', '', '', '', '', '', '', 'jpg', '', ''),
-(21, 'Deepanjali Tripathi', 'Front-End Developer', '', '', '', '', '', '', 'jpg', '', '');
+(21, 'Deepanjali Tripathi', 'Front-End Developer', '', '', '', '', '', '', 'jpg', '', ''),
+(22, 'Soumya Bharati', 'UI/UX Designer', '', '', '', '', '', '', 'jpg', '', '');
 
 -- --------------------------------------------------------
 
@@ -394,6 +442,12 @@ INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `email_verified_a
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `careers`
+--
+ALTER TABLE `careers`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `community`
@@ -474,22 +528,28 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `careers`
+--
+ALTER TABLE `careers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `community`
 --
 ALTER TABLE `community`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `episodes`
 --
 ALTER TABLE `episodes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -531,7 +591,7 @@ ALTER TABLE `series`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `users`
