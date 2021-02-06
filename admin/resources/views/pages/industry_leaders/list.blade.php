@@ -27,8 +27,7 @@
                         <td>{{$industry_leaders->position}}</td>
                         <td>{{$industry_leaders->company}}</td>
                         <td class="text-nowrap">
-                            <a class="btn btn-warning btn-sm" href="/industry_leaders/edit/{{$industry_leaders->id}}" role="button">Edit</a>
-                            <a class="btn btn-primary btn-sm" href="#" role="button">View</a>
+                            <a class="btn btn-warning btn-sm" href="/industry_leaders/edit/{{$industry_leaders->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
                         </td>
                     </tr>
                     @endforeach

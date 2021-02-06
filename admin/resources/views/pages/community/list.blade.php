@@ -30,8 +30,7 @@
                         <td>{{$community->role}}</td>
                         <td>{{$community->industry}}</td>
                         <td class="text-nowrap">
-                            <a class="btn btn-warning btn-sm" href="/community/edit/{{$community->id}}" role="button">Edit</a>
-                            <a class="btn btn-primary btn-sm" href="#" role="button">View</a>
+                            <a class="btn btn-warning btn-sm" href="/community/edit/{{$community->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
                         </td>
                     </tr>
                     @endforeach
