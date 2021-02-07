@@ -19,16 +19,19 @@
                     </tr>
                 </thead>
                 <tbody>
+                    
                     @foreach ($tablerow as $story)
+                        
                     <tr>
                         <th scope="row">{{$story->id}}</th>
-                        <td>{{$story->leader_id}}</td>
+                        <td>{{DB::table('industry_leaders')->find($story->id)->name}}</td>
                         <td>{{$story->link}}</td>
 
                         <td class="text-nowrap">
                             <a class="btn btn-sm btn-warning " href="/inspire_stories/edit/{{$story->id}}"><i class="fa fa-edit"></i> Edit</a>
                         </td>
                     </tr>
+                        
                     @endforeach
                 </tbody>
             </table>

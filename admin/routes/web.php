@@ -10,11 +10,12 @@ use App\Http\Controllers\CommonController;
 
 
 
+
 Route::get('/login', [User_authentication::class, 'getLogin'])->name('login');
 Route::post('/login', [User_authentication::class, 'login']);
 Route::get('/logout', [User_authentication::class, 'logout']);
 
-
+    
 
 Route::middleware(['auth'])->group(function () {
 
@@ -25,6 +26,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/{tablename}/edit/{id}',[CommonController::class, 'edit']);
     Route::post('/{tablename}/add',[CommonController::class, 'add']);
     Route::get('/{tablename}/add', [CommonController::class, 'get_add_page']);
+
+    
 
 
 
@@ -39,7 +42,7 @@ Route::middleware(['auth'])->group(function () {
 
     // Route::get('/community/list', [CommunityController::class, 'community_details']);
     // Route::get('/community/add', [CommunityController::class, 'community_add_page']);
-    // Route::post('/community/add', [CommunityController::class, 'add_community']);
+    // Route::post('/community/add', [CommunityController::class, 'add_community']);    
     // Route::get('/community/edit/{id}',[CommunityController::class, 'community_edit_page']);
     // Route::post('/community/edit/{id}',[CommunityController::class, 'edit_community']);
     
