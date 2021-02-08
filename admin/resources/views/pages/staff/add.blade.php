@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('staff_details')
+@section('main')
 
 
 <form method="POST" action="/staff/add" >

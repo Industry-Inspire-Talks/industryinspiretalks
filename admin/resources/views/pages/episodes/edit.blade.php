@@ -1,30 +1,33 @@
 @extends('template')
 
-@section('episode_details')
+@section('main')
 
 <form method="POST" action="/episodes/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
 
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/episodes/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Details of {{$tablerow->title}}</p>
+            <p class="h5 m-0"><a href="/episodes/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit  {{$tablerow->title}}</p>
         </div>
         <div class="card-body">
             <div class="form-group">
                 <label for="">Series</label>
-                <select class="form-control" name="series_id">
-                    <option value="">--- Select ---</option>
-                    <option></option>
-                    <option></option>
+                <select class="form-control" id="series_id" name="series_id">
+                    <option >--- Select ---</option>
+                    @foreach ($series as $series)
+                    
+                    <option value="{{$series->id}}" {{$tablerow->series_id == $series->id ? 'selected' : " "}}>{{$series->name}}</option>
+                    
+                    @endforeach
                 </select>
             </div>
             <div class="form-group">
                 <label for="">Title</label>
-                <input type="text" name="title" class="form-control" required>
+                <input type="text" name="title" value="{{$tablerow->title}}" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="">link</label>
-                <input type="text" name="designation" class="form-control" required>
+                <input type="text" name="designation" value="{{$tablerow->link}}" class="form-control" required>
             </div>
         </div>
         <div class="card-footer">
@@ -32,5 +35,11 @@
         </div>
     </div>
 </form>
+<!-- <script>
+    document.getElementById('series_id').onchange = function() {
+        this.options[this.selectedIndex].text = "Hello";
+    this.value = {{$tablerow->series_id}};
+    }
+</script> -->
 
 @stop

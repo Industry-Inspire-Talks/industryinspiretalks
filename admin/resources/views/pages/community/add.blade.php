@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('community_details')
+@section('main')
 
 
 <form method="POST" action="/community/add" >

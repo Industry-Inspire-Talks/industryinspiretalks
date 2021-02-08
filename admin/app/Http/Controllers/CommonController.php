@@ -57,39 +57,53 @@ class CommonController extends Controller
     public function edit(Request $request,$tablename,$id)
     {
     
-        switch ($request->input('action')) {
-            case 'image_upload':
-                $request->validate([
-                    'profile_image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                ]); 
-        
-                $imageExtension = $request->profile_image_ext->extension(); 
-                $request->profile_image_ext->move(public_path('uploads/'.$tablename), $id.'.'.$imageExtension);
-        
-                DB::table($tablename)
-                ->where('id', $id)
-                ->update(['profile_image_ext'=>$imageExtension]);
-        
-                break;
-    
-            case 'update':
-                
-                
-                $col1 =  DB::getSchemaBuilder()->getColumnListing($tablename);
-                $col2 = ['profile_image_ext'];
+        if(Schema::hasColumn($tablename,'profile_image_ext'))
+        {
 
-                $columnname = array_diff($col1,$col2);
-                DB::table($tablename)
-                ->where('id',$id)
-                ->update($request->only($columnname));
+            switch ($request->input('action')) {
+                case 'image_upload':
+                    $request->validate([
+                        'profile_image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                    ]); 
+            
+                    $imageExtension = $request->profile_image_ext->extension(); 
+                    $request->profile_image_ext->move(public_path('uploads/'.$tablename), $id.'.'.$imageExtension);
+            
+                    DB::table($tablename)
+                    ->where('id', $id)
+                    ->update(['profile_image_ext'=>$imageExtension]);
+            
+                    break;
+        
+                case 'update':
                 
-                break;
+                    $col1 =  DB::getSchemaBuilder()->getColumnListing($tablename);
+                    $col2 = ['profile_image_ext'];
     
-           
+                    $columnname = array_diff($col1,$col2);
+                    DB::table($tablename)
+                    ->where('id',$id)
+                    ->update($request->only($columnname));
+                    
+                    break;
+                
+               
+            }
+    
+        }
+
+        else
+        {
+            $columnname =  DB::getSchemaBuilder()->getColumnListing($tablename);
+            DB::table($tablename)
+                    ->where('id',$id)
+                    ->update($request->only($columnname));
         }
 
             
         $tablerow = DB::table($tablename)->where('id', $id)->distinct()->first();
+
+       
 
         return view('pages.'.$tablename.'.edit', compact('tablerow'));
     }

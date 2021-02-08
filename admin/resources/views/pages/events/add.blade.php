@@ -1,13 +1,13 @@
 @extends('template')
 
-@section('staff_details')
+@section('main')
 
 
-<form method="POST" action="/staff/add" >
+<form method="POST" action="/events/add" >
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/staff/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Staff</p>
+            <p class="h5 m-0"><a href="/events/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Event</p>
         </div>
         <div class="card-body">
             <div class="row">

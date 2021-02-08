@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('staff_details')
+@section('main')
 
 <form method="POST" action="/staff/edit/{{$tablerow->id}}" enctype='multipart/form-data'> <!--action="/staff/edit/{{$tablerow->id}}"-->
 @csrf

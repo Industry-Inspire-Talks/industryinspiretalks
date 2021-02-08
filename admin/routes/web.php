@@ -7,6 +7,7 @@ use App\Http\Controllers\User_authentication;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\CommonController;
+use App\Http\Controllers\EpisodeController;
 
 
 
@@ -21,11 +22,15 @@ Route::middleware(['auth'])->group(function () {
 
     Route::view('/', 'admindashboard');
 
+    Route::get('/episodes/edit/{id}',[EpisodeController::class, 'get_episode_edit_page']);
+    Route::post('/episodes/edit/{id}',[EpisodeController::class, 'edit_episode']);
+
     Route::get('/{tablename}/list', [CommonController::class, 'list']);
     Route::get('/{tablename}/edit/{id}',[CommonController::class, 'edit_page']);
     Route::post('/{tablename}/edit/{id}',[CommonController::class, 'edit']);
     Route::post('/{tablename}/add',[CommonController::class, 'add']);
     Route::get('/{tablename}/add', [CommonController::class, 'get_add_page']);
+
 
     
 

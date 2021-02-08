@@ -1,40 +1,56 @@
 @extends('template')
 
-@section('community_details')
+@section('main')
 
 
-<form method="POST" action="/community/add" >
+<form method="POST" action="/careers/add" >
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/community/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Community Member</p>
+            <p class="h5 m-0"><a href="/careers/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Careers</p>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="form-group" >
-                        <label for="">Name</label>
-                        <input type="text" name="name" class="form-control" required>
+                    <div class="form-group">
+                        <label for="">Title</label>
+                        <input type="text" name="title" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="">Company</label>
-                        <input type="text" name="company" class="form-control" required>
+                        <label for="">Description</label>
+                        <input type="text" name="description" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="form-group">
-                        <label for="">Role</label>
-                        <input type="text" name="role" class="form-control">
-                    </div>
+                <label for="">Type</label>
+                <select class="form-control" id="series_id" onchange="getValue(this);" name="type">
+                    <option >--- Select ---</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Internship">Internship</option>
+                </select>
                 </div>
+                
+                
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="">Industry</label>
-                        <input type="text" name="industry" class="form-control">
+                        <label for="">Skills</label>
+                        <input type="text" name="skills" class="form-control" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Perks</label>
+                        <input type="text" name="perks" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="">Tenure</label>
+                        <input type="text" name="tenure" class="form-control">
                     </div>
                 </div>
 

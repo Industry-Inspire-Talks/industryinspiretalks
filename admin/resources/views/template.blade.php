@@ -373,6 +373,7 @@
                     @yield('admin_dashboard')
 
                     @yield('main')
+                    
 
                     @yield('404')
 
