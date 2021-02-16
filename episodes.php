@@ -28,7 +28,7 @@
 					echo '<div class="col-md-6 col-lg-4">' .
 						'	<div class="card mx-auto mb-3 shadow border-0" style="max-width: 290px;border-radius:1rem;overflow:hidden">' .
 						'		<a class="" href="' . ((!$row['coming_soon']) ? 'series.php?id=' . $row['id'] . '' : '#') . '">' .
-						'			<div class="image-center-cover" style="padding-top:100%;background-image:url(\'./uploads/series/' . $row['id'] . '.' . $row['image_ext'] . '\')"></div>' .
+						'			<div class="image-center-cover" style="padding-top:100%;background-image:url(\'/admin/public/uploads/series/' . $row['id'] . '.' . $row['image_ext'] . '\')"></div>' .
 						'			<div class="card-body text-center">' .
 						'				<p class="h5 font-weight-normal">' . $row['name'] . '</p>' .
 						'			</div>' .

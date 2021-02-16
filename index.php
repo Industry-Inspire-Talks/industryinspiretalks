@@ -58,7 +58,7 @@
 
         <section class="container board">
             <p class="title text-center">Meet Our Board of Directors</p>
-            <div class="row">
+            <div class="row justify-content-center">
                 <?php
                 $idArray = array(1, 3, 4);
 
@@ -70,7 +70,7 @@
                         '<div class="mb-3 col-lg-3 col-sm-6">' .
                         '    <div class="director">' .
                         '        <div class="">' .
-                        '            <div class="image image-center-cover" style="background-image: url(\'./uploads/team/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
+                        '            <div class="image image-center-cover" style="background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
                         '            </div>' .
                         '            <p class="name">' . $result['name'] . '</p>' .
                         '            <p class="position">' . $result['designation'] . '</p>' .
@@ -112,7 +112,7 @@
                     foreach ($idArray as $id) {
                         $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
 
-                        $background = ($result['profile_image_ext']) ? './uploads/team/' . $result['id'] . '.' . $result['profile_image_ext'] : './assets/img/dummy-avatar.png';
+                        $background = ($result['profile_image_ext']) ? '/admin/public/uploads/staff/' . $result['id'] . '.' . $result['profile_image_ext'] : './assets/img/dummy-avatar.png';
 
 
                         echo '<div class="swiper-slide">' .
@@ -157,7 +157,7 @@
                                 '            <p class="card-title m-0">' . $result['title'] . '</p>' .
                                 '            <p class="small">' . $result['category'] . '</p>' .
                                 '        </div>' .
-                                '        <div class=" image-center-cover" style="height:160px;background-image: url(\'./uploads/events/' . $result['id'] . '.' . $result['thumbnail_image_ext'] . '\')"></div>' .
+                                '        <div class=" image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/events/' . $result['id'] . '.' . $result['thumbnail_image_ext'] . '\')"></div>' .
                                 '        <div class="card-body">' .
                                 // '            <hr>' .
                                 '            <p class="card-text des mb-3">' . $result['description'] . '</p>' .
@@ -199,7 +199,7 @@
 
                         echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
                             '    <div class="member d-flex card flex-row">' .
-                            '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'./uploads/community/' . $result['id'] . '.' . $result['profile_image_ext'] . '?new\')"></div>' .
+                            '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/community/' . $result['id'] . '.' . $result['profile_image_ext'] . '?new\')"></div>' .
                             '        <div class="d-flex justify-content-between flex-column">' .
                             '            <div>' .
                             '                <p class="name">' . $result['name'] . '</p>' .
@@ -250,7 +250,7 @@
                                 echo '' .
                                     '<div class="swiper-slide">' .
                                     '   <div class="p-4 mx-3 mb-2" style="overflow:hidden;border-radius:1rem;background:#fff">' .
-                                    '       <div class=" image image-center-contain" style="height:70px;background-image: url(\'./uploads/companies/' . $result['id'] . '.' . $result['logo_image_ext'] . '\')"></div>' .
+                                '       <div class=" image image-center-contain" style="filter:grayscale(1);height:70px;background-image: url(\'/admin/public/uploads/companies/' . $result['id'] . '.' . $result['logo_image_ext'] . '\')"></div>' .
                                     '   </div>' .
                                     '   <p class="text-center small font-weight-bold">' . $result['title'] . '</p>' .
                                     '</div>';
