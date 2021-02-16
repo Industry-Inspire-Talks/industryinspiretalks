@@ -1,9 +1,9 @@
 @extends('template')
 
-@section('staff_details')
+@section('main')
 
 
-<form method="POST" action="/staff/add" enctype='multipart/form-data'>
+<form method="POST" action="/staff/add" >
     @csrf
     <div class="card">
         <div class="card-header">
@@ -61,11 +61,6 @@
             <div class="form-group">
                 <label for="">Date of Leaving</label>
                 <input type="date" name="date_of_leaving" class="form-control">
-            </div>
-
-            <div>
-                <label for="formFile" class="form-label">Upload Image</label>
-                <input class="form-control form-control mb-4" name="profile_image_ext" type="file">
             </div>
         </div>
         <div class="card-footer">

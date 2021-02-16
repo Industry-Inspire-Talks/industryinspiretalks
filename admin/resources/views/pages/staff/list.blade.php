@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('staff_details')
+@section('main')
 
 <div class="card">
     <div class="card-header d-flex align-items-center justify-content-between">
@@ -13,6 +13,7 @@
                 <thead class="thead">
                     <tr>
                         <th scope="col">Id</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Name</th>
                         <th scope="col">Designation</th>
                         <th scope="col">Contact</th>
@@ -22,9 +23,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($staff as $staff)
+                    @foreach ($tablerow as $staff)
                     <tr>
                         <th scope="row">{{$staff->id}}</th>
+                        <td class="text-center"><img class="rounded" src="/uploads/staff/{{$staff->id}}.{{$staff->profile_image_ext}}" height="100px" alt=""></td>
                         <td>{{$staff->name}}</td>
                         <td>{{$staff->designation}}</td>
                         <td>{{$staff->contact}}</td>
@@ -33,7 +35,6 @@
 
                         <td class="text-nowrap">
                             <a class="btn btn-sm btn-warning " href="/staff/edit/{{$staff->id}}"><i class="fa fa-edit"></i> Edit</a>
-                            <a class="btn btn-sm btn-primary" href="#"><i class="fa fa-eye"></i> View</a>
                         </td>
                     </tr>
                     @endforeach

@@ -10,8 +10,6 @@ use Auth;
 class User_authentication extends Controller
 {
 
-    
-
     public function register(Request $request)
     {
         $fName = $request->input('FirstName');

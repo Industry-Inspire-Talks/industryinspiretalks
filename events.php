@@ -48,7 +48,7 @@
                         '            <p class="card-title m-0">' . $result['title'] . '</p>' .
                         '            <p class="small">' . $result['category'] . '</p>' .
                         '        </div>' .
-                        '        <div class=" image-center-cover" style="height:160px;background-image: url(\'./uploads/events/' . $result['id'] . '.' . $result['thumbnail_image_ext'] . '\')"></div>' .
+                        '        <div class=" image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/events/' . $result['id'] . '.' . $result['thumbnail_image_ext'] . '\')"></div>' .
                         '        <div class="card-body">' .
                         // '            <hr>' .
                         '            <p class="card-text des mb-3">' . $result['description'] . '</p>' .
