@@ -13,6 +13,7 @@
                 <thead class="thead">
                     <tr>
                         <th scope="col">Id</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Name</th>
                         <th scope="col">Position</th>
                         <th scope="col">Company</th>
@@ -23,6 +24,7 @@
                     @foreach ($tablerow as $industry_leaders)
                     <tr>
                         <th scope="row">{{$industry_leaders->id}}</th>
+                        <td class="text-center"><img class="rounded" src="/uploads/industry_leaders/{{$industry_leaders->id}}.{{$industry_leaders->profile_image_ext}}" height="100px" alt=""></td>
                         <td>{{$industry_leaders->name}}</td>
                         <td>{{$industry_leaders->position}}</td>
                         <td>{{$industry_leaders->company}}</td>

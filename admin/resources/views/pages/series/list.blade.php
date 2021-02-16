@@ -13,6 +13,7 @@
                 <thead class="thead">
                     <tr>
                         <th scope="col">Id</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
                         <th scope="col">Actions</th>
@@ -22,6 +23,7 @@
                     @foreach ($tablerow as $series)
                     <tr>
                         <th scope="row">{{$series->id}}</th>
+                        <td class="text-center"><img class="rounded" src="/uploads/series/{{$series->id}}.{{$series->image_ext}}" height="100px" alt=""></td>
                         <td>{{$series->name}}</td>
                         <td>{{$series->description}}</td>
 
