@@ -33,7 +33,7 @@
                     <li><a href="./stories.php">Inspire Stories </a></li>
                     <li><a href="#">Campus Ambassador Program</a></li>
                     <li><a href="./careers.php">Careers </a></li>
-                    <li><a href="#">Our Channel</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCSA7txiQWbCNhkfUq37qx7A" target="blank">Our Channel</a></li>
 
             </div>
 

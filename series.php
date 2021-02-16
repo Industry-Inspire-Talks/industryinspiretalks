@@ -40,7 +40,7 @@
             </div>
 
             <?php
-            $result = $conn->query("SELECT * FROM episodes WHERE series_id='$id'");
+            $result = $conn->query("SELECT * FROM episodes WHERE series_id='$id'  ORDER BY id DESC");
 
             while ($row = $result->fetch_assoc()) {
 
