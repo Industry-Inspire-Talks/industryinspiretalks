@@ -13,8 +13,9 @@
                 <thead class="thead">
                     <tr>
                         <th scope="col">Id</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Title</th>
-                        <th scope="col">Description</th>
+                        <!-- <th scope="col">Description</th> -->
                         <th scope="col">Link</th>
                         <th scope="col">Category</th>
                         <th scope="col">Action</th>
@@ -24,8 +25,9 @@
                     @foreach ($tablerow as $event)
                     <tr>
                         <th scope="row">{{$event->id}}</th>
+                        <td class="text-center"><img class="rounded" src="/uploads/events/{{$event->id}}.{{$event->thumbnail_image_ext}}" height="100px" alt=""></td>
                         <td>{{$event->title}}</td>
-                        <td>{{$event->description}}</td>
+                        <!-- <td>{{$event->description}}</td> -->
                         <td>{{$event->link}}</td>
                         <td>{{$event->category}}</td>
 

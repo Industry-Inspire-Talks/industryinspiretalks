@@ -28,7 +28,7 @@
                         <p class="lead m-0"><?php echo $series['description'] ?></p>
                     </div>
                     <div class="col-lg-2 d-none d-lg-block">
-                        <div class="image-center-cover shadow" style="padding-top:100%;background-image:url('./uploads/series/<?php echo $id ?>.<?php echo $series['image_ext'] ?>');border-radius:1rem;overflow:hidden"></div>
+                        <div class="image-center-cover shadow" style="padding-top:100%;background-image:url('/admin/public/uploads/series/<?php echo $id ?>.<?php echo $series['image_ext'] ?>');border-radius:1rem;overflow:hidden"></div>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
             </div>
 
             <?php
-            $result = $conn->query("SELECT * FROM episodes WHERE series_id='$id'");
+            $result = $conn->query("SELECT * FROM episodes WHERE series_id='$id'  ORDER BY id DESC");
 
             while ($row = $result->fetch_assoc()) {
 

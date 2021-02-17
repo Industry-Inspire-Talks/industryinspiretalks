@@ -14,6 +14,7 @@
                 <thead class="thead">
                     <tr>
                         <th scope="col">Id</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Name</th>
                         <th scope="col">Company</th>
                         <th scope="col">Role</th>
@@ -25,6 +26,7 @@
                     @foreach ($tablerow as $community)
                     <tr>
                         <th scope="row">{{$community->id}}</th>
+                        <td class="text-center"><img class="rounded" src="/uploads/community/{{$community->id}}.{{$community->profile_image_ext}}" height="100px" alt=""></td>
                         <td>{{$community->name}}</td>
                         <td>{{$community->company}}</td>
                         <td>{{$community->role}}</td>

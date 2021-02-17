@@ -22,7 +22,9 @@
 
             <div class="row">
                 <?php
-                $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22);
+                $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28);
+
+                shuffle($idArray);
                 // $idArray = array(1, 2, 3, 4, 5, 6);
 
                 foreach ($idArray as $id) {
@@ -30,7 +32,7 @@
 
                     echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
                         '    <div class="member d-flex card flex-row">' .
-                        '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'./uploads/community/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')"></div>' .
+                        '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/community/' . $result['id'] . '.' . $result['profile_image_ext'] . '?new\')"></div>' .
                         '        <div class="d-flex justify-content-between flex-column">' .
                         '            <div>' .
                         '                <p class="name">' . $result['name'] . '</p>' .
@@ -38,7 +40,7 @@
                         '                <p class="position">' . $result['role'] . '</p>' .
                         '            </div>' .
                         '            <div class="social">' .
-                        '                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
+                        '                <a href="' . $result['link'] . '" target="blank"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
                         '            </div>' .
                         '        </div>' .
                         '    </div>' .

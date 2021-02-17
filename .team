@@ -16,3 +16,7 @@ Tanmay- /                                /views/template
         /community/edit/{id}             /views/pages/community/edit (with get paramter id)
 
         /notfound                        /views/pages/404
+
+
+
+

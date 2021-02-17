@@ -58,24 +58,25 @@
 
         <section class="container board">
             <p class="title text-center">Meet Our Board of Directors</p>
-            <div class="row">
+            <div class="row justify-content-center">
                 <?php
-                $idArray = array(1, 2, 3, 4);
+                $idArray = array(1, 3, 4);
 
                 foreach ($idArray as $id) {
                     $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
+                    $social = json_decode($result['social_links'], true);
 
                     echo '' .
                         '<div class="mb-3 col-lg-3 col-sm-6">' .
                         '    <div class="director">' .
                         '        <div class="">' .
-                        '            <div class="image image-center-cover" style="background-image: url(\'./uploads/team/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
+                        '            <div class="image image-center-cover" style="background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
                         '            </div>' .
                         '            <p class="name">' . $result['name'] . '</p>' .
                         '            <p class="position">' . $result['designation'] . '</p>' .
                         '        </div>' .
                         '        <div class="social">' .
-                        '            <a href="#"><i class="fab fa-linkedin"></i></a>' .
+                        '            <a href="' . $social['linkedin'] . '" target="blank"><i class="fab fa-linkedin"></i></a>' .
                         '            <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>' .
                         '            <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>' .
                         '            <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>' .
@@ -103,7 +104,7 @@
 
                 <div class="swiper-wrapper">
                     <?php
-                    $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 18, 19, 20, 21);
+                    $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 18, 19, 20, 21, 22);
 
                     shuffle($idArray);
 
@@ -111,7 +112,7 @@
                     foreach ($idArray as $id) {
                         $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
 
-                        $background = ($result['profile_image_ext']) ? './uploads/team/' . $result['id'] . '.' . $result['profile_image_ext'] : './assets/img/dummy-avatar.png';
+                        $background = ($result['profile_image_ext']) ? '/admin/public/uploads/staff/' . $result['id'] . '.' . $result['profile_image_ext'] : './assets/img/dummy-avatar.png';
 
 
                         echo '<div class="swiper-slide">' .
@@ -156,7 +157,7 @@
                                 '            <p class="card-title m-0">' . $result['title'] . '</p>' .
                                 '            <p class="small">' . $result['category'] . '</p>' .
                                 '        </div>' .
-                                '        <div class=" image-center-cover" style="height:160px;background-image: url(\'./uploads/events/' . $result['id'] . '.' . $result['thumbnail_image_ext'] . '\')"></div>' .
+                                '        <div class=" image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/events/' . $result['id'] . '.' . $result['thumbnail_image_ext'] . '\')"></div>' .
                                 '        <div class="card-body">' .
                                 // '            <hr>' .
                                 '            <p class="card-text des mb-3">' . $result['description'] . '</p>' .
@@ -171,7 +172,7 @@
                     <div class="swiper-button-prev"></div>
                 </div>
                 <p class="text-center">
-                    <a href="./events.php" class="btn btn-primary btn-pill">Events <i class="fa fa-arrow-right"></i></a>
+                    <a href="./events.php" class="btn btn-primary btn-pill mt-3">Events <i class="fa fa-arrow-right"></i></a>
                 </p>
 
             </div>
@@ -187,15 +188,18 @@
             <div class="container">
                 <div class="row">
                     <?php
-                    // $idArray = array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22);
-                    $idArray = array(1, 2, 3, 4, 5, 6);
 
+                    $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28);
+
+                    shuffle($idArray);
+
+                    $i = 0;
                     foreach ($idArray as $id) {
                         $result = $conn->query("SELECT * FROM community WHERE id='$id'")->fetch_assoc();
 
                         echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
                             '    <div class="member d-flex card flex-row">' .
-                            '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'./uploads/community/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')"></div>' .
+                            '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/community/' . $result['id'] . '.' . $result['profile_image_ext'] . '?new\')"></div>' .
                             '        <div class="d-flex justify-content-between flex-column">' .
                             '            <div>' .
                             '                <p class="name">' . $result['name'] . '</p>' .
@@ -203,11 +207,14 @@
                             '                <p class="position">' . $result['role'] . '</p>' .
                             '            </div>' .
                             '            <div class="social">' .
-                            '                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
+                            '                <a  href="' . $result['link'] . '" target="blank"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
                             '            </div>' .
                             '        </div>' .
                             '    </div>' .
                             '</div>';
+
+                        $i++;
+                        if ($i > 5) break;
                     }
                     ?>
 
@@ -229,26 +236,29 @@
 
                 <div class="d-flex align-items-center ">
 
-                    <div class="swiper-prev"><i class="fa fa-chevron-left"></i></div>
+                    <div class="swiper-prev btn"><i class="fa fa-chevron-left"></i></div>
                     <div id="companies" class="swiper-container">
                         <div class="swiper-wrapper">
                             <?php
-                            $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
+                            $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24);
+
+                            shuffle($idArray);
 
                             foreach ($idArray as $id) {
                                 $result = $conn->query("SELECT * FROM companies WHERE id='$id'")->fetch_assoc();
 
                                 echo '' .
                                     '<div class="swiper-slide">' .
-                                    '   <div class="p-4 mx-3" style="overflow:hidden;border-radius:1rem;background:#fff">' .
-                                    '       <div class=" image image-center-contain" style="height:70px;background-image: url(\'./uploads/companies/' . $result['id'] . '.' . $result['logo_image_ext'] . '\')"></div>' .
+                                    '   <div class="p-4 mx-3 mb-2" style="overflow:hidden;border-radius:1rem;background:#fff">' .
+                                '       <div class=" image image-center-contain" style="filter:grayscale(1);height:70px;background-image: url(\'/admin/public/uploads/companies/' . $result['id'] . '.' . $result['logo_image_ext'] . '\')"></div>' .
                                     '   </div>' .
+                                    '   <p class="text-center small font-weight-bold">' . $result['title'] . '</p>' .
                                     '</div>';
                             }
                             ?>
                         </div>
                     </div>
-                    <div class="swiper-next"><i class="fa fa-chevron-right"></i></div>
+                    <div class="swiper-next btn"><i class="fa fa-chevron-right"></i></div>
                 </div>
             </div>
 
@@ -325,6 +335,11 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             slidesPerView: 1,
             breakpoints: {
                 768: {
@@ -343,6 +358,10 @@
             },
             slidesPerView: 1,
             loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
             breakpoints: {
                 552: {
                     slidesPerView: 2,
@@ -361,6 +380,11 @@
                 nextEl: '.swiper-next',
                 prevEl: '.swiper-prev',
             },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+
             slidesPerView: 2,
             slidesPerColumn: 2,
             // loop: true,
