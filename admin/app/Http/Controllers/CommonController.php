@@ -14,7 +14,7 @@ class CommonController extends Controller
     {
         return view('pages.'.$tablename.'.add');
     }  
-
+    
     // get list page
     public function list($tablename)
     {
