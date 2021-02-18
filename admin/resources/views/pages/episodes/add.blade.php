@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('episode_details')
+@section('main')
 
 
 <form method="POST" action="/episodes/add">
