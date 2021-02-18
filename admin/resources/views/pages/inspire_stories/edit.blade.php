@@ -12,6 +12,7 @@
             <div class="col-md-4">
                 <label for="">Industry Leader</label>
                 <select class="form-control" id="leader_id" name="category">
+                    <option value=""></option>
                 </select>
             </div>
             <div class="col-md-4">
@@ -28,6 +29,13 @@
                 <div class="form-group">
                     <button class="btn btn-warning " type="submit" name="action" value="image_upload"><i class="fa fa-plus"></i> Upload Image</button>
                 </div>
+            </div>
+            <div class="form-group">
+                <label for="">Visibility</label>
+                <select class="form-control" name="visibility">
+                    <option value="0">Hidden</option>
+                    <option value="1">Visible</option>
+                </select>
             </div>
         </div>
         <div class="card-footer">

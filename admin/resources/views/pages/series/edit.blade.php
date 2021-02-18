@@ -2,8 +2,8 @@
 
 @section('main')
 
-<form method="POST" action="/series/edit/{{$tablerow->id}}" enctype='multipart/form-data'> 
-@csrf
+<form method="POST" action="/series/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
+    @csrf
     <div class="card">
         <div class="card-header">
             <p class="h5 m-0"><a href="/series/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Details of {{$tablerow->name}}</p>
@@ -23,14 +23,21 @@
                     </div>
                 </div>
             </div>
-           
-            <div >
+
+            <div>
                 <label for="formFile" class="form-label">Upload Image</label>
                 <input class="form-control form-control mb-4" name="image_ext" type="file">
             </div>
+            <div class="form-group">
+                <label for="">Visibility</label>
+                <select class="form-control" name="visibility">
+                    <option value="0">Hidden</option>
+                    <option value="1">Visible</option>
+                </select>
+            </div>
         </div>
         <div class="card-footer">
-            <button class="btn btn-primary" type="submit" name="action" value="update"  ><i class="fa fa-plus"></i> Update</button>
+            <button class="btn btn-primary" type="submit" name="action" value="update"><i class="fa fa-plus"></i> Update</button>
         </div>
     </div>
 </form>
