@@ -26,7 +26,7 @@
                     @foreach ($tablerow as $community)
                     <tr>
                         <th scope="row">{{$community->id}}</th>
-                        <td class="text-center"><img class="rounded" src="/uploads/community/{{$community->id}}.{{$community->profile_image_ext}}" height="100px" alt=""></td>
+                        <td class="text-center"><img class="rounded" src="/uploads/community/{{$community->id}}.{{$community->image_ext}}" height="100px" alt=""></td>
                         <td>{{$community->name}}</td>
                         <td>{{$community->company}}</td>
                         <td>{{$community->role}}</td>

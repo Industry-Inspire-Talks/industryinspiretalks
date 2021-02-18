@@ -25,7 +25,7 @@
 
                     <tr>
                         <th scope="row">{{$story->id}}</th>
-                        <td class="text-center"><img class="rounded" src="/uploads/inspire_stories/{{$story->id}}.{{$story->post_image_ext}}" height="100px" alt=""></td>
+                        <td class="text-center"><img class="rounded" src="/uploads/inspire_stories/{{$story->id}}.{{$story->image_ext}}" height="100px" alt=""></td>
                         <td>{{DB::table('industry_leaders')->find($story->id)->name}}</td>
                         <td>{{$story->link}}</td>
 

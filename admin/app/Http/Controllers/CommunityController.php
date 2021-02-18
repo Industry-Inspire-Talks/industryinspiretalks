@@ -63,15 +63,15 @@ class CommunityController extends Controller
         switch ($request->input('action')) {
             case 'image_upload':
                 $request->validate([
-                    'profile_image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                    'image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                 ]); 
         
-                $imageExtension = $request->profile_image_ext->extension(); 
-                $request->profile_image_ext->move(public_path('uploads/community'), $id.$imageExtension);
+                $imageExtension = $request->image_ext->extension(); 
+                $request->image_ext->move(public_path('uploads/community'), $id.$imageExtension);
         
                 DB::table('community')
                 ->where('id', $id)
-                ->update(['profile_image_ext'=>$imageExtension]);
+                ->update(['image_ext'=>$imageExtension]);
         
                 break;
     

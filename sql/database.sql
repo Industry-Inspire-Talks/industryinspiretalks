@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 06, 2021 at 11:00 AM
+-- Generation Time: Feb 18, 2021 at 09:50 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -59,7 +59,7 @@ CREATE TABLE `community` (
   `company` varchar(80) NOT NULL,
   `role` varchar(80) NOT NULL,
   `industry` varchar(80) NOT NULL,
-  `profile_image_ext` varchar(6) NOT NULL,
+  `image_ext` varchar(6) NOT NULL,
   `link` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -67,7 +67,7 @@ CREATE TABLE `community` (
 -- Dumping data for table `community`
 --
 
-INSERT INTO `community` (`id`, `name`, `company`, `role`, `industry`, `profile_image_ext`, `link`) VALUES
+INSERT INTO `community` (`id`, `name`, `company`, `role`, `industry`, `image_ext`, `link`) VALUES
 (1, 'Ritwik Deshpande', 'JP Morgan Chase & Co', 'Software Development Engineer', 'Financial Services', 'jpg', 'https://www.linkedin.com/in/ritwik-deshpande-ba4b51170/'),
 (2, 'Irin Banerjee', 'D.E Shaw & Co', 'Software Development Engineer', 'Financial Services', 'jpg', 'https://www.linkedin.com/in/irin-banerjee-a8a4261b2/'),
 (3, 'Krishan Kumar', 'Dell', 'Ex-Software Development Engineer', 'Information Technology & Services', 'jpg', 'https://www.linkedin.com/in/krishan-kumar-4ab217166/'),
@@ -106,14 +106,14 @@ INSERT INTO `community` (`id`, `name`, `company`, `role`, `industry`, `profile_i
 CREATE TABLE `companies` (
   `id` int(11) NOT NULL,
   `title` varchar(50) NOT NULL,
-  `logo_image_ext` varchar(6) NOT NULL
+  `image_ext` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `companies`
 --
 
-INSERT INTO `companies` (`id`, `title`, `logo_image_ext`) VALUES
+INSERT INTO `companies` (`id`, `title`, `image_ext`) VALUES
 (1, 'JP Morgan Chase & Co', 'jpeg'),
 (2, 'D.E Shaw & Co', 'png'),
 (3, 'Dell', 'png'),
@@ -187,14 +187,14 @@ CREATE TABLE `events` (
   `title` varchar(100) NOT NULL,
   `description` text NOT NULL,
   `link` varchar(200) NOT NULL,
-  `thumbnail_image_ext` varchar(6) NOT NULL
+  `image_ext` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `category`, `title`, `description`, `link`, `thumbnail_image_ext`) VALUES
+INSERT INTO `events` (`id`, `category`, `title`, `description`, `link`, `image_ext`) VALUES
 (1, 'Industry Expo 2020', 'Path to Product Management', 'Welcome to Day 1 of Industry Expo 2k20, A 5-Day virtual event hosted with experts from the industry. Hope you have an amazing learning experience with us. Industry Inspire Talks are back again to equip you with the right dose of industry knowledge and scale-up your industry skills by making you industry-ready!  Yusuf Hassan is a Product Manager with a demonstrated ability to manage the entire product lifecycle - from ideation to deployment and post-deployment enhancements in an agile environment.Introduced QR codes on websites for a seamless payment experience. My area of expertise is to build and enhance products and features for higher customer retention, higher success rates, reduced frauds, and overall engaging experience for the consumer.', 'https://youtu.be/Zt8BhRS2vf0', 'png'),
 (2, 'Industry Expo 2020', 'Career opportunities in Big Data', 'Welcome to Day 2 of Industry Expo 2k20, A 5-Day virtual event hosted with experts from the industry. Hope you have an amazing learning experience with us. Industry Inspire Talks are back again to equip you with the right dose of industry knowledge and scale-up your industry skills by making you industry-ready! Shashank Mishra is a Data Engineer for Amazon, Ex - McKinsey & Company, Ex - Paytm, Founder @ E-Learning Bridge. He is an experienced Data Engineer with a demonstrated history of working in the information technology and services industry. Skilled in BigData technologies and Data Visualization ( Hadoop, Spark, SparkStreaming, HBase, Hive, Sqoop, Kafka, Datastax Cassandra, Datastax Studio, ElasticSearch, Grafana, Kibana) with a good grasp of Java, Python, C++, Core Data Structures & Algorithms, Django, REST API, and Databases. Strong engineering professional with a Master of Computer Applications (M.C.A.) focused in Computer Science and Engineering from Motilal Nehru National Institute Of Technology, Allahabad (NIT Allahabad)  ', 'https://youtu.be/5C5cJSduemw', 'png'),
 (3, 'Industry Expo 2020', 'Build your brand', 'Welcome to Day 3 of Industry Expo 2k20, A 5-Day virtual event hosted with experts from the industry. Hope you have an amazing learning experience with us. Industry Inspire Talks are back again to equip you with the right dose of industry knowledge and scale-up your industry skills by making you industry-ready! Pooja Sund is the Director-Technology & Analytics for Microsoft, Redmond, the USA with 14yrs+ of experience. She is an achievement-oriented finance and technology leader with solid credentials (Gold medalist and 2 times CFO Award winner). 15+ years of global experience in setting the vision, and the ability to execute on that vision by leading teams. An enthusiastic leader with deep technical and financial experience & proven ability to lead high-performing teams, build strong relationships, foster efficiency, and create an impact. I am the recipient of Highest Award for Leadership 2018, Dale Carnegie’s “Advanced Leadership Program”. She loves to make an impact by utilizing my brand of 3P: Passion for Technology, Data Analytics, Leadership and Business intelligence; Power to believe in myself and others, the power to keep ideating, fix things, create clarity, generate positive energy in teams; and lead people and teams to be successful.', 'https://youtu.be/04FokgmRk5o', 'png'),
@@ -233,14 +233,14 @@ CREATE TABLE `industry_leaders` (
   `name` varchar(40) NOT NULL,
   `position` varchar(40) NOT NULL,
   `company` varchar(40) NOT NULL,
-  `profile_image_ext` varchar(6) NOT NULL
+  `image_ext` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `industry_leaders`
 --
 
-INSERT INTO `industry_leaders` (`id`, `name`, `position`, `company`, `profile_image_ext`) VALUES
+INSERT INTO `industry_leaders` (`id`, `name`, `position`, `company`, `image_ext`) VALUES
 (1, 'Dr. Sneha Rakesh', 'Managing Director', 'Akarmaxs Tech', 'jpeg'),
 (2, 'Paras Pundir', 'Program Manager', 'Microsoft', 'jpeg'),
 (3, 'Srikumar Nair', 'Principal Group Program Manager', 'Microsoft', 'jpeg'),
@@ -274,7 +274,7 @@ INSERT INTO `industry_leaders` (`id`, `name`, `position`, `company`, `profile_im
 CREATE TABLE `inspire_stories` (
   `id` int(11) NOT NULL,
   `leader_id` int(11) NOT NULL,
-  `post_image_ext` varchar(6) NOT NULL,
+  `image_ext` varchar(6) NOT NULL,
   `link` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -282,7 +282,7 @@ CREATE TABLE `inspire_stories` (
 -- Dumping data for table `inspire_stories`
 --
 
-INSERT INTO `inspire_stories` (`id`, `leader_id`, `post_image_ext`, `link`) VALUES
+INSERT INTO `inspire_stories` (`id`, `leader_id`, `image_ext`, `link`) VALUES
 (1, 1, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_career-achievements-technology-activity-6732266136710209536-SS8N'),
 (2, 2, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_paraspundir-communityguy-microsoft-activity-6739047122873806848-jw4o'),
 (3, 3, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_srikumarnair-industryleader-microsoft-activity-6739793834185773056-RCDB'),
@@ -379,7 +379,7 @@ CREATE TABLE `staff` (
   `social_links` text NOT NULL,
   `nationality` varchar(50) NOT NULL,
   `address` text DEFAULT NULL,
-  `profile_image_ext` varchar(5) NOT NULL,
+  `image_ext` varchar(5) NOT NULL,
   `date_of_joining` varchar(20) DEFAULT NULL,
   `date_of_leaving` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -388,7 +388,7 @@ CREATE TABLE `staff` (
 -- Dumping data for table `staff`
 --
 
-INSERT INTO `staff` (`id`, `name`, `designation`, `contact`, `email`, `dob`, `social_links`, `nationality`, `address`, `profile_image_ext`, `date_of_joining`, `date_of_leaving`) VALUES
+INSERT INTO `staff` (`id`, `name`, `designation`, `contact`, `email`, `dob`, `social_links`, `nationality`, `address`, `image_ext`, `date_of_joining`, `date_of_leaving`) VALUES
 (1, 'Omkar Shinde', 'Founder & CEO', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/omkar-shinde-310aa5193/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'png', '', ''),
 (2, 'Satya Prakash Mohapatra', 'Chief Marketing Officer', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/satya-prakash-mohapatra-153926129/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'jpeg', '', ''),
 (3, 'Vishal Nair', 'Chief People Officer', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/vishalnairm/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'png', '', ''),
@@ -437,7 +437,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `email_verified_at`, `password`, `user_type`, `remember_token`, `created_at`, `updated_at`) VALUES
 (2, 'Tanmay', 'Jadhav', 'tanmay@gmail.com', NULL, '$2y$10$XkLdB0fFZimb3rPwgiN2YOjI7u60YE8IpOSnOotlCboAGXwLL175u', 'admin', NULL, '2020-12-22 11:49:17', '2020-12-22 11:49:17'),
-(3, 'asd', 'adas', 'abc@gmail.com', NULL, '$2y$10$Ua7Hr2fcM4uZ9hODJqyvsuXghssQGZ106VlTpE/kxhvrNRaP71EQC', 'admin', NULL, '2020-12-23 07:54:18', '2020-12-23 07:54:18');
+(3, 'Admin', '', 'admin@industryinspire.careers', NULL, '$2y$10$Ua7Hr2fcM4uZ9hODJqyvsuXghssQGZ106VlTpE/kxhvrNRaP71EQC', 'admin', NULL, '2020-12-23 07:54:18', '2020-12-23 07:54:18');
 
 --
 -- Indexes for dumped tables

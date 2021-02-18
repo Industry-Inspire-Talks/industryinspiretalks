@@ -31,7 +31,7 @@
 
 
                     $id = $row['leader_id'];
-                    $ext = $row['post_image_ext'];
+                    $ext = $row['image_ext'];
 
                     $leader = $conn->query("SELECT * FROM industry_leaders WHERE id='$id'")->fetch_assoc();
 
@@ -39,7 +39,7 @@
                         '    <div class="card story-card d-flex justify-content-between" style="height:100%">' .
                         '        <div class="py-2 px-3 d-flex align-items-center justify-content-between">' .
                         '            <div class="d-flex align-items-center justify-content-between">' .
-                        '                <div class="image-center-cover rounded-circle mr-2 flex-shrink-0" style="width:50px;height: 50px;background-image : url(\'uploads/industry_leaders/' . $id . '.' . $leader['profile_image_ext'] . '\')"></div>' .
+                        '                <div class="image-center-cover rounded-circle mr-2 flex-shrink-0" style="width:50px;height: 50px;background-image : url(\'uploads/industry_leaders/' . $id . '.' . $leader['image_ext'] . '\')"></div>' .
                         '                <div>' .
                         '                    <p class="name">' . $leader['name'] . '</p>' .
                         '                    <p class="position"><i class="text-muted">' . $leader['position'] . '</i> ' . (($leader['company']) ? 'at <i class="text-muted">' . $leader['company'] . '</i>' : '') . '</p>' .

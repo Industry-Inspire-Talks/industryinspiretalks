@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('inspire_stories')
+@section('main')
 
 
 <form method="POST" action="/inspire_story/add">

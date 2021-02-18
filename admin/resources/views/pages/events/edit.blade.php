@@ -41,7 +41,7 @@
             
             <div >
                 <label for="formFile" class="form-label">Upload Image</label>
-                <input class="form-control form-control mb-4" name="profile_image_ext" type="file">
+                <input class="form-control form-control mb-4" name="image_ext" type="file">
             </div>
             <div class="col-md-3">
                     <div class="form-group">

@@ -1,6 +1,6 @@
 @extends('template')
 
-@section('staff_details')
+@section('main')
 
 <form method="POST" action="/staff/edit/{{$staff->id}}" enctype='multipart/form-data'> <!--action="/staff/edit/{{$staff->id}}"-->
 @csrf
@@ -63,7 +63,7 @@
             </div>
             <div >
                 <label for="formFile" class="form-label">Upload Image</label>
-                <input class="form-control form-control mb-4" name="profile_image_ext" type="file">
+                <input class="form-control form-control mb-4" name="image_ext" type="file">
             </div>
         </div>
         <div class="card-footer">

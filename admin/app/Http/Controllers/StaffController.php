@@ -32,7 +32,7 @@ class StaffController extends Controller
     public function add_staff(Request $request)
     {   
 
-        // DB::insert('insert into staff(name,designation,contact,email,dob,social_links,nationality,address,profile_image_ext,date_of_joining,date_of_leaving) values(?,?,?,?,?,?,?,?,?,?,?)' , [$name,$designation,$contact,$email,$dob,$social_links,$nationality,$address,$image,$date_of_joining,$date_of_leaving]);
+        // DB::insert('insert into staff(name,designation,contact,email,dob,social_links,nationality,address,image_ext,date_of_joining,date_of_leaving) values(?,?,?,?,?,?,?,?,?,?,?)' , [$name,$designation,$contact,$email,$dob,$social_links,$nationality,$address,$image,$date_of_joining,$date_of_leaving]);
 
         if(DB::table('staff')->insert($request->only(['name', 'designation', 'contact', 'email','dob','social_links','nationality','address','date_of_joining','date_of_leaving'])))
         
@@ -65,15 +65,15 @@ class StaffController extends Controller
         switch ($request->input('action')) {
             case 'image_upload':
                 $request->validate([
-                    'profile_image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                    'image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                 ]); 
         
-                $imageExtension = $request->profile_image_ext->extension(); 
-                $request->profile_image_ext->move(public_path('uploads/staff'), $id.$imageExtension);
+                $imageExtension = $request->image_ext->extension(); 
+                $request->image_ext->move(public_path('uploads/staff'), $id.$imageExtension);
         
                 DB::table('staff')
                 ->where('id', $id)
-                ->update(['profile_image_ext'=>$imageExtension]);
+                ->update(['image_ext'=>$imageExtension]);
         
                 break;
     

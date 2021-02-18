@@ -38,7 +38,7 @@
 						'<div class="mb-3 col-lg-3 col-sm-6">' .
 						'    <div class="director">' .
 						'        <div class="">' .
-						'            <div class="image image-center-cover" style="background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')">' .
+						'            <div class="image image-center-cover" style="background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] . '\')">' .
 						'            </div>' .
 						'            <p class="name">' . $result['name'] . '</p>' .
 						'            <p class="position">' . $result['designation'] . '</p>' .
@@ -71,7 +71,7 @@
 					$result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
 					echo '<div class="card m-2 border-0" style="width:200px">' .
 						'	<div class="card-body mb-3">' .
-						'       <div class="image-center-cover mb-3" style="border-radius:1rem;overflow:hidden;height:200px;background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['profile_image_ext'] . '\')"></div>' .
+						'       <div class="image-center-cover mb-3" style="border-radius:1rem;overflow:hidden;height:200px;background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] . '\')"></div>' .
 						'		<h5 class="card-title">' . $result['name'] . '</h5>' .
 						'		<p class="card-text">' . $result['designation'] . '</p>' .
 						'	</div>' .
