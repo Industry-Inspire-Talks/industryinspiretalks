@@ -10,7 +10,18 @@
             <p class="h5 m-0"><a href="/inspire_stories/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Inspire Stories</p>
         </div>
         <div class="card-body">
-
+            <div class="col-md-4">
+                <label for="">Industry Leader</label>
+                <select class="form-control" id="leader_id" name="category">
+                </select>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="">Link</label>
+                    <input type="text" name="link" class="form-control">
+                </div>
+            </div>
+           
         </div>
         <div class="card-footer">
             <button class="btn btn-success" type="submit" name="add"><i class="fa fa-plus"></i> Add</button>
