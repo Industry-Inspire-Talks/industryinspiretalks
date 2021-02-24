@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-md-4">
                 <label for="">Type</label>
-                <select class="form-control" id="series_id" onchange="getValue(this);" name="type">
+                <select class="form-control" name="type">
                     <option >--- Select ---</option>
                     <option value="Full Time">Full Time</option>
                     <option value="Internship">Internship</option>

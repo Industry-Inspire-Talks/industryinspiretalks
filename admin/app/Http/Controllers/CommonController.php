@@ -14,7 +14,7 @@ class CommonController extends Controller
     {
         return view('pages.'.$tablename.'.add');
     }  
-
+    
     // get list page
     public function list($tablename)
     {
@@ -27,7 +27,7 @@ class CommonController extends Controller
     public function add(Request $request, $tablename){
 
        $col1 =  DB::getSchemaBuilder()->getColumnListing($tablename);
-       $col2 = ['profile_image_ext'];
+       $col2 = ['image_ext'];
 
        $columnname = array_diff($col1,$col2);
         // dd($columnname);
@@ -57,28 +57,28 @@ class CommonController extends Controller
     public function edit(Request $request,$tablename,$id)
     {
     
-        if(Schema::hasColumn($tablename,'profile_image_ext'))
+        if(Schema::hasColumn($tablename,'image_ext'))
         {
 
             switch ($request->input('action')) {
                 case 'image_upload':
                     $request->validate([
-                        'profile_image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                        'image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
                     ]); 
             
-                    $imageExtension = $request->profile_image_ext->extension(); 
-                    $request->profile_image_ext->move(public_path('uploads/'.$tablename), $id.'.'.$imageExtension);
+                    $imageExtension = $request->image_ext->extension(); 
+                    $request->image_ext->move(public_path('uploads/'.$tablename), $id.'.'.$imageExtension);
             
                     DB::table($tablename)
                     ->where('id', $id)
-                    ->update(['profile_image_ext'=>$imageExtension]);
+                    ->update(['image_ext'=>$imageExtension]);
             
                     break;
         
                 case 'update':
                 
                     $col1 =  DB::getSchemaBuilder()->getColumnListing($tablename);
-                    $col2 = ['profile_image_ext'];
+                    $col2 = ['image_ext'];
     
                     $columnname = array_diff($col1,$col2);
                     DB::table($tablename)

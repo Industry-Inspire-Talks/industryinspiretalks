@@ -22,7 +22,7 @@
                     @foreach ($tablerow as $companies)
                     <tr>
                         <th scope="row">{{$companies->id}}</th>
-                        <td class="text-center"><img class="rounded" src="/uploads/companies/{{$companies->id}}.{{$companies->logo_image_ext}}" height="100px" alt=""></td>
+                        <td class="text-center"><img class="rounded" src="/uploads/companies/{{$companies->id}}.{{$companies->image_ext}}" height="100px" alt=""></td>
                         <td>{{$companies->title}}</td>
                         <td class="text-nowrap">
                             <a class="btn btn-warning btn-sm" href="/companies/edit/{{$companies->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>

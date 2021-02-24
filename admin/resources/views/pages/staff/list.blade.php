@@ -26,7 +26,7 @@
                     @foreach ($tablerow as $staff)
                     <tr>
                         <th scope="row">{{$staff->id}}</th>
-                        <td class="text-center"><img class="rounded" src="/uploads/staff/{{$staff->id}}.{{$staff->profile_image_ext}}" height="100px" alt=""></td>
+                        <td class="text-center"><img class="rounded" src="/uploads/staff/{{$staff->id}}.{{$staff->image_ext}}" height="100px" alt=""></td>
                         <td>{{$staff->name}}</td>
                         <td>{{$staff->designation}}</td>
                         <td>{{$staff->contact}}</td>

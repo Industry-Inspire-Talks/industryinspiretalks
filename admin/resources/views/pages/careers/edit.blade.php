@@ -12,7 +12,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="form-group" >
+                    <div class="form-group">
                         <label for="">Title</label>
                         <input type="text" name="title" value="{{$tablerow->title}}" class="form-control" required>
                     </div>
@@ -29,19 +29,19 @@
                         <input type="text" name="skills" value="{{$tablerow->skills}}" class="form-control">
                     </div>
                 </div>
-                
+
                 <div class="col-md-2">
                     <div class="form-group">
                         <label for="">Type</label>
                         <select class="form-control" name="type">
-                        
-                        @php 
-                        $type = DB::table('careers')->select('type')->distinct()->get()
-                        @endphp
-                        @foreach ($type as $type)
-                            <option value="{{$type->type}}" {{$tablerow->type == $type->type ? 'selected' : " "}} >{{$type->type}}</option>
-                        @endforeach
-                        
+
+                            @php
+                            $type = DB::table('careers')->select('type')->distinct()->get()
+                            @endphp
+                            @foreach ($type as $type)
+                            <option value="{{$type->type}}" {{$tablerow->type == $type->type ? 'selected' : " "}}>{{$type->type}}</option>
+                            @endforeach
+
                         </select>
                     </div>
                 </div>
@@ -68,11 +68,19 @@
                         <input type="text" name="tenure" value="{{$tablerow->tenure}}" class="form-control">
                     </div>
                 </div>
-             
+
             </div>
-        </div>    
+            <div class="form-group">
+                <label for="">Visibility</label>
+                <select class="form-control" name="visible">
+                    <option value="0">Hidden</option>
+                    <option value="1">Visible</option>
+                </select>
+            </div>
+
+        </div>
         <div class="card-footer">
-        <button class="btn btn-primary" type="submit" name="action" value="update"  ><i class="fa fa-plus"></i> Update</button>
+            <button class="btn btn-primary" type="submit" name="action" value="update"><i class="fa fa-plus"></i> Update</button>
         </div>
     </div>
 </form>

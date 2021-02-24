@@ -12,7 +12,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="form-group" >
+                    <div class="form-group">
                         <label for="">Name</label>
                         <input type="text" name="name" value="{{$tablerow->name}}" class="form-control" required>
                     </div>
@@ -34,20 +34,28 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label for="formFile" class="form-label">Upload Image</label>
-                        <input class="form-control form-control mb-4" name="profile_image_ext" type="file">
+                        <input class="form-control form-control mb-4" name="image_ext" type="file">
                     </div>
                 </div>
             </div>
             <div class="row">
-            <div class="col-md-3">
+                <div class="col-md-3">
                     <div class="form-group">
-                        <button class="btn btn-warning " type="submit" name="action" value="image_upload" ><i class="fa fa-plus"></i> Upload Image</button >
+                        <button class="btn btn-warning " type="submit" name="action" value="image_upload"><i class="fa fa-plus"></i> Upload Image</button>
                     </div>
                 </div>
             </div>
-            
+        </div>
+        <div class="form-group">
+            <label for="">Visibility</label>
+            <select class="form-control" name="visible">
+                <option value="0">Hidden</option>
+                <option value="1">Visible</option>
+            </select>
+        </div>
+
         <div class="card-footer">
-        <button class="btn btn-primary" type="submit" name="action" value="update"  ><i class="fa fa-plus"></i> Update</button>
+            <button class="btn btn-primary" type="submit" name="action" value="update"><i class="fa fa-plus"></i> Update</button>
         </div>
     </div>
 </form>

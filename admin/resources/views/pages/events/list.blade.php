@@ -25,7 +25,7 @@
                     @foreach ($tablerow as $event)
                     <tr>
                         <th scope="row">{{$event->id}}</th>
-                        <td class="text-center"><img class="rounded" src="/uploads/events/{{$event->id}}.{{$event->thumbnail_image_ext}}" height="100px" alt=""></td>
+                        <td class="text-center"><img class="rounded" src="/uploads/events/{{$event->id}}.{{$event->image_ext}}" height="100px" alt=""></td>
                         <td>{{$event->title}}</td>
                         <!-- <td>{{$event->description}}</td> -->
                         <td>{{$event->link}}</td>
