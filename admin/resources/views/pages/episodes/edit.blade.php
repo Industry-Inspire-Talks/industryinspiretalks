@@ -31,7 +31,7 @@
             </div>
             <div class="form-group">
                 <label for="">Visibility</label>
-                <select class="form-control" name="visibility">
+                <select class="form-control" name="visible">
                     <option value="0">Hidden</option>
                     <option value="1">Visible</option>
                 </select>
@@ -42,11 +42,5 @@
         </div>
     </div>
 </form>
-<!-- <script>
-    document.getElementById('series_id').onchange = function() {
-        this.options[this.selectedIndex].text = "Hello";
-    this.value = {{$tablerow->series_id}};
-    }
-</script> -->
 
 @stop

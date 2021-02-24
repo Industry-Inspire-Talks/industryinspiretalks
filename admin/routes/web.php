@@ -8,6 +8,7 @@ use App\Http\Controllers\StaffController;
 use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\EpisodeController;
+use App\Http\Controllers\InspireStoriesController;
 
 
 
@@ -17,16 +18,24 @@ Route::post('/login', [User_authentication::class, 'login']);
 Route::get('/logout', [User_authentication::class, 'logout']);
 
 
-Route::get('/', function () {
-    return redirect('/staff/list');
-});
+
 
 Route::middleware(['auth'])->group(function () {
 
     // Route::view('/', 'admindashboard');
 
+    Route::get('/', function () {
+        return redirect('/staff/list');
+    });
+
+    Route::post('/inspire_stories/edit/{id}', [InspireStoriesController::class, 'edit_inspire_stories']);
+
+
     Route::get('/episodes/edit/{id}', [EpisodeController::class, 'get_episode_edit_page']);
     Route::post('/episodes/edit/{id}', [EpisodeController::class, 'edit_episode']);
+
+
+
 
     Route::get('/{tablename}/list', [CommonController::class, 'list']);
     Route::get('/{tablename}/edit/{id}', [CommonController::class, 'edit_page']);

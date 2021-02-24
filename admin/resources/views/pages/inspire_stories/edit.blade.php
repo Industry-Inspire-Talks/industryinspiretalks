@@ -2,7 +2,7 @@
 
 @section('main')
 
-<form method="POST" action="/inspire_story/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
+<form method="POST" action="/inspire_stories/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
@@ -11,14 +11,18 @@
         <div class="card-body">
             <div class="col-md-4">
                 <label for="">Industry Leader</label>
-                <select class="form-control" id="leader_id" name="category">
-                    <option value=""></option>
-                </select>
+                @php
+                $industry_leader = DB::table('industry_leaders')->select('name')->where('id',$tablerow->leader_id)->first()
+                @endphp
+                
+                <input type="text" name="name" value="{{$industry_leader->name}}"  class="form-control">
+              
+                
             </div>
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="">Link</label>
-                    <input type="text" name="link" class="form-control">
+                    <input type="text" name="link" value={{$tablerow->link}} class="form-control">
                 </div>
             </div>
             <div class="col-md-4">
@@ -32,7 +36,7 @@
             </div>
             <div class="form-group">
                 <label for="">Visibility</label>
-                <select class="form-control" name="visibility">
+                <select class="form-control" name="visible">
                     <option value="0">Hidden</option>
                     <option value="1">Visible</option>
                 </select>

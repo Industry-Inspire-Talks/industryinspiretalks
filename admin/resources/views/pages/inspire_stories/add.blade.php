@@ -12,7 +12,14 @@
         <div class="card-body">
             <div class="col-md-4">
                 <label for="">Industry Leader</label>
+                @php
+                $industry_leader = DB::table('industry_leaders')->get()
+                @endphp
                 <select class="form-control" id="leader_id" name="category">
+                @foreach ($industry_leader as $industry_leader)
+                
+                <option value="{{$industry_leader->id}}">{{$industry_leader->name}}</option>
+                @endforeach
                 </select>
             </div>
             <div class="col-md-4">

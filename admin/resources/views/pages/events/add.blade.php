@@ -20,7 +20,6 @@
                         @foreach ($category as $category)
                             <option value="{{$category->category}}"  >{{$category->category}}</option>
                         @endforeach
-                        <<option value=""></option>
                     </select>
                 </div>
                 <div class="col-md-4">

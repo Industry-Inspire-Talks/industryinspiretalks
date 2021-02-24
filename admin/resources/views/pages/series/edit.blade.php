@@ -30,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="">Visibility</label>
-                <select class="form-control" name="visibility">
+                <select class="form-control" name="visible">
                     <option value="0">Hidden</option>
                     <option value="1">Visible</option>
                 </select>
