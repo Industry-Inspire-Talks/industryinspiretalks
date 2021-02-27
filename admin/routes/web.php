@@ -29,6 +29,8 @@ Route::middleware(['auth'])->group(function () {
     });
 
     Route::post('/inspire_stories/edit/{id}', [InspireStoriesController::class, 'edit_inspire_stories']);
+    Route::post('/inspire_stories/add', [InspireStoriesController::class, 'add_inspire_stories']);
+    // Route::get('/inspire_stories/list', [InspireStoriesController::class, 'inspire_stories']);
 
 
     Route::get('/episodes/edit/{id}', [EpisodeController::class, 'get_episode_edit_page']);

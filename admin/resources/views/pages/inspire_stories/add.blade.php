@@ -3,11 +3,11 @@
 @section('main')
 
 
-<form method="POST" action="/inspire_story/add">
+<form method="POST" action="/inspire_stories/add">
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/inspire_stories/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Inspire Stories</p>
+            <p class="h5 m-0"><a href="/inspire_stories/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Inspire Story</p>
         </div>
         <div class="card-body">
             <div class="col-md-4">
@@ -15,7 +15,7 @@
                 @php
                 $industry_leader = DB::table('industry_leaders')->get()
                 @endphp
-                <select class="form-control" id="leader_id" name="category">
+                <select class="form-control" id="leader_id" name="leader_id">
                 @foreach ($industry_leader as $industry_leader)
                 
                 <option value="{{$industry_leader->id}}">{{$industry_leader->name}}</option>
