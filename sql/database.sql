@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2021 at 10:07 PM
+-- Generation Time: Mar 02, 2021 at 09:59 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -29,13 +29,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `careers` (
   `id` int(11) NOT NULL,
-  `title` varchar(60) NOT NULL,
-  `description` text NOT NULL,
-  `type` varchar(20) NOT NULL,
-  `skills` text NOT NULL,
-  `perks` text NOT NULL,
-  `tenure` text NOT NULL,
-  `visible` tinyint(1) NOT NULL
+  `title` varchar(60) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `type` varchar(20) DEFAULT NULL,
+  `skills` text DEFAULT NULL,
+  `perks` text DEFAULT NULL,
+  `tenure` text DEFAULT NULL,
+  `visible` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -56,13 +56,13 @@ INSERT INTO `careers` (`id`, `title`, `description`, `type`, `skills`, `perks`, 
 
 CREATE TABLE `community` (
   `id` int(11) NOT NULL,
-  `name` varchar(80) NOT NULL,
-  `company` varchar(80) NOT NULL,
-  `role` varchar(80) NOT NULL,
-  `industry` varchar(80) NOT NULL,
-  `image_ext` varchar(6) NOT NULL,
-  `link` varchar(200) NOT NULL,
-  `visible` tinyint(1) NOT NULL
+  `name` varchar(80) DEFAULT NULL,
+  `company` varchar(80) DEFAULT NULL,
+  `role` varchar(80) DEFAULT NULL,
+  `industry` varchar(80) DEFAULT NULL,
+  `image_ext` varchar(6) DEFAULT NULL,
+  `link` varchar(200) DEFAULT NULL,
+  `visible` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -107,9 +107,9 @@ INSERT INTO `community` (`id`, `name`, `company`, `role`, `industry`, `image_ext
 
 CREATE TABLE `companies` (
   `id` int(11) NOT NULL,
-  `title` varchar(50) NOT NULL,
-  `image_ext` varchar(6) NOT NULL,
-  `visible` tinyint(1) NOT NULL
+  `title` varchar(50) DEFAULT NULL,
+  `image_ext` varchar(6) DEFAULT NULL,
+  `visible` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -150,10 +150,10 @@ INSERT INTO `companies` (`id`, `title`, `image_ext`, `visible`) VALUES
 
 CREATE TABLE `episodes` (
   `id` int(11) NOT NULL,
-  `series_id` int(11) NOT NULL,
-  `title` varchar(60) NOT NULL,
-  `link` varchar(60) NOT NULL,
-  `visible` tinyint(1) NOT NULL
+  `series_id` int(11) DEFAULT NULL,
+  `title` varchar(60) DEFAULT NULL,
+  `link` varchar(60) DEFAULT NULL,
+  `visible` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -187,12 +187,12 @@ INSERT INTO `episodes` (`id`, `series_id`, `title`, `link`, `visible`) VALUES
 
 CREATE TABLE `events` (
   `id` int(11) NOT NULL,
-  `category` varchar(50) NOT NULL,
-  `title` varchar(100) NOT NULL,
-  `description` text NOT NULL,
-  `link` varchar(200) NOT NULL,
-  `image_ext` varchar(6) NOT NULL,
-  `visible` tinyint(1) NOT NULL
+  `category` varchar(50) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `link` varchar(200) DEFAULT NULL,
+  `image_ext` varchar(6) DEFAULT NULL,
+  `visible` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -235,11 +235,11 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `industry_leaders` (
   `id` int(11) NOT NULL,
-  `name` varchar(40) NOT NULL,
-  `position` varchar(40) NOT NULL,
-  `company` varchar(40) NOT NULL,
-  `image_ext` varchar(6) NOT NULL,
-  `visible` tinyint(1) NOT NULL
+  `name` varchar(40) DEFAULT NULL,
+  `position` varchar(40) DEFAULT NULL,
+  `company` varchar(40) DEFAULT NULL,
+  `image_ext` varchar(6) DEFAULT NULL,
+  `visible` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -279,10 +279,10 @@ INSERT INTO `industry_leaders` (`id`, `name`, `position`, `company`, `image_ext`
 
 CREATE TABLE `inspire_stories` (
   `id` int(11) NOT NULL,
-  `leader_id` int(11) NOT NULL,
-  `image_ext` varchar(6) NOT NULL,
-  `link` varchar(300) NOT NULL,
-  `visible` tinyint(1) NOT NULL
+  `leader_id` int(11) DEFAULT NULL,
+  `image_ext` varchar(6) DEFAULT NULL,
+  `link` varchar(300) DEFAULT NULL,
+  `visible` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -355,11 +355,11 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `series` (
   `id` int(11) NOT NULL,
-  `name` varchar(40) NOT NULL,
-  `description` text NOT NULL,
-  `image_ext` varchar(6) NOT NULL,
-  `coming_soon` tinyint(1) NOT NULL,
-  `visible` tinyint(1) NOT NULL
+  `name` varchar(40) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `image_ext` varchar(6) DEFAULT NULL,
+  `coming_soon` tinyint(1) DEFAULT NULL,
+  `visible` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -379,18 +379,18 @@ INSERT INTO `series` (`id`, `name`, `description`, `image_ext`, `coming_soon`, `
 
 CREATE TABLE `staff` (
   `id` int(11) NOT NULL,
-  `name` varchar(80) NOT NULL,
-  `designation` varchar(60) NOT NULL,
-  `contact` varchar(15) NOT NULL,
-  `email` varchar(80) NOT NULL,
-  `dob` varchar(20) NOT NULL,
-  `social_links` text NOT NULL,
-  `nationality` varchar(50) NOT NULL,
+  `name` varchar(80) DEFAULT NULL,
+  `designation` varchar(60) DEFAULT NULL,
+  `contact` varchar(15) DEFAULT NULL,
+  `email` varchar(80) DEFAULT NULL,
+  `dob` varchar(20) DEFAULT NULL,
+  `social_links` text DEFAULT NULL,
+  `nationality` varchar(50) DEFAULT NULL,
   `address` text DEFAULT NULL,
-  `image_ext` varchar(5) NOT NULL,
+  `image_ext` varchar(5) DEFAULT NULL,
   `date_of_joining` varchar(20) DEFAULT NULL,
   `date_of_leaving` varchar(20) DEFAULT NULL,
-  `visible` tinyint(1) NOT NULL
+  `visible` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -399,7 +399,7 @@ CREATE TABLE `staff` (
 
 INSERT INTO `staff` (`id`, `name`, `designation`, `contact`, `email`, `dob`, `social_links`, `nationality`, `address`, `image_ext`, `date_of_joining`, `date_of_leaving`, `visible`) VALUES
 (1, 'Omkar Shinde', 'Founder & CEO', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/omkar-shinde-310aa5193/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'png', '', '', 1),
-(2, 'Satya Prakash Mohapatra', 'Chief Marketing Officer', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/satya-prakash-mohapatra-153926129/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'jpeg', '', '', 1),
+(2, 'Satya Prakash Mohapatra', 'Chief Marketing Officer', NULL, NULL, NULL, '{     \"linkedin\" : \"https://www.linkedin.com/in/satya-prakash-mohapatra-153926129/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', NULL, NULL, 'jpeg', NULL, NULL, 0),
 (3, 'Vishal Nair', 'Chief People Officer', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/vishalnairm/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'png', '', '', 1),
 (4, 'Danish Shaikh', 'Chief Technology Officer', '8655332519', 'shaikh.danish4444@gmail.com', '1999-01-04', '{     \"linkedin\" : \"https://www.linkedin.com/in/shaikhdanish04/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', 'Indian', NULL, 'png', NULL, NULL, 1),
 (5, 'Amrita Bhattacharjee', 'Program Manager', '', '', '', '', '', '', 'jpg', '', '', 1),
@@ -411,10 +411,10 @@ INSERT INTO `staff` (`id`, `name`, `designation`, `contact`, `email`, `dob`, `so
 (11, 'Himanshi Lodha', 'Program Manager', '', '', '', '', '', '', 'jpeg', '', '', 1),
 (12, 'Eshaan Chauhan', 'Marketing Manager', '', '', '', '', '', '', 'jpg', '', '', 1),
 (13, 'Ajinkya Sonawale', 'Backend Developer', '', '', '', '', '', '', 'jpg', '', '', 1),
-(14, 'Aayush Vishnoi', 'Front-End Developer', '', '', '', '', '', '', '', '', '', 1),
-(15, 'Rihen Vora', 'Backend Developer', '', '', '', '', '', '', '', '', '', 1),
-(16, 'Karan Sawant', 'Backend Developer', '', '', '', '', '', '', '', '', '', 1),
-(17, 'Asish Mohapatra', 'Backend Developer', '', '', '', '', '', '', '', '', '', 1),
+(14, 'Aayush Vishnoi', 'Front-End Developer', '', '', '', '', '', '', '', '', '', 0),
+(15, 'Rihen Vora', 'Backend Developer', '', '', '', '', '', '', '', '', '', 0),
+(16, 'Karan Sawant', 'Backend Developer', '', '', '', '', '', '', '', '', '', 0),
+(17, 'Asish Mohapatra', 'Backend Developer', '', '', '', '', '', '', '', '', '', 0),
 (18, 'Varad Gaidhani', 'Community Manager', '', '', '', '', '', '', 'jpg', '', '', 1),
 (19, 'Ali Asgar Tinwala', 'Graphic Design Head', '', '', '', '', '', '', 'jpg', '', '', 1),
 (20, 'Shashwat Mulgund', 'Graphic Designer', '', '', '', '', '', '', 'jpg', '', '', 1),
@@ -446,7 +446,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `email_verified_at`, `password`, `user_type`, `remember_token`, `created_at`, `updated_at`) VALUES
 (2, 'Tanmay', 'Jadhav', 'tanmay@gmail.com', NULL, '$2y$10$XkLdB0fFZimb3rPwgiN2YOjI7u60YE8IpOSnOotlCboAGXwLL175u', 'admin', NULL, '2020-12-22 11:49:17', '2020-12-22 11:49:17'),
-(3, 'Admin', '', 'admin@industryinspire.careers', NULL, '$2y$10$Ua7Hr2fcM4uZ9hODJqyvsuXghssQGZ106VlTpE/kxhvrNRaP71EQC', 'admin', NULL, '2020-12-23 07:54:18', '2020-12-23 07:54:18');
+(3, 'Admin', '', 'admin@industryinspiretalks.careers', NULL, '$2y$10$Ua7Hr2fcM4uZ9hODJqyvsuXghssQGZ106VlTpE/kxhvrNRaP71EQC', 'admin', NULL, '2020-12-23 07:54:18', '2020-12-23 07:54:18');
 
 --
 -- Indexes for dumped tables
