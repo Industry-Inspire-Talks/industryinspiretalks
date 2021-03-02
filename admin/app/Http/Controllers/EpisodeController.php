@@ -22,7 +22,7 @@ class EpisodeController extends Controller
         // dd($request->series_id);
         DB::table('episodes')
                 ->where('id',$id)
-                ->update($request->only("series_id","title","link"));
+                ->update($request->only("series_id","title","link","visible"));
         
 
         $tablerow = DB::table('episodes')->where('id', $id)->distinct()->first();
