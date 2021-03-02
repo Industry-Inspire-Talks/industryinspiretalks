@@ -22,7 +22,7 @@
 
             <div class="row">
                 <?php
-                $count = $conn->query("SELECT * FROM community")->num_rows;
+                echo $count = $conn->query("SELECT * FROM community")->num_rows;
                 $idArray = array();
                 for ($i = 1; $i < $count; $i++) {
                     array_push($idArray, $i);
