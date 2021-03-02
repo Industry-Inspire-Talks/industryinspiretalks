@@ -67,7 +67,7 @@
 
 				$count = $conn->query("SELECT * FROM staff")->num_rows;
 				$idArray = array();
-				for ($i = 5; $i < $count; $i++) {
+				for ($i = 5; $i <= $count; $i++) {
 					array_push($idArray, $i);
 				}
 				shuffle($idArray);

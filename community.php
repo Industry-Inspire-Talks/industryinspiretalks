@@ -22,9 +22,9 @@
 
             <div class="row">
                 <?php
-                echo $count = $conn->query("SELECT * FROM community")->num_rows;
+                $count = $conn->query("SELECT * FROM community")->num_rows;
                 $idArray = array();
-                for ($i = 1; $i < $count; $i++) {
+                for ($i = 1; $i <= $count; $i++) {
                     array_push($idArray, $i);
                 }
 
@@ -34,7 +34,7 @@
                 foreach ($idArray as $id) {
                     $result = $conn->query("SELECT * FROM community WHERE id='$id'")->fetch_assoc();
 
-                    // if ($result['visible'])
+                    if ($result['visible'])
 
                         echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
                             '    <div class="member d-flex card flex-row">' .
