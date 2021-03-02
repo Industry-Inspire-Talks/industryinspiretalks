@@ -39,7 +39,7 @@
                         '    <div class="card story-card d-flex justify-content-between" style="height:100%">' .
                         '        <div class="py-2 px-3 d-flex align-items-center justify-content-between">' .
                         '            <div class="d-flex align-items-center justify-content-between">' .
-                        '                <div class="image-center-cover rounded-circle mr-2 flex-shrink-0" style="width:50px;height: 50px;background-image : url(\'uploads/industry_leaders/' . $id . '.' . $leader['image_ext'] . '\')"></div>' .
+                        '                <div class="image-center-cover rounded-circle mr-2 flex-shrink-0" style="width:50px;height: 50px;background-image : url(\'/admin/public/uploads/industry_leaders/' . $id . '.' . $leader['image_ext'] . '\')"></div>' .
                         '                <div>' .
                         '                    <p class="name">' . $leader['name'] . '</p>' .
                         '                    <p class="position"><i class="text-muted">' . $leader['position'] . '</i> ' . (($leader['company']) ? 'at <i class="text-muted">' . $leader['company'] . '</i>' : '') . '</p>' .
@@ -48,7 +48,7 @@
                         '            </div>' .
                         '        </div>' .
                         '        <div>' .
-                        '           <div class="img-square" style="background-image : url(\'uploads/inspire_stories/' . $row['id'] . '.' . $ext . '\')" style="background: #f1f1f1;"></div>' .
+                        '           <div class="img-square" style="background-image : url(\'/admin/public/uploads/inspire_stories/' . $row['id'] . '.' . $ext . '\')" style="background: #f1f1f1;"></div>' .
                         '      <a href="' . $row['link'] . '" target="blank">' .
                         '              <div class="py-2 px-3 d-flex align-items-center justify-content-between">' .
                         '                  <p class="m-0"><i class="far fa-thumbs-up "></i></p>' .
