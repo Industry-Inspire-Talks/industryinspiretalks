@@ -24,7 +24,7 @@
             </div>
             <div class="form-group">
                 <label for="">link</label>
-                <input type="text" name="designation" class="form-control" required>
+                <input type="text" name="link" class="form-control" required>
             </div>
         </div>
         <div class="card-footer">
