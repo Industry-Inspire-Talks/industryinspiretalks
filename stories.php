@@ -25,7 +25,7 @@
 
                 <?php } ?>
                 <?php
-                $result = $conn->query("SELECT * FROM inspire_stories ORDER BY id DESC");
+                $result = $conn->query("SELECT * FROM inspire_stories WHERE visible ='1' ORDER BY id DESC");
 
                 while ($row = $result->fetch_assoc()) {
 

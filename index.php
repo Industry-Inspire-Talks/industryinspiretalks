@@ -60,30 +60,31 @@
             <p class="title text-center">Meet Our Board of Directors</p>
             <div class="row justify-content-center">
                 <?php
-                $idArray = array(1, 3, 4);
+                $idArray = array(1, 2, 3, 4);
 
                 foreach ($idArray as $id) {
                     $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
                     $social = json_decode($result['social_links'], true);
 
-                    echo '' .
-                        '<div class="mb-3 col-lg-3 col-sm-6">' .
-                        '    <div class="director">' .
-                        '        <div class="">' .
-                        '            <div class="image image-center-cover" style="background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] . '\')">' .
-                        '            </div>' .
-                        '            <p class="name">' . $result['name'] . '</p>' .
-                        '            <p class="position">' . $result['designation'] . '</p>' .
-                        '        </div>' .
-                        '        <div class="social">' .
-                        '            <a href="' . $social['linkedin'] . '" target="blank"><i class="fab fa-linkedin"></i></a>' .
-                        '            <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>' .
-                        '            <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>' .
-                        '            <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>' .
-                        '            <a href="javascript:0" disabled><i class="fab fa-google-plus"></i></a>' .
-                        '        </div>' .
-                        '    </div>' .
-                        '</div>';
+                    if ($result['visible'])
+                        echo '' .
+                            '<div class="mb-3 col-lg-3 col-sm-6">' .
+                            '    <div class="director">' .
+                            '        <div class="">' .
+                            '            <div class="image image-center-cover" style="background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] . '\')">' .
+                            '            </div>' .
+                            '            <p class="name">' . $result['name'] . '</p>' .
+                            '            <p class="position">' . $result['designation'] . '</p>' .
+                            '        </div>' .
+                            '        <div class="social">' .
+                            '            <a href="' . $social['linkedin'] . '" target="blank"><i class="fab fa-linkedin"></i></a>' .
+                            '            <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>' .
+                            '            <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>' .
+                            '            <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>' .
+                            '            <a href="javascript:0" disabled><i class="fab fa-google-plus"></i></a>' .
+                            '        </div>' .
+                            '    </div>' .
+                            '</div>';
                 }
                 ?>
 
@@ -104,26 +105,30 @@
 
                 <div class="swiper-wrapper">
                     <?php
-                    $idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13, 18, 19, 20, 21, 22);
 
+                    $count = $conn->query("SELECT * FROM staff")->num_rows;
+                    $idArray = array();
+                    for ($i = 5; $i < $count; $i++) {
+                        array_push($idArray, $i);
+                    }
                     shuffle($idArray);
-
 
                     foreach ($idArray as $id) {
                         $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
 
                         $background = ($result['image_ext']) ? '/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] : './assets/img/dummy-avatar.png';
 
+                        if ($result['visible'])
 
-                        echo '<div class="swiper-slide">' .
-                            '    <div class="member">' .
-                            '            <div class="image image-center-cover" style="background-image: url(' . $background . ')">' .
-                            '            <img src="" alt="">' .
-                            '        </div>' .
-                            '        <p class="name">' . $result['name'] . '</p>' .
-                            '        <p class="position">' . $result['designation'] . '</p>' .
-                            '    </div>' .
-                            '</div>';
+                            echo '<div class="swiper-slide">' .
+                                '    <div class="member">' .
+                                '            <div class="image image-center-cover" style="background-image: url(' . $background . ')">' .
+                                '            <img src="" alt="">' .
+                                '        </div>' .
+                                '        <p class="name">' . $result['name'] . '</p>' .
+                                '        <p class="position">' . $result['designation'] . '</p>' .
+                                '    </div>' .
+                                '</div>';
                     }
                     ?>
 
@@ -145,11 +150,9 @@
                 <div id="expo" class="swiper-container">
                     <div class="swiper-wrapper">
                         <?php
-                        $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+                        $table = $conn->query("SELECT * FROM events WHERE visible='1' ORDER BY id DESC LIMIT 10");
 
-                        foreach ($idArray as $id) {
-                            $result = $conn->query("SELECT * FROM events WHERE id='$id'")->fetch_assoc();
-
+                        while ($result = $table->fetch_assoc()) {
                             echo '' .
                                 '<div class="swiper-slide">' .
                                 '    <div class="card" style="width: 18rem;">' .
@@ -189,7 +192,11 @@
                 <div class="row">
                     <?php
 
-                    $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28);
+                    $count = $conn->query("SELECT * FROM community")->num_rows;
+                    $idArray = array();
+                    for ($i = 1; $i < $count; $i++) {
+                        array_push($idArray, $i);
+                    }
 
                     shuffle($idArray);
 
@@ -197,21 +204,23 @@
                     foreach ($idArray as $id) {
                         $result = $conn->query("SELECT * FROM community WHERE id='$id'")->fetch_assoc();
 
-                        echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
-                            '    <div class="member d-flex card flex-row">' .
-                            '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/community/' . $result['id'] . '.' . $result['image_ext'] . '?new\')"></div>' .
-                            '        <div class="d-flex justify-content-between flex-column">' .
-                            '            <div>' .
-                            '                <p class="name">' . $result['name'] . '</p>' .
-                            '                <p class="company mb-2">' . $result['company'] . '</p>' .
-                            '                <p class="position">' . $result['role'] . '</p>' .
-                            '            </div>' .
-                            '            <div class="social">' .
-                            '                <a  href="' . $result['link'] . '" target="blank"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
-                            '            </div>' .
-                            '        </div>' .
-                            '    </div>' .
-                            '</div>';
+                        if ($result['visible'])
+
+                            echo '<div class="col-md-6 col-lg-6 col-xl-4">' .
+                                '    <div class="member d-flex card flex-row">' .
+                                '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/community/' . $result['id'] . '.' . $result['image_ext'] . '?new\')"></div>' .
+                                '        <div class="d-flex justify-content-between flex-column">' .
+                                '            <div>' .
+                                '                <p class="name">' . $result['name'] . '</p>' .
+                                '                <p class="company mb-2">' . $result['company'] . '</p>' .
+                                '                <p class="position">' . $result['role'] . '</p>' .
+                                '            </div>' .
+                                '            <div class="social">' .
+                                '                <a  href="' . $result['link'] . '" target="blank"><i class="fab fa-linkedin"></i> LinkedIn </a>' .
+                                '            </div>' .
+                                '        </div>' .
+                                '    </div>' .
+                                '</div>';
 
                         $i++;
                         if ($i > 5) break;
@@ -240,21 +249,28 @@
                     <div id="companies" class="swiper-container">
                         <div class="swiper-wrapper">
                             <?php
-                            $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24);
+
+                            $count = $conn->query("SELECT * FROM companies")->num_rows;
+                            $idArray = array();
+                            for ($i = 1; $i < $count; $i++) {
+                                array_push($idArray, $i);
+                            }
 
                             shuffle($idArray);
 
-                            foreach ($idArray as $id) {
-                                $result = $conn->query("SELECT * FROM companies WHERE id='$id'")->fetch_assoc();
+                            if ($result['visible'])
 
-                                echo '' .
-                                    '<div class="swiper-slide">' .
-                                    '   <div class="p-4 mx-3 mb-2" style="overflow:hidden;border-radius:1rem;background:#fff">' .
-                                '       <div class=" image image-center-contain" style="filter:grayscale(1);height:70px;background-image: url(\'/admin/public/uploads/companies/' . $result['id'] . '.' . $result['image_ext'] . '\')"></div>' .
-                                    '   </div>' .
-                                    '   <p class="text-center small font-weight-bold">' . $result['title'] . '</p>' .
-                                    '</div>';
-                            }
+                                foreach ($idArray as $id) {
+                                    $result = $conn->query("SELECT * FROM companies WHERE id='$id'")->fetch_assoc();
+
+                                    echo '' .
+                                        '<div class="swiper-slide">' .
+                                        '   <div class="p-4 mx-3 mb-2" style="overflow:hidden;border-radius:1rem;background:#fff">' .
+                                        '       <div class=" image image-center-contain" style="filter:grayscale(1);height:70px;background-image: url(\'/admin/public/uploads/companies/' . $result['id'] . '.' . $result['image_ext'] . '\')"></div>' .
+                                        '   </div>' .
+                                        '   <p class="text-center small font-weight-bold">' . $result['title'] . '</p>' .
+                                        '</div>';
+                                }
                             ?>
                         </div>
                     </div>

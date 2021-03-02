@@ -23,7 +23,7 @@
             <div class="row">
                 <?php
 
-                $result = $conn->query("SELECT * FROM careers");
+                $result = $conn->query("SELECT * FROM careers WHERE visible ='1'");
 
                 while ($row = $result->fetch_assoc()) {
 
