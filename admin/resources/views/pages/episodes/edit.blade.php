@@ -27,7 +27,7 @@
             </div>
             <div class="form-group">
                 <label for="">link</label>
-                <input type="text" name="designation" value="{{$tablerow->link}}" class="form-control" required>
+                <input type="text" name="link" value="{{$tablerow->link}}" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="">Visibility</label>
