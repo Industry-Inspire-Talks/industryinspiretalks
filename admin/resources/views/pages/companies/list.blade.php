@@ -20,7 +20,7 @@
                 </thead>
                 <tbody>
                     @foreach ($tablerow as $companies)
-                    <tr>
+                    <tr class="{{!$companies->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$companies->id}}</th>
                         <td class="text-center"><img class="rounded" src="/uploads/companies/{{$companies->id}}.{{$companies->image_ext}}" height="100px" alt=""></td>
                         <td>{{$companies->title}}</td>

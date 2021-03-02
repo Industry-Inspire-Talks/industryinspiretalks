@@ -36,10 +36,9 @@
 
             <div class="row text-center">
                 <?php
-                $idArray = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+                $table = $conn->query("SELECT * FROM events WHERE visible='1' ORDER BY id DESC LIMIT 10");
 
-                foreach ($idArray as $id) {
-                    $result = $conn->query("SELECT * FROM events WHERE id='$id'")->fetch_assoc();
+                while ($result = $table->fetch_assoc()) {
 
                     echo '' .
                         '<div class="col-md-6 col-lg-4 mb-3">' .

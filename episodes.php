@@ -22,7 +22,7 @@
 		<section class="container pt-5 my-5 series">
 			<div class="row align-items-center justify-content-center">
 				<?php
-				$result = $conn->query("SELECT * FROM series");
+				$result = $conn->query("SELECT * FROM series WHERE visible ='1'");
 
 				while ($row = $result->fetch_assoc()) {
 					echo '<div class="col-md-6 col-lg-4">' .

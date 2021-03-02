@@ -28,30 +28,31 @@
 			<h1 class="title text-center mb-5">Our Board of Directors</h1>
 			<div class="row justify-content-center">
 				<?php
-				$idArray = array(1, 3, 4);
+				$idArray = array(1, 2, 3, 4);
 
 				foreach ($idArray as $id) {
 					$result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
 					$social = json_decode($result['social_links'], true);
 
-					echo '' .
-						'<div class="mb-3 col-lg-3 col-sm-6">' .
-						'    <div class="director">' .
-						'        <div class="">' .
-						'            <div class="image image-center-cover" style="background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] . '\')">' .
-						'            </div>' .
-						'            <p class="name">' . $result['name'] . '</p>' .
-						'            <p class="position">' . $result['designation'] . '</p>' .
-						'        </div>' .
-						'        <div class="social">' .
-						'            <a href="' . $social['linkedin'] . '" target="blank"><i class="fab fa-linkedin"></i></a>' .
-						'            <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>' .
-						'            <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>' .
-						'            <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>' .
-						'            <a href="javascript:0" disabled><i class="fab fa-google-plus"></i></a>' .
-						'        </div>' .
-						'    </div>' .
-						'</div>';
+					if ($result['visible'])
+						echo '' .
+							'<div class="mb-3 col-lg-3 col-sm-6">' .
+							'    <div class="director">' .
+							'        <div class="">' .
+							'            <div class="image image-center-cover" style="background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] . '\')">' .
+							'            </div>' .
+							'            <p class="name">' . $result['name'] . '</p>' .
+							'            <p class="position">' . $result['designation'] . '</p>' .
+							'        </div>' .
+							'        <div class="social">' .
+							'            <a href="' . $social['linkedin'] . '" target="blank"><i class="fab fa-linkedin"></i></a>' .
+							'            <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>' .
+							'            <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>' .
+							'            <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>' .
+							'            <a href="javascript:0" disabled><i class="fab fa-google-plus"></i></a>' .
+							'        </div>' .
+							'    </div>' .
+							'</div>';
 				}
 				?>
 
@@ -63,19 +64,30 @@
 
 			<div class="d-flex flex-wrap justify-content-center align-items-center text-center">
 				<?php
-				$idArray = array(5, 6, 7, 8, 9, 10, 11, 12, 13,  18, 19, 20, 21, 22);
 
+				$count = $conn->query("SELECT * FROM staff")->num_rows;
+				$idArray = array();
+				for ($i = 5; $i < $count; $i++) {
+					array_push($idArray, $i);
+				}
 				shuffle($idArray);
 
 				foreach ($idArray as $id) {
 					$result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
-					echo '<div class="card m-2 border-0" style="width:200px">' .
-						'	<div class="card-body mb-3">' .
-						'       <div class="image-center-cover mb-3" style="border-radius:1rem;overflow:hidden;height:200px;background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] . '\')"></div>' .
-						'		<h5 class="card-title">' . $result['name'] . '</h5>' .
-						'		<p class="card-text">' . $result['designation'] . '</p>' .
-						'	</div>' .
-						'</div>';
+
+					$background = ($result['image_ext']) ? '/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] : './assets/img/dummy-avatar.png';
+
+					if ($result['visible'])
+
+						echo '<div class="swiper-slide">' .
+							'    <div class="member">' .
+							'            <div class="image image-center-cover" style="background-image: url(' . $background . ')">' .
+							'            <img src="" alt="">' .
+							'        </div>' .
+							'        <p class="name">' . $result['name'] . '</p>' .
+							'        <p class="position">' . $result['designation'] . '</p>' .
+							'    </div>' .
+							'</div>';
 				}
 				?>
 			</div>

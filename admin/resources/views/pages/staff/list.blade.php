@@ -1,7 +1,6 @@
 @extends('template')
 
 @section('main')
-
 <div class="card">
     <div class="card-header d-flex align-items-center justify-content-between">
         <p class="h3 m-0">Staff List</p>
@@ -23,9 +22,10 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     @foreach ($tablerow as $staff)
-                    <tr>
-                        <th scope="row">{{$staff->id}}</th>
+                    <tr class="{{!$staff->visible ? 'bg-grey' : ''}}">
+                        <th scope=" row">{{$staff->id}}</th>
                         <td class="text-center"><img class="rounded" src="/uploads/staff/{{$staff->id}}.{{$staff->image_ext}}" height="100px" alt=""></td>
                         <td>{{$staff->name}}</td>
                         <td>{{$staff->designation}}</td>
