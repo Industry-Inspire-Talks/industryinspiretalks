@@ -79,13 +79,11 @@
 
 					if ($result['visible'])
 
-						echo '<div class="swiper-slide">' .
-							'    <div class="member">' .
-							'            <div class="image image-center-cover" style="background-image: url(' . $background . ')">' .
-							'            <img src="" alt="">' .
-							'        </div>' .
-							'        <p class="name">' . $result['name'] . '</p>' .
-							'        <p class="position">' . $result['designation'] . '</p>' .
+						echo '<div class="card m-2 border-0" style="width:200px">' .
+							'	<div class="card-body mb-3">' .
+							'       <div class="image-center-cover mb-3" style="border-radius:1rem;overflow:hidden;height:200px;background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] . '\')"></div>' .
+							'		<h5 class="card-title">' . $result['name'] . '</h5>' .
+							'		<p class="card-text">' . $result['designation'] . '</p>' .
 							'    </div>' .
 							'</div>';
 				}
