@@ -21,7 +21,7 @@
                 </thead>
                 <tbody>
                     @foreach ($tablerow as $series)
-                    <tr>
+                    <tr class="{{!$series->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$series->id}}</th>
                         <td class="text-center"><img class="rounded" src="/uploads/series/{{$series->id}}.{{$series->image_ext}}" height="100px" alt=""></td>
                         <td>{{$series->name}}</td>

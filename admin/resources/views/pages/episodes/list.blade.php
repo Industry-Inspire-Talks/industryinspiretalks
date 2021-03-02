@@ -20,7 +20,7 @@
                 </thead>
                 <tbody>
                     @foreach ($tablerow as $episode)
-                    <tr>
+                    <tr class="{{!$episode->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$episode->series_id}}</th>
                         <td>{{$episode->title}}</td>
                         <td>{{$episode->link}}</td>

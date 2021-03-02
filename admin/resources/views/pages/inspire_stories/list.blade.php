@@ -23,7 +23,7 @@
 
                     @foreach ($tablerow as $story)
 
-                    <tr>
+                    <tr class="{{!$story->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$story->id}}</th>
                         <td class="text-center"><img class="rounded" src="/uploads/inspire_stories/{{$story->id}}.{{$story->image_ext}}" height="100px" alt=""></td>
                         @php

@@ -18,7 +18,11 @@
     <!-- Custom styles for this template-->
     <link href="/css/sb-admin-2.min.css" rel="stylesheet">
 
-
+    <style>
+        .bg-grey {
+            background: #f5f5f5;
+        }
+    </style>
 </head>
 
 <body id="page-top" class="sidebar-toggled">

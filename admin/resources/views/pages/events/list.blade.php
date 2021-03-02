@@ -23,7 +23,7 @@
                 </thead>
                 <tbody>
                     @foreach ($tablerow as $event)
-                    <tr>
+                    <tr class="{{!$event->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$event->id}}</th>
                         <td class="text-center"><img class="rounded" src="/uploads/events/{{$event->id}}.{{$event->image_ext}}" height="100px" alt=""></td>
                         <td>{{$event->title}}</td>
