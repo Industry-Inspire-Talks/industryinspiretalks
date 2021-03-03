@@ -13,9 +13,8 @@
             <div class="form-group">
                 <label for="">Series</label>
                 <select class="form-control" name="series_id">
-                    <option value="">--- Select ---</option>
-                    <option></option>
-                    <option></option>
+                    <option value = 1>Interview Series</option>
+                    <option value = 2>Podcast Series</option>
                 </select>
             </div>
             <div class="form-group">
