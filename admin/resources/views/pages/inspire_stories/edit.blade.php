@@ -12,11 +12,14 @@
             <div class="col-md-4">
                 <label for="">Industry Leader</label>
                 @php
-                $industry_leader = DB::table('industry_leaders')->select('name')->where('id',$tablerow->leader_id)->first()
+                $industry_leader = DB::table('industry_leaders')->distinct()->get()
                 @endphp
-                
-                <input type="text" name="name" value="{{$industry_leader->name}}"  class="form-control">
-              
+
+                <select class="form-control" name="name">
+                @foreach ($industry_leader as $industry_leader)
+                <option value="{{$industry_leader->name}}" {{$industry_leader->id==$tablerow->leader_id ? 'selected' : ""}}>{{$industry_leader->name}}</option>
+                @endforeach
+                </select>
                 
             </div>
             <div class="col-md-4">
