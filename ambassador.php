@@ -162,8 +162,6 @@
 					<li class="mb-3">Have a good linkedIn network!</li>
 				</ul>
 
-				<img src="logo.png" alt="">
-
 				<a href="https://forms.gle/NPQ3Ki1RrH8txzAV7" class="btn btn-primary mt-4 btn-pill ml-md-4"> Apply Now</a>
 			</div>
 		</section>
