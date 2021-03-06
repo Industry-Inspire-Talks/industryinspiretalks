@@ -36,7 +36,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                     <!-- <a class="dropdown-item" href="./stories.php">Inspire Stories</a> -->
-                    <a class="dropdown-item disabled" href="./ambassador.php">Campus Ambassador Program</a>
+                    <a class="dropdown-item" href="./ambassador.php">Campus Ambassador Program</a>
                     <a class="dropdown-item" href="./careers.php">Careers</a>
                     <a class="dropdown-item" href="./contact.php">Contact Us</a>
                 </div>
