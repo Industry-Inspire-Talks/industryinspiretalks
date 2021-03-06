@@ -15,8 +15,8 @@
 		<div class="jumbotron jumbotron-fluid">
 			<div class="container d-flex align-items-center justify-content-between flex-md-row flex-column">
 				<div class="mb-md-0 mb-4">
-					<p class="h5 text-center text-md-left">Industry Inspire Talks</p>
-					<p class="h3 font-weight-light"><b>Campus Ambassador Program</b></p>
+					<p class="h5 d-none d-md-block">Industry Inspire Talks</p>
+					<p class="h3 text-center text-md-left font-weight-light"><b>Campus Ambassador Program</b></p>
 				</div>
 				<a href="https://forms.gle/NPQ3Ki1RrH8txzAV7" target="blank" class="btn btn-outline-light">Apply Now</a>
 
@@ -24,7 +24,7 @@
 		</div>
 
 		<section class="container">
-			<p class="h3 mb-4">Why become our Campus Ambassador?</p>
+			<p class="h3 mb-4 text-center text-md-left">Why become our Campus Ambassador?</p>
 			<p class="text-justify">The Campus Ambassador program at Industry Inspire Talks is aimed at identifying energetic, passionate, brilliant, like minded College Students who have the zeal to take initiative and make a mark. All the students will gain many skills like team management, organizing events, public speaking, social media, content, and marketing. The most valuable benefit is, these programs provide opportunities to get connected with many other like-minded student leaders across various campuses.</p>
 		</section>
 		<style>
