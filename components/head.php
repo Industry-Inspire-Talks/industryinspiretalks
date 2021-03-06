@@ -15,7 +15,7 @@
 
 <style>
     .jumbotron {
-        background: #095077;
+        background: linear-gradient(45deg, #1bb1dc, #006d8c);
         color: #fff;
     }
 </style>
