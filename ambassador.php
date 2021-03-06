@@ -28,11 +28,6 @@
 			<p class="text-justify">The Campus Ambassador program at Industry Inspire Talks is aimed at identifying energetic, passionate, brilliant, like minded College Students who have the zeal to take initiative and make a mark. All the students will gain many skills like team management, organizing events, public speaking, social media, content, and marketing. The most valuable benefit is, these programs provide opportunities to get connected with many other like-minded student leaders across various campuses.</p>
 		</section>
 		<style>
-			.jumbotron {
-				background: #095077;
-				color: #fff;
-			}
-
 			.perks-section {
 				background: #e4eeff;
 				border-radius: 1rem;
