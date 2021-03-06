@@ -9,17 +9,6 @@ class InspireStoriesController extends Controller
 {
 
 
-    // public function inspire_stories(Request $request)
-    // {
-    //     $tablerow = DB::table('inspire_stories')->distinct()->get();
-    //     $leard =  $tablerow->leader_id;
-    //     return $leard;
-    //     $name = DB::table('industry_leaders')->select('name')->whereIn('id',$tablerow)->get();
-
-       
-        
-    //     return view('pages.inspire_stories.list',compact('name','tablerow'));
-    // }
 
     public function add_inspire_stories(Request $request)
     {
