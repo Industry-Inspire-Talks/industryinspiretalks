@@ -79,13 +79,22 @@
 
 				height: 250px;
 				width: 250px;
+
+				padding: 1rem;
 				font-size: 50px;
 				width: 100%;
 				background: #fff;
+
+				opacity: .85;
 				/* background: #f1f1f1; */
 				border-radius: 1rem;
 				/* background: #1e1e1e; */
 				/* background: #0984a7; */
+			}
+
+			.card:hover .icon-holder {
+				filter: revert();
+				opacity: .75;
 			}
 		</style>
 		<section class="perks-section container">
@@ -97,7 +106,7 @@
 			<div class="row px-3">
 				<div class="col-md-4 mb-4">
 					<div class="card h-100 ">
-						<div class="icon-holder shadow"><i class="fa fa-image"></i></div>
+						<div class="icon-holder shadow"><img src="assets/img/ambassador/1.jpeg" height="100%" alt=""></div>
 						<div class="card-body py-2 d-flex align-items-center justify-content-between flex-column">
 							<p class="text-holder px-1">Get early access to all our industry events.</p>
 						</div>
@@ -105,7 +114,7 @@
 				</div>
 				<div class="col-md-4 mb-4">
 					<div class="card h-100 ">
-						<div class="icon-holder shadow"><i class="fa fa-image"></i></div>
+						<div class="icon-holder shadow"><img src="assets/img/ambassador/2.jpeg" height="100%" alt=""></div>
 						<div class="card-body py-2 d-flex align-items-center justify-content-between flex-column">
 							<p class="text-holder px-1">Build your network with Industry Experts.</p>
 						</div>
@@ -113,7 +122,7 @@
 				</div>
 				<div class="col-md-4 mb-4">
 					<div class="card h-100 ">
-						<div class="icon-holder shadow"><i class="fa fa-image"></i></div>
+						<div class="icon-holder shadow"><img src="assets/img/ambassador/3.jpeg" height="100%" alt=""></div>
 						<div class="card-body py-2 d-flex align-items-center justify-content-between flex-column">
 							<p class="text-holder px-1">Transform yourself into a Campus Leader.</p>
 						</div>
@@ -121,7 +130,7 @@
 				</div>
 				<div class="col-md-4 mb-4">
 					<div class="card h-100 ">
-						<div class="icon-holder shadow"><i class="fa fa-image"></i></div>
+						<div class="icon-holder shadow"><img src="assets/img/ambassador/4.jpeg" height="100%" alt=""></div>
 						<div class="card-body py-2 d-flex align-items-center justify-content-between flex-column">
 							<p class="text-holder px-1">Get an opportunity to get mentored by an industry expert over a phone call.</p>
 						</div>
@@ -129,7 +138,7 @@
 				</div>
 				<div class="col-md-4 mb-4">
 					<div class="card h-100 ">
-						<div class="icon-holder shadow"><i class="fa fa-image"></i></div>
+						<div class="icon-holder shadow"><img src="assets/img/ambassador/5.jpeg" height="100%" alt=""></div>
 						<div class="card-body py-2 d-flex align-items-center justify-content-between flex-column">
 							<p class="text-holder px-1">Become Industry Ready with us!</p>
 						</div>
@@ -137,7 +146,7 @@
 				</div>
 				<div class="col-md-4 mb-4">
 					<div class="card h-100 ">
-						<div class="icon-holder shadow"><i class="fa fa-image"></i></div>
+						<div class="icon-holder shadow"><img src="assets/img/ambassador/6.jpeg" height="100%" alt=""></div>
 						<div class="card-body py-2 d-flex align-items-center justify-content-between flex-column">
 							<p class="text-holder px-1">Get an internship letter after completion of your Campus Ambassador internship.</p>
 						</div>
