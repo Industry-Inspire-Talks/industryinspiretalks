@@ -31,32 +31,42 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Industry</label>
                         <input type="text" name="industry" value="{{$tablerow->industry}}" class="form-control">
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label for="formFile" class="form-label">Upload Image</label>
                         <input class="form-control form-control mb-4" name="image_ext" type="file">
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
                         <button class="btn btn-warning mt-4" type="submit" name="action" value="image_upload"><i class="fa fa-plus"></i> Upload Image</button>
                     </div>
                 </div>
 
             </div>
-            <div class="form-group">
-                <label for="">Visibility</label>
-                <select class="form-control" name="visible">
-                    <option value="0">Hidden</option>
-                    <option value="1">Visible</option>
-                </select>
-            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">Visibility</label>
+                        <select class="form-control" name="visible">
+                            <option value="0">Hidden</option>
+                            <option value="1">Visible</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="">LinkedIn Link</label>
+                        <input type="text" name="link" value="{{$tablerow->link}}" class="form-control">
+                    </div>
+                </div>
+            </div>            
 
         </div>
         <div class="card-footer">
