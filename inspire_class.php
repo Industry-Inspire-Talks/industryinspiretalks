@@ -14,185 +14,187 @@
     <main>
         <?php require_once('components/navbar.php') ?>
 
-        <section id="hero_inspire_class">
-            <div class="card">
-                <img class="image1" src="C:\Users\shree\Downloads\Rectangle 30.png">
-                <div class="cont">
-                    <img src="C:\Users\shree\Downloads\bg.jpg">
-                </div>
 
-                <div class="content">
-                    <h1>What is Inspire Class?</h1>
-                    <p>Inspire Class is an Interactive and Experiential Learning<br> concept led by Industry Experts to
-                        enhance
-                        your<br> Foundational Knowledge. </p>
-                    <a href="#uclasses" class="btn">APPLY NOW</a>
+        <section class="bg-dark text-light" style="background:url('/assets/inspire_class/hero_section_bg.png');background-position: center;background-size: cover;">
+            <div class="container py-5">
+
+                <div class="row">
+                    <div class="col-md-4 text-center">
+                        <img class="mx-auto rounded" src="/assets/inspire_class/inspire_class_logo.jpg" width="200px">
+
+                    </div>
+                    <div class="col-md-8">
+                        <div class="my-5">
+                            <h1>What is Inspire Class?</h1>
+                            <p class="mb-4">Inspire Class is an Interactive and Experiential Learning<br> concept led by Industry Experts to
+                                enhance
+                                your<br> Foundational Knowledge. </p>
+                            <a href="#uclasses" class="btn btn-primary badge-pill px-5 small">APPLY NOW</a>
+                        </div>
+                    </div>
                 </div>
 
         </section>
-        
-        <section id="services" class="services mt-5 mb-3 py-3">
 
-            <div class="section-title">
-                <h2 class="text-center">Focus Areas</h2>
+        <section style="box-shadow:0 0 20px rgba(0,0,0,.25) inset">
+            <div class="container">
+
+                <div class="section-title  mb-5">
+                    <h2 class="text-center font-weight-bold" style="color:#413e66">Focus Areas</h2>
+
+                </div>
+
+                <div class="row text-center font-weight-bold">
+                    <div class="col-lg-3 col-sm-6">
+                        <figure>
+                            <img class="mb-3" src="/assets/inspire_class/Ellipse_1.png" style="width:150px" />
+                            <figcaption class="fig">Technology</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <figure>
+                            <img class="mb-3" src="/assets/inspire_class/Ellipse_2.png" style="width:150px" />
+                            <figcaption class="fig">Management</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <figure>
+                            <img class="mb-3" src="/assets/inspire_class/Ellipse_3.png" style="width:150px" />
+                            <figcaption class="fig">Finance</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <figure>
+                            <img class="mb-3" src="/assets/inspire_class/Ellipse_4.png" style="width:150px" />
+                            <figcaption class="fig">Entrepreneurship</figcaption>
+                        </figure>
+                    </div>
+                </div>
+
 
             </div>
 
-            <figure>
-                <img class="item" src="C:\Users\shree\Downloads\Ellipse 1.png" />
-                <figcaption class="fig">Technology</figcaption>
-            </figure>
-
-            <figure><img class="item" src="C:\Users\shree\Downloads\Ellipse 2.png" />
-                <figcaption class="fig">Management</figcaption>
-            </figure>
-
-            <figure> <img class="item" src="C:\Users\shree\Downloads\Ellipse 3.png" />
-                <figcaption class="fig">Finance</figcaption>
-            </figure>
-
-            <figure><img class="item" src="C:\Users\shree\Downloads\Ellipse 4.png" />
-                <figcaption class="fig">Entrepreneurship</figcaption>
-            </figure>
 
         </section>
 
-        <section id="uclasses" class="services mt-5 mb-3 py-3">
+        <section class="">
+            <div class="container">
 
-            <div class="section-title">
-                <h2 class="text-center">Upcoming Classes</h2>
+                <div class="section-title  mb-5">
+                    <h2 class="text-center font-weight-bold" style="color:#413e66">Upcoming Classes</h2>
 
-            </div>
-
-            <div class="card">
-                <a href="#"><img class="image" src="C:\Users\shree\Downloads\Vector.png"></a>
-                <div class="flex-child 1" id="foo">
-
-                    <img src="C:\Users\shree\Downloads\Rectangle 19.png">
-                </div>
-                <div class="do">
-                    <p>NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)</p>
-                    <p class="d">26th April, 2021 16:00 IST</p>
-                    <p class="g">8 Total Hours . All Level . Subtitles </p>
-                    <p class="l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex
-                        ea commodo consequat.</p>
-                    <img class="i2" src="C:\Users\shree\Downloads\Vector (4).png">
-                    <p class="f">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore
-                        et dolore magna aliqua.</p>
-                    <img class="i1" src="C:\Users\shree\Downloads\Vector (4).png">
-                    <p class="v">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore
-                        et dolore magna aliqua.</p>
-                    <img class="i" src="C:\Users\shree\Downloads\Vector (4).png">
-                    <p class="r">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore
-                        et dolore magna aliqua.</p>
-                    <button class="bo">Enroll Now</button>
                 </div>
 
+                <div id="upcoming" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php for ($i = 0; $i < 5; $i++) { ?>
+                            <div class="swiper-slide">
+                                <div class="card mx-auto" style="width: 18rem;">
+                                    <img src="/assets/inspire_class/dummy_class_image.png" style="filter:blur(2px)" alt="">
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
 
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-primary badge-pill px-4">View All Upcoming Classes</a>
+                </div>
             </div>
-            <div class="flex-child 2">
-                <img src="C:\Users\shree\Downloads\Rectangle 21 (6).png">
-            </div>
-
-
-            <div class="flex-child 3">
-                <img src="C:\Users\shree\Downloads\Rectangle 21 (6).png">
-            </div>
-
-
-            <div class="flex-child 4">
-                <img src="C:\Users\shree\Downloads\Rectangle 21 (7).png">
-            </div>
-            <a href="#"><img class="im1" src="C:\Users\shree\Downloads\Vector (3).png"></a>
-            <a href="" class="main-btn">View All Upcoming Classes</a>
         </section>
 
+        <section class="" style="background:#f6f6f6">
+            <div class="container">
 
-        <section id="pclasses" class="services mt-5 mb-3 py-3">
+                <div class="section-title  mb-5">
+                    <h2 class="text-center font-weight-bold" style="color:#413e66">Past Classes</h2>
 
-            <div class="section-title">
-                <h2 class="text-center">Past Classes</h2>
+                </div>
 
+                <div id="upcoming" class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php for ($i = 0; $i < 5; $i++) { ?>
+                            <div class="swiper-slide">
+                                <div class="card mx-auto" style="width: 18rem;">
+                                    <img src="/assets/inspire_class/dummy_class_image_past.png" style="filter:blur(2px)" alt="">
+                                </div>
+                            </div>
+                        <?php } ?>
+                    </div>
+
+
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-primary badge-pill px-4">View All</a>
+                </div>
             </div>
-            <a href="#"><img class="image" src="C:\Users\shree\Downloads\Vector.png"></a>
-
-            <div class="k">
-                <img class="i" rc="C:\Users\shree\Downloads\Rectangle 20.png">
-                <p>NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)</p>
-                <p class="d">Omkar Sindhe(Founder & CEO)</p>
-                <p class="g">8 Total Hours . All Level . Subtitles </p>
-                <p class="l">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <button class="bo">View Class Recording</button>
-
-            </div>
-
-            <div class="flex-child 1">
-                <img src="C:\Users\shree\Downloads\Rectangle 21 (2).png">
-            </div>
-
-            <div class="flex-child 3">
-                <img src="C:\Users\shree\Downloads\Rectangle 21 (2).png">
-            </div>
-
-            <div class="flex-child 4">
-                <img src="C:\Users\shree\Downloads\Rectangle 21 (2).png">
-            </div>
-
-            <a href="#"><img class="im1" src="C:\Users\shree\Downloads\Vector (3).png"></a>
-            <a href="" class="main-btn">View All</a>
         </section>
 
-        <section class="why">
-            <h2>Why should you attend?</h2>
-            <div class="row">
-                <div class="column">
-                    <div class="flex-child para1">
-                        <img class="i1" src="C:\Users\shree\Downloads\Vector (1).png">
+        <section class="p-4">
+            <div class="container my-4 rounded py-5" style="background:#eaf2ff">
 
-                        <p class="p1">Learn and Network with Industry Experts</p>
+                <h2 class="py-5 text-center font-weight-bold" style="color:#413e66">Why should you attend?</h2>
+                <div class="row mb-5">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
+                            <div class="d-flex">
+
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <p class="m-0" style="font-weight:500">Learn and Network with Industry Experts</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="column">
-                    <div class="flex-child para2">
-                        <img class="i2" src="C:\Users\shree\Downloads\Vector (1).png">
-                        <p class="p2">Develop your foundational knowledge in your focus area</p>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
+                            <div class="d-flex">
+
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <p class="m-0" style="font-weight:500">Develop your foundational knowledge in your focus area</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <div class="flex-child para3">
-                        <img class="i3" src="C:\Users\shree\Downloads\Vector (1).png">
-                        <p class="p3">Grow yourself <br>professionally</p>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
+                            <div class="d-flex">
+
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <p class="m-0" style="font-weight:500">Grow yourself <br>professionally</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="column">
-                    <div class="flex-child para4">
-                        <img class="i3" src="C:\Users\shree\Downloads\Vector (1).png">
-                        <p class="p4">Ace your industry<br> careers in style</p>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
+                            <div class="d-flex">
+
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <p class="m-0" style="font-weight:500">Ace your industry<br> careers in style</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <div class="flex-child para5">
-                        <img class="i3" src="C:\Users\shree\Downloads\Vector (1).png">
-                        <p class="p5">Seek mentorship from industry Leaders</p>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
+                            <div class="d-flex">
+
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <p class="m-0" style="font-weight:500">Seek mentorship from industry Leaders</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="column">
-                    <div class="flex-child para6">
-                        <img class="i3" src="C:\Users\shree\Downloads\Vector (1).png">
-                        <p class="p6">Become industry Ready in your focus Area</p>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
+                            <div class="d-flex">
+
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <p class="m-0" style="font-weight:500">Become industry Ready in your focus Area</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -245,6 +247,7 @@
             </div>
 
         </section>
+
         <section class="mb">
             <div class="imagebox">
                 <img src="C:\Users\shree\Downloads\WhatsApp Image 2021-04-09 at 1.11 1.png">
@@ -325,7 +328,31 @@
         </section>
 
 
+        <script>
+            $(document).ready(function() {
 
+                var swiper = new Swiper('#upcoming.swiper-container', {
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    loop: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    slidesPerView: 1,
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        996: {
+                            slidesPerView: 3,
+                        }
+                    },
+                });
+            })
+        </script>
 
         <!-- Footer Section  -->
         <?php require_once('components/footer.php') ?>
