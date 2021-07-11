@@ -11,7 +11,6 @@
 
 @section('content')
 
-    <!-- BANNER SECTION -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container py-1">
             <div class="row">
@@ -30,8 +29,7 @@
             </div>
         </div>
     </section>
-    <!-- BANNER SECTION END -->
-    <!-- About Section -->
+
     <section class="container about">
         <div class="direct" id="about_us" style="top:-85px"></div>
         <!-- <h2 class="font-weight-bold text-center mt-3 mb-5">About Our Community</h2> -->
@@ -51,7 +49,6 @@
             </div>
         </div>
     </section>
-    <!-- About Section End -->
 
     <section class="container board">
         <p class="title text-center">Meet Our Board of Directors</p>
@@ -70,10 +67,6 @@
             ?> --}}
 
         </div>
-
-
-
-
     </section>
 
     <section class="container team">
@@ -108,7 +101,7 @@
         </div>
 
     </section>
-    <!-- Our Events -->
+
     <section class="explore container ">
         <div class="direct" id="explore" style="top:-150px"></div>
         <div class="text-center justify-content-center">
@@ -164,8 +157,7 @@
 
         </div>
     </section>
-    <!-- Our Events End -->
-    <!-- Our Community-->
+
     <section id="community" class="community text-center justify-content-center">
         <div class="container text-center justify-content-center mt-5">
             <p class="title">Our Community</p>
@@ -205,9 +197,6 @@
             </p>
         </div>
     </section>
-    <!-- view more community -->
-
-    <!-- End of view more community -->
 
     <section class="companies mb-5" style="background:#ebebeb">
         <div class="container">
@@ -245,9 +234,6 @@
 
     </section>
 
-    <!-- Our Community End -->
-
-    <!-- Contact us  -->
     <section class="contact mb-5">
         <div class="direct" id="contact" style="top:-90px"></div>
         <div class="container">
