@@ -2,6 +2,15 @@
 
 namespace App\Providers;
 
+use App\Models\Career;
+use App\Models\Community;
+use App\Models\Company;
+use App\Models\Episode;
+use App\Models\Event;
+use App\Models\InspireStory;
+use App\Models\Series;
+use App\Models\Staff;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -24,5 +33,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+
+        View::share('staffs', Staff::all());
+        View::share('events', Event::all());
+        View::share('members', Community::all());
+        View::share('companies', Company::all());
+        View::share('episodes', Episode::all());
+        View::share('all_series', Series::all());
+        View::share('inspire_stories', InspireStory::all());
+        View::share('careers', Career::all());
     }
 }

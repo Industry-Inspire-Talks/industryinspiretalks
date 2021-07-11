@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="assets/img/undraw_experts3_3njd.svg" alt="" class="img-fluid image">
+                    <img src="/assets/img/undraw_experts3_3njd.svg" alt="" class="img-fluid image">
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="content row">
             <div class="col-md-4 d-none d-lg-flex">
                 <div class="doodle">
-                    <img src="assets/img/68-Customer-support.svg" alt="">
+                    <img src="/assets/img/68-Customer-support.svg" alt="">
                 </div>
             </div>
             <div class="col-md-8">
@@ -45,7 +45,7 @@
                 <p class="h6">Industry Inspire Talks is an organization started by Omkar Shinde in August 2020</p>
                 <p class="text-justify mt-3">We believe in educating the Students / Working Professionals / Entrepreneurs by providing them guidance from the Industry Experts & helping them to make an impact in their lives by transforming themselves into an Industry-Leader.</p>
                 <!-- <p> It is a platform where we invite successful people from the industry to share their career journeys. We inspire people in three ways. We have three categories i.e.. Interview Series, Podcasts Series, Career Stories. 'Interview series' involves people who interned at companies & converted that internship opportunity into a full-time offer. 'Podcasts Series' involves people with 5-10 years of Industry Experience who hold big positions at companies like Founder, MD, CEO, Managers, etc. sharing their industry experiences in our series. 'Career Stories' is where we invite people who achieved immeasurable success in their careers with 10+ years of industry experience in a specific industry/company. -->
-                <a href="./about.php" class="btn btn-primary mt-4 btn-pill"> More About Us</a>
+                <a href="/about" class="btn btn-primary mt-4 btn-pill"> More About Us</a>
             </div>
         </div>
     </section>
@@ -53,19 +53,23 @@
     <section class="container board">
         <p class="title text-center">Meet Our Board of Directors</p>
         <div class="row justify-content-center">
-            {{-- <?php
-            $idArray = [1, 2, 3, 4];
-
-            foreach ($idArray as $id) {
-                $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
-                $social = json_decode($result['social_links'], true);
-
-                if ($result['visible']) {
-                    echo '' . '<div class="mb-3 col-lg-3 col-sm-6">' . '    <div class="director">' . '        <div class="">' . '            <div class="image image-center-cover" style="background-image: url(\'/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] . '\')">' . '            </div>' . '            <p class="name">' . $result['name'] . '</p>' . '            <p class="position">' . $result['designation'] . '</p>' . '        </div>' . '        <div class="social">' . '            <a href="' . $social['linkedin'] . '" target="blank"><i class="fab fa-linkedin"></i></a>' . '            <a href="javascript:0" disabled><i class="fab fa-facebook"></i></a>' . '            <a href="javascript:0" disabled><i class="fab fa-twitter"></i></a>' . '            <a href="javascript:0" disabled><i class="fab fa-instagram"></i></a>' . '            <a href="javascript:0" disabled><i class="fab fa-google-plus"></i></a>' . '        </div>' . '    </div>' . '</div>';
-                }
-            }
-            ?> --}}
-
+            @foreach ($staffs->whereIn('id', [1, 2, 3, 4]) as $staff)
+                <div class="mb-3 col-lg-3 col-sm-6">
+                    <div class="director">
+                        <div class="">
+                            <div class="image image-center-cover" style="background-image: url('/uploads/staff/{{ $staff->id }}.{{ $staff->image_ext }}')">
+                            </div>
+                            <p class="name">{{ $staff->name }}</p>
+                            <p class="position">{{ $staff->designation }}</p>
+                        </div>
+                        <div class="social">
+                            @foreach ($staff->social_links as $index => $link)
+                                <a href="{{ $link == '' ? 'javascript:0' : $link }}" {{ $link == '' ? 'disabled' : 'target="blank"' }}><i class="fab fa-{{ $index }}"></i></a>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </section>
 
@@ -78,25 +82,19 @@
             </div>
 
             <div class="swiper-wrapper">
-                {{-- <?php
-                $count = $conn->query('SELECT * FROM staff')->num_rows;
-                $idArray = [];
-                for ($i = 5; $i <= $count; $i++) {
-                    array_push($idArray, $i);
-                }
-                shuffle($idArray);
 
-                foreach ($idArray as $id) {
-                    $result = $conn->query("SELECT * FROM staff WHERE id='$id'")->fetch_assoc();
-
-                    $background = $result['image_ext'] ? '/admin/public/uploads/staff/' . $result['id'] . '.' . $result['image_ext'] : './assets/img/dummy-avatar.png';
-
-                    if ($result['visible']) {
-                        echo '<div class="swiper-slide">' . '    <div class="member">' . '            <div class="image image-center-cover" style="background-image: url(' . $background . ')">' . '            <img src="" alt="">' . '        </div>' . '        <p class="name">' . $result['name'] . '</p>' . '        <p class="position">' . $result['designation'] . '</p>' . '    </div>' . '</div>';
-                    }
-                }
-                ?> --}}
-
+                @foreach ($staffs->except([1, 2, 3, 4])->shuffle()->where('visible', 1)
+        as $staff)
+                    <div class="swiper-slide">
+                        <div class="member">
+                            <div class="image image-center-cover" style="background-image: url('/uploads/staff/{{ $staff->id }}.{{ $staff->image_ext }}')">
+                                <img src="" alt="">
+                            </div>
+                            <p class="name">{{ $staff->name }}</p>
+                            <p class="position">{{ $staff->designation }}</p>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
 
@@ -114,45 +112,28 @@
 
             <div id="expo" class="swiper-container">
                 <div class="swiper-wrapper">
-                    {{-- <?php
-                    $table = $conn->query("SELECT * FROM events WHERE visible='1' ORDER BY id DESC LIMIT 10");
+                    @foreach ($events as $event)
 
-                    while ($result = $table->fetch_assoc()) {
-                        echo '' .
-                            '<div class="swiper-slide">' .
-                            '    <div class="card" style="width: 18rem;">' .
-                            '        <div class="card-body pb-0">' .
-                            '            <p class="card-title m-0">' .
-                            $result['title'] .
-                            '</p>' .
-                            '            <p class="small">' .
-                            $result['category'] .
-                            '</p>' .
-                            '        </div>' .
-                            '        <div class=" image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/events/' .
-                            $result['id'] .
-                            '.' .
-                            $result['image_ext'] .
-                            '\')"></div>' .
-                            '        <div class="card-body">' .
-                            // '            <hr>' .
-                            '            <p class="card-text des mb-3">' .
-                            $result['description'] .
-                            '</p>' .
-                            '            <a href="' .
-                            $result['link'] .
-                            '" target="blank" class="btn btn-primary btn-sm">Watch Now</a>' .
-                            '        </div>' .
-                            '    </div>' .
-                            '</div>';
-                    }
-                    ?> --}}
+                        <div class="swiper-slide">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body pb-0">
+                                    <p class="card-title m-0">{{ $event->title }}</p>
+                                    <p class="small">{{ $event->category }}</p>
+                                </div>
+                                <div class=" image-center-cover" style="height:160px;background-image: url('/uploads/events/{{ $event->id }}.{{ $event->image_ext }}')"></div>
+                                <div class="card-body">
+                                    <p class="card-text des mb-3">{{ $event->description }}</p>
+                                    <a href="{{ $event->link }}" target="blank" class="btn btn-primary btn-sm">Watch Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
             </div>
             <p class="text-center">
-                <a href="./events.php" class="btn btn-primary btn-pill mt-3">Events <i class="fa fa-arrow-right"></i></a>
+                <a href="/events" class="btn btn-primary btn-pill mt-3">Events <i class="fa fa-arrow-right"></i></a>
             </p>
 
         </div>
@@ -166,34 +147,29 @@
         </div>
         <div class="container">
             <div class="row">
-                {{-- <?php
-                $count = $conn->query('SELECT * FROM community')->num_rows;
-                $idArray = [];
-                for ($i = 1; $i <= $count; $i++) {
-                    array_push($idArray, $i);
-                }
 
-                shuffle($idArray);
+                @foreach ($members->shuffle()->where('visible', 1)->take(6)
+        as $member)
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="member d-flex card flex-row">
+                            <div class="image mr-3 image-center-cover" style="height:160px;background-image: url('/uploads/community/{{ $member->id }}.{{ $member->image_ext }}')"></div>
+                            <div class="d-flex justify-content-between flex-column">
+                                <div>
+                                    <p class="name">{{ $member->name }}</p>
+                                    <p class="company mb-2">{{ $member->company }}</p>
+                                    <p class="position">{{ $member->role }}</p>
+                                </div>
+                                <div class="social">
+                                    <a href="{{ $member->link }}" target="blank"><i class="fab fa-linkedin"></i> LinkedIn </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                $i = 0;
-                foreach ($idArray as $id) {
-                    $result = $conn->query("SELECT * FROM community WHERE id='$id'")->fetch_assoc();
-
-                    if ($result['visible']) {
-                        echo '<div class="col-md-6 col-lg-6 col-xl-4">' . '    <div class="member d-flex card flex-row">' . '        <div class="image mr-3 image-center-cover" style="height:160px;background-image: url(\'/admin/public/uploads/community/' . $result['id'] . '.' . $result['image_ext'] . '?new\')"></div>' . '        <div class="d-flex justify-content-between flex-column">' . '            <div>' . '                <p class="name">' . $result['name'] . '</p>' . '                <p class="company mb-2">' . $result['company'] . '</p>' . '                <p class="position">' . $result['role'] . '</p>' . '            </div>' . '            <div class="social">' . '                <a  href="' . $result['link'] . '" target="blank"><i class="fab fa-linkedin"></i> LinkedIn </a>' . '            </div>' . '        </div>' . '    </div>' . '</div>';
-                    }
-
-                    $i++;
-                    if ($i > 5) {
-                        break;
-                    }
-                }
-                ?> --}}
-
-
+                @endforeach
             </div>
             <p class="text-center">
-                <a href="./community.php" class="btn btn-primary">Community <i class="fa fa-arrow-right"></i></a>
+                <a href="/community" class="btn btn-primary">Community <i class="fa fa-arrow-right"></i></a>
             </p>
         </div>
     </section>
@@ -208,23 +184,16 @@
                 <div class="swiper-prev btn"><i class="fa fa-chevron-left"></i></div>
                 <div id="companies" class="swiper-container">
                     <div class="swiper-wrapper">
-                        {{-- <?php
-                        $count = $conn->query('SELECT * FROM companies')->num_rows;
-                        $idArray = [];
-                        for ($i = 1; $i <= $count; $i++) {
-                            array_push($idArray, $i);
-                        }
 
-                        shuffle($idArray);
+                        @foreach ($companies as $company)
 
-                        if ($result['visible']) {
-                            foreach ($idArray as $id) {
-                                $result = $conn->query("SELECT * FROM companies WHERE id='$id'")->fetch_assoc();
-
-                                echo '' . '<div class="swiper-slide">' . '   <div class="p-4 mx-3 mb-2" style="overflow:hidden;border-radius:1rem;background:#fff">' . '       <div class=" image image-center-contain" style="filter:grayscale(1);height:70px;background-image: url(\'/admin/public/uploads/companies/' . $result['id'] . '.' . $result['image_ext'] . '\')"></div>' . '   </div>' . '   <p class="text-center small font-weight-bold">' . $result['title'] . '</p>' . '</div>';
-                            }
-                        }
-                        ?> --}}
+                            <div class="swiper-slide">
+                                <div class="p-4 mx-3 mb-2" style="overflow:hidden;border-radius:1rem;background:#fff">
+                                    <div class=" image image-center-contain" style="filter:grayscale(1);height:70px;background-image: url('/uploads/companies/{{ $company->id }}.{{ $company->image_ext }}')"></div>
+                                </div>
+                                <p class="text-center small font-weight-bold">{{ $company->title }}</p>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="swiper-next btn"><i class="fa fa-chevron-right"></i></div>
@@ -243,7 +212,7 @@
             <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
                     <div class="p-3">
-                        <img src="assets/img/careers.png" width="100%" alt="">
+                        <img src="/assets/img/careers.png" width="100%" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Series;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,6 +24,7 @@ Route::view('/community', 'pages.community');
 Route::view('/events', 'pages.events');
 
 Route::view('/episodes', 'pages.episodes');
+Route::get('/episodes/{series}', fn (Series $series) => view('pages.episode', ['series' => $series]));
 
 Route::view('/stories', 'pages.stories');
 
