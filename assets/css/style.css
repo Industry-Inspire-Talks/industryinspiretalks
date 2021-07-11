@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
 }
 
@@ -138,8 +138,8 @@ body .jumbotron {
   position: fixed;
   z-index: 9999;
   width: 100%;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   background-color: rgba(0, 0, 0, 0);
   -webkit-box-shadow: 0 0 0;
           box-shadow: 0 0 0;
@@ -161,8 +161,8 @@ body .jumbotron {
 
 .navbar.shown .navbar-collapse {
   background: linear-gradient(45deg, #fff, #ebebeb);
-  margin: .5rem 0rem;
-  padding: .5rem 1rem;
+  margin: 0.5rem 0rem;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
 }
 
@@ -174,7 +174,7 @@ body .jumbotron {
 .nav-nofixed .navbar {
   top: 0;
   background: linear-gradient(45deg, #fff, #ebebeb);
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
           box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.15);
 }
@@ -201,7 +201,7 @@ body .jumbotron {
 
 .navbar .logo {
   border-radius: 10px;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .navbar .navbar-brand {
@@ -222,7 +222,7 @@ body .jumbotron {
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -299,7 +299,7 @@ body .jumbotron {
 }
 
 #hero .btn-primary {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
@@ -336,10 +336,10 @@ body .jumbotron {
   width: 90%;
   height: 92%;
   z-index: -1;
-  content: '';
+  content: "";
   background-color: #ebf1fa;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .about .doodle::after {
@@ -349,17 +349,17 @@ body .jumbotron {
   width: 90%;
   height: 92%;
   z-index: -1;
-  content: '';
+  content: "";
   background-color: #ebf1fa;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .about .doodle img {
   width: 100%;
   border: 8px solid #fff;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .team .member {
@@ -367,8 +367,8 @@ body .jumbotron {
   margin: 5px;
   margin: auto;
   margin-bottom: 1rem;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border-radius: 1rem;
   width: 150px;
   height: 100%;
@@ -377,16 +377,16 @@ body .jumbotron {
 .team .member:hover {
   padding: 10px;
   cursor: pointer;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   background-color: #006d8c;
 }
 
 .team .member:hover .image {
   width: 130px;
   height: 180px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .team .member:hover .name,
@@ -395,8 +395,8 @@ body .jumbotron {
 }
 
 .team .member .image {
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   width: 150px;
   height: 180px;
   margin: auto;
@@ -436,8 +436,8 @@ body .jumbotron {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .board .director:hover {
@@ -496,7 +496,7 @@ body .jumbotron {
   background-color: #006d8c;
   background: linear-gradient(45deg, #1bb1dc, #006d8c);
   border-radius: 5rem;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
 .board .director .social a {
@@ -522,7 +522,7 @@ section .title {
   color: #413e66;
   font-weight: 700;
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 section .section-header {
@@ -531,7 +531,7 @@ section .section-header {
   color: #413e66;
   font-weight: 700;
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .community .section-header {
@@ -571,7 +571,7 @@ section .section-header {
   font-style: italic;
   display: block;
   font-size: 13px;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .community .member .social i {
