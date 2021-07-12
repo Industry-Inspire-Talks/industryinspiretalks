@@ -1,9 +1,29 @@
 <?php include('connect.php') ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
+<style>
+.freq .btn-link::after{
+font-family: 'Ionicons';
+content: '\2212';
+position: absolute;
+float: right;
+right: 1rem;
+font-size: 2rem;
+color: black;
+padding: 0px;
+width: 60px;
+height: 60px;
+cursor: pointer;
+text-align: center;
+}
+.freq .btn-link.collapsed::after{
+font-family: 'Ionicons';
+content: '\FF0B';
+color: black;
+padding-top: 0px;
+}
+</style>
     <?php require_once('components/head.php') ?>
 
 </head>
@@ -15,12 +35,12 @@
         <?php require_once('components/navbar.php') ?>
 
 
-        <section class="bg-dark text-light" style="background:url('/assets/inspire_class/hero_section_bg.png');background-position: center;background-size: cover;">
+        <section class="bg-dark text-light" style="background:url('./assets/inspire_class/hero_section_bg.png');background-position: center;background-size: cover;">
             <div class="container py-5">
 
                 <div class="row">
                     <div class="col-md-4 text-center">
-                        <img class="mx-auto rounded" src="/assets/inspire_class/inspire_class_logo.jpg" width="200px">
+                        <img class="mx-auto rounded" src="./assets/inspire_class/inspire_class_logo.jpg" width="200px">
 
                     </div>
                     <div class="col-md-8">
@@ -47,25 +67,25 @@
                 <div class="row text-center font-weight-bold">
                     <div class="col-lg-3 col-sm-6">
                         <figure>
-                            <img class="mb-3" src="/assets/inspire_class/Ellipse_1.png" style="width:150px" />
+                            <img class="mb-3" src="./assets/inspire_class/Ellipse_1.png" style="width:150px" />
                             <figcaption class="fig">Technology</figcaption>
                         </figure>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <figure>
-                            <img class="mb-3" src="/assets/inspire_class/Ellipse_2.png" style="width:150px" />
+                            <img class="mb-3" src="./assets/inspire_class/Ellipse_2.png" style="width:150px" />
                             <figcaption class="fig">Management</figcaption>
                         </figure>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <figure>
-                            <img class="mb-3" src="/assets/inspire_class/Ellipse_3.png" style="width:150px" />
+                            <img class="mb-3" src="./assets/inspire_class/Ellipse_3.png" style="width:150px" />
                             <figcaption class="fig">Finance</figcaption>
                         </figure>
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <figure>
-                            <img class="mb-3" src="/assets/inspire_class/Ellipse_4.png" style="width:150px" />
+                            <img class="mb-3" src="./assets/inspire_class/Ellipse_4.png" style="width:150px" />
                             <figcaption class="fig">Entrepreneurship</figcaption>
                         </figure>
                     </div>
@@ -90,7 +110,7 @@
                         <?php for ($i = 0; $i < 5; $i++) { ?>
                             <div class="swiper-slide">
                                 <div class="card mx-auto" style="width: 18rem;">
-                                    <img src="/assets/inspire_class/dummy_class_image.png" style="filter:blur(2px)" alt="">
+                                    <img src="./assets/inspire_class/dummy_class_image.png" style="filter:blur(2px)" alt="">
                                 </div>
                             </div>
                         <?php } ?>
@@ -120,7 +140,7 @@
                         <?php for ($i = 0; $i < 5; $i++) { ?>
                             <div class="swiper-slide">
                                 <div class="card mx-auto" style="width: 18rem;">
-                                    <img src="/assets/inspire_class/dummy_class_image_past.png" style="filter:blur(2px)" alt="">
+                                    <img src="./assets/inspire_class/dummy_class_image_past.png" style="filter:blur(2px)" alt="">
                                 </div>
                             </div>
                         <?php } ?>
@@ -146,7 +166,7 @@
                         <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
                             <div class="d-flex">
 
-                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src=".\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                                 <p class="m-0" style="font-weight:500">Learn and Network with Industry Experts</p>
                             </div>
                         </div>
@@ -155,7 +175,7 @@
                         <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
                             <div class="d-flex">
 
-                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src=".\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                                 <p class="m-0" style="font-weight:500">Develop your foundational knowledge in your focus area</p>
                             </div>
                         </div>
@@ -164,7 +184,7 @@
                         <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
                             <div class="d-flex">
 
-                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src=".\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                                 <p class="m-0" style="font-weight:500">Grow yourself <br>professionally</p>
                             </div>
                         </div>
@@ -173,7 +193,7 @@
                         <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
                             <div class="d-flex">
 
-                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src=".\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                                 <p class="m-0" style="font-weight:500">Ace your industry<br> careers in style</p>
                             </div>
                         </div>
@@ -182,7 +202,7 @@
                         <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
                             <div class="d-flex">
 
-                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src=".\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                                 <p class="m-0" style="font-weight:500">Seek mentorship from industry Leaders</p>
                             </div>
                         </div>
@@ -191,7 +211,7 @@
                         <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
                             <div class="d-flex">
 
-                                <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
+                                <img class="p-3 flex-grow-0 flex-shrink-0" src=".\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                                 <p class="m-0" style="font-weight:500">Become industry Ready in your focus Area</p>
                             </div>
                         </div>
@@ -248,86 +268,140 @@
 
         </section>
 
-        <section class="mb">
-            <div class="imagebox">
-                <img src="C:\Users\shree\Downloads\WhatsApp Image 2021-04-09 at 1.11 1.png">
-            </div>
-            <div class="xo">
-                <div class="textbox">
-                    <h2>Certificate of Graduation</h2>
-                    <p>After you complete the class, you’ll get your<br> verified Certificate of Graduation to Showcase
-                        <br>the
-                        things you learntout of Inspire Class.
-                    </p>
-
+        <section style="box-shadow:0 0 20px rgba(0,0,0,.25) inset">
+        <div class="row">
+<div class="col-md-6 text-center">
+<img class="mx-auto rounded" src="./assets/inspire_class/certificate.png" width="800px">
+</div>
+<div class="col-md-6 ">
+<div class="col-md-offset-5" style="margin-left: 85px;margin-top:170px;">
+    <h2 style="font-family: Poppins;
+font-style: normal;font-weight: bold;font-size: 2.5em;line-height: 64px;
+color: #413E66;">Certificate of Graduation</h2>
+<p class="mb-5" style="font-family: Poppins;font-style: normal;font-weight: normal;font-size: 26px;line-height: 34px;color: #000000;">After you complete the class, you’ll get your<br> verified Certificate of Graduation to Showcase
+<br>the things you learntout of Inspire Class.</p>
+</div></div>
+<a href="#" class="btn btn-primary badge-pill px-5 small mx-auto d-block" style="margin-top: 55px;box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.25);">APPLY NOW</a>    
+</div>
+</section>
+        <section class="freq" style="font-family: 'Hind', sans-serif;background: #fff;color: #4d5974;">
+ <h1 style="padding:20px 0 50px 0; font-weight:bold;font-size:34px;text-align:center;">Frequently Asked Questions</h1>
+   <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-lg-2">
+                    <div id="accordion">
+  <div class="car" style="padding-bottom:20px;">
+    <div class="card-header" id="headingOne" style="background: #EAF2FF;border: 4px solid #FFFFFF;border-radius: 20px;">
+      <h5 class="mb-0"> <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="
+color:black;   font-weight:bold; font-size:1.5rem;">
+        1.Who is Eligible to Apply?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;font-family:Poppins">
+      <div class="card-body" style="font-style: normal;
+font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+      All undergraduate students and young professionals with a<br> maximum of 2 years of
+    experience who are
+    looking to build <br>foundational knowledge or to explore a particular domain are<br>
+    eligible to apply
+    for our programs. The final decision of enrolment
+    would be taken by our team after evaluating all the candidates.
+      </div>
+    </div>
+  </div>
+  <div class="car" style="padding-bottom:20px;">
+    <div class="card-header" id="headingTwo" st style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"  style="
+                                color:black;   font-weight:bold; font-size:1.5rem;">
+        2.Who is going to take the class?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;font-family:Poppins">
+      <div class="card-body" style="font-style: normal;
+font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+      The classes would be taken by Industry experts from respective domains. In addition to
+    educating the selected students, Industry experts would also provide mentorship wherever required.
+      </div>
+    </div>
+  </div>
+<div class="car" style="padding-bottom:20px;">
+<div class="card-header" id="headingThree"  style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"  style="
+color:black;font-weight:bold; font-size:1.5rem;">
+3.What is the format of the class and cohort?   
+</button>
+</h5>
+ </div>
+ <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;font-family:Poppins">
+   <div class="card-body" style="font-style: normal;
+font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+      All the classes would be virtual-only. Each cohort will consist of 60 students from diverse backgrounds.
+      </div>
+    </div>
+  </div>
+<div class="car" style="padding-bottom:20px;">
+<div class="card-header" id="headingFour"  style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"  style="
+color:black;   font-weight:bold; font-size:1.5rem;">
+4.what is the duration of the program?
+</button>
+</h5>
+</div>
+    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;font-family:Poppins">
+      <div class="card-body" style="font-style: normal;
+font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+      The duration of the program is 5 weeks. One is required to attend 3 hours of class every
+weekend for the
+entire duration of the program.
+      </div>
+    </div>
+  </div>
+  <div class="car" style="padding-bottom:20px;">
+    <div class="card-header" id="headingFive"  style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"  style="
+                                color:black;   font-weight:bold; font-size:1.5rem;">
+        5.Is the program paid?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;font-family:Poppins">
+      <div class="card-body" style="font-style: normal;
+font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+      No. Our programs are not paid.
+      </div>
+    </div>
+  </div>
+<div class="car" style="padding-bottom:20px;">
+<div class="card-header" id="headingSix"  style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
+<h5 class="mb-0">
+<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"  style="
+color:black;   font-weight:bold; font-size:1.5rem;">
+6.What are the additional perks?
+</button>
+</h5>
+</div>
+<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;font-family:Poppins">
+<div class="card-body" style="font-style: normal;
+font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+      As our organisation requires interns, program managers and other employees,
+we will consider all of you as our first preference to work with. In Addition to this,
+you will get lifetime access to our community and network.
+      </div>
+    </div>
+  </div>
+</div>
+       
+</div>
+<div class="col-lg-8 offset-lg-2"></div>
                 </div>
-
             </div>
-            <a href="#">Apply Now</a>
         </section>
-
-        <section class="freq">
-            <div class="container">
-
-                <h2>Frequently Asked Questions</h2>
-
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <a>1.Who is Eligible to Apply?</a>
-                        <div class="content">
-                            <p>All undergraduate students and young professionals with a<br> maximum of 2 years of
-                                experience who are
-                                looking to build <br>foundational knowledge or to explore a particular domain are<br>
-                                eligible to apply
-                                for our programs. The final decision of enrolment
-                                would be taken by our team after evaluating all the candidates.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a> 2.Who is going to take the class?</a>
-                        <div class="content">
-                            <p>The classes would be taken by Industry experts from respective domains. In addition to
-                                educating the
-                                selected students, Industry experts would also provide mentorship wherever required.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a>3.What is the format of the class and cohort?</a>
-                        <div class="content">
-                            <p>All the classes would be virtual-only. Each cohort will consist of 60 students from diverse
-                                backgrounds.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a>4.what is the duration of the program?</a>
-                        <div class="content">
-                            <p>The duration of the program is 5 weeks. One is required to attend 3 hours of class every
-                                weekend for the
-                                entire duration of the program.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a> 5.Is the program paid?</a>
-                        <div class="content">
-                            <p>No. Our programs are not paid.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a>6.What are the additional perks?</a>
-                        <div class="content">
-                            <p>As our organisation requires interns, program managers and other employees,
-                                we will consider all of you as our first preference to work with. In Addition to this,
-                                you will get lifetime access to our community and network.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-
         <script>
             $(document).ready(function() {
 
