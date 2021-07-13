@@ -10,6 +10,7 @@ use App\Http\Controllers\SeriesController;
 use App\Http\Controllers\IndustryLeaderController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\CareerController;
 use App\Models\Career;
 use App\Models\Community;
 use App\Models\Company;

@@ -32,8 +32,12 @@
                         <td>{{$career->skills}}</td>
                         <td>{{$career->perks}}</td>
                         <td>{{$career->tenure}}</td>
-                        <td class="text-nowrap">
-                            <a class="btn btn-warning btn-sm" href="/careers/edit/{{$career->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
+                        <td class="text-nowrap d-flex">
+                            <a class="btn btn-warning btn-sm " href="/careers/{{$career->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
+                            <form action="/careers/{{ $career->id }}/delete" method="post">
+                                @csrf
+                                <button class="btn btn-sm btn-danger mx-1"><i class="fa fa-trash"></i> Delete</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
