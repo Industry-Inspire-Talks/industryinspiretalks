@@ -29,8 +29,12 @@
                         <td>{{$story->leader->name}}</td>
                         <td>{{$story->link}}</td>
 
-                        <td class="text-nowrap">
-                            <a class="btn btn-sm btn-warning " href="/inspire_stories/edit/{{$story->id}}"><i class="fa fa-edit"></i> Edit</a>
+                        <td class="text-nowrap d-flex">
+                            <a class="btn btn-sm btn-warning " href="/inspire_stories/{{$story->id}}"><i class="fa fa-edit"></i> Edit</a>
+                            <form action="/inspire_stories/{{ $story->id }}/delete" method="post">
+                                @csrf
+                                <button class="btn btn-sm btn-danger mx-1"><i class="fa fa-trash"></i> Delete</button>
+                            </form>
                         </td>
                     </tr>
 

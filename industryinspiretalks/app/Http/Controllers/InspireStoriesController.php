@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\InspireStory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -10,52 +11,30 @@ class InspireStoriesController extends Controller
 
 
 
-    public function add_inspire_stories(Request $request)
+    public function insert(Request $request)
     {
-        $leader_id = $request->input('leader_id');
-        $link = $request->input('link');
 
-        DB::table('inspire_stories')->insert($request->only('link','leader_id'));
+        $inspire_stories = new InspireStory();
+        $inspire_stories->fill($request->input());
+        $inspire_stories->save();
+
+        return redirect()->back()->with('alert', 'Sucessfully Registered');
     }
 
-
-
-
-    public function edit_inspire_stories(Request $request)
+    public function update(Request $request, InspireStory $inspire_stories)
     {
-        $leader_name = $request->input('name');
-       
-        $leader_id = DB::table('industry_leaders')->select('id')->where('name',$leader_name)->first();
-        
-        switch ($request->input('action')) {
-            case 'image_upload':
-                $request->validate([
-                    'image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                ]); 
-        
-                $imageExtension = $request->image_ext->extension(); 
-                $request->image_ext->move(public_path('uploads/inspire_stories'), $leader_id->id.'.'.$imageExtension);
-        
-                DB::table('inspire_stories')
-                ->where('leader_id', $leader_id->id)
-                ->update(['image_ext'=>$imageExtension]);
-        
-                break;
+        $inspire_stories->fill($request->input());
+        $inspire_stories->save();
+
+        return redirect()->back()->with('alert', 'Updated Successfully');
+    }
+
+    public function delete(InspireStory $inspire_stories)
+    {
+        $inspire_stories->delete();
+
+        return redirect('/inspire_stories')->with('alert', 'Deleted Successfully');
+    }
+
     
-            case 'update':
-            
-                
-                DB::table('inspire_stories')
-                ->where('leader_id',$leader_id->id)
-                ->update($request->only('link','visible'));
-                
-                break;
-        }
-
-        $tablerow = DB::table('inspire_stories')->where('id', $leader_id->id)->distinct()->first();
-
-        return view('admin.pages.inspire_stories.edit', compact('tablerow'));
-
-
-    }
 }

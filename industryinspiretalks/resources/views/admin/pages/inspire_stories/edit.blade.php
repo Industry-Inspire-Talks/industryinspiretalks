@@ -2,22 +2,20 @@
 
 @section('main')
 
-<form method="POST" action="/inspire_stories/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
+<form method="POST" action="" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/inspire_stories/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Inspire Stories </p>
+            <p class="h5 m-0"><a href="/inspire_stories" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Inspire Stories </p>
         </div>
         <div class="card-body">
             <div class="col-md-4">
                 <label for="">Industry Leader</label>
-                @php
-                $industry_leader = DB::table('industry_leaders')->distinct()->get()
-                @endphp
+                
 
                 <select class="form-control" name="name">
-                @foreach ($industry_leader as $industry_leader)
-                <option value="{{$industry_leader->name}}" {{$industry_leader->id==$tablerow->leader_id ? 'selected' : ""}}>{{$industry_leader->name}}</option>
+                @foreach ($industry_leaders as $industry_leaders)
+                <option value="{{$industry_leaders->name}}" {{$industry_leaders->id==$inspire_stories->leader_id ? 'selected' : ""}}>{{$industry_leaders->name}}</option>
                 @endforeach
                 </select>
                 
@@ -25,7 +23,7 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="">Link</label>
-                    <input type="text" name="link" value={{$tablerow->link}} class="form-control">
+                    <input type="text" name="link" value={{$inspire_stories->link}} class="form-control">
                 </div>
             </div>
             <div class="col-md-4">

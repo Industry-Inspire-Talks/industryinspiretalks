@@ -2,24 +2,24 @@
 
 @section('main')
 
-<form method="POST" action="/series/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
+<form method="POST" action="" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/series/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Details of {{$tablerow->name}}</p>
+            <p class="h5 m-0"><a href="/series" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Details of {{$series->name}}</p>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input type="text" value="{{$tablerow->name}}" name="name" class="form-control" required>
+                        <input type="text" value="{{$series->name}}" name="name" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Description</label>
-                        <input type="textarea" value="{{$tablerow->description}}" name="description" class="form-control" required>
+                        <input type="textarea" value="{{$series->description}}" name="description" class="form-control" required>
                     </div>
                 </div>
             </div>
