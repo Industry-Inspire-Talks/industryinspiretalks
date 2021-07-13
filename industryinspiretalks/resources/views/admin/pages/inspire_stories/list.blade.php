@@ -44,4 +44,4 @@
     </div>
 </div>
 
-@stop
+@endsection

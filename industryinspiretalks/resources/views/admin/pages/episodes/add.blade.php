@@ -41,4 +41,4 @@
 </form>
 
 
-@stop
+@endsection

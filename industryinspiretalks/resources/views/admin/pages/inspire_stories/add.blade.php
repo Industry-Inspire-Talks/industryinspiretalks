@@ -37,4 +37,4 @@
 </form>
 
 
-@stop
+@endsection

@@ -76,4 +76,4 @@
 </form>
 
 
-@stop
+@endsection

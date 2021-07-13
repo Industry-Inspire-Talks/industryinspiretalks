@@ -52,4 +52,4 @@
 </form>
 
 
-@stop
+@endsection
