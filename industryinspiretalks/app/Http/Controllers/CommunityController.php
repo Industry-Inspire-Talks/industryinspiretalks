@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Community;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Input;
@@ -10,86 +11,29 @@ class CommunityController extends Controller
 {
     // Get community details list
 
-    public function community_details()
+    public function insert(Request $request)
     {
-        $community = DB::table('community')->distinct()->get();
 
-        return view('admin.pages.community.list', compact('community'));
+        $community = new Community();
+        $community->fill($request->input());
+        $community->save();
+
+        return redirect()->back()->with('alert', 'Sucessfully Registered');
     }
 
-
-    // Get Add New Community Page 
-    public function community_add_page()
+    public function update(Request $request, Community $community)
     {
-        return view('admin.pages.community.add');
-    }  
 
-     // Add New Community
+        $community->fill($request->input());
+        $community->save();
 
-     public function add_community(Request $request)
-     {   
-     
- 
-         if(DB::table('community')->insert($request->only(['name', 'company', 'role', 'industry'])))
-         
-         {
-             return redirect()->back()->with('alert','Sucessfully Registered');
-         }
-         
-         else
-         {
-             return redirect()->back()->with('alert','Error !!! Try Again Later');
-         }    
-         
-         
-     }
+        return redirect()->back()->with('alert', 'Updated Successfully');
+    }
 
-
-         // Get Community Edit Page
-
-    public function community_edit_page($id)
+    public function delete(Community $community)
     {
-        $community = DB::table('community')->where('id', $id)->distinct()->first();
+        $community->delete();
 
-        return view('admin.pages.community.edit', compact('community'));
-    } 
-
-
-     // Edit community details
-
-     public function edit_community(Request $request,$id)
-     {
-
-        switch ($request->input('action')) {
-            case 'image_upload':
-                $request->validate([
-                    'image_ext' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                ]); 
-        
-                $imageExtension = $request->image_ext->extension(); 
-                $request->image_ext->move(public_path('uploads/community'), $id.$imageExtension);
-        
-                DB::table('community')
-                ->where('id', $id)
-                ->update(['image_ext'=>$imageExtension]);
-        
-                break;
-    
-            case 'update':
-                DB::table('community')
-                ->where('id', $id)
-                ->update($request->only(['name', 'company', 'role', 'industry']));
-
-                break;
-    
-           
-        }
-
- 
-         $community = DB::table('community')->where('id', $id)->distinct()->first();
- 
-         return view('admin.pages.community.edit', compact('community'));
-     }
-     
-
+        return redirect('/community')->with('alert', 'Deleted Successfully');
+    }
 }

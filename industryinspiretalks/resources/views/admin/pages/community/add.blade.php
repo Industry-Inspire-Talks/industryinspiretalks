@@ -7,7 +7,7 @@
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/community/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Community Member</p>
+            <p class="h5 m-0"><a href="/community" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Add New Community Member</p>
         </div>
         <div class="card-body">
             <div class="row">

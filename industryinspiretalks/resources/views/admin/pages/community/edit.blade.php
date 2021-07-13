@@ -3,30 +3,30 @@
 @section('main')
 
 
-<form method="POST" action="/community/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
+<form method="POST" action="" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/community/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Details of {{$tablerow->name}}</p>
+            <p class="h5 m-0"><a href="/community" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Details of {{$community->name}}</p>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input type="text" name="name" value="{{$tablerow->name}}" class="form-control" required>
+                        <input type="text" name="name" value="{{$community->name}}" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Company</label>
-                        <input type="text" name="company" value="{{$tablerow->company}}" class="form-control" required>
+                        <input type="text" name="company" value="{{$community->company}}" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Role</label>
-                        <input type="text" name="role" value="{{$tablerow->role}}" class="form-control">
+                        <input type="text" name="role" value="{{$community->role}}" class="form-control">
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Industry</label>
-                        <input type="text" name="industry" value="{{$tablerow->industry}}" class="form-control">
+                        <input type="text" name="industry" value="{{$community->industry}}" class="form-control">
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -63,7 +63,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="">LinkedIn Link</label>
-                        <input type="text" name="link" value="{{$tablerow->link}}" class="form-control">
+                        <input type="text" name="link" value="{{$community->link}}" class="form-control">
                     </div>
                 </div>
             </div>            
