@@ -3,6 +3,7 @@
 use App\Http\Controllers\CommonController;
 use App\Http\Controllers\EpisodeController;
 use App\Http\Controllers\InspireStoriesController;
+use App\Http\Controllers\StaffController;
 use App\Http\Controllers\UserController;
 use App\Models\Career;
 use App\Models\Community;
@@ -46,11 +47,12 @@ Route::domain('admin.' . str_replace('admin.', '', request()->getHost()))->group
             Route::view('/', 'admin.pages.staff.list');
 
             Route::view('/add', 'admin.pages.staff.add');
-            Route::post('/add', [Controller::class, 'insert']);
+            Route::post('/add', [StaffController::class, 'insert']);
 
             Route::get('/{staff}', fn (Staff $staff) => view('admin.pages.staff.edit', ['staff' => $staff]));
-            Route::post('/{staff}', [Controller::class, 'update']);
+            Route::post('/{staff}', [StaffController::class, 'update']);
             
+            Route::post('/{staff}/delete', [StaffController::class, 'delete']);
         });
 
         Route::prefix('community')->group(function () {

@@ -2,7 +2,7 @@
 
 @section('main')
 
-<form method="POST" action="/staff/edit/{{$staff->id}}" enctype='multipart/form-data'>
+<form method="POST" action="" enctype='multipart/form-data'>
     <!--action="/staff/edit/{{$staff->id}}"-->
     @csrf
     <div class="card">

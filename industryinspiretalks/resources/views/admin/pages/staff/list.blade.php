@@ -33,8 +33,12 @@
                                 <td>{{ $staff->email }}</td>
                                 <td>{{ $staff->nationality }}</td>
 
-                                <td class="text-nowrap">
-                                    <a class="btn btn-sm btn-warning " href="/staff/edit/{{ $staff->id }}"><i class="fa fa-edit"></i> Edit</a>
+                                <td class="text-nowrap d-flex">
+                                    <a class="btn btn-sm btn-warning mx-1" href="/staff/{{ $staff->id }}"><i class="fa fa-edit"></i> Edit</a>
+                                    <form action="/staff/{{ $staff->id }}/delete" method="post">
+                                        @csrf
+                                        <button class="btn btn-sm btn-danger mx-1"><i class="fa fa-trash"></i> Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
