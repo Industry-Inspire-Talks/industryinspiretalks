@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('bodyClass', 'nav-nofixed')
+
 @section('content')
     <section class="container dummy">
         <div class="container-fluid text-center">

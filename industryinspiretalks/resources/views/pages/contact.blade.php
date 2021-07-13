@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+@section('bodyClass', 'nav-nofixed')
 
 @section('style')
     <style>

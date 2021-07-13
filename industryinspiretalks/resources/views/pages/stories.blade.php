@@ -1,5 +1,7 @@
 @extends('layouts.main')
 
+@section('bodyClass', 'nav-nofixed')
+
 @section('style')
     <link rel="stylesheet" href="assets/css/stories.css?1530H">
 @endsection

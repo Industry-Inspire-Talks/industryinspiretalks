@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+@section('bodyClass', 'nav-nofixed')
 
 @section('content')
     <section class="bg-dark text-light" style="background:url('/assets/inspire_class/hero_section_bg.png');background-position: center;background-size: cover;">

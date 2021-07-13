@@ -7,7 +7,7 @@
     @yield('style')
 </head>
 
-<body class="nav-nofixed">
+<body class="@yield('bodyClass')">
     @include('includes.preloader')
     <main>
 
