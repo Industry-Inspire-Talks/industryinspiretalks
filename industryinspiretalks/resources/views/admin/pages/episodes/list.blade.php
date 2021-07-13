@@ -25,8 +25,12 @@
                         <td>{{$episode->title}}</td>
                         <td>{{$episode->link}}</td>
 
-                        <td class="text-nowrap">
-                            <a class="btn btn-sm btn-warning " href="/episodes/edit/{{$episode->id}}"><i class="fa fa-edit"></i> Edit</a>
+                        <td class="text-nowrap d-flex">
+                            <a class="btn btn-sm btn-warning " href="/episodes/{{$episode->id}}"><i class="fa fa-edit"></i> Edit</a>
+                            <form action="/episodes/{{ $episode->id }}/delete" method="post">
+                                @csrf
+                                <button class="btn btn-sm btn-danger mx-1"><i class="fa fa-trash"></i> Delete</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach

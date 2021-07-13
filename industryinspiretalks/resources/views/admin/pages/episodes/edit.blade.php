@@ -2,32 +2,32 @@
 
 @section('main')
 
-<form method="POST" action="/episodes/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
+<form method="POST" action="" enctype='multipart/form-data'>
 
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/episodes/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit {{$tablerow->title}}</p>
+            <p class="h5 m-0"><a href="/episodes" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit {{$episode->title}}</p>
         </div>
         <div class="card-body">
             <div class="form-group">
                 <label for="">Series</label>
                 <select class="form-control" id="series_id" name="series_id">
                     <option>--- Select ---</option>
-                    @foreach ($series as $series)
+                    @foreach ($all_series as $all_series)
 
-                    <option value="{{$series->id}}" {{$tablerow->series_id == $series->id ? 'selected' : " "}}>{{$series->name}}</option>
+                    <option value="{{$all_series->id}}" {{$episode->series_id == $all_series->id ? 'selected' : " "}}>{{$all_series->name}}</option>
 
                     @endforeach
                 </select>
             </div>
             <div class="form-group">
                 <label for="">Title</label>
-                <input type="text" name="title" value="{{$tablerow->title}}" class="form-control" required>
+                <input type="text" name="title" value="{{$episode->title}}" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="">link</label>
-                <input type="text" name="link" value="{{$tablerow->link}}" class="form-control" required>
+                <input type="text" name="link" value="{{$episode->link}}" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="">Visibility</label>

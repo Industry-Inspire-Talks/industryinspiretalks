@@ -2,34 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Episode;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class EpisodeController extends Controller
 {
-    public function get_episode_edit_page($id)
+    public function insert(Request $request)
     {
-        $tablerow = DB::table('episodes')->where('id', $id)->distinct()->first();
-        $series = DB::table('series')->distinct()->get();
 
-        return view('admin.pages.episodes.edit', compact('tablerow','series'));
+        $episode = new Episode();
+        $episode->fill($request->input());
+        $episode->save();
+
+        return redirect()->back()->with('alert', 'Sucessfully Registered');
     }
 
-
-    public function edit_episode($id,Request $request)
+    public function update(Request $request, Episode $episode)
     {
+        $episode->fill($request->input());
+        $episode->save();
 
-        // dd($request->series_id);
-        DB::table('episodes')
-                ->where('id',$id)
-                ->update($request->only("series_id","title","link","visible"));
-        
+        return redirect()->back()->with('alert', 'Updated Successfully');
+    }
 
-        $tablerow = DB::table('episodes')->where('id', $id)->distinct()->first();
-        $series = DB::table('series')->distinct()->get();
+    public function delete(Episode $episode)
+    {
+        $episode->delete();
 
-        return view('admin.pages.episodes.edit', compact('tablerow','series'));
-    
+        return redirect('/episodes')->with('alert', 'Deleted Successfully');
     }
 }
 

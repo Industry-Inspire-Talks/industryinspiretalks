@@ -6,6 +6,10 @@ use App\Http\Controllers\EpisodeController;
 use App\Http\Controllers\InspireStoriesController;
 use App\Http\Controllers\StaffController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SeriesController;
+use App\Http\Controllers\IndustryLeaderController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\EventController;
 use App\Models\Career;
 use App\Models\Community;
 use App\Models\Company;
@@ -72,70 +76,84 @@ Route::domain('admin.' . str_replace('admin.', '', request()->getHost()))->group
             Route::view('/', 'admin.pages.episodes.list');
 
             Route::view('/add', 'admin.pages.episodes.add');
-            Route::post('/add', [Controller::class, 'insert']);
+            Route::post('/add', [EpisodeController::class, 'insert']);
 
             Route::get('/{episode}', fn (Episode $episode) => view('admin.pages.episodes.edit', ['episode' => $episode]));
-            Route::post('/{episode}', [Controller::class, 'update']);
+            Route::post('/{episode}', [EpisodeController::class, 'update']);
+
+            Route::post('/{episode}/delete', [EpisodeController::class, 'delete']);
         });
 
         Route::prefix('inspire_stories')->group(function () {
             Route::view('/', 'admin.pages.inspire_stories.list');
 
             Route::view('/add', 'admin.pages.inspire_stories.add');
-            Route::post('/add', [Controller::class, 'insert']);
+            Route::post('/add', [InspireStoriesController::class, 'insert']);
 
             Route::get('/{inspireStory}', fn (InspireStory $inspire_story) => view('admin.pages.inspire_stories.edit', ['inspireStory' => $inspire_story]));
-            Route::post('/{inspireStory}', [Controller::class, 'update']);
+            Route::post('/{inspireStory}', [InspireStoriesController::class, 'update']);
+
+            Route::post('/{inspireStory}/delete', [InspireStoriesController::class, 'delete']);
         });
 
         Route::prefix('series')->group(function () {
             Route::view('/', 'admin.pages.series.list');
 
             Route::view('/add', 'admin.pages.series.add');
-            Route::post('/add', [Controller::class, 'insert']);
+            Route::post('/add', [SeriesController::class, 'insert']);
 
             Route::get('/{series}', fn (Series $series) => view('admin.pages.series.edit', ['series' => $series]));
-            Route::post('/{series}', [Controller::class, 'update']);
+            Route::post('/{series}', [SeriesController::class, 'update']);
+
+            Route::post('/{series}/delete', [SeriesController::class, 'delete']);
         });
 
         Route::prefix('events')->group(function () {
             Route::view('/', 'admin.pages.events.list');
 
             Route::view('/add', 'admin.pages.events.add');
-            Route::post('/add', [Controller::class, 'insert']);
+            Route::post('/add', [EventController::class, 'insert']);
 
             Route::get('/{event}', fn (Event $event) => view('admin.pages.events.edit', ['event' => $event]));
-            Route::post('/{event}', [Controller::class, 'update']);
+            Route::post('/{event}', [EventController::class, 'update']);
+
+            Route::post('/{event}/delete', [EventController::class, 'delete']);
         });
 
         Route::prefix('careers')->group(function () {
             Route::view('/', 'admin.pages.careers.list');
 
             Route::view('/add', 'admin.pages.careers.add');
-            Route::post('/add', [Controller::class, 'insert']);
+            Route::post('/add', [CareerController::class, 'insert']);
 
             Route::get('/{career}', fn (Career $career) => view('admin.pages.careers.edit', ['career' => $career]));
-            Route::post('/{career}', [Controller::class, 'update']);
+            Route::post('/{career}', [CareerController::class, 'update']);
+
+            Route::post('/{career}/delete', [CareerController::class, 'delete']);
         });
 
         Route::prefix('industry_leaders')->group(function () {
             Route::view('/', 'admin.pages.industry_leaders.list');
 
             Route::view('/add', 'admin.pages.industry_leaders.add');
-            Route::post('/add', [Controller::class, 'insert']);
+            Route::post('/add', [IndustryLeaderController::class, 'insert']);
 
             Route::get('/{industry_leader}', fn (IndustryLeader $industry_leader) => view('admin.pages.industry_leaders.edit', ['industry_leader' => $industry_leader]));
-            Route::post('/{industry_leader}', [Controller::class, 'update']);
+            Route::post('/{industry_leader}', [IndustryLeaderController::class, 'update']);
+
+            Route::post('/{industry_leader}/delete', [IndustryLeaderController::class, 'delete']);
         });
 
         Route::prefix('companies')->group(function () {
             Route::view('/', 'admin.pages.companies.list');
 
             Route::view('/add', 'admin.pages.companies.add');
-            Route::post('/add', [Controller::class, 'insert']);
+            Route::post('/add', [CompanyController::class, 'insert']);
 
             Route::get('/{company}', fn (Company $company) => view('admin.pages.companies.edit', ['company' => $company]));
-            Route::post('/{company}', [Controller::class, 'update']);
+            Route::post('/{company}', [CompanyController::class, 'update']);
+
+            Route::post('/{company}/delete', [CompanyController::class, 'delete']);
         });
 
 
