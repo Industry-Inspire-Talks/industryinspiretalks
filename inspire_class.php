@@ -25,11 +25,72 @@
             color: black;
             padding-top: 0px;
         }
+        .time {
+            display: flex;
+            margin-left: 32px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+        .time img {
+            width: 140px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0));
+        }
+        .time .flex-child {
+            flex: 1;
+            justify-content: space-around;
+            margin-top: 110px;
+            background: #F9F9F9;
+            border: 4px solid #FFFFFF;
+            box-sizing: border-box;
+            padding-left: 35px;
+            margin-left: -15px;
+            box-shadow: 0px 4px 10px rgb(0 0 0 / 10%), inset 0px 0px 19px rgb(0 0 0 / 5%);
+            border-radius: 10px;
+        }
+        .time .vector {
+            width: 60px;
+            height: 70px;
+            margin-top: 225px;
+        }
+        @media only screen and (max-width: 600px) {
+            .time .vector {
+                transform: rotate(90deg);
+            }
+        }
+        .time h4 {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 56px;
+            text-align: left;
+            color: #000000;
+            opacity: 0.3;
+        } 
+        .time p {
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 36px;
+            text-align: center;
+            margin-left: -5px;
+            color: #000000;
+        }
+            .time .h2-responsive {
+                font-size: 2.4rem;
+                text-align: center;
+                position:absolute;
+                left: 50%;
+                -webkit-transform:translateX(-50%);
+                transform:translateX(-50%);
+                max-width: 600px;
+                color:#413e66;
+            }        
     </style>
     <?php require_once('components/head.php') ?>
-
 </head>
-
 <body class="nav-nofixed">
     <?php require_once('components/preloader.php') ?>
 
@@ -222,48 +283,48 @@
             </div>
         </section>
 
-        <section class="time">
-            <h2>Class Timeline</h2>
+        <section class="time">    
+            <h2 class="h2-responsive">Class Timeline</h2>  
             <div class="flex-child 1">
-                <img src="C:\Users\shree\Downloads\5221913 1.png">
+                <img src="./assets/inspire_class/time_c.png">
                 <p class="p1">Kickoff & Basic<br>
                     Idea Development<br>
                     Phase ( 3hrs )</p>
                 <h4 class="w">week 0</h4>
             </div>
-            <img class="vector" src="C:\Users\shree\Downloads\Vector (2).png">
+            <img class="vector" src="./assets/inspire_class/tick.png">
             <div class="flex-child 2">
-                <img src="C:\Users\shree\Downloads\5221913 1 (1).png">
+                <img src="./assets/inspire_class/time_d.png">
                 <p class="p2">Ideation and<br>
                     Conecept Building<br>
                     Phase ( 3hrs )</p>
                 <h4 class="w">week 1</h4>
             </div>
-            <img class="vector" src="C:\Users\shree\Downloads\Vector (2).png">
+            <img class="vector" src="./assets/inspire_class/tick.png">
             <div class="flex-child 3">
-                <img src="C:\Users\shree\Downloads\5221913 1 (2).png">
+                <img src="./assets/inspire_class/time_e.png">
                 <p class="p3">Problem <br>Statement<br>
                     Allotments Phase<br>
                     ( 3hrs )</p>
                 <h4 class="w">week 2</h4>
             </div>
-            <img class="vector" src="C:\Users\shree\Downloads\Vector (2).png">
+            <img class="vector" src="./assets/inspire_class/tick.png">
             <div class="flex-child 4">
-                <img src="C:\Users\shree\Downloads\5221913 1 (3).png">
+                <img src="./assets/inspire_class/time_f.png">
                 <p class="p4">Problem/Doubt<br> Solving Phase
                     <br>( 3hrs )
                 </p>
                 <h4 class="w">week 3</h4>
             </div>
-            <img class="vector" src="C:\Users\shree\Downloads\Vector (2).png">
+            <img class="vector" src="./assets/inspire_class/tick.png">
             <div class="flex-child 5">
-                <img src="C:\Users\shree\Downloads\5221913 1 (4).png">
+                <img src="./assets/inspire_class/time_g.png">
                 <p class="p5">Idea<br> Presentation<br> Phase ( 3hrs )</p>
                 <h4 class="w">week 4</h4>
             </div>
-            <img class="vector" src="C:\Users\shree\Downloads\Vector (2).png">
+            <img class="vector" src="./assets/inspire_class/tick.png">
             <div class="flex-child 6">
-                <img src="C:\Users\shree\Downloads\5221913 1 (5).png">
+                <img src="./assets/inspire_class/time_h.png">
                 <p class="p6">Graduation<br> Day<br> ( 3hrs )</p>
                 <h4 class="w">week 5</h4>
             </div>
