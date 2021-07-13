@@ -23,7 +23,7 @@
                     </thead>
                     <tbody>
 
-                        @foreach ($tablerow as $staff)
+                        @foreach ($staffs as $staff)
                             <tr class="{{ !$staff->visible ? 'bg-grey' : '' }}">
                                 <th scope=" row">{{ $staff->id }}</th>
                                 <td class="text-center"><img class="rounded" src="/uploads/staff/{{ $staff->id }}.{{ $staff->image_ext }}" height="100px" alt=""></td>

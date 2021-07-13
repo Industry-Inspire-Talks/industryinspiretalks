@@ -20,7 +20,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($tablerow as $series)
+                    @foreach ($all_series as $series)
                     <tr class="{{!$series->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$series->id}}</th>
                         <td class="text-center"><img class="rounded" src="/uploads/series/{{$series->id}}.{{$series->image_ext}}" height="100px" alt=""></td>

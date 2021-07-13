@@ -23,7 +23,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($tablerow as $community)
+                    @foreach ($members as $community)
                     <tr class="{{!$community->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$community->id}}</th>
                         <td class="text-center"><img class="rounded" src="/uploads/community/{{$community->id}}.{{$community->image_ext}}" height="100px" alt=""></td>

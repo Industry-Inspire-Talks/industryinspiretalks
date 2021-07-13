@@ -76,7 +76,7 @@
     </li> -->
     <!-- Nav Item - Staff -->
     <li class="nav-item">
-        <a class="nav-link" href="/staff/list">
+        <a class="nav-link" href="/staff">
             <i class="fas fa-fw fa-table"></i>
             <span>Staff</span>
         </a>
@@ -84,7 +84,7 @@
 
     <!-- Nav Item - Community -->
     <li class="nav-item">
-        <a class="nav-link" href="/community/list">
+        <a class="nav-link" href="/community">
             <i class="fas fa-fw fa-table"></i>
             <span>Community</span>
         </a>
@@ -93,14 +93,14 @@
 
     <!-- Nav Item - Episodes -->
     <li class="nav-item">
-        <a class="nav-link" href="/episodes/list">
+        <a class="nav-link" href="/episodes">
             <i class="fas fa-fw fa-table"></i>
             <span>Episodes</a>
     </li>
 
     <!-- Nav Item - Inspire Stories -->
     <li class="nav-item">
-        <a class="nav-link" href="/inspire_stories/list">
+        <a class="nav-link" href="/inspire_stories">
             <i class="fas fa-fw fa-table"></i>
             <span>Inspire Stories</span>
         </a>
@@ -108,7 +108,7 @@
 
     <!-- Nav Item - Series -->
     <li class="nav-item">
-        <a class="nav-link" href="/series/list">
+        <a class="nav-link" href="/series">
             <i class="fas fa-fw fa-table"></i>
             <span>Series</span>
         </a>
@@ -116,7 +116,7 @@
 
     <!-- Nav Item - Events -->
     <li class="nav-item">
-        <a class="nav-link" href="/events/list">
+        <a class="nav-link" href="/events">
             <i class="fas fa-fw fa-table"></i>
             <span>Events</span>
         </a>
@@ -124,21 +124,21 @@
 
     <!-- Nav Item - Careers -->
     <li class="nav-item">
-        <a class="nav-link" href="/careers/list">
+        <a class="nav-link" href="/careers">
             <i class="fas fa-fw fa-table"></i>
             <span>Careers</span>
         </a>
     </li>
     <!-- Nav Item - Leaders -->
     <li class="nav-item">
-        <a class="nav-link" href="/industry_leaders/list">
+        <a class="nav-link" href="/industry_leaders">
             <i class="fas fa-fw fa-table"></i>
             <span>Industry Leaders</span>
         </a>
     </li>
     <!-- Nav Item - Leaders -->
     <li class="nav-item">
-        <a class="nav-link" href="/companies/list">
+        <a class="nav-link" href="/companies">
             <i class="fas fa-fw fa-table"></i>
             <span>Companies</span>
         </a>

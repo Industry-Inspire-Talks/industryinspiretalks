@@ -21,7 +21,7 @@
                 </thead>
                 <tbody>
 
-                    @foreach ($tablerow as $story)
+                    @foreach ($inspire_stories as $story)
 
                     <tr class="{{!$story->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$story->id}}</th>

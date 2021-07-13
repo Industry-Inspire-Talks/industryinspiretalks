@@ -19,13 +19,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($tablerow as $companies)
-                    <tr class="{{!$companies->visible ? 'bg-grey' : ''}}">
-                        <th scope="row">{{$companies->id}}</th>
-                        <td class="text-center"><img class="rounded" src="/uploads/companies/{{$companies->id}}.{{$companies->image_ext}}" height="100px" alt=""></td>
-                        <td>{{$companies->title}}</td>
+                    @foreach ($companies as $company)
+                    <tr class="{{!$company->visible ? 'bg-grey' : ''}}">
+                        <th scope="row">{{$company->id}}</th>
+                        <td class="text-center"><img class="rounded" src="/uploads/companies/{{$company->id}}.{{$company->image_ext}}" height="100px" alt=""></td>
+                        <td>{{$company->title}}</td>
                         <td class="text-nowrap">
-                            <a class="btn btn-warning btn-sm" href="/companies/edit/{{$companies->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
+                            <a class="btn btn-warning btn-sm" href="/companies/edit/{{$company->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
                         </td>
                     </tr>
                     @endforeach

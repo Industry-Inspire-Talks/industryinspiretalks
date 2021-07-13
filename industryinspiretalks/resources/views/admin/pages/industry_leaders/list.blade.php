@@ -21,15 +21,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($tablerow as $industry_leaders)
-                    <tr class="{{!$industry_leaders->visible ? 'bg-grey' : ''}}">
-                        <th scope="row">{{$industry_leaders->id}}</th>
-                        <td class="text-center"><img class="rounded" src="/uploads/industry_leaders/{{$industry_leaders->id}}.{{$industry_leaders->image_ext}}" height="100px" alt=""></td>
-                        <td>{{$industry_leaders->name}}</td>
-                        <td>{{$industry_leaders->position}}</td>
-                        <td>{{$industry_leaders->company}}</td>
+                    @foreach ($industry_leaders as $industry_leader)
+                    <tr class="{{!$industry_leader->visible ? 'bg-grey' : ''}}">
+                        <th scope="row">{{$industry_leader->id}}</th>
+                        <td class="text-center"><img class="rounded" src="/uploads/industry_leaders/{{$industry_leader->id}}.{{$industry_leader->image_ext}}" height="100px" alt=""></td>
+                        <td>{{$industry_leader->name}}</td>
+                        <td>{{$industry_leader->position}}</td>
+                        <td>{{$industry_leader->company}}</td>
                         <td class="text-nowrap">
-                            <a class="btn btn-warning btn-sm" href="/industry_leaders/edit/{{$industry_leaders->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
+                            <a class="btn btn-warning btn-sm" href="/industry_leaders/edit/{{$industry_leader->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
                         </td>
                     </tr>
                     @endforeach

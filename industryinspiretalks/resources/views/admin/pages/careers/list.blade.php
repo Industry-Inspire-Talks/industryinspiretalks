@@ -23,7 +23,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($tablerow as $career)
+                    @foreach ($careers as $career)
                     <tr class="{{!$career->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$career->id}}</th>
                         <td>{{$career->title}}</td>
