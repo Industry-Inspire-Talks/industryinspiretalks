@@ -2,11 +2,11 @@
 
 @section('main')
 
-<form method="POST" action="/events/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
+<form method="POST" action="" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/events/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Event {{$tablerow->title}}</p>
+            <p class="h5 m-0"><a href="/events" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit Event {{$event->title}}</p>
         </div>
         <div class="card-body">
             <div class="row">
@@ -19,7 +19,7 @@
                             $category = DB::table('events')->select('category')->distinct()->get()
                             @endphp
                             @foreach ($category as $category)
-                            <option value="{{$category->category}}" {{$tablerow->category == $category->category ? 'selected' : " "}}>{{$category->category}}</option>
+                            <option value="{{$category->category}}" {{$event->category == $category->category ? 'selected' : " "}}>{{$category->category}}</option>
                             @endforeach
 
                         </select>
@@ -28,13 +28,13 @@
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Title</label>
-                        <input type="text" value="{{$tablerow->description}}" name="designation" class="form-control" required>
+                        <input type="text" value="{{$event->description}}" name="designation" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Link</label>
-                        <input type="text" value="{{$tablerow->link}}" name="contact" class="form-control">
+                        <input type="text" value="{{$event->link}}" name="contact" class="form-control">
                     </div>
                 </div>
             </div>
