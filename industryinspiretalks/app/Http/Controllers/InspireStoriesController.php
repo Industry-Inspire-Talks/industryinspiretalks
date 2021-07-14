@@ -21,17 +21,17 @@ class InspireStoriesController extends Controller
         return redirect()->back()->with('alert', 'Sucessfully Registered');
     }
 
-    public function update(Request $request, InspireStory $inspire_stories)
+    public function update(Request $request, InspireStory $inspire_story)
     {
-        $inspire_stories->fill($request->input());
-        $inspire_stories->save();
+        $inspire_story->fill($request->input());
+        $inspire_story->save();
 
         return redirect()->back()->with('alert', 'Updated Successfully');
     }
 
-    public function delete(InspireStory $inspire_stories)
+    public function delete(InspireStory $inspire_story)
     {
-        $inspire_stories->delete();
+        $inspire_story->delete();
 
         return redirect('/inspire_stories')->with('alert', 'Deleted Successfully');
     }

@@ -26,7 +26,7 @@
                     <tr class="{{!$story->visible ? 'bg-grey' : ''}}">
                         <th scope="row">{{$story->id}}</th>
                         <td class="text-center"><img class="rounded" src="/uploads/inspire_stories/{{$story->id}}.{{$story->image_ext}}" height="100px" alt=""></td>
-                        <td>{{$story->leader->name}}</td>
+                        <td>{{$story->leader->name ?? 'No Data Found'}}</td>
                         <td>{{$story->link}}</td>
 
                         <td class="text-nowrap d-flex">

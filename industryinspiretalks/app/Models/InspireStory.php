@@ -11,7 +11,6 @@ class InspireStory extends Model
     use HasFactory,SoftDeletes;
 
     protected $fillable = [
-        'id',
          'leader_id',
          'image_ext',
          'link',

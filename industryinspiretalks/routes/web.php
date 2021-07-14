@@ -91,10 +91,10 @@ Route::domain('admin.' . str_replace('admin.', '', request()->getHost()))->group
             Route::view('/add', 'admin.pages.inspire_stories.add');
             Route::post('/add', [InspireStoriesController::class, 'insert']);
 
-            Route::get('/{inspireStory}', fn (InspireStory $inspire_story) => view('admin.pages.inspire_stories.edit', ['inspireStory' => $inspire_story]));
-            Route::post('/{inspireStory}', [InspireStoriesController::class, 'update']);
+            Route::get('/{inspire_story}', fn (InspireStory $inspire_story) => view('admin.pages.inspire_stories.edit', ['inspire_story' => $inspire_story]));
+            Route::post('/{inspire_story}', [InspireStoriesController::class, 'update']);
 
-            Route::post('/{inspireStory}/delete', [InspireStoriesController::class, 'delete']);
+            Route::post('/{inspire_story}/delete', [InspireStoriesController::class, 'delete']);
         });
 
         Route::prefix('series')->group(function () {

@@ -11,7 +11,6 @@ class IndustryLeader extends Model
     use HasFactory,SoftDeletes;
 
     protected $fillable = [
-        'id',
          'name',
          'position',
          'company',
