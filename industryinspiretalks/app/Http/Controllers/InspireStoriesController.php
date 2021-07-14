@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\DB;
 
 class InspireStoriesController extends Controller
 {
-
-
-
     public function insert(Request $request)
     {
 

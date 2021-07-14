@@ -136,7 +136,8 @@
             <span>Industry Leaders</span>
         </a>
     </li>
-    <!-- Nav Item - Leaders -->
+    
+    <!-- Nav Item - Companies -->
     <li class="nav-item">
         <a class="nav-link" href="/companies">
             <i class="fas fa-fw fa-table"></i>
@@ -144,6 +145,13 @@
         </a>
     </li>
 
+    <!-- Nav Item - Industry Experts -->
+    <li class="nav-item">
+        <a class="nav-link" href="/industry_experts">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Industry Experts</span>
+        </a>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

@@ -7,6 +7,7 @@ use App\Models\Community;
 use App\Models\Company;
 use App\Models\Episode;
 use App\Models\Event;
+use App\Models\IndustryExpert;
 use App\Models\IndustryLeader;
 use App\Models\InspireStory;
 use App\Models\Series;
@@ -44,5 +45,6 @@ class AppServiceProvider extends ServiceProvider
         View::share('inspire_stories', InspireStory::all());
         View::share('industry_leaders', IndustryLeader::all());
         View::share('careers', Career::all());
+        View::share('industry_experts', IndustryExpert::all());
     }
 }

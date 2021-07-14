@@ -11,6 +11,7 @@ use App\Http\Controllers\IndustryLeaderController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\IndustryExpertController;
 use App\Models\Career;
 use App\Models\Community;
 use App\Models\Company;
@@ -20,6 +21,7 @@ use App\Models\IndustryLeader;
 use App\Models\InspireStory;
 use App\Models\Series;
 use App\Models\Staff;
+use App\Models\IndustryExpert;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -155,6 +157,18 @@ Route::domain('admin.' . str_replace('admin.', '', request()->getHost()))->group
             Route::post('/{company}', [CompanyController::class, 'update']);
 
             Route::post('/{company}/delete', [CompanyController::class, 'delete']);
+        });
+
+        Route::prefix('industry_experts')->group(function () {
+            Route::view('/', 'admin.pages.industry_experts.list');
+
+            Route::view('/add', 'admin.pages.industry_experts.add');
+            Route::post('/add', [CompanyController::class, 'insert']);
+
+            Route::get('/{industry_expert}', fn (IndustryExpert $industry_expert) => view('admin.pages.industry_experts.edit', ['industry_expert' => $industry_expert]));
+            Route::post('/{industry_expert}', [IndustryExpertController::class, 'update']);
+
+            Route::post('/{industry_expert}/delete', [IndustryExpertController::class, 'delete']);
         });
 
 
