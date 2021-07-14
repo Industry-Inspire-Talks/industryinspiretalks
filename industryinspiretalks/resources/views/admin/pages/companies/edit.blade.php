@@ -3,18 +3,18 @@
 @section('main')
 
 
-<form method="POST" action="/companies/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
+<form method="POST" action="" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/companies/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit {{$tablerow->title}}</p>
+            <p class="h5 m-0"><a href="/companies/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a> Edit {{$company->title}}</p>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Title</label>
-                        <input type="text" name="title" value="{{$tablerow->title}}" class="form-control" required>
+                        <input type="text" name="title" value="{{$company->title}}" class="form-control" required>
                     </div>
                 </div>
             </div>

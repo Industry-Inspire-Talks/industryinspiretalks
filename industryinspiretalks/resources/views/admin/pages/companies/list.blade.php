@@ -24,8 +24,12 @@
                         <th scope="row">{{$company->id}}</th>
                         <td class="text-center"><img class="rounded" src="/uploads/companies/{{$company->id}}.{{$company->image_ext}}" height="100px" alt=""></td>
                         <td>{{$company->title}}</td>
-                        <td class="text-nowrap">
-                            <a class="btn btn-warning btn-sm" href="/companies/edit/{{$company->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
+                        <td class="text-nowrap d-flex">
+                            <a class="btn btn-warning btn-sm" href="/companies/{{$company->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
+                            <form action="/companies/{{ $company->id }}/delete" method="post">
+                                @csrf
+                                <button class="btn btn-sm btn-danger mx-1"><i class="fa fa-trash"></i> Delete</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
