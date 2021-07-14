@@ -3,30 +3,30 @@
 @section('main')
 
 
-<form method="POST" action="/industry_leaders/edit/{{$tablerow->id}}" enctype='multipart/form-data'>
+<form method="POST" action="" enctype='multipart/form-data'>
     @csrf
     <div class="card">
         <div class="card-header">
-            <p class="h5 m-0"><a href="/industry_leaders/list" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a>Edit Details of {{$tablerow->name}} </p>
+            <p class="h5 m-0"><a href="/industry_leaders" class="btn btn-dark mr-2 btn-sm"><i class="fa fa-chevron-left"></i></a>Edit Details of {{$industry_leader->name}} </p>
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input type="text" name="name" value="{{$tablerow->name}}" class="form-control" required>
+                        <input type="text" name="name" value="{{$industry_leader->name}}" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Position</label>
-                        <input type="text" name="position" value="{{$tablerow->position}}" class="form-control" required>
+                        <input type="text" name="position" value="{{$industry_leader->position}}" class="form-control" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="">Company</label>
-                        <input type="text" name="company" value="{{$tablerow->company}}" class="form-control">
+                        <input type="text" name="company" value="{{$industry_leader->company}}" class="form-control">
                     </div>
                 </div>
             </div>

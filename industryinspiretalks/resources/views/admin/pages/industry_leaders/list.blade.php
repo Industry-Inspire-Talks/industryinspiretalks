@@ -28,8 +28,12 @@
                         <td>{{$industry_leader->name}}</td>
                         <td>{{$industry_leader->position}}</td>
                         <td>{{$industry_leader->company}}</td>
-                        <td class="text-nowrap">
-                            <a class="btn btn-warning btn-sm" href="/industry_leaders/edit/{{$industry_leader->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
+                        <td class="text-nowrap d-flex">
+                            <a class="btn btn-warning btn-sm" href="/industry_leaders/{{$industry_leader->id}}" role="button"><i class="fa fa-edit"></i> Edit</a>
+                            <form action="/industry_leaders/{{ $industry_leader->id }}/delete" method="post">
+                                @csrf
+                                <button class="btn btn-sm btn-danger mx-1"><i class="fa fa-trash"></i> Delete</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
