@@ -12,6 +12,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\CareerController;
 use App\Http\Controllers\IndustryExpertController;
+use App\Http\Controllers\InspireClassController;
 use App\Models\Career;
 use App\Models\Community;
 use App\Models\Company;
@@ -22,6 +23,7 @@ use App\Models\InspireStory;
 use App\Models\Series;
 use App\Models\Staff;
 use App\Models\IndustryExpert;
+use App\Models\InspireClass;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -169,6 +171,18 @@ Route::domain('admin.' . str_replace('admin.', '', request()->getHost()))->group
             Route::post('/{industry_expert}', [IndustryExpertController::class, 'update']);
 
             Route::post('/{industry_expert}/delete', [IndustryExpertController::class, 'delete']);
+        });
+
+        Route::prefix('inspire_classes')->group(function () {
+            Route::view('/', 'admin.pages.inspire_classes.list');
+
+            Route::view('/add', 'admin.pages.inspire_classes.add');
+            Route::post('/add', [InspireClassController::class, 'insert']);
+
+            Route::get('/{inspire_class}', fn (InspireClass $inspire_class) => view('admin.pages.inspire_classes.edit', ['inspire_class' => $inspire_class]));
+            Route::post('/{inspire_class}', [InspireClassController::class, 'update']);
+
+            Route::post('/{inspire_class}/delete', [InspireClassController::class, 'delete']);
         });
 
 
