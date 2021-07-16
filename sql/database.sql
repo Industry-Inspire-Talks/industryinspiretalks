@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 02, 2021 at 09:59 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.13
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jul 11, 2021 at 02:11 PM
+-- Server version: 10.4.18-MariaDB-cll-lve
+-- PHP Version: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `admin_schema`
+-- Database: `u964064311_iit`
 --
 
 -- --------------------------------------------------------
@@ -97,7 +98,23 @@ INSERT INTO `community` (`id`, `name`, `company`, `role`, `industry`, `image_ext
 (25, 'Aswin Nagarajan', 'PayPal', 'Software Engineer', 'Internet', 'jpeg', 'https://www.linkedin.com/in/aswin-nagarajan-a957b8149/', 1),
 (26, 'Divyansh Srivastava', 'NCR Corporation', 'Software Engineer', 'IT Services', 'jpeg', 'https://www.linkedin.com/in/divyansh-srivastava-a2b87a176/', 1),
 (27, 'Shwetabh Dixit', 'VISA', 'Software Engineer', 'IT Services', 'jpeg', 'https://www.linkedin.com/in/shwetabh-dixit-4b2aa9149/', 1),
-(28, 'Aman Sadique', 'Deloitte', 'Analyst', 'Management Consulting', 'jpeg', 'https://www.linkedin.com/in/aman-sadique/', 1);
+(28, 'Aman Sadique', 'Deloitte', 'Analyst', 'Management Consulting', 'jpeg', 'https://www.linkedin.com/in/aman-sadique/', 1),
+(29, 'Chaitya Chheda', 'Morgan Stanley', 'Technology Associate', 'Financial Services', 'jpg', NULL, 1),
+(30, 'Dhairya Gangwani', 'KPMG', 'SAP Analyst', 'Management Consulting', 'jpg', 'https://www.linkedin.com/in/dhairya-gangwani/', 1),
+(31, 'Sanjay Malhotra', 'CRED', 'Backend Developer', 'Internet', 'jpg', 'https://www.linkedin.com/in/sanjay-malhotra-28b747147/', 1),
+(32, 'Devansh Jain', 'udaan', 'Product Engineer', 'Internet', 'jpg', NULL, 1),
+(33, 'Akshay Gupta', 'A-Trac Engineering', 'Managing Director', 'Automotive', 'jpg', 'https://www.linkedin.com/in/akshay-atracparts/', 1),
+(34, 'Vani Sengupta', 'The Westin Chennai Velachery', 'Director of Human Resources', 'Hospitality', 'png', 'https://www.linkedin.com/in/vani-sengupta-b1499236/', 1),
+(35, 'Tim Esse', 'Growth by Design Talent', 'Recruiter', 'Staffing & Recruiting', 'jpg', 'https://www.linkedin.com/in/timesse/', 1),
+(36, 'Ash Rao', 'Verizon', 'Global Talent Acquisition', 'Information Technology & Services', 'jpg', 'https://www.linkedin.com/in/ashrao1/', 1),
+(37, 'Utkarsh Bagri', 'Pariksha', 'Founder', 'Edtech', 'jpg', 'https://www.linkedin.com/in/utkarshbagri/', 1),
+(38, 'Kumaresh Bhatt', 'URPopular', 'Founder & CEO', 'Marketing & Advertising', 'png', 'https://www.linkedin.com/in/kumaresh-bhatt/', 1),
+(39, 'Sandeep Arora', 'Bueno Finance', 'Co-Founder', 'Financial Services', 'jpg', 'https://www.linkedin.com/in/sandeep-arora-065bb519/', 1),
+(40, 'Tejas Sati', 'Avysh', 'Founder', 'Internet', 'jpg', 'https://www.linkedin.com/in/tejas4sati/', 1),
+(41, 'Ram Ray', 'Wizita Healthcare', 'CEO', 'Health, Wellness & Fitness', 'jpg', 'https://www.linkedin.com/in/ram-ray-02b14614/', 1),
+(42, 'Abhijit Sanzgiri', 'A P Sanzgiri & Co', 'Founding Partner', 'Chartered Accountancy', 'jpg', 'https://www.linkedin.com/in/abhijitsanzgiririskderisk/', 1),
+(43, 'Prakkash Manohar', 'Grofers', 'Data Analyst', 'Internet', 'jpg', 'https://www.linkedin.com/in/manoharprakkash/', 1),
+(44, 'Chidroop I', 'Walmart Global Tech India', 'Software Engineer', 'Information Technology & Services', 'jpg', 'https://www.linkedin.com/in/chidroop-i/', 1);
 
 -- --------------------------------------------------------
 
@@ -140,7 +157,20 @@ INSERT INTO `companies` (`id`, `title`, `image_ext`, `visible`) VALUES
 (21, 'Amazon Web Services', 'png', 1),
 (22, 'MindArt', 'jpeg', 1),
 (23, 'OneDirect', 'jpg', 1),
-(24, 'WittyFeed', 'png', 1);
+(24, 'WittyFeed', 'png', 1),
+(25, 'Morgan Stanley', 'jpg', 1),
+(26, 'CRED', 'png', 1),
+(27, 'KPMG', 'png', 1),
+(28, 'udaan', 'png', 1),
+(29, 'Pariksha', 'png', 1),
+(30, 'URPopular', 'png', 1),
+(31, 'Bueno Finance', 'png', 1),
+(32, 'Avysh', 'png', 1),
+(33, 'Wizita Healthcare', 'png', 1),
+(34, 'A-Trac Engineering', 'png', 1),
+(35, 'Growth by Design Talent', 'png', 1),
+(36, 'Walmart Global Tech India', 'png', 1),
+(37, 'Grofers', 'png', 1);
 
 -- --------------------------------------------------------
 
@@ -177,7 +207,32 @@ INSERT INTO `episodes` (`id`, `series_id`, `title`, `link`, `visible`) VALUES
 (14, 1, 'Interview Series with Aswin - EP #13', 'https://www.youtube.com/embed/KXc5lU1cYgM', 1),
 (15, 1, 'Interview Series with Divyansh - EP #14 (Part 1)', 'https://www.youtube.com/embed/SLenw3oIL0U', 1),
 (16, 1, 'Interview Series with Divyansh - EP #14 (Part 2)', 'https://www.youtube.com/embed/sTE6HBTnrsI', 1),
-(17, 1, 'Interview Series with Shwetabh - EP #15 (Part 1)', 'https://www.youtube.com/embed/z_V6MAsU43A', 1);
+(17, 1, 'Interview Series with Shwetabh - EP #15 (Part 1)', 'https://www.youtube.com/embed/z_V6MAsU43A', 1),
+(18, 1, 'Interview Series with Shwetabh - EP #15 (Part 2)', 'https://www.youtube.com/embed/14PaFomXXCc', 1),
+(19, 2, 'Podcast Series with Pablo Veramendi - EP #2 (Part 1)', 'https://www.youtube.com/embed/94PKSpqHmaw', 1),
+(20, 2, 'Podcast Series with Pablo Veramendi - EP #2 (Part 2)', 'https://www.youtube.com/embed/8hPs3h6iibI', 1),
+(21, 1, 'Interview Series with Aman - EP #16 (Part 1)', 'https://www.youtube.com/embed/mktIsxl-vkE', 1),
+(22, 1, 'Interview Series with Aman - EP #16 (Part 2)', 'https://www.youtube.com/embed/5Ac9AcsRfz8', 1),
+(23, 2, 'Podcast Series with Akshay Gupta - EP #3 (Part 1)', 'https://www.youtube.com/embed/39ENxMow1OM', 1),
+(24, 2, 'Podcast Series with Akshay Gupta - EP #3 (Part 2)', 'https://www.youtube.com/embed/r8xh5DnzRSY', 1),
+(25, 1, 'Interview Series with Chaitya - EP #17 (Part 1)', 'https://www.youtube.com/embed/WwR_kkwHfCw', 1),
+(26, 1, 'Interview Series with Chaitya - EP #17 (Part 2)', 'https://www.youtube.com/embed/R_hpYCL-gwg', 1),
+(27, 2, 'Podcast Series with Vani Sengupta -  EP #4 (Part 1)', 'https://www.youtube.com/embed/dVAbIoQuT4k', 1),
+(28, 2, 'Podcast Series with Vani Sengupta -  EP #4 (Part 2)', 'https://www.youtube.com/embed/kU1vFrBO2T4', 1),
+(29, 2, 'Podcast Series with Tim Esse - EP #5 (Part 1)', 'https://www.youtube.com/embed/EcbqAqAmZ3A', 1),
+(30, 2, 'Podcast Series with Tim Esse - EP #5 (Part 2)', 'https://www.youtube.com/embed/DyFxWloJuIw', 1),
+(31, 2, 'Podcast Series with Abhijit Sanzgiri - EP #6 (Part 1)', 'https://www.youtube.com/embed/O9VUtS6__lY', 1),
+(32, 2, 'Podcast Series with Abhijit Sanzgiri - EP #6 (Part 2)', 'https://www.youtube.com/embed/gTT2LDlYnMs', 1),
+(33, 1, 'Interview Series with Dhairya - EP #18 (Part 1)', 'https://www.youtube.com/embed/rEXvlNzI2T0', 1),
+(34, 1, 'Interview Series with Dhairya - EP #18 (Part 2)', 'https://www.youtube.com/embed/uI-6LMAyOYc', 1),
+(35, 2, 'Podcast Series with Ash Rao - EP #7 (Part 1)', 'https://www.youtube.com/embed/FBcqToBvVWA', 1),
+(36, 2, 'Podcast Series with Ash Rao - EP #7 (Part 2)', 'https://www.youtube.com/embed/lwS2wAQX5fo', 1),
+(37, 1, 'Interview Series with Devansh - EP #19 (Part 1)', 'https://www.youtube.com/embed/QHITcFmp4Uo', 1),
+(38, 1, 'Interview Series with Devansh - EP #19 (Part 2)', 'https://www.youtube.com/embed/IVhiFnB5mfA', 1),
+(39, 1, 'Interview Series with Prakkash Manohar - EP #20 (Part 1)', 'https://www.youtube.com/embed/WDmxxEHWK00', 1),
+(40, 1, 'Interview Series with Prakkash Manohar - EP #20 (Part 2)', 'https://www.youtube.com/embed/4Nl-v0X7ewc', 1),
+(41, 1, 'Interview Series with Chidroop I - EP #21 (Part 1)', 'https://www.youtube.com/embed/OQN83Q2hwC8', 1),
+(42, 1, 'Interview Series with Chidroop I - EP #21 (Part 2)', 'https://www.youtube.com/embed/fp5fbD-fREM', 1);
 
 -- --------------------------------------------------------
 
@@ -269,7 +324,26 @@ INSERT INTO `industry_leaders` (`id`, `name`, `position`, `company`, `image_ext`
 (20, 'Logesh Velsamy', 'Founder & CEO', 'Effitrac Solutions', 'jpeg', 1),
 (21, 'Shalaka Verma', 'Director - Partner Technology', 'Microsoft', 'jpeg', 1),
 (22, 'Linda Thackeray', 'Director - The Garage', 'Microsoft', 'jpeg', 1),
-(23, 'Vani Sengupta', 'Director - Human Resources', 'The Westin Chennai Velachery', 'jpeg', 1);
+(23, 'Vani Sengupta', 'Director - Human Resources', 'The Westin Chennai Velachery', 'jpeg', 1),
+(24, 'Ash Rao', 'Global Talent Acquisition', 'Verizon', 'jpg', 1),
+(25, 'Shyam Prashad Rajasekaran', 'Co Founder and Chief Operations', 'Veg Route Agri Tech Private Limited', 'jpg', 1),
+(26, 'Samaresh Shah', 'Founder', 'White Canvas India', 'png', 1),
+(27, 'Sumit Agarwal', 'Founder', 'PR Signal', 'jpg', 1),
+(28, 'Muralidhar Teppala', 'Founder & CEO', 'Shenzyn', 'jpg', 1),
+(29, 'Vagisha Arora', 'Freelance Content Writer and Marketer', 'Self Employed', 'png', 1),
+(30, 'Deepa Choudhary', 'EA to President & COO', 'MAHLE', 'jpg', 1),
+(31, 'Richa Sharma', 'Principal', 'BMVB-ASMA', 'jpg', 1),
+(32, 'Bhavna Chibber', 'Vice Principal', 'Gurugram Global Heights School', 'jpg', 1),
+(33, 'Mayur Sundararajan', 'Business Head', 'Versa Drives PVT LTD', 'jpg', 1),
+(34, 'Dr Shunila Joy Chauhan', 'Principal', 'Thakur International School', 'jpg', 1),
+(35, 'Dr Mithileysh Sathiyanarayanan', 'Founder & CEO', 'MIT Square', 'jpg', 1),
+(36, 'Sneha Gon', 'Senior Software Developer', 'Etiqa Life insurance', 'jpg', 1),
+(37, 'Srivas A', 'COO', 'Jinglebid', 'jpg', 1),
+(38, 'Kalpesh Kabra', 'Founder & CEO', 'HWCT India Foundation', 'jpg', 1),
+(39, 'Tanvi Sualy', 'Co-Founder', 'Happy People & Co', 'jpg', 1),
+(40, 'Saurav Gandhi', 'Co-Founder', 'Bueno Finance', 'jpg', 1),
+(41, 'Piyush Verma', 'Founder & CEO', 'Manush Labs', NULL, 1),
+(42, 'Saniya Tilwali', 'Cabin Crew', 'Emirates', 'png', 1);
 
 -- --------------------------------------------------------
 
@@ -292,7 +366,7 @@ CREATE TABLE `inspire_stories` (
 INSERT INTO `inspire_stories` (`id`, `leader_id`, `image_ext`, `link`, `visible`) VALUES
 (1, 1, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_career-achievements-technology-activity-6732266136710209536-SS8N', 1),
 (2, 2, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_paraspundir-communityguy-microsoft-activity-6739047122873806848-jw4o', 1),
-(3, 3, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_srikumarnair-industryleader-microsoft-activity-6739793834185773056-RCDB', 1),
+(3, 3, 'jpeg', 'class=\"form-control\"', 0),
 (4, 4, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_satyaprakashmohapatra-industryleader-hrmanager-activity-6740603622310191104-bGmI', 1),
 (5, 5, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_vandanamohture-womenleaders-womenfounders-activity-6741697307500261376-Mh5t', 1),
 (6, 6, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_rabiahbhatia-industryleader-womenleaders-activity-6742085860054974465-P4A0', 1),
@@ -312,7 +386,28 @@ INSERT INTO `inspire_stories` (`id`, `leader_id`, `image_ext`, `link`, `visible`
 (20, 20, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_logeshvelusamy-industryleaders-crmsolutions-activity-6753673286162505728-Gk_i', 1),
 (21, 21, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_shalakaverma-womenleaders-industryinsights-activity-6754389659104747520-rt88', 1),
 (22, 22, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_lindathackeray-womenleaders-industryinsights-activity-6754738906312376320-1aB2', 1),
-(23, 23, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_vanisengupta-womenleaders-industryinsights-activity-6757262687211794432-_9L3', 1);
+(23, 23, 'jpeg', 'https://www.linkedin.com/posts/industry-inspire-talks_vanisengupta-womenleaders-industryinsights-activity-6757262687211794432-_9L3', 1),
+(24, 24, 'png', 'class=\"form-control\"', 0),
+(25, 25, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_shyamprasadrajasekaran-cofounder-vegrouteagritech-activity-6766330914403434496-p2N5', 1),
+(26, 26, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_samareshshah-founder-whitecanvasindia-activity-6769523279070924800-jSv2', 1),
+(27, 27, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_sumitagarwal-founder-prsignal-activity-6769974382656921600--fMA', 1),
+(28, 28, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_muralidharteppala-founder-shenzyn-activity-6770331321307951104-5Ta7', 1),
+(29, 29, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_vagishaarora-womenleaders-industryinsights-activity-6772452171222007808-NZDW', 1),
+(30, 30, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_deepachoudhary-womenleaders-industryinsights-activity-6776420580469166081-EdcL', 1),
+(31, 31, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_richasharma-womenleaders-industryinsights-activity-6776792478986190848-ssvN', 1),
+(32, 32, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_bhavnachibber-educationist-womenleaders-activity-6778311792952250368-tLi7', 1),
+(33, 33, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_mayursundaranjan-businesshead-versadrives-activity-6779380547220312064-g49E', 1),
+(34, 34, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_shunilaroychauhan-educationist-womenleaders-activity-6781158789153456129-WzhF', 1),
+(35, 35, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_mithileyshsathiyanarayanan-founder-entrepreneur-activity-6783731624967335937-FB7O', 1),
+(36, 36, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_snehagon-seniorsoftwaredeveloper-itprofessionals-activity-6788773700037677056-GrYQ', 1),
+(37, 37, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_inspirestories-srivasanantharaman-founderstory-activity-6791695735453835264-UGrx', 1),
+(38, 38, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_industryinspiretalks-inspirestories-kalpeshkabra-activity-6792428348921516032-yDX1', 1),
+(39, 39, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_tanvisualy-cofounder-womenfounders-activity-6794246080382038016-5Jj0', 1),
+(40, 40, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_industryinspiretalks-inspirestories-sauravgandhi-activity-6795333208281088000-f8H3', 0),
+(41, 40, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_industryinspiretalks-inspirestories-sauravgandhi-activity-6795333208281088000-f8H3', 0),
+(42, 40, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_industryinspiretalks-inspirestories-sauravgandhi-activity-6795333208281088000-f8H3', 0),
+(43, 40, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_industryinspiretalks-inspirestories-sauravgandhi-activity-6795333208281088000-f8H3', 0),
+(44, 41, 'png', 'https://www.linkedin.com/posts/industry-inspire-talks_industryinspiretalks-inspirestories-piyushverma-activity-6796805418661355520-_IP5', NULL);
 
 -- --------------------------------------------------------
 
@@ -399,27 +494,37 @@ CREATE TABLE `staff` (
 
 INSERT INTO `staff` (`id`, `name`, `designation`, `contact`, `email`, `dob`, `social_links`, `nationality`, `address`, `image_ext`, `date_of_joining`, `date_of_leaving`, `visible`) VALUES
 (1, 'Omkar Shinde', 'Founder & CEO', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/omkar-shinde-310aa5193/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'png', '', '', 1),
-(2, 'Satya Prakash Mohapatra', 'Chief Marketing Officer', NULL, NULL, NULL, '{     \"linkedin\" : \"https://www.linkedin.com/in/satya-prakash-mohapatra-153926129/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', NULL, NULL, 'jpeg', NULL, NULL, 0),
+(2, 'Aman Sadique', 'Chief Operating Officer', NULL, NULL, NULL, '{     \"linkedin\" : \"https://www.linkedin.com/in/satya-prakash-mohapatra-153926129/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', NULL, NULL, 'jpg', NULL, NULL, 1),
 (3, 'Vishal Nair', 'Chief People Officer', '', '', '', '{     \"linkedin\" : \"https://www.linkedin.com/in/vishalnairm/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', '', '', 'png', '', '', 1),
 (4, 'Danish Shaikh', 'Chief Technology Officer', '8655332519', 'shaikh.danish4444@gmail.com', '1999-01-04', '{     \"linkedin\" : \"https://www.linkedin.com/in/shaikhdanish04/\",     \"facebook\":\"\",     \"twitter\":\"\",     \"instagram\":\"\",     \"googlePlus\":\"\" }', 'Indian', NULL, 'png', NULL, NULL, 1),
-(5, 'Amrita Bhattacharjee', 'Program Manager', '', '', '', '', '', '', 'jpg', '', '', 1),
-(6, 'Joseph Nssien', 'Program Manager', '', '', '', '', '', '', 'jpg', '', '', 1),
-(7, 'Muneeb Ahmed', 'Community Manager', '', '', '', '', '', '', 'jpeg', '', '', 1),
+(5, 'Aditya Satish', 'Product Manager Intern', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 0),
+(6, 'Bhavana BP', 'Podcast Series Host', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 0),
+(7, 'Shubhanshu Gupta', 'Product Manager Intern', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 0),
 (8, 'Ganesh Dubey', 'Front-End Developer', '', '', '', '', '', '', 'jpg', '', '', 1),
 (9, 'Tanmay Jadhav', 'Backend Developer', '', '', '', '', '', '', 'jpg', '', '', 1),
 (10, 'Omkar Desai', 'Front-End Developer', '', '', '', '', '', '', 'jpg', '', '', 1),
-(11, 'Himanshi Lodha', 'Program Manager', '', '', '', '', '', '', 'jpeg', '', '', 1),
+(11, 'Khayati Shah', 'Social Media Specialist', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 1),
 (12, 'Eshaan Chauhan', 'Marketing Manager', '', '', '', '', '', '', 'jpg', '', '', 1),
 (13, 'Ajinkya Sonawale', 'Backend Developer', '', '', '', '', '', '', 'jpg', '', '', 1),
-(14, 'Aayush Vishnoi', 'Front-End Developer', '', '', '', '', '', '', '', '', '', 0),
-(15, 'Rihen Vora', 'Backend Developer', '', '', '', '', '', '', '', '', '', 0),
-(16, 'Karan Sawant', 'Backend Developer', '', '', '', '', '', '', '', '', '', 0),
-(17, 'Asish Mohapatra', 'Backend Developer', '', '', '', '', '', '', '', '', '', 0),
-(18, 'Varad Gaidhani', 'Community Manager', '', '', '', '', '', '', 'jpg', '', '', 1),
-(19, 'Ali Asgar Tinwala', 'Graphic Design Head', '', '', '', '', '', '', 'jpg', '', '', 1),
-(20, 'Shashwat Mulgund', 'Graphic Designer', '', '', '', '', '', '', 'jpg', '', '', 1),
+(14, 'Rinku Rupraj', 'Social Media Specialist', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 1),
+(15, 'Yash Anchaliya', 'Product Manager Intern', NULL, NULL, NULL, '', NULL, NULL, '', NULL, NULL, 0),
+(16, 'Bhavana BP', 'Podcast Series Host', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 1),
+(17, 'Mohit Patil', 'Product Manager Intern', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 1),
+(18, 'Aditya Satish', 'Product Manager Intern', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 0),
+(19, 'Aditya Satish', 'Product Manager Intern', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 0),
+(20, 'Shashwat Mulgund', 'Graphic Designer', NULL, NULL, NULL, '', NULL, NULL, 'jpg', NULL, NULL, 0),
 (21, 'Deepanjali Tripathi', 'Front-End Developer', '', '', '', '', '', '', 'jpg', '', '', 1),
-(22, 'Soumya Bharati', 'UI/UX Designer', '', '', '', '', '', '', 'jpg', '', '', 1);
+(22, 'Soumya Bharati', 'UI/UX Designer', '', '', '', '', '', '', 'jpg', '', '', 1),
+(23, 'Rahul Bharadia', 'Product Manager Intern', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 0),
+(24, 'Vandana Mohture', 'Podcast Series Host', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 1),
+(25, 'Aditya Satish', 'Product Manager Intern', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 1),
+(26, 'Mitali Rajput', 'Marketing Manager Intern', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 1),
+(27, 'Shruti Shirke', 'Marketing Manager Intern', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 0),
+(28, 'Vinita Sharma', 'Marketing Executive', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 1),
+(29, 'Mayur Thakur', 'Marketing Executive', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 1),
+(30, 'Sameer Ansari', 'Marketing Executive', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 1),
+(31, 'Shivam Shukla', 'Marketing Executive', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 1),
+(32, 'Rutuja Rajhans', 'Web Developer', NULL, NULL, NULL, NULL, NULL, NULL, 'jpg', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -546,19 +651,19 @@ ALTER TABLE `careers`
 -- AUTO_INCREMENT for table `community`
 --
 ALTER TABLE `community`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `companies`
 --
 ALTER TABLE `companies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `episodes`
 --
 ALTER TABLE `episodes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `events`
@@ -576,13 +681,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `industry_leaders`
 --
 ALTER TABLE `industry_leaders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `inspire_stories`
 --
 ALTER TABLE `inspire_stories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -600,7 +705,7 @@ ALTER TABLE `series`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `users`
