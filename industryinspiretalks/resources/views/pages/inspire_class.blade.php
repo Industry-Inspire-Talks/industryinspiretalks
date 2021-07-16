@@ -110,7 +110,7 @@
                     <img class="mx-auto rounded" src="/assets/inspire_class/inspire_class_logo.jpg" width="200px">
 
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 text-center text-md-left">
                     <div class="my-5">
                         <h1>What is Inspire Class?</h1>
                         <p class="mb-4">Inspire Class is an Interactive and Experiential Learning<br> concept led by Industry Experts to
@@ -183,7 +183,7 @@
                     <?php for ($i = 0; $i < 5; $i++) { ?>
                     <div class="swiper-slide">
                         <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/assets/inspire_class/dummy_class_image.png" style="filter:blur(2px)" alt="">
+                            <img src="/assets/inspire_class/dummy_class_image_cs.png" style="filter:blur(2px)" alt="">
                         </div>
                     </div>
                     <?php } ?>
@@ -213,7 +213,7 @@
                     <?php for ($i = 0; $i < 5; $i++) { ?>
                     <div class="swiper-slide">
                         <div class="card mx-auto" style="width: 18rem;">
-                            <img src="/assets/inspire_class/dummy_class_image_past.png" style="filter:blur(2px)" alt="">
+                            <img src="/assets/inspire_class/dummy_class_image_past_cs.png" style="filter:blur(2px)" alt="">
                         </div>
                     </div>
                     <?php } ?>
@@ -354,7 +354,9 @@
 
             <div class="row">
                 <div class="col-lg-5 col-xl-6 d-flex align-items-center justify-content-between">
-                    <img class="mx-auto shadow" style="border-radius: 2.5rem" src="./assets/inspire_class/certificate.png" width="100%">
+                    <div class="pr-0 pr-md-5">
+                        <img class="mx-auto shadow " style="border-radius: 2.5rem" src="./assets/inspire_class/certificate.png" width="100%">
+                    </div>
                 </div>
                 <div class="col-lg-7 col-xl-6 text-center text-lg-left">
                     <div class="mt-5">
