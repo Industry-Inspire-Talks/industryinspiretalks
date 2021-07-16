@@ -25,6 +25,7 @@
             color: black;
             padding-top: 0px;
         }
+
         .time {
             display: flex;
             margin-left: 32px;
@@ -32,10 +33,12 @@
             flex-wrap: wrap;
             min-height: 100vh;
         }
+
         .time img {
             width: 140px;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0));
         }
+
         .time .flex-child {
             flex: 1;
             justify-content: space-around;
@@ -48,16 +51,19 @@
             box-shadow: 0px 4px 10px rgb(0 0 0 / 10%), inset 0px 0px 19px rgb(0 0 0 / 5%);
             border-radius: 10px;
         }
+
         .time .vector {
             width: 60px;
             height: 70px;
             margin-top: 225px;
         }
+
         @media only screen and (max-width: 600px) {
             .time .vector {
                 transform: rotate(90deg);
             }
         }
+
         .time h4 {
             font-family: Poppins;
             font-style: normal;
@@ -67,7 +73,8 @@
             text-align: left;
             color: #000000;
             opacity: 0.3;
-        } 
+        }
+
         .time p {
             font-family: Poppins;
             font-style: normal;
@@ -78,19 +85,21 @@
             margin-left: -5px;
             color: #000000;
         }
-            .time .h2-responsive {
-                font-size: 2.4rem;
-                text-align: center;
-                position:absolute;
-                left: 50%;
-                -webkit-transform:translateX(-50%);
-                transform:translateX(-50%);
-                max-width: 600px;
-                color:#413e66;
-            }        
+
+        .time .h2-responsive {
+            font-size: 2.4rem;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            max-width: 600px;
+            color: #413e66;
+        }
     </style>
     <?php require_once('components/head.php') ?>
 </head>
+
 <body class="nav-nofixed">
     <?php require_once('components/preloader.php') ?>
 
@@ -283,8 +292,8 @@
             </div>
         </section>
 
-        <section class="time">    
-            <h2 class="h2-responsive">Class Timeline</h2>  
+        <section class="time">
+            <h2 class="h2-responsive">Class Timeline</h2>
             <div class="flex-child 1">
                 <img src="./assets/inspire_class/time_c.png">
                 <p class="p1">Kickoff & Basic<br>
@@ -347,6 +356,7 @@
                 <a href="#" class="btn btn-primary badge-pill px-5 small mx-auto d-block" style="margin-top: 55px;box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.25);">APPLY NOW</a>
             </div>
         </section>
+        
         <section class="freq" style="font-family: 'Hind', sans-serif;background: #fff;color: #4d5974;">
             <h1 style="padding:20px 0 50px 0; font-weight:bold;font-size:34px;text-align:center;">Frequently Asked Questions</h1>
             <div class="container">
