@@ -174,6 +174,12 @@
 
             <div id="upcoming" class="swiper-container">
                 <div class="swiper-wrapper">
+                    {{-- <div class="card-body p-2">
+                        <img class="mb-2" src="/assets/inspire_class/rectangle 20.png" width="100%" alt="">
+                        <p class="h5 font-weight-bolder">{{ $class->title }}</p>
+                        <p class="">{{ $class->expert->name }} ({{ $class->expert->designation }})</p>
+                    </div> --}}
+                    {{-- {{ $inspire_classes }} --}}
                     <?php for ($i = 0; $i < 5; $i++) { ?>
                     <div class="swiper-slide">
                         <div class="card mx-auto" style="width: 18rem;">
@@ -287,55 +293,59 @@
         </div>
     </section>
 
-    <section class="time">
-        <h2 class="h2-responsive">Class Timeline</h2>
-        <div class="flex-child 1" style="max-width: 200px">
-            <img src="./assets/inspire_class/time_c.png">
-            <p class="p1">
-                Kickoff & Basic<br>
-                Idea Development<br>
-                Phase ( 3hrs )
-            </p>
-            <h4 class="w">week 0</h4>
+    <section class="container">
+        <div class="time">
+
+            <h2 class="h2-responsive">Class Timeline</h2>
+            <div class="flex-child 1" style="max-width: 200px">
+                <img src="./assets/inspire_class/time_c.png">
+                <p class="p1">
+                    Kickoff & Basic<br>
+                    Idea Development<br>
+                    Phase ( 3hrs )
+                </p>
+                <h4 class="w">week 0</h4>
+            </div>
+            <img class="vector" src="./assets/inspire_class/tick.png">
+            <div class="flex-child 2" style="max-width: 200px">
+                <img src="./assets/inspire_class/time_d.png">
+                <p class="p2">Ideation and<br>
+                    Conecept Building<br>
+                    Phase ( 3hrs )
+                </p>
+                <h4 class="w">week 1</h4>
+            </div>
+            <img class="vector" src="./assets/inspire_class/tick.png">
+            <div class="flex-child 3" style="max-width: 200px">
+                <img src="./assets/inspire_class/time_e.png">
+                <p class="p3">Problem <br>Statement<br>
+                    Allotments Phase<br>
+                    ( 3hrs )
+                </p>
+                <h4 class="w">week 2</h4>
+            </div>
+            <img class="vector" src="./assets/inspire_class/tick.png">
+            <div class="flex-child 4" style="max-width: 200px">
+                <img src="./assets/inspire_class/time_f.png">
+                <p class="p4">Problem/Doubt<br> Solving Phase
+                    <br>( 3hrs )
+                </p>
+                <h4 class="w">week 3</h4>
+            </div>
+            <img class="vector" src="./assets/inspire_class/tick.png">
+            <div class="flex-child 5" style="max-width: 200px">
+                <img src="./assets/inspire_class/time_g.png">
+                <p class="p5">Idea<br> Presentation<br> Phase ( 3hrs )</p>
+                <h4 class="w">week 4</h4>
+            </div>
+            <img class="vector" src="./assets/inspire_class/tick.png">
+            <div class="flex-child 6" style="max-width: 200px">
+                <img src="./assets/inspire_class/time_h.png">
+                <p class="p6">Graduation<br> Day<br> ( 3hrs )</p>
+                <h4 class="w">week 5</h4>
+            </div>
         </div>
-        <img class="vector" src="./assets/inspire_class/tick.png">
-        <div class="flex-child 2" style="max-width: 200px">
-            <img src="./assets/inspire_class/time_d.png">
-            <p class="p2">Ideation and<br>
-                Conecept Building<br>
-                Phase ( 3hrs )
-            </p>
-            <h4 class="w">week 1</h4>
-        </div>
-        <img class="vector" src="./assets/inspire_class/tick.png">
-        <div class="flex-child 3" style="max-width: 200px">
-            <img src="./assets/inspire_class/time_e.png">
-            <p class="p3">Problem <br>Statement<br>
-                Allotments Phase<br>
-                ( 3hrs )
-            </p>
-            <h4 class="w">week 2</h4>
-        </div>
-        <img class="vector" src="./assets/inspire_class/tick.png">
-        <div class="flex-child 4" style="max-width: 200px">
-            <img src="./assets/inspire_class/time_f.png">
-            <p class="p4">Problem/Doubt<br> Solving Phase
-                <br>( 3hrs )
-            </p>
-            <h4 class="w">week 3</h4>
-        </div>
-        <img class="vector" src="./assets/inspire_class/tick.png">
-        <div class="flex-child 5" style="max-width: 200px">
-            <img src="./assets/inspire_class/time_g.png">
-            <p class="p5">Idea<br> Presentation<br> Phase ( 3hrs )</p>
-            <h4 class="w">week 4</h4>
-        </div>
-        <img class="vector" src="./assets/inspire_class/tick.png">
-        <div class="flex-child 6" style="max-width: 200px">
-            <img src="./assets/inspire_class/time_h.png">
-            <p class="p6">Graduation<br> Day<br> ( 3hrs )</p>
-            <h4 class="w">week 5</h4>
-        </div>
+
 
     </section>
 
