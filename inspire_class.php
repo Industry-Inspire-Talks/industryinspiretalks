@@ -25,62 +25,68 @@
             color: black;
             padding-top: 0px;
         }
-        .time .main-timeline-section{
+
+        .time .main-timeline-section {
             position: relative;
             width: 100%;
-            margin:auto;
-            }
-        
+            margin: auto;
+        }
+
         .time .main-timeline-section .conference-center-line {
             position: absolute;
             width: 4px;
-            height:100%;
+            height: 100%;
             top: 0;
-            left:50%;
+            left: 50%;
             margin-left: -2px;
-            background: #EAF2FF;;
+            background: #EAF2FF;
+            ;
             z-index: -1;
-            }
-        .time .timeline-article{
-            width:100%;
-            position:relative;
-            margin:40px 0px;
+        }
+
+        .time .timeline-article {
+            width: 100%;
+            position: relative;
+            margin: 40px 0px;
             min-height: 135px;
             z-index: 0;
-            }
-        .time .timeline-article .content-date{
+        }
+
+        .time .timeline-article .content-date {
             position: absolute;
             top: -69%;
             left: 42%;
             margin-left: -150px;
-             transform: translateY(50%);
-             font-family: Poppins;
-             font-style: normal;
-             font-weight: bold;
-            font-size: 47px;
-            line-height: 96px;
-            display: flex;
-            align-items: center;
-             color: #000000;
-             opacity: 0.3;
-            }
-        .time .timeline-article .cont-date{
-            position: absolute;
-            top: -69%;
-            left: 71%;
-            margin-left: -150px;
-             transform: translateY(50%);
-             font-family: Poppins;
-             font-style: normal;
+            transform: translateY(50%);
+            font-family: Poppins;
+            font-style: normal;
             font-weight: bold;
             font-size: 47px;
             line-height: 96px;
             display: flex;
             align-items: center;
-             color: #000000;
+            color: #000000;
             opacity: 0.3;
-            }
-        .time  .timeline-article .meta-date {
+        }
+
+        .time .timeline-article .cont-date {
+            position: absolute;
+            top: -69%;
+            left: 71%;
+            margin-left: -150px;
+            transform: translateY(50%);
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 47px;
+            line-height: 96px;
+            display: flex;
+            align-items: center;
+            color: #000000;
+            opacity: 0.3;
+        }
+
+        .time .timeline-article .meta-date {
             position: absolute;
             left: 50%;
             width: 20px;
@@ -90,8 +96,9 @@
             border-radius: 100%;
             background: #0093D1;
             border: 1px solid #0093D1;
-            }
-            .time .timeline-article .content-box{
+        }
+
+        .time .timeline-article .content-box {
             position: absolute;
             background-color: #fff;
             width: 41%;
@@ -103,51 +110,60 @@
             padding: 8px;
             left: 50%;
             margin-left: 40px;
-            }    
-            .time  .content-left-container .content-box{
-                    left: 5%;
-                margin-left: -17px;
-            }
-           .time .content-left-container .content-date{
+        }
+
+        .time .content-left-container .content-box {
+            left: 5%;
+            margin-left: -17px;
+        }
+
+        .time .content-left-container .content-date {
             margin-left: 50px;
+        }
+
+        @media (max-width:460px) {
+            .time.timeline-article.content-left-container .content-box {
+                left: -10px;
             }
-            @media (max-width:460px){
-            .time.timeline-article.content-left-container .content-box{
-            left: -10px;
+
+            .time.timeline-article .content-box p {
+                height: 100px;
+                overflow: hidden;
             }
-            .time.timeline-article .content-box p{
-            height: 100px;
-            overflow: hidden;
-            }
-            }
-         .time .h2-responsive {
+        }
+
+        .time .h2-responsive {
             font-size: 2.4rem;
             text-align: center;
-            position:absolute;
+            position: absolute;
             left: 50%;
-            -webkit-transform:translateX(-50%);
-            transform:translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
             max-width: 600px;
-            color:#413e66;
-                    }   
-            .time  .person-image {
-            display:inline-block;
+            color: #413e66;
+        }
+
+        .time .person-image {
+            display: inline-block;
             text-align: left;
             margin-right: 22px;
             padding-top: 8px;
-            padding-left: 15px;  
-                    }
-        .time img{
+            padding-left: 15px;
+        }
+
+        .time img {
             width: 40%;
             height: 100%;
-                    }              
+        }
+
         .time .main-timeline-section {
             position: relative;
             width: 100%;
             margin: auto;
-            margin-top: 80px;  
-        }         
-        .time  .last{
+            margin-top: 80px;
+        }
+
+        .time .last {
             margin: 0 0 10px;
             margin-left: 152px;
             position: absolute;
@@ -159,10 +175,11 @@
             font-size: 19px;
             line-height: 36px;
             text-align: center;
-            width:230px;
+            width: 230px;
             color: #000000;
         }
-        .time .first{
+
+        .time .first {
             margin: 0 0 10px;
             margin-left: -10px;
             position: absolute;
@@ -176,13 +193,14 @@
             line-height: 36px;
             color: #000000;
         }
-        .time .per-image{
-            display:inline-block;
+
+        .time .per-image {
+            display: inline-block;
             text-align: right;
             margin-right: 22px;
             padding-top: 10px;
             padding-left: 15px;
-        }                     
+        }
     </style>
     <?php require_once('components/head.php') ?>
 </head>
@@ -379,101 +397,101 @@
             </div>
         </section>
         <section class="time">
-        <div class="container">
-        <h2 class="h2-responsive">Class Timeline</h2>
-        <div class="row">
-        <div class="col-md-12 col-sm-12 col-xs-12">
-        <section class="main-timeline-section">
-        <div class="timeline-start"></div>
-        <div class="conference-center-line"></div>
-        <div class="conference-timeline-content">
-        <div class="timeline-article content-right-container">
-        <div class="content-date">
-        <span>Week 0</span>
-        </div>
-        <div class="meta-date"></div>
-        <div class="content-box">
-        <p class="first">Kickoff & Basic Idea Development Phase ( 3hrs )
-        </p>
-        <div class="per-image pull-left ">
-        <img src="./assets/inspire_class/time_c.png">
-        </div>
-        </div>
-        </div>
-        <div class="timeline-article content-left-container">
-        <div class="cont-date">
-        <span>Week 1</span>
-        </div>
-        <div class="meta-date"></div>
-        <div class="content-box">
-            <div class="person-image pull-left ">
-            <img src="./assets/inspire_class/time_d.png">
-        </div>
-        <p class="last">Ideation and Conecept Building Phase ( 3hrs )
-        </p>
-        </div>
-        </div>
-        <div class="timeline-article content-right-container">
-        <div class="content-date">
-        <span>Week 2</span>
-        </div>
-        <div class="meta-date"></div>
-        <div class="content-box">
-        <p class="first">Problem Statement Allotments Phase ( 3hrs )
-        </p>
-        <div class="per-image pull-left ">
-        <img src="./assets/inspire_class/time_e.png">
-        </div>
-        </div>
-        </div>
-        <div class="timeline-article content-left-container">
-        <div class="cont-date">
-        <span>Week 3</span>
-        </div>
-        <div class="meta-date"></div>
-        <div class="content-box">
-            <div class="person-image pull-left ">
-            <img src="./assets/inspire_class/time_f.png">
-        </div>
+            <div class="container">
+                <h2 class="h2-responsive">Class Timeline</h2>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <section class="main-timeline-section">
+                            <div class="timeline-start"></div>
+                            <div class="conference-center-line"></div>
+                            <div class="conference-timeline-content">
+                                <div class="timeline-article content-right-container">
+                                    <div class="content-date">
+                                        <span>Week 0</span>
+                                    </div>
+                                    <div class="meta-date"></div>
+                                    <div class="content-box">
+                                        <p class="first">Kickoff & Basic Idea Development Phase ( 3hrs )
+                                        </p>
+                                        <div class="per-image pull-left ">
+                                            <img src="./assets/inspire_class/time_c.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-article content-left-container">
+                                    <div class="cont-date">
+                                        <span>Week 1</span>
+                                    </div>
+                                    <div class="meta-date"></div>
+                                    <div class="content-box">
+                                        <div class="person-image pull-left ">
+                                            <img src="./assets/inspire_class/time_d.png">
+                                        </div>
+                                        <p class="last">Ideation and Conecept Building Phase ( 3hrs )
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="timeline-article content-right-container">
+                                    <div class="content-date">
+                                        <span>Week 2</span>
+                                    </div>
+                                    <div class="meta-date"></div>
+                                    <div class="content-box">
+                                        <p class="first">Problem Statement Allotments Phase ( 3hrs )
+                                        </p>
+                                        <div class="per-image pull-left ">
+                                            <img src="./assets/inspire_class/time_e.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="timeline-article content-left-container">
+                                    <div class="cont-date">
+                                        <span>Week 3</span>
+                                    </div>
+                                    <div class="meta-date"></div>
+                                    <div class="content-box">
+                                        <div class="person-image pull-left ">
+                                            <img src="./assets/inspire_class/time_f.png">
+                                        </div>
 
-        <p class="last">Problem/Doubt Solving Phase ( 3hrs )
-        </p>
+                                        <p class="last">Problem/Doubt Solving Phase ( 3hrs )
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-article content-right-container">
+                                <div class="content-date">
+                                    <span>Week 4</span>
+                                </div>
+                                <div class="meta-date"></div>
+                                <div class="content-box">
+                                    <p class="first">Idea Presentation Phase ( 3hrs )
+                                    </p>
+                                    <div class="per-image pull-left ">
+                                        <img src="./assets/inspire_class/time_g.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="timeline-article content-left-container">
+                                <div class="cont-date">
+                                    <span>Week 5</span>
+                                </div>
+                                <div class="meta-date"></div>
+                                <div class="content-box">
+                                    <div class="person-image pull-left ">
+                                        <img src="./assets/inspire_class/time_h.png">
+                                    </div>
+                                    <p class="last">Graduation Day ( 3hrs )
+                                    </p>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="timeline-end"></div>
+        </section>
         </div>
         </div>
-</div>
-<div class="timeline-article content-right-container">
-    <div class="content-date">
-    <span>Week 4</span>
-    </div>
-    <div class="meta-date"></div>
-    <div class="content-box">
-    <p class="first">Idea Presentation Phase ( 3hrs  )
-    </p>
-    <div class="per-image pull-left ">
-    <img src="./assets/inspire_class/time_g.png">
-    </div>
-    </div>
-    </div>
-    <div class="timeline-article content-left-container">
-        <div class="cont-date">
-        <span>Week 5</span>
         </div>
-        <div class="meta-date"></div>
-        <div class="content-box">
-            <div class="person-image pull-left ">
-            <img src="./assets/inspire_class/time_h.png">
-        </div> 
-        <p class="last">Graduation Day  ( 3hrs )
-        </p>
-        </div>
-        </div>
-        </div>   
-<div class="timeline-end"></div>
-</section>
-</div>
-</div>
-</div>
-                </section>
+        </section>
 
         <section style="box-shadow:0 0 20px rgba(0,0,0,.25) inset">
             <div class="row">
@@ -491,7 +509,7 @@
                 <a href="#" class="btn btn-primary badge-pill px-5 small mx-auto d-block" style="margin-top: 55px;box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.25);">APPLY NOW</a>
             </div>
         </section>
-        
+
         <section class="freq" style="font-family: 'Hind', sans-serif;background: #fff;color: #4d5974;">
             <h1 style="padding:20px 0 50px 0; font-weight:bold;font-size:34px;text-align:center;">Frequently Asked Questions</h1>
             <div class="container">

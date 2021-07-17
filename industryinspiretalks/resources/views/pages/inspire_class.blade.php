@@ -5,7 +5,7 @@
 @section('style')
     <style>
         .freq .btn-link::after {
-            /* font-family: 'Ionicons'; */
+
             content: '\2212';
             position: absolute;
             float: right;
@@ -17,84 +17,201 @@
             height: 60px;
             cursor: pointer;
             text-align: center;
+            margin: -12px 10px;
         }
 
         .freq .btn-link.collapsed::after {
-            /* font-family: 'Ionicons'; */
+
             content: '\FF0B';
             color: black;
             padding-top: 0px;
         }
 
-        .time {
-            display: flex;
-            margin-left: 32px;
-            flex-direction: row;
-            flex-wrap: wrap;
-            min-height: 100vh;
+    </style>
+    <style>
+        .time .main-timeline-section {
+            position: relative;
+            width: 100%;
+            margin: auto;
         }
 
-        .time img {
-            width: 140px;
-            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0));
+        .time .main-timeline-section .conference-center-line {
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            margin-left: -2px;
+            background: #EAF2FF;
+            z-index: -1;
         }
 
-        .time .flex-child {
-            flex: 1;
-            justify-content: space-around;
-            margin-top: 110px;
-            background: #F9F9F9;
-            border: 4px solid #FFFFFF;
-            box-sizing: border-box;
-            padding-left: 35px;
-            margin-left: -15px;
-            box-shadow: 0px 4px 10px rgb(0 0 0 / 10%), inset 0px 0px 19px rgb(0 0 0 / 5%);
-            border-radius: 10px;
+        .time .timeline-article {
+            width: 100%;
+            position: relative;
+            margin: 40px 0px;
+            min-height: 135px;
+            z-index: 0;
         }
 
-        .time .vector {
-            width: 60px;
-            height: 70px;
-            margin-top: 225px;
-        }
+        .time .timeline-article .content-date {
+            position: absolute;
+            top: -69%;
+            left: 42%;
+            margin-left: -150px;
+            transform: translateY(50%);
 
-        @media only screen and (max-width: 600px) {
-            .time .vector {
-                transform: rotate(90deg);
-            }
-        }
-
-        .time h4 {
-            /*  */
             font-style: normal;
             font-weight: bold;
-            font-size: 48px;
-            line-height: 56px;
-            text-align: left;
-            color: #000000;
-            opacity: 0.3;
+            font-size: 47px;
+            line-height: 96px;
+            display: flex;
+            align-items: center;
+            color: #e6e6e6;
+            /* opacity: 0.3; */
         }
 
-        .time p {
-            /*  */
-            /* font-style: normal; */
-            font-weight: 600;
-            font-size: 20px;
-            line-height: 36px;
-            text-align: center;
-            margin-left: -5px;
-            color: #000000;
+        .time .timeline-article .cont-date {
+            position: absolute;
+            top: -69%;
+            left: 71%;
+            margin-left: -150px;
+            transform: translateY(50%);
+
+            font-style: normal;
+            font-weight: bold;
+            font-size: 47px;
+            line-height: 96px;
+            display: flex;
+            align-items: center;
+            color: #e6e6e6;
+            /* opacity: 0.3; */
         }
 
-        .time .h2-responsive {
-            font-size: 2.4rem;
-            text-align: center;
+        .time .timeline-article .meta-date {
             position: absolute;
             left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-            max-width: 600px;
-            color: #413e66;
+            width: 25px;
+            height: 25px;
+            transform: translateY(-50%);
+            margin-left: -13px;
+            border-radius: 100%;
+            background: #0093D1;
+            border: 3px solid #d9dadf;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, .35);
+
+        }
+
+        .time .timeline-article .content-box {
+            position: absolute;
+            background-color: #fff;
+            width: 40%;
+            /* height: 202px; */
+            background: linear-gradient(273.04deg, #F9F9F9 18.28%, #FFFFFF 124.74%);
+            background: #f9f9f9;
+            border-radius: 40px;
+            top: 9%;
+            transform: translateY(-50%);
+            padding: 8px;
+            left: 50%;
+            margin-left: 40px;
+
+            border: 5px solid #eeeeee;
+
+
+        }
+
+        .time .content-left-container .content-box {
+            left: 5%;
+            margin-left: 15px;
+        }
+
+        .time .content-left-container .content-date {
+            margin-left: 50px;
+        }
+
+        /* @media (max-width:460px) {
+                            .time.timeline-article.content-left-container .content-box {
+                                left: -10px;
+                            }
+
+                            .time.timeline-article .content-box p {
+                                height: 100px;
+                                overflow: hidden;
+                            }
+                        } */
+
+        /* .time .h2-responsive {
+                            font-size: 2.4rem;
+                            text-align: center;
+                            position: absolute;
+                            left: 50%;
+                            -webkit-transform: translateX(-50%);
+                            transform: translateX(-50%);
+                            max-width: 600px;
+                            color: #413e66;
+                        } */
+
+        /* .time .person-image {
+                            display: inline-block;
+                            text-align: left;
+                            margin-right: 22px;
+                            padding-top: 8px;
+                            padding-left: 15px;
+                        } */
+
+        .time img {
+            width: 30%;
+            height: 100%;
+        }
+
+        .time .main-timeline-section {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            margin-top: 1.5rem;
+        }
+
+        .time .last {
+            margin: 0 0 10px;
+            margin-left: 152px;
+            position: absolute;
+            /* padding-left: 39px; */
+            margin-top: -104px;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 36px;
+            text-align: center;
+            /* width: 230px; */
+            width: 60%;
+            color: #000000;
+        }
+
+        .time .first {
+            margin: 0 0 10px;
+            /* margin-left: -10px; */
+            position: absolute;
+            padding-left: 1rem;
+            margin-top: 20px;
+
+            text-align: center;
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 19px;
+            width: 60%;
+            line-height: 36px;
+            color: #000000;
+        }
+
+        .time .per-image {
+            display: inline-block;
+            text-align: right;
+            margin-right: 22px;
+            padding-top: 10px;
+            padding-left: 15px;
         }
 
     </style>
@@ -294,57 +411,101 @@
     </section>
 
     <section class="container">
-        <div class="time">
+        <section class="time">
+            <div class="container">
+                <p class="text-center h1 font-weight-bolder mb-5" style="color:#413e66">Class Timeline</p>
+                {{-- <div class="row"> --}}
+                {{-- <div class="col-md-12 col-sm-12 col-xs-12"> --}}
+                <section class="main-timeline-section">
+                    <div class="timeline-start"></div>
+                    <div class="conference-center-line"></div>
+                    <div class="conference-timeline-content">
+                        <div class="timeline-article content-right-container">
+                            <div class="content-date">
+                                <span>Week 0</span>
+                            </div>
+                            <div class="meta-date"></div>
+                            <div class="content-box">
+                                <p class="first">Kickoff & Basic Idea Development Phase (3hrs)
+                                </p>
+                                <div class="per-image pull-left ">
+                                    <img src="./assets/inspire_class/time_c.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-article content-left-container">
+                            <div class="cont-date">
+                                <span>Week 1</span>
+                            </div>
+                            <div class="meta-date"></div>
+                            <div class="content-box">
+                                <div class="person-image pull-left ">
+                                    <img src="./assets/inspire_class/time_d.png">
+                                </div>
+                                <p class="last">Ideation and Conecept Building Phase (3hrs)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="timeline-article content-right-container">
+                            <div class="content-date">
+                                <span>Week 2</span>
+                            </div>
+                            <div class="meta-date"></div>
+                            <div class="content-box">
+                                <p class="first">Problem Statement Allotments Phase (3hrs)
+                                </p>
+                                <div class="per-image pull-left ">
+                                    <img src="./assets/inspire_class/time_e.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-article content-left-container">
+                            <div class="cont-date">
+                                <span>Week 3</span>
+                            </div>
+                            <div class="meta-date"></div>
+                            <div class="content-box">
+                                <div class="person-image pull-left ">
+                                    <img src="./assets/inspire_class/time_f.png">
+                                </div>
 
-            <h2 class="h2-responsive">Class Timeline</h2>
-            <div class="flex-child 1" style="max-width: 200px">
-                <img src="./assets/inspire_class/time_c.png">
-                <p class="p1">
-                    Kickoff & Basic<br>
-                    Idea Development<br>
-                    Phase ( 3hrs )
-                </p>
-                <h4 class="w">week 0</h4>
+                                <p class="last">Problem/Doubt Solving Phase (3hrs)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-article content-right-container">
+                        <div class="content-date">
+                            <span>Week 4</span>
+                        </div>
+                        <div class="meta-date"></div>
+                        <div class="content-box">
+                            <p class="first">Idea Presentation Phase (3hrs)
+                            </p>
+                            <div class="per-image pull-left ">
+                                <img src="./assets/inspire_class/time_g.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-article content-left-container">
+                        <div class="cont-date">
+                            <span>Week 5</span>
+                        </div>
+                        <div class="meta-date"></div>
+                        <div class="content-box">
+                            <div class="person-image pull-left ">
+                                <img src="./assets/inspire_class/time_h.png">
+                            </div>
+                            <p class="last">Graduation Day (3hrs)
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                {{-- </div> --}}
+                {{-- <div class="timeline-end"></div> --}}
+                {{-- </div> --}}
             </div>
-            <img class="vector" src="./assets/inspire_class/tick.png">
-            <div class="flex-child 2" style="max-width: 200px">
-                <img src="./assets/inspire_class/time_d.png">
-                <p class="p2">Ideation and<br>
-                    Conecept Building<br>
-                    Phase ( 3hrs )
-                </p>
-                <h4 class="w">week 1</h4>
-            </div>
-            <img class="vector" src="./assets/inspire_class/tick.png">
-            <div class="flex-child 3" style="max-width: 200px">
-                <img src="./assets/inspire_class/time_e.png">
-                <p class="p3">Problem <br>Statement<br>
-                    Allotments Phase<br>
-                    ( 3hrs )
-                </p>
-                <h4 class="w">week 2</h4>
-            </div>
-            <img class="vector" src="./assets/inspire_class/tick.png">
-            <div class="flex-child 4" style="max-width: 200px">
-                <img src="./assets/inspire_class/time_f.png">
-                <p class="p4">Problem/Doubt<br> Solving Phase
-                    <br>( 3hrs )
-                </p>
-                <h4 class="w">week 3</h4>
-            </div>
-            <img class="vector" src="./assets/inspire_class/tick.png">
-            <div class="flex-child 5" style="max-width: 200px">
-                <img src="./assets/inspire_class/time_g.png">
-                <p class="p5">Idea<br> Presentation<br> Phase ( 3hrs )</p>
-                <h4 class="w">week 4</h4>
-            </div>
-            <img class="vector" src="./assets/inspire_class/tick.png">
-            <div class="flex-child 6" style="max-width: 200px">
-                <img src="./assets/inspire_class/time_h.png">
-                <p class="p6">Graduation<br> Day<br> ( 3hrs )</p>
-                <h4 class="w">week 5</h4>
-            </div>
-        </div>
+        </section>
 
 
     </section>
@@ -362,7 +523,7 @@
                     <div class="mt-5">
                         <h2 style="font-style: normal;font-weight: bold;font-size: 2.5em;line-height: 64px;color: #413E66;">Certificate of Graduation</h2>
                         <p class="mb-5" style="font-size: 18px;color: #000000;">After you complete the class, you’ll get your<br> verified Certificate of Graduation to Showcase
-                            <br>the things you learntout of Inspire Class.
+                            <br>the things you learn out of Inspire Class.
                         </p>
                         <a href="#" class="btn btn-primary py-2 badge-pill px-5 small mx-auto" style="box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.25);">APPLY NOW</a>
                     </div>
@@ -378,7 +539,7 @@
                 <div class="col-lg-8 offset-lg-2">
                     <div id="accordion">
                         <div class="car" style="padding-bottom:20px;">
-                            <div class="card-header" id="headingOne" style="background: #EAF2FF;border: 4px solid #FFFFFF;border-radius: 20px;">
+                            <div class="card-header" id="headingOne" style="background: #EAF2FF;border: 4px solid #FFFFFF;border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:black;   font-weight:bold; font-size:1.5rem;">
                                         1.Who is Eligible to Apply?
@@ -386,7 +547,7 @@
                                 </h5>
                             </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body" style="font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
                                     All undergraduate students and young professionals with a<br> maximum of 2 years of
                                     experience who are
                                     looking to build <br>foundational knowledge or to explore a particular domain are<br>
@@ -405,7 +566,7 @@
                                 </h5>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body" style="font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
                                     The classes would be taken by Industry experts from respective domains. In addition to
                                     educating the selected students, Industry experts would also provide mentorship wherever required.
                                 </div>
@@ -420,7 +581,7 @@
                                 </h5>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body" style="font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
                                     All the classes would be virtual-only. Each cohort will consist of 60 students from diverse backgrounds.
                                 </div>
                             </div>
@@ -429,12 +590,12 @@
                             <div class="card-header" id="headingFour" style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
                                     <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color:black;   font-weight:bold; font-size:1.5rem;">
-                                        4.what is the duration of the program?
+                                        4.What is the duration of the program?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body" style="font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
                                     The duration of the program is 5 weeks. One is required to attend 3 hours of class every
                                     weekend for the
                                     entire duration of the program.
@@ -450,7 +611,7 @@
                                 </h5>
                             </div>
                             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body" style="font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
                                     No. Our programs are not paid.
                                 </div>
                             </div>
@@ -464,7 +625,7 @@
                                 </h5>
                             </div>
                             <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body" style="font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
                                     As our organisation requires interns, program managers and other employees,
                                     we will consider all of you as our first preference to work with. In Addition to this,
                                     you will get lifetime access to our community and network.
