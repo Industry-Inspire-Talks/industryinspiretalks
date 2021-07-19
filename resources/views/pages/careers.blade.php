@@ -20,7 +20,7 @@
                         </div>
                         <div class="card-body d-flex flex-column align-items-between justify-content-between" style="background: linear-gradient(45deg, #e9ecef, #ededed);">
                             <div>
-                                <p class=" small text-justify">{{!! $career->description !!}}</p>
+                                <p class=" small text-justify">{!! $career->description !!}</p>
                                 <hr>
                                 <p class="small"><b>Skills :</b> {{ $career->skills }}</p>
                                 <p class="small"><b>Perks :</b> {{ $career->perks }}</p>
