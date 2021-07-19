@@ -663,7 +663,7 @@
                                 </h5>
                             </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 20px;text-align:justify;line-height: 28px;color: #000000;background: #EAF2FF;">
                                     All undergraduate students and young professionals with a maximum of 2 years of
                                     experience who are
                                     looking to build foundational knowledge or to explore a particular domain are
@@ -682,7 +682,7 @@
                                 </h5>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 20px;text-align:justify;line-height: 28px;color: #000000;background: #EAF2FF;">
                                     The classes would be taken by Industry experts from respective domains. In addition to
                                     educating the selected students, Industry experts would also provide mentorship wherever required.
                                 </div>
@@ -697,7 +697,7 @@
                                 </h5>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 20px;text-align:justify;line-height: 28px;color: #000000;background: #EAF2FF;">
                                     All the classes would be virtual-only. Each cohort will consist of 60 students from diverse backgrounds.
                                 </div>
                             </div>
@@ -711,7 +711,7 @@
                                 </h5>
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 20px;text-align:justify;line-height: 28px;color: #000000;background: #EAF2FF;">
                                     The duration of the program is 5 weeks. One is required to attend 3 hours of class every
                                     weekend for the
                                     entire duration of the program.
@@ -727,7 +727,7 @@
                                 </h5>
                             </div>
                             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 20px;text-align:justify;line-height: 28px;color: #000000;background: #EAF2FF;">
                                     No. Our programs are not paid.
                                 </div>
                             </div>
@@ -741,7 +741,7 @@
                                 </h5>
                             </div>
                             <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 20px;text-align:justify;line-height: 28px;color: #000000;background: #EAF2FF;">
                                     As our organisation requires interns, program managers and other employees,
                                     we will consider all of you as our first preference to work with. In Addition to this,
                                     you will get lifetime access to our community and network.
