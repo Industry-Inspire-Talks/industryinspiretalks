@@ -657,7 +657,7 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingOne" style="background: #EAF2FF;border: 4px solid #FFFFFF;border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:black;   font-weight:bold; font-size:1.5rem;">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         1.Who is Eligible to Apply?
                                     </button>
                                 </h5>
@@ -676,7 +676,7 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingTwo" st style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color:black;   font-weight:bold; font-size:1.5rem;">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         2.Who is going to take the class?
                                     </button>
                                 </h5>
@@ -705,7 +705,7 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingFour" style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color:black;   font-weight:bold; font-size:1.5rem;">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         4.What is the duration of the program?
                                     </button>
                                 </h5>
@@ -721,7 +721,7 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingFive" style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="color:black;   font-weight:bold; font-size:1.5rem;">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         5.Is the program paid?
                                     </button>
                                 </h5>
@@ -735,7 +735,7 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingSix" style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color:black;   font-weight:bold; font-size:1.5rem;">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         6.What are the additional perks?
                                     </button>
                                 </h5>
