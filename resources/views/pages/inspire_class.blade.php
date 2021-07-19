@@ -494,7 +494,7 @@
                         <div class="d-flex">
 
                             <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
-                            <p class="m-0" style="font-weight:500">Grow yourself <br>professionally</p>
+                            <p class="m-0" style="font-weight:500">Grow yourself professionally</p>
                         </div>
                     </div>
                 </div>
@@ -503,7 +503,7 @@
                         <div class="d-flex">
 
                             <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
-                            <p class="m-0" style="font-weight:500">Ace your industry<br> careers in style</p>
+                            <p class="m-0" style="font-weight:500">Ace your industry careers in style</p>
                         </div>
                     </div>
                 </div>
@@ -639,8 +639,7 @@
                 <div class="col-lg-7 col-xl-6 text-center text-lg-left">
                     <div class="mt-5">
                         <h2 style="font-style: normal;font-weight: bold;font-size: 2.5em;line-height: 64px;color: #413E66;">Certificate of Graduation</h2>
-                        <p class="mb-5" style="font-size: 18px;color: #000000;">After you complete the class, you’ll get your<br> verified Certificate of Graduation to Showcase
-                            <br>the things you learn out of Inspire Class.
+                        <p class="mb-5" style="font-size: 18px;color: #000000;">After you complete the class, you’ll get your verified Certificate of Graduation to Showcase the things you learn out of Inspire Class.
                         </p>
                         <a href="#" class="btn btn-primary py-2 badge-pill px-5 small mx-auto" style="box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.25);">APPLY NOW</a>
                     </div>
@@ -665,9 +664,9 @@
                             </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
                                 <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
-                                    All undergraduate students and young professionals with a<br> maximum of 2 years of
+                                    All undergraduate students and young professionals with a maximum of 2 years of
                                     experience who are
-                                    looking to build <br>foundational knowledge or to explore a particular domain are<br>
+                                    looking to build foundational knowledge or to explore a particular domain are
                                     eligible to apply
                                     for our programs. The final decision of enrolment
                                     would be taken by our team after evaluating all the candidates.
