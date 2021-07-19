@@ -657,13 +657,13 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingOne" style="background: #EAF2FF;border: 4px solid #FFFFFF;border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:#1e1e1e;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         1.Who is Eligible to Apply?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
                                     All undergraduate students and young professionals with a maximum of 2 years of
                                     experience who are
                                     looking to build foundational knowledge or to explore a particular domain are
@@ -676,13 +676,13 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingTwo" st style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color:#1e1e1e;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         2.Who is going to take the class?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
                                     The classes would be taken by Industry experts from respective domains. In addition to
                                     educating the selected students, Industry experts would also provide mentorship wherever required.
                                 </div>
@@ -691,13 +691,13 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingThree" style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color:black;font-weight:bold; font-size:1.5rem;">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color:#1e1e1e;font-weight:bold; font-size:1.2rem;text-align:left">
                                         3.What is the format of the class and cohort?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
                                     All the classes would be virtual-only. Each cohort will consist of 60 students from diverse backgrounds.
                                 </div>
                             </div>
@@ -705,13 +705,13 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingFour" style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" style="color:#1e1e1e;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         4.What is the duration of the program?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
                                     The duration of the program is 5 weeks. One is required to attend 3 hours of class every
                                     weekend for the
                                     entire duration of the program.
@@ -721,13 +721,13 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingFive" style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" style="color:#1e1e1e;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         5.Is the program paid?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
                                     No. Our programs are not paid.
                                 </div>
                             </div>
@@ -735,13 +735,13 @@
                         <div class="car" style="padding-bottom:20px;">
                             <div class="card-header" id="headingSix" style="background: #EAF2FF;border: 4px solid #FFFFFF;box-sizing:border-box;box-shadow: 4px 6px 10px rgba(0, 0, 0, 0.05);border-radius: 13px;">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color:black;   font-weight:bold; font-size:1.2rem;text-align:left">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix" style="color:#1e1e1e;   font-weight:bold; font-size:1.2rem;text-align:left">
                                         6.What are the additional perks?
                                     </button>
                                 </h5>
                             </div>
                             <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion" style=" border-bottom: 1px solid #e5e5e5;">
-                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 36px;color: #000000;background: #EAF2FF;">
+                                <div class="card-body mt-3" style="overflow:hidden;border-radius:1rem;font-style: normal;font-weight: normal;font-size: 24px;line-height: 24px;color: #000000;background: #EAF2FF;">
                                     As our organisation requires interns, program managers and other employees,
                                     we will consider all of you as our first preference to work with. In Addition to this,
                                     you will get lifetime access to our community and network.
