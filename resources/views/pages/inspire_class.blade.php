@@ -473,7 +473,7 @@
             <div class="row mb-5">
                 <div class="col-lg-4 col-md-6">
                     <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
-                        <div class="d-flex">
+                        <div class="d-flex align-items-center">
 
                             <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                             <p class="m-0" style="font-weight:500">Learn and Network with Industry Experts</p>
@@ -482,7 +482,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
-                        <div class="d-flex">
+                        <div class="d-flex align-items-center">
 
                             <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                             <p class="m-0" style="font-weight:500">Develop your foundational knowledge in your focus area</p>
@@ -491,7 +491,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
-                        <div class="d-flex">
+                        <div class="d-flex align-items-center">
 
                             <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                             <p class="m-0" style="font-weight:500">Grow yourself professionally</p>
@@ -500,7 +500,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
-                        <div class="d-flex">
+                        <div class="d-flex align-items-center">
 
                             <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                             <p class="m-0" style="font-weight:500">Ace your industry careers in style</p>
@@ -509,7 +509,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
-                        <div class="d-flex">
+                        <div class="d-flex align-items-center">
 
                             <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                             <p class="m-0" style="font-weight:500">Seek mentorship from industry Leaders</p>
@@ -518,7 +518,7 @@
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="card badge-pill border-0 mb-3 mx-auto" style="max-width:300px">
-                        <div class="d-flex">
+                        <div class="d-flex align-items-center">
 
                             <img class="p-3 flex-grow-0 flex-shrink-0" src="\assets\inspire_class\Vector (1).png" height="50px" width="50px">
                             <p class="m-0" style="font-weight:500">Become industry Ready in your focus Area</p>
