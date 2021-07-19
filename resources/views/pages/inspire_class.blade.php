@@ -351,9 +351,7 @@
                 <div class="col-md-8 text-center text-md-left">
                     <div class="my-5">
                         <h1>What is Inspire Class?</h1>
-                        <p class="mb-4">Inspire Class is an Interactive and Experiential Learning<br> concept led by Industry Experts to
-                            enhance
-                            your<br> Foundational Knowledge. </p>
+                        <p class="mb-4">Inspire Class is an Interactive and Experiential Learning concept led by Industry Experts to enhance your Foundational Knowledge. </p>
                         <a href="#uclasses" class="btn btn-primary badge-pill px-5 small">APPLY NOW</a>
                     </div>
                 </div>
@@ -405,7 +403,7 @@
     <section class="">
         <div class="container">
 
-            <div class="section-title  mb-5">
+            <div class="section-title  mb-5" id="uclasses">
                 <h2 class="text-center font-weight-bold" style="color:#413e66">Upcoming Classes</h2>
 
             </div>
